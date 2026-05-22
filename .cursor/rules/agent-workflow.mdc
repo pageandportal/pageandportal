@@ -1,0 +1,18 @@
+---
+description: Page and Portal website — task workflow and plan file
+alwaysApply: true
+---
+
+# Agent workflow
+
+Before substantial work on this repo:
+
+1. Read `PROJECT_PLAN.md` at the repo root.
+2. Pick the next item from **Cursor agent tasks → In progress (agents)**, or promote from backlog / create a new row.
+3. Move that item to **In progress (agents)** when starting.
+4. When finishing, move to **Done** with date `YYYY-MM-DD`, a short note, and `→ vX.Y.Z` after bumping `version.properties` per `VERSIONING.md`.
+5. Do not rely only on in-chat todos — update **Cursor agent tasks** in `PROJECT_PLAN.md`.
+6. When the owner confirms a **Your tasks** item is complete, move it to **Done** (or note in Done).
+7. Keep **To Test Checklist** in `PROJECT_PLAN.md` aligned with the live site.
+8. Put polish ideas in **Polish backlog** until the owner promotes them.
+9. Never delete **Done** history; newest entries first.

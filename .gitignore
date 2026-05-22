@@ -1,0 +1,24 @@
+# Dependencies & build (Astro — added in Phase 0)
+node_modules/
+dist/
+.astro/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS & editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cursor temp assets (not project source)
+assets/

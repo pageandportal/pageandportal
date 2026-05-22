@@ -1,0 +1,33 @@
+---
+description: Agents own all Git operations for this repository
+alwaysApply: true
+---
+
+# Git — agent-controlled
+
+The owner delegates **all Git work** to agents for `pageandportal/pageandportal`.
+
+## Agents do
+
+- `git init` / remotes / branches when needed for the website project
+- Stage, commit, and push with clear messages (after substantive work or when the owner asks)
+- Pull / merge / resolve simple conflicts when syncing with GitHub
+- Keep binary assets in `supply/**/graphics/` and `supply/site/branding/` committed when supplied
+
+## Agents do not
+
+- Change `git config` (local or global)
+- Force-push to `main` unless the owner explicitly requests it
+- Commit `.env`, credentials, or secrets
+- Skip hooks (`--no-verify`) unless the owner requests it
+- Amend commits unless user rules allow (see commit skill)
+
+## Remote
+
+- **Origin:** https://github.com/pageandportal/pageandportal.git
+- **Default branch:** `main`
+- **Pages URL:** https://pageandportal.github.io/pageandportal/
+
+## Commit style
+
+One or two sentences focusing on **why**; note `version.properties` bumps when user-visible work ships.

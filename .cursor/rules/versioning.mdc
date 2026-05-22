@@ -1,0 +1,12 @@
+---
+description: Bump version.properties when shipping visible site changes
+globs: version.properties,site.properties,VERSIONING.md,src/**/*
+alwaysApply: false
+---
+
+# Website versioning
+
+- Canonical version: `version.properties` (`version=X.Y.Z`).
+- Read `VERSIONING.md` before bumping.
+- Bump when user-visible work ships or before a GitHub Pages deploy you are preparing.
+- Record `→ vX.Y.Z` in `PROJECT_PLAN.md` **Done** rows for that work.
