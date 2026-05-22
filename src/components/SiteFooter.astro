@@ -1,0 +1,39 @@
+---
+import { SITE } from '../config/site';
+
+const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="copy">© {year} {SITE.title}</p>
+    <p class="contact">
+      <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding-block: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .copy {
+    margin: 0;
+  }
+
+  .contact {
+    margin: 0;
+  }
+</style>

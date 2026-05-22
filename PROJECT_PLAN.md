@@ -244,8 +244,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Backlog (agents)
 
-1. **Phase 0 — Bootstrap** — Init Astro, dark theme, deploy workflow, `version.properties` → v0.1.0
-2. **Phase 1 — Home** — Home layout + placeholder app cards
+1. **Phase 1 — Home** — Refine copy when owner supplies blurb / donate; optional tier-a-3 hero
 3. **Phase 2 — App template** — Content collection schema + `AppPage` layout
 4. **Phase 3 — Pilot app** — First real app from owner supply pack
 5. **Phase 4 — Remaining apps** — Roll out after each **Your tasks** per-app block is done
@@ -258,6 +257,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-23 | Phase 0 — Astro bootstrap, minimal home, GitHub Pages deploy | → v0.1.0 |
 | 2026-05-23 | Project plan + agent rules + versioning stubs | → v0.0.1 |
 
 ---
@@ -278,7 +278,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Global
 
-- [ ] Home loads at https://pageandportal.github.io/pageandportal/ (`base: /pageandportal/`)
+- [ ] Home loads at https://pageandportal.github.io/pageandportal/ (`base: /pageandportal/`) — verify after Actions deploy
 - [ ] Dark theme readable; focus visible on links and donate button
 - [ ] Mobile layout: nav, app cards, footer
 - [ ] Donate button opens correct external URL in new tab (`rel="noopener"`)

@@ -1,6 +1,7 @@
 # Tier A — Page & Portal branding (approved)
 
-**Owner decision:** Keep this set for the site build (2026-05-23).
+**Owner decision:** Keep this set for the site build (2026-05-23).  
+**v1 home:** Minimal — `tier-a-1` icon in nav only; no `tier-a-3` hero on home.
 
 Use **HTML text** for the wordmark in the site nav where possible; these files are the art to keep.
 

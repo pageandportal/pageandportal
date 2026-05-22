@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppCard from '../components/AppCard.astro';
+import { SITE } from '../config/site';
+import inventory from '../../apps.inventory.json';
+
+const base = import.meta.env.BASE_URL;
+
+const appIcons: Record<string, string> = {
+  'commander-vault': `${base}apps/commander-vault/icon.png`,
+};
+---
+
+<BaseLayout>
+  <section class="hero container">
+    <p class="eyebrow">Developer hub</p>
+    <h1>{SITE.title}</h1>
+    <p class="lead">{SITE.tagline}</p>
+  </section>
+
+  <section id="apps" class="apps container">
+    <h2 class="section-title">Apps</h2>
+    <div class="app-grid">
+      {
+        inventory.apps.map((app) => (
+          <AppCard app={app} iconUrl={appIcons[app.slug]} />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: 1rem 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .hero h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    color: var(--text);
+  }
+
+  .lead {
+    margin: 0;
+    max-width: 42ch;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .section-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.35rem;
+  }
+
+  .app-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .app-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

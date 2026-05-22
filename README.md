@@ -9,7 +9,15 @@ Public developer hub for **Page and Portal** apps: features, roadmaps, about, do
 
 ## Status
 
-Planning and content supply — site build not started yet. See [`PROJECT_PLAN.md`](PROJECT_PLAN.md) for phases and tasks.
+**v0.1.0** — Astro site bootstrapped; minimal home + app stubs. Live after GitHub Actions deploy: [pageandportal.github.io/pageandportal/](https://pageandportal.github.io/pageandportal/)
+
+```bash
+npm install
+npm run dev    # local preview at http://localhost:4321/pageandportal/
+npm run build
+```
+
+See [`PROJECT_PLAN.md`](PROJECT_PLAN.md) for phases and tasks.
 
 ## Owner content
 

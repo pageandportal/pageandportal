@@ -2,6 +2,9 @@
 node_modules/
 dist/
 .astro/
+.DS_Store
+
+# Lockfile is committed for reproducible CI
 
 # Environment & secrets
 .env
