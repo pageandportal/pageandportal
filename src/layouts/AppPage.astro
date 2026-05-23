@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AppHero from '../components/AppHero.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import Roadmap from '../components/Roadmap.astro';
+import AboutBlurb from '../components/AboutBlurb.astro';
+import DonateSection from '../components/DonateSection.astro';
+import AppLegalFooter from '../components/AppLegalFooter.astro';
+import type { AppEntry } from '../lib/apps';
+
+interface Props {
+  entry: AppEntry;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+const accentStyle =
+  data.accentColor || data.accentColorSecondary
+    ? {
+        '--app-accent': data.accentColor ?? 'var(--gold)',
+        '--app-accent-secondary': data.accentColorSecondary ?? data.accentColor ?? 'var(--gold-dim)',
+      }
+    : undefined;
+---
+
+<BaseLayout title={data.name} description={data.tagline}>
+  <article class="app-page container" style={accentStyle}>
+    <AppHero entry={entry} />
+    <FeatureGrid features={data.features} />
+    <Roadmap entry={entry} />
+    <AboutBlurb />
+    <DonateSection entry={entry} />
+    <AppLegalFooter entry={entry} />
+  </article>
+</BaseLayout>
+
+<style>
+  .app-page {
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+</style>

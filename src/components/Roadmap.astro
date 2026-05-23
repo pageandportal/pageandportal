@@ -1,0 +1,154 @@
+---
+import { hasRoadmapItems, roadmapLanes } from '../lib/apps';
+import type { AppEntry } from '../lib/apps';
+
+interface Props {
+  entry: AppEntry;
+}
+
+const { entry } = Astro.props;
+const lanes = roadmapLanes(entry);
+const showLanes = hasRoadmapItems(entry);
+---
+
+<section class="roadmap" aria-labelledby="roadmap-heading">
+  <h2 id="roadmap-heading" class="section-title">Roadmap</h2>
+
+  {
+    showLanes ? (
+      <div class="roadmap-lanes" role="list">
+        {lanes.map((lane) => (
+          <div class="roadmap-lane" role="listitem">
+            <h3 class="lane-label">{lane.label}</h3>
+            {lane.items.length > 0 ? (
+              <ul class="lane-items">
+                {lane.items.map((item) => (
+                  <li class="roadmap-card">
+                    <div class="card-head">
+                      <span class="card-title">{item.title}</span>
+                      {item.status && <span class={`status status-${item.status}`}>{item.status.replace('-', ' ')}</span>}
+                    </div>
+                    {item.description && <p>{item.description}</p>}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p class="lane-empty">Nothing listed yet.</p>
+            )}
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p class="roadmap-placeholder">
+        Roadmap items will appear here once they are added to the app supply sheet.
+      </p>
+    )
+  }
+</section>
+
+<style>
+  .section-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.35rem;
+  }
+
+  .roadmap-placeholder,
+  .lane-empty {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .roadmap-lanes {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .roadmap-lanes {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .lane-label {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    color: var(--app-accent, var(--gold));
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .lane-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  @media (max-width: 767px) {
+    .roadmap-lanes {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .roadmap-lane {
+      flex: 0 0 min(85%, 280px);
+      scroll-snap-align: start;
+    }
+  }
+
+  .roadmap-card {
+    padding: 0.85rem 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .card-title {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .roadmap-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .status {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .status-in-progress {
+    color: var(--app-accent, var(--gold));
+    border-color: var(--app-accent, var(--gold-dim));
+  }
+
+  .status-shipped {
+    color: #8bc49a;
+    border-color: #3d5c45;
+  }
+</style>

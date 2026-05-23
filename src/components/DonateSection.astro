@@ -1,0 +1,66 @@
+---
+import DonateButton from './DonateButton.astro';
+import { DONATE, resolveDonateUrl } from '../config/donate';
+import type { AppEntry } from '../lib/apps';
+
+interface Props {
+  entry: AppEntry;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const url = resolveDonateUrl(data.donateUrl, data.donateUseGlobal);
+const label = data.donateLabel ?? DONATE.label;
+const thankYou = DONATE.thankYou;
+---
+
+<section class="donate" aria-labelledby="donate-heading">
+  <h2 id="donate-heading" class="section-title">Support development</h2>
+  {
+    url ? (
+      <div class="donate-inner">
+        {thankYou && <p class="donate-note">{thankYou}</p>}
+        <DonateButton url={url} label={label} />
+      </div>
+    ) : (
+      <p class="donate-placeholder">
+        A donate link will appear here once it is added to <code>supply/site/donate.md</code>.
+      </p>
+    )
+  }
+</section>
+
+<style>
+  .section-title {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+  }
+
+  .donate-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .donate-note {
+    margin: 0;
+    max-width: 42ch;
+    color: var(--text-muted);
+  }
+
+  .donate-placeholder {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+
+  .donate-placeholder code {
+    font-size: 0.85em;
+    color: var(--text);
+  }
+</style>

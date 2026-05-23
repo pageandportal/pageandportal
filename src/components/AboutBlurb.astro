@@ -1,0 +1,63 @@
+---
+import { ABOUT, hasAboutContent } from '../config/about';
+import { SITE } from '../config/site';
+---
+
+<section class="about" aria-labelledby="about-heading">
+  <h2 id="about-heading" class="section-title">About the developer</h2>
+  {
+    hasAboutContent() ? (
+      <div class="about-body">
+        {ABOUT.displayName && <p class="about-name">{ABOUT.displayName}</p>}
+        {ABOUT.headline && <p class="about-headline">{ABOUT.headline}</p>}
+        {ABOUT.bio && <p class="about-bio">{ABOUT.bio}</p>}
+      </div>
+    ) : (
+      <p class="about-placeholder">
+        A short bio for {SITE.title} will appear here once it is added to{' '}
+        <code>supply/site/about.md</code>.
+      </p>
+    )
+  }
+</section>
+
+<style>
+  .section-title {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+  }
+
+  .about-name {
+    margin: 0 0 0.25rem;
+    font-weight: 600;
+    color: var(--app-accent, var(--gold));
+  }
+
+  .about-headline {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+
+  .about-bio {
+    margin: 0;
+    max-width: 65ch;
+    color: var(--text-muted);
+    white-space: pre-line;
+  }
+
+  .about-placeholder {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+
+  .about-placeholder code {
+    font-size: 0.85em;
+    color: var(--text);
+  }
+</style>

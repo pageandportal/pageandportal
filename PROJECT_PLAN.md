@@ -145,7 +145,7 @@ Enable Pages in the repo: **Settings → Pages → Source:** GitHub Actions (aft
 │   │   └── legal/
 │   ├── layouts/
 │   └── pages/
-└── docs/                    Optional: owner-facing “how to add an app”
+└── docs/                    Owner reference (not deployed): adding-an-app, app-ideas
 ```
 
 ---
@@ -187,7 +187,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **Pilot app pack** — Commander Vault (features + legal from Google Sites); roadmap, graphics, store links still TODO
 - [ ] **Developer blurb** — 2–4 short paragraphs (or bullet bio): who you are, what Page and Portal is, tone (casual / professional)
 - [ ] **Donation** — URL for donate button(s): one global link or per-app links
-- [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables TODO
+- [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`)
 
 ### Per app (repeat for each)
 
@@ -245,8 +245,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 ### Backlog (agents)
 
 1. **Phase 1 — Home** — Refine copy when owner supplies blurb / donate; optional tier-a-3 hero
-3. **Phase 2 — App template** — Content collection schema + `AppPage` layout
-4. **Phase 3 — Pilot app** — First real app from owner supply pack
+3. **Phase 3 — Pilot app** — Sync `supply/` → `src/content/apps/`; wire donate/about config from owner supply
 5. **Phase 4 — Remaining apps** — Roll out after each **Your tasks** per-app block is done
 6. **Phase 5 — Legal routes** — Privacy/terms from Markdown
 7. **Phase 6 — Launch** — Pages config, smoke test, update **To Test Checklist**
@@ -257,6 +256,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-23 | Phase 2 — App template (content schema, AppPage, components) | Commander Vault pilot data in collection; hero in public → v0.2.0 |
 | 2026-05-23 | Phase 0 — Astro bootstrap, minimal home, GitHub Pages deploy | → v0.1.0 |
 | 2026-05-23 | Project plan + agent rules + versioning stubs | → v0.0.1 |
 
@@ -316,6 +316,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 ---
 
 ## Quick reference for owners
+
+- **App ideas (private, not on site):** [`docs/app-ideas.md`](docs/app-ideas.md)
 
 1. Fill **Your tasks** (start with pilot app; GitHub repo is set).
 2. Drop files under `supply/` or tell the agent paths in this repo.

@@ -1,0 +1,139 @@
+---
+import { appAssetUrl, appIconUrl, statusLabel } from '../lib/apps';
+import type { AppEntry } from '../lib/apps';
+
+interface Props {
+  entry: AppEntry;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const base = import.meta.env.BASE_URL;
+const iconUrl = appIconUrl(entry.id, data.icon);
+const heroUrl = appAssetUrl(data.heroImage);
+---
+
+<header class="app-hero">
+  <a class="back" href={base}>← Back to home</a>
+
+  <div class="hero-main">
+    <div class="hero-ident">
+      {
+        iconUrl ? (
+          <img src={iconUrl} alt="" width="96" height="96" class="app-icon" />
+        ) : (
+          <div class="app-icon-fallback" aria-hidden="true">
+            {data.name.charAt(0)}
+          </div>
+        )
+      }
+      <div class="hero-copy">
+        <span class="badge">{statusLabel(data.status)}</span>
+        <h1>{data.name}</h1>
+        {data.subtitle && <p class="subtitle">{data.subtitle}</p>}
+        <p class="tagline">{data.tagline}</p>
+      </div>
+    </div>
+
+    {
+      heroUrl && (
+        <figure class="hero-banner">
+          <img
+            src={heroUrl}
+            alt={data.heroImageAlt ?? `${data.name} hero artwork`}
+            width="1100"
+            height="400"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      )
+    }
+  </div>
+
+  <p class="intro">{data.description}</p>
+</header>
+
+<style>
+  .back {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--text-muted);
+  }
+
+  .back:hover {
+    color: var(--app-accent, var(--gold));
+  }
+
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-ident {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .app-icon {
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+
+  .app-icon-fallback {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: var(--app-accent, var(--gold));
+    background: rgb(197 160 89 / 10%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  .hero-copy h1 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+
+  .subtitle {
+    margin: 0 0 0.35rem;
+    color: var(--app-accent, var(--gold));
+    font-weight: 500;
+  }
+
+  .tagline {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+
+  .hero-banner {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .hero-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .intro {
+    margin: 0;
+    max-width: 65ch;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
+</style>

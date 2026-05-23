@@ -22,7 +22,7 @@
 | App Store | TODO: or leave blank |
 | GitHub / source | TODO: or leave blank |
 | Website / other | TODO: or leave blank |
-| Support email | TODO: or leave blank |
+| Support email | pageandportal@gmail.com |
 
 ---
 
@@ -97,7 +97,7 @@ Add 3–8 items. Delete unused rows.
 
 | Page | Include? | File |
 |------|----------|------|
-| Privacy | TODO — owner may have draft ready | `legal/privacy.md` |
+| Privacy | yes | `legal/privacy.md` |
 | Terms | TODO \| delete if unused | `legal/terms.md` |
 
 ---
