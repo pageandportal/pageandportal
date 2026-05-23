@@ -240,15 +240,13 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### In progress (agents)
 
-*(empty)*
+- **Phase 3 — Content ingest** — Sync `supply/` → content collections; Times Tables app copy; `npm run sync:content`
 
 ### Backlog (agents)
 
 1. **Phase 1 — Home** — Refine copy when owner supplies blurb / donate; optional tier-a-3 hero
-3. **Phase 3 — Pilot app** — Sync `supply/` → `src/content/apps/`; wire donate/about config from owner supply
 5. **Phase 4 — Remaining apps** — Roll out after each **Your tasks** per-app block is done
-6. **Phase 5 — Legal routes (Commander Vault)** — Privacy, terms, credits from `supply/`
-7. **Phase 6 — Launch** — Pages config, smoke test, update **To Test Checklist**
+6. **Phase 6 — Launch** — Pages config, smoke test, update **To Test Checklist**
 
 ### Done (agents)
 
@@ -256,6 +254,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-23 | Phase 5 — Legal routes (Commander Vault) | Privacy, terms, credits from `supply/` → v0.4.0 |
 | 2026-05-23 | Phase 5 — Legal routes (Times Tables privacy) | `legal` collection + `/apps/portal-pages-times-tables/privacy` from supply → v0.3.0 |
 | 2026-05-23 | Phase 2 — App template (content schema, AppPage, components) | Commander Vault pilot data in collection; hero in public → v0.2.0 |
 | 2026-05-23 | Phase 0 — Astro bootstrap, minimal home, GitHub Pages deploy | → v0.1.0 |
@@ -292,6 +291,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] About blurb displays; links work
 - [ ] Privacy (and other legal) pages linked and readable
 - [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy` (local build)
+- [x] Commander Vault — privacy, terms, credits at `/apps/commander-vault/{privacy,terms,credits}` (local build)
 - [ ] Store/repo links work
 
 ### Deploy & meta
