@@ -25,19 +25,26 @@ const accentStyle =
 ---
 
 <BaseLayout title={data.name} description={data.tagline}>
-  <article class="app-page container" style={accentStyle}>
+  <article class="app-page" style={accentStyle}>
     <AppHero entry={entry} />
-    <FeatureGrid features={data.features} />
-    <Roadmap entry={entry} />
-    <AboutBlurb />
-    <DonateSection entry={entry} />
-    <AppLegalFooter entry={entry} />
+    <div class="app-body container">
+      <FeatureGrid features={data.features} />
+      <Roadmap entry={entry} />
+      <AboutBlurb />
+      <DonateSection entry={entry} />
+      <AppLegalFooter entry={entry} />
+    </div>
   </article>
 </BaseLayout>
 
 <style>
   .app-page {
-    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .app-body {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
