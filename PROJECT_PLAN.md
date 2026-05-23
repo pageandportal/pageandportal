@@ -189,6 +189,10 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [ ] **Donation** — URL for donate button(s): one global link or per-app links *(UI hidden via `DONATE.enabled` until ready)*
 - [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`)
 
+### Post-launch (owner)
+
+- [ ] **Plausible analytics — finish setup** — Sign up at [plausible.io](https://plausible.io/); add site with domain `pageandportal.github.io`; browse the live site once; confirm visits appear in the dashboard. Steps: [`docs/analytics.md`](docs/analytics.md)
+
 ### Per app (repeat for each)
 
 **Commander Vault** (`supply/apps/commander-vault/`)
@@ -214,7 +218,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **Social links** — none (owner decision 2026-05-23; recorded in `supply/site/about.md`)
 - [x] **SEO** — default site title/description in `src/config/site.ts`; per-app meta from taglines
 - [x] **Custom domain** — not planned (stay on `pageandportal.github.io/pageandportal/`)
-- [x] **Analytics** — Plausible (`pageandportal.github.io`); see `docs/analytics.md` — owner completes Plausible signup
+- [x] **Analytics (site code)** — Plausible script in production builds (`PUBLIC_PLAUSIBLE_DOMAIN` in CI); see `docs/analytics.md`
 - [x] **404 copy** — custom page at `/404.html`; `<base>` fix for nested bad URLs on GitHub Pages
 
 ### Delivery format (helps agents)
