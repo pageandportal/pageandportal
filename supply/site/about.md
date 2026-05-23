@@ -1,38 +1,37 @@
 # About — Page and Portal (developer blurb)
 
-Used on the home page and/or the shared “about the developer” section on app pages.
+Used on the home page (`/#about`). App pages link here via “Built by …” in the footer.
 
 ---
 
 ## Display name (optional)
 
-TODO: Your name or pen name, or leave blank to use “Page and Portal” only
+James
 
 ## Headline
 
-TODO: One line (e.g. “Indie developer building thoughtful mobile tools”)
+Developer and creator behind Page & Portal
 
 ## Bio
 
-TODO: Write 2–4 short paragraphs. Example prompts:
-
-- What is Page and Portal?
-- What kinds of apps you make
-- Background or motivation (only what you’re comfortable sharing)
-- Tone: casual / professional — pick one and stick to it
-
 Paragraph 1:
 
-TODO
+I'm James, the developer and creator behind Page & Portal. Based in the Nelson region, I focus on building clean, purposeful digital tools that bridge the gap between practical utility and engaging experiences.
 
 Paragraph 2:
 
-TODO
+My work spans a diverse range of digital spaces, from community-minded educational tools for families to streamlined resources for hobbyists and gamers. Whether designing interactive learning aids or specialized tracking apps, my goal is always the same: to deliver high-quality, distraction-free digital experiences that solve real-world problems. Under the Page & Portal banner, I build software that is intuitive, reliable, and designed to bring value to everyday life.
 
 ## Avatar
 
-- [ ] Add photo: `supply/site/branding/avatar.jpg` (or .png / .webp)
-- [ ] Or: no avatar — note “use initials / placeholder”
+Add your photo (one file):
+
+- `supply/site/branding/avatar.jpg` — or `avatar.png` / `avatar.webp`
+
+Then run `npm run sync` (copies to `public/brand/` and updates the site).
+
+- [x] Photo added to `supply/site/branding/`
+- [ ] Or: no avatar — check this instead: “use initials / placeholder”
 
 ## Social links (optional)
 

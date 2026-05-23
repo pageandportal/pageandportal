@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Page not found" description="The page you requested could not be found.">
+  <section class="not-found container">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p class="lead">That link does not exist or may have moved.</p>
+    <p class="actions">
+      <a class="home-link" href={base}>← Back to home</a>
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding-block: 3rem 4rem;
+    max-width: 36ch;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .not-found h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    color: var(--text);
+  }
+
+  .lead {
+    margin: 0 0 1.5rem;
+    color: var(--text-muted);
+  }
+
+  .actions {
+    margin: 0;
+  }
+
+  .home-link {
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .home-link:hover {
+    text-decoration: underline;
+  }
+</style>

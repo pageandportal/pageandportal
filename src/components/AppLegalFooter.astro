@@ -1,4 +1,6 @@
 ---
+import { ABOUT } from '../config/about';
+import { SITE } from '../config/site';
 import type { AppEntry } from '../lib/apps';
 
 interface Props {
@@ -9,9 +11,15 @@ const { entry } = Astro.props;
 const { data } = entry;
 const base = import.meta.env.BASE_URL;
 const appBase = `${base}apps/${entry.id}/`;
+const studioCreditName = ABOUT.displayName ?? SITE.title;
 ---
 
 <footer class="app-legal">
+  <p class="studio-credit">
+    Built by {studioCreditName} ·{' '}
+    <a href={`${base}#about`}>{SITE.title}</a>
+  </p>
+
   {
     data.links.length > 0 && (
       <nav class="app-links" aria-label="App links">
@@ -50,6 +58,20 @@ const appBase = `${base}apps/${entry.id}/`;
     border-top: 1px solid var(--border);
     font-size: 0.9rem;
     color: var(--text-muted);
+  }
+
+  .studio-credit {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+  }
+
+  .studio-credit a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .studio-credit a:hover {
+    color: var(--app-accent, var(--gold));
   }
 
   .app-links ul,

@@ -5,6 +5,8 @@
  * - Legal: supply/apps/<slug>/legal/*.md → src/content/legal/<slug>/
  * - Site config: supply/site/about.md + donate.md → src/config/ (when values are not TODO)
  *
+ * Graphics: use `npm run sync:assets` (supply → public/).
+ *
  * App frontmatter (src/content/apps/*.md) is maintained manually from supply/app.md.
  * Run after editing supply; see docs/adding-an-app.md.
  */
@@ -78,14 +80,45 @@ function syncLegal() {
   return count;
 }
 
+const AVATAR_FILENAMES = ['avatar.webp', 'avatar.png', 'avatar.jpg', 'avatar.jpeg'];
+
+function findAvatarPath() {
+  const brandingDir = path.join(root, 'supply', 'site', 'branding');
+  for (const name of AVATAR_FILENAMES) {
+    if (fs.existsSync(path.join(brandingDir, name))) return `brand/${name}`;
+  }
+  return null;
+}
+
+function wantsInitialsOnly(markdown) {
+  return /-\s*\[x\]\s*Or:\s*no avatar/i.test(markdown);
+}
+
+function writeAboutConfig(next) {
+  const out = `/** Shared developer blurb — sync with supply/site/about.md when owner supplies copy. */
+export const ABOUT = {
+  headline: ${tsString(next.headline)} as string | null,
+  bio: ${tsString(next.bio)} as string | null,
+  displayName: ${tsString(next.displayName)} as string | null,
+  avatar: ${tsString(next.avatar)} as string | null,
+} as const;
+
+export function hasAboutContent(): boolean {
+  return Boolean(ABOUT.headline || ABOUT.bio || ABOUT.displayName || ABOUT.avatar);
+}
+`;
+  writeFile(path.join(root, 'src', 'config', 'about.ts'), out);
+}
+
 function syncAbout() {
   const aboutPath = path.join(root, 'supply', 'site', 'about.md');
   if (!fs.existsSync(aboutPath)) return false;
 
-  const markdown = readFile(aboutPath);
+  const markdown = readFile(aboutPath).replace(/\r\n/g, '\n');
   const displayNameRaw = markdown.match(/## Display name[^\n]*\n\n([^\n#]+)/)?.[1]?.trim() ?? '';
   const displayName = isTodo(displayNameRaw) ? '' : displayNameRaw;
-  const headline = tableCell(markdown, 'Headline');
+  const headlineRaw = markdown.match(/## Headline[^\n]*\n\n([^\n#]+)/)?.[1]?.trim() ?? '';
+  const headline = isTodo(headlineRaw) ? '' : headlineRaw.replace(/^TODO:\s*/i, '').trim();
 
   const bioParts = [];
   const bioRe = /Paragraph (\d+):\s*\n\s*([^\n#]+)/g;
@@ -100,6 +133,7 @@ function syncAbout() {
     displayName: isTodo(displayName) ? null : displayName,
     headline: isTodo(headline) ? null : headline,
     bio: bio || null,
+    avatar: wantsInitialsOnly(markdown) ? null : findAvatarPath(),
   };
 
   const currentPath = path.join(root, 'src', 'config', 'about.ts');
@@ -107,29 +141,19 @@ function syncAbout() {
   if (
     current.includes(`headline: ${tsString(next.headline)}`) &&
     current.includes(`bio: ${tsString(next.bio)}`) &&
-    current.includes(`displayName: ${tsString(next.displayName)}`)
+    current.includes(`displayName: ${tsString(next.displayName)}`) &&
+    current.includes(`avatar: ${tsString(next.avatar)}`)
   ) {
     console.log('about  unchanged (still TODO in supply or already synced)');
     return false;
   }
 
-  if (!next.headline && !next.bio && !next.displayName) {
-    console.log('about  skipped (supply/site/about.md still has TODO placeholders)');
+  if (!next.headline && !next.bio && !next.displayName && !next.avatar) {
+    console.log('about  skipped (supply/site/about.md still has TODO placeholders; no avatar file)');
     return false;
   }
 
-  const out = `/** Shared developer blurb — sync with supply/site/about.md when owner supplies copy. */
-export const ABOUT = {
-  headline: ${tsString(next.headline)} as string | null,
-  bio: ${tsString(next.bio)} as string | null,
-  displayName: ${tsString(next.displayName)} as string | null,
-} as const;
-
-export function hasAboutContent(): boolean {
-  return Boolean(ABOUT.headline || ABOUT.bio);
-}
-`;
-  writeFile(currentPath, out);
+  writeAboutConfig(next);
   console.log('about  updated src/config/about.ts');
   return true;
 }

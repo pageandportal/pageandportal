@@ -1,8 +1,9 @@
 export const SITE = {
   title: 'Page & Portal',
-  tagline: 'Indie apps — calm tools for play and learning.',
+  tagline:
+    'Clean, purposeful digital tools for learning, hobbies, and everyday life.',
   description:
-    'Page and Portal develops Commander Vault and Portal Pages Times Tables.',
+    'Page and Portal builds intuitive, distraction-free apps — from educational tools for families to specialized resources for hobbyists and gamers.',
   url: 'https://pageandportal.github.io/pageandportal/',
   supportEmail: 'pageandportal@gmail.com',
 } as const;

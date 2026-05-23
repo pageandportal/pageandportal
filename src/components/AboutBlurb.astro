@@ -1,16 +1,57 @@
 ---
 import { ABOUT, hasAboutContent } from '../config/about';
 import { SITE } from '../config/site';
+
+interface Props {
+  id?: string;
+}
+
+const { id } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const avatarUrl = ABOUT.avatar ? `${base}${ABOUT.avatar.replace(/^\//, '')}` : null;
+const avatarAlt = ABOUT.displayName
+  ? `Photo of ${ABOUT.displayName}`
+  : `Photo — ${SITE.title}`;
+const hasText = Boolean(ABOUT.displayName || ABOUT.headline || ABOUT.bio);
 ---
 
-<section class="about" aria-labelledby="about-heading">
+<section class="about container" id={id} aria-labelledby="about-heading">
   <h2 id="about-heading" class="section-title">About the developer</h2>
   {
     hasAboutContent() ? (
-      <div class="about-body">
-        {ABOUT.displayName && <p class="about-name">{ABOUT.displayName}</p>}
-        {ABOUT.headline && <p class="about-headline">{ABOUT.headline}</p>}
-        {ABOUT.bio && <p class="about-bio">{ABOUT.bio}</p>}
+      <div class:list={['about-inner', { 'has-avatar': avatarUrl }]}>
+        {
+          avatarUrl && (
+            <figure class="about-avatar-wrap">
+              <img
+                class="about-avatar"
+                src={avatarUrl}
+                alt={avatarAlt}
+                width="120"
+                height="120"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          )
+        }
+        <div class="about-copy">
+          {
+            hasText ? (
+              <>
+                {ABOUT.displayName && <p class="about-name">{ABOUT.displayName}</p>}
+                {ABOUT.headline && <p class="about-headline">{ABOUT.headline}</p>}
+                {ABOUT.bio && <p class="about-bio">{ABOUT.bio}</p>}
+              </>
+            ) : (
+              <p class="about-placeholder-inline">
+                A short bio for {SITE.title} will appear here once it is added to{' '}
+                <code>supply/site/about.md</code>.
+              </p>
+            )
+          }
+        </div>
       </div>
     ) : (
       <p class="about-placeholder">
@@ -22,9 +63,46 @@ import { SITE } from '../config/site';
 </section>
 
 <style>
+  .about {
+    padding-block: 2.5rem 3rem;
+  }
+
   .section-title {
     margin: 0 0 1rem;
     font-size: 1.35rem;
+  }
+
+  .about-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 520px) {
+    .about-inner.has-avatar {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  }
+
+  .about-avatar-wrap {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .about-avatar {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--app-accent, var(--gold-dim));
+    background: var(--bg-elevated);
+  }
+
+  .about-copy {
+    min-width: 0;
   }
 
   .about-name {
@@ -46,17 +124,23 @@ import { SITE } from '../config/site';
     white-space: pre-line;
   }
 
-  .about-placeholder {
+  .about-placeholder,
+  .about-placeholder-inline {
     margin: 0;
-    padding: 1rem 1.25rem;
+    max-width: 65ch;
     color: var(--text-muted);
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
     font-size: 0.95rem;
   }
 
-  .about-placeholder code {
+  .about-placeholder {
+    padding: 1rem 1.25rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .about-placeholder code,
+  .about-placeholder-inline code {
     font-size: 0.85em;
     color: var(--text);
   }

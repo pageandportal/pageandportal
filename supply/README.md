@@ -9,8 +9,9 @@ Use this folder to give agents copy, images, and legal text without editing site
    - To: `supply/apps/<your-app-slug>/`  
      Example: `supply/apps/page-and-portal-demo/`
 2. Fill in `app.md`, add images under `graphics/`, and edit `legal/privacy.md`.
-3. For site-wide content, use `supply/site/` (about blurb, donate link, logo).
-4. Tell the agent when a folder is ready (e.g. “pilot app pack is in `supply/apps/my-app/`”).
+3. For site-wide content, use `supply/site/` (about blurb, donate link, branding).
+4. After updating graphics, run **`npm run sync:assets`** (copies supply → `public/`).
+5. Tell the agent when a folder is ready (e.g. “pilot app pack is in `supply/apps/my-app/`”).
 
 See **Your tasks** in `PROJECT_PLAN.md` for the full checklist.
 

@@ -85,17 +85,36 @@ Drafted from the privacy policy and app positioning (2026-05-23). Owner may rewo
 
 ## Roadmap
 
-### Now
+*Site lanes: **Now** = Release 2 (next Play build); **Next** = Release 3 (v1.x polish); **Later** = Release 4+ backlog.*
 
-- **TODO** — TODO
+### Now — Release 2 (next app build, likely v0.2.9 or v0.3.0)
 
-### Next
+Small agent-ready items before or alongside Play upload.
 
-- **TODO** — TODO
+| Item | Notes |
+|------|-------|
+| Notification permission for reminders | Request `POST_NOTIFICATIONS` when grown-up enables reminders (API 33+) |
+| OpenDyslexic license in About | Attribution for bundled font |
 
-### Later
+### Next — Release 3 (post-launch polish, v1.x)
 
-- **TODO** — TODO
+| Item | Notes |
+|------|-------|
+| Perfect-score dog artwork | Replace confetti placeholder in `PerfectScoreCelebration` (confetti shipped v0.2.7; dog deferred) |
+
+**Optional UX** (promote to task board when ready — not on board yet):
+
+- Tap a heatmap cell for fact detail (attempt count, last practised)
+- Dark/light theme control (beyond “follow system” if not already exposed)
+- Broader accessibility pass beyond current TalkBack labels
+
+### Later — Release 4+ (post-launch backlog)
+
+Explicitly not v1; no tasks promoted yet:
+
+- Themes / visual variants
+- Classroom mode
+- Further mixed-mode / weighting refinements
 
 ---
 

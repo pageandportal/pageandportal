@@ -49,14 +49,44 @@ features:
       version — a calm space for learning.
 roadmap:
   - id: now
-    label: Now
-    items: []
+    label: Release 2 · Next build
+    items:
+      - title: Notification permission for reminders
+        description: >-
+          Request POST_NOTIFICATIONS when a grown-up enables reminders (API 33+).
+        status: planned
+      - title: OpenDyslexic license in About
+        description: Attribution for the bundled OpenDyslexic font.
+        status: planned
   - id: next
-    label: Next
-    items: []
+    label: Release 3 · Post-launch (v1.x)
+    items:
+      - title: Perfect-score dog artwork
+        description: >-
+          Replace the confetti placeholder in PerfectScoreCelebration (confetti
+          shipped in v0.2.7; dog artwork deferred).
+        status: planned
+      - title: Heatmap cell detail (optional)
+        description: >-
+          Tap a heatmap cell for fact detail — attempt count, last practised.
+        status: planned
+      - title: Dark/light theme control (optional)
+        description: >-
+          Theme choice beyond “follow system”, if not already exposed in settings.
+        status: planned
+      - title: Broader accessibility pass (optional)
+        description: Beyond current TalkBack labels.
+        status: planned
   - id: later
-    label: Later
-    items: []
+    label: Release 4+ · Backlog
+    items:
+      - title: Themes / visual variants
+        status: planned
+      - title: Classroom mode
+        status: planned
+      - title: Mixed-mode / weighting refinements
+        description: Further improvements to mixed practice and weighting.
+        status: planned
 legalPages:
   - title: Privacy
     slug: privacy

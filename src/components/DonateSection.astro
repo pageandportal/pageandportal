@@ -1,10 +1,14 @@
 ---
 import DonateButton from './DonateButton.astro';
-import { DONATE, resolveDonateUrl } from '../config/donate';
+import { DONATE, isDonateEnabled, resolveDonateUrl } from '../config/donate';
 import type { AppEntry } from '../lib/apps';
 
 interface Props {
   entry: AppEntry;
+}
+
+if (!isDonateEnabled()) {
+  return null;
 }
 
 const { entry } = Astro.props;

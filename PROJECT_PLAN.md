@@ -87,7 +87,7 @@ Enable Pages in the repo: **Settings → Pages → Source:** GitHub Actions (aft
 1. **Hero** — App name, one-line pitch, key art (your graphic or placeholder)
 2. **Features** — 3–8 items: icon or screenshot, title, short description
 3. **Roadmap** — Visual timeline / status lanes: *Now · Next · Later* (or quarters)
-4. **About the developer** — Shared blurb (same component site-wide; configurable override per app if you want)
+4. **About the developer** — On the home page (`/#about`); app pages link back via studio credit in the footer
 5. **Donate** — Prominent button → external donation URL (Ko-fi, PayPal, GitHub Sponsors, etc.)
 6. **Footer** — Links to privacy/legal, store listing (if any), back to home
 
@@ -96,7 +96,7 @@ Enable Pages in the repo: **Settings → Pages → Source:** GitHub Actions (aft
 - Page and Portal logo/wordmark
 - Short studio tagline
 - Grid of app cards (art, name, one line, link)
-- Global donate + about snippet
+- About the developer (`#about`)
 
 ---
 
@@ -185,8 +185,8 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **GitHub setup** — [pageandportal/pageandportal](https://github.com/pageandportal/pageandportal); project site → https://pageandportal.github.io/pageandportal/
 - [x] **App inventory** — Commander Vault, Portal Pages Times Tables (both coming soon); see **App inventory** above
 - [x] **Pilot app pack** — Commander Vault (features + legal from Google Sites); roadmap, graphics, store links still TODO
-- [ ] **Developer blurb** — 2–4 short paragraphs (or bullet bio): who you are, what Page and Portal is, tone (casual / professional)
-- [ ] **Donation** — URL for donate button(s): one global link or per-app links
+- [x] **Developer blurb** — James; Nelson region; Page & Portal copy in `supply/site/about.md` (2026-05-23)
+- [ ] **Donation** — URL for donate button(s): one global link or per-app links *(UI hidden via `DONATE.enabled` until ready)*
 - [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`)
 
 ### Per app (repeat for each)
@@ -194,7 +194,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 **Commander Vault** (`supply/apps/commander-vault/`)
 
 - [x] **Features** — 4 items from legacy site (in `app.md`)
-- [ ] **Roadmap** — not on Google Site; owner to supply
+- [x] **Roadmap** — v1.0–v1.2+ and iOS plan in `app.md` (2026-05-23)
 - [x] **Links** — support email; store URLs TODO
 - [x] **Graphics** — `logo-icon.png`, `hero-banner.png`, `logo-lockup.png`; in-app feature screenshots still TODO
 - [x] **Brand hints** — Cinzel/Inter, gold/purple accents, fan content disclaimer (see `app.md`, `legal/credits.md`)
@@ -202,7 +202,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 **Portal Pages Times Tables** (`supply/apps/portal-pages-times-tables/`)
 
 - [x] **Features** — 7 items in `app.md` (screenshots still TODO)
-- [ ] **Roadmap**
+- [x] **Roadmap** — Release 2–4+ plan in `app.md` (2026-05-23)
 - [ ] **Links**
 - [x] **Graphics** — `logo-icon.png`, `hero-banner.png` in `graphics/`; Play feature graphic + screenshots still TODO
 - [x] **Brand hints** — orange/green accents (see `app.md`, `graphics/README.md`)
@@ -210,7 +210,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 ### Site-wide optional (recommended)
 
 - [x] **Global logo** — Tier A set in `supply/site/branding/` (`tier-a-1` nav icon, `tier-a-2` header, `tier-a-3` optional hero); see `TIER-A.md`
-- [ ] **Avatar** — Photo or illustration for about section
+- [x] **Avatar** — `supply/site/branding/avatar.png` (2026-05-23)
 - [ ] **Social links** — GitHub, X, Mastodon, Discord, etc. (URLs or “none”)
 - [ ] **SEO** — Default site description; per-app descriptions if different
 - [ ] **Custom domain** — e.g. `pageandportal.dev` + whether you want agents to document DNS
@@ -254,6 +254,11 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-23 | Commander Vault roadmap on site | v1.0–v1.2+ and iOS → `commander-vault` collection → v0.4.4 |
+| 2026-05-23 | About on home only | Moved `AboutBlurb` to home `#about`; studio credit on app pages → v0.5.0 |
+| 2026-05-23 | Times Tables roadmap on site | Release 2–4+ from owner → `portal-pages-times-tables` collection → v0.4.3 |
+| 2026-05-23 | Site assets sync + 404 page | `sync:assets` supply→public; favicon/nav icons; 404 → v0.4.2 |
+| 2026-05-23 | Hide donate UI until owner ready | `DONATE.enabled: false` on app pages → v0.4.1 |
 | 2026-05-23 | Phase 5 — Legal routes (Commander Vault) | Privacy, terms, credits from `supply/` → v0.4.0 |
 | 2026-05-23 | Phase 5 — Legal routes (Times Tables privacy) | `legal` collection + `/apps/portal-pages-times-tables/privacy` from supply → v0.3.0 |
 | 2026-05-23 | Phase 2 — App template (content schema, AppPage, components) | Commander Vault pilot data in collection; hero in public → v0.2.0 |
@@ -281,7 +286,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] Home loads at https://pageandportal.github.io/pageandportal/ (`base: /pageandportal/`) — verify after Actions deploy
 - [ ] Dark theme readable; focus visible on links and donate button
 - [ ] Mobile layout: nav, app cards, footer
-- [ ] Donate button opens correct external URL in new tab (`rel="noopener"`)
+- [ ] Donate button opens correct external URL in new tab (`rel="noopener"`) — skip while donate UI hidden
 
 ### Per app
 
@@ -297,8 +302,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 ### Deploy & meta
 
 - [ ] `version.properties` matches shipped user-visible version
-- [ ] Favicon and page `<title>` / description present
-- [ ] 404 page works
+- [ ] Favicon and page `<title>` / description present — favicon via `public/brand/studio-icon.png` (verify on deploy)
+- [x] 404 page works (local build: `/404.html`)
 - [ ] Lighthouse: no critical a11y failures on home + one app page
 
 ---

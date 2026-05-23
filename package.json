@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "sync:content": "node scripts/sync-content.mjs"
+    "sync:content": "node scripts/sync-content.mjs",
+    "sync:assets": "node scripts/sync-assets.mjs",
+    "sync": "npm run sync:content && npm run sync:assets"
   },
   "dependencies": {
     "astro": "^6.3.7"

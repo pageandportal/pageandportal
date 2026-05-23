@@ -47,12 +47,61 @@ features:
       account registration — a focused utility for personal deck tracking.
 roadmap:
   - id: now
-    label: Now
-    items: []
+    label: v1.0
+    items:
+      - title: 32-slot Commander challenge tracker
+        description: Core 32 Deck Challenge grid — one slot per colour identity.
+        status: planned
+      - title: 5 free mono slots
+        description: Free tier with five mono-colour slots to start the challenge.
+        status: planned
+      - title: Unlock all slots
+        description: In-app purchase to unlock the full grid.
+        status: planned
+      - title: Support screen
+        description: In-app support for questions and feedback.
+        status: planned
+      - title: Share watermark on free tier
+        description: Shared exports include a watermark until slots are unlocked.
+        status: planned
   - id: next
-    label: Next
-    items: []
+    label: v1.1
+    items:
+      - title: Smarter commander search
+        description: Improved Scryfall lookup and search UX.
+        status: planned
+      - title: Filter and sort grid
+        description: Filter and sort the deck grid as your collection grows.
+        status: planned
+      - title: Quick status
+        description: Faster updates to deck build status.
+        status: planned
+      - title: More deck hosts
+        description: Additional hosting and export options.
+        status: planned
   - id: later
-    label: Later
-    items: []
+    label: v1.2+ and iOS
+    items:
+      - title: Settings menu
+        status: planned
+      - title: Themes
+        description: Visual variants for the app.
+        status: planned
+      - title: Partners
+        description: Partner integrations.
+        status: planned
+      - title: Richer shares
+        description: Enhanced share cards and export options.
+        status: planned
+      - title: EDHREC, budget, and play tracking
+        description: Deeper deck tooling and play insights.
+        status: planned
+      - title: iOS — TestFlight to App Store
+        description: iOS release via TestFlight, then App Store.
+        status: planned
+      - title: iOS widget
+        status: planned
+      - title: iOS IAP parity (optional)
+        description: Same unlock model as Android, if applicable.
+        status: planned
 ---

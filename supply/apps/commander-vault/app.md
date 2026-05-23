@@ -71,19 +71,44 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-*Not published on the legacy Google Site — add upcoming items here.*
+*Site lanes: **Now** = v1.0; **Next** = v1.1; **Later** = v1.2+ and iOS.*
 
-### Now
+### Now — v1.0
 
-- **TODO** — e.g. initial release, Play listing
+| Feature | Notes |
+|---------|--------|
+| 32-slot Commander challenge tracker | Core 32 Deck Challenge grid |
+| 5 free mono slots | Free tier entry point |
+| Unlock all slots | IAP to unlock full grid |
+| Support screen | In-app support |
+| Share watermark on free tier | Shared exports show watermark until unlock |
 
-### Next
+### Next — v1.1
 
-- **TODO**
+| Feature | Notes |
+|---------|--------|
+| Smarter commander search | Improved Scryfall lookup / UX |
+| Filter/sort grid | Manage large deck lists |
+| Quick status | Faster deck status updates |
+| More deck hosts | Additional hosting / export options |
 
-### Later
+### Later — v1.2+
 
-- **TODO**
+| Feature | Notes |
+|---------|--------|
+| Settings menu | App settings hub |
+| Themes | Visual variants |
+| Partners | Partner integrations |
+| Richer shares | Enhanced share cards / exports |
+| EDHREC, budget, play tracking | Deeper deck tooling |
+
+### Later — iOS
+
+| Feature | Notes |
+|---------|--------|
+| TestFlight → App Store | iOS release path |
+| Widget | Home-screen widget |
+| Optional same IAP model | Parity with Android unlock model |
 
 ---
 
