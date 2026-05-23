@@ -10,7 +10,7 @@
 | **URL slug** | portal-pages-times-tables |
 | **Tagline** | Learn and practise times tables 2–12 — calm, offline, and free. |
 | **Status** | coming-soon |
-| **Short description** | TODO: 2–3 sentences for the app page intro |
+| **Short description** | A calm, offline-friendly app for children to learn and practise multiplication tables 2–12. Progress and settings stay on the device — no account, no ads, and no analytics. |
 
 ---
 
@@ -37,24 +37,48 @@
 
 ## Features
 
-Add 3–8 items. Delete unused rows.
+Drafted from the privacy policy and app positioning (2026-05-23). Owner may reword or add screenshots.
 
-### Feature 1
+### Feature 1 — Times tables 2–12
 
-- **Title:** TODO
-- **Description:** TODO
+- **Title:** Times tables 2–12
+- **Description:** Focused practice for every table from 2 through 12 — learn facts at your own pace without distractions.
 - **Image (optional):** TODO
 
-### Feature 2
+### Feature 2 — Works fully offline
 
-- **Title:** TODO
-- **Description:** TODO
+- **Title:** Works fully offline
+- **Description:** No internet connection is required after install. Practice anywhere without worrying about connectivity or data use.
 - **Image (optional):** TODO
 
-### Feature 3
+### Feature 3 — Progress on your device
 
-- **Title:** TODO
-- **Description:** TODO
+- **Title:** Progress on your device
+- **Description:** Practice history, mastery, and settings are stored locally so families keep control of their data.
+- **Image (optional):** TODO
+
+### Feature 4 — Grown-up controls
+
+- **Title:** Grown-up controls
+- **Description:** Optional parent PIN protects settings. Review progress summaries without needing an online account.
+- **Image (optional):** TODO
+
+### Feature 5 — Learn mode with speech
+
+- **Title:** Learn mode with speech
+- **Description:** Learn mode can read facts aloud using the device’s built-in text-to-speech — processed on-device, not sent to Page and Portal.
+- **Image (optional):** TODO
+
+### Feature 6 — Optional practice reminders
+
+- **Title:** Optional practice reminders
+- **Description:** Reminders are off by default. Turn them on in settings if you want a gentle nudge to practise.
+- **Image (optional):** TODO
+
+### Feature 7 — No ads or tracking
+
+- **Title:** No ads or tracking
+- **Description:** No advertising, no in-app purchases, and no analytics SDKs in the current version — a calm space for learning.
 - **Image (optional):** TODO
 
 ---
