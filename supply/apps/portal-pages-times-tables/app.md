@@ -101,10 +101,18 @@ Drafted from the privacy policy and app positioning (2026-05-23). Owner may rewo
 
 ## Graphics checklist
 
-- [ ] `logo.png` or `logo.svg`
-- [ ] `hero.png` or `hero.webp`
-- [ ] Feature screenshots
-- [ ] **No art yet?** TODO: note placeholder preference if needed
+Assets in `graphics/` (owner-supplied 2026-05-23):
+
+| File | Role | Verdict |
+|------|------|---------|
+| `logo-icon.png` | App icon, Play store, site card | **Done** |
+| `hero-banner.png` | App page hero | **Done** |
+
+- [x] `logo-icon.png` — orange × with sprout (cream background)
+- [x] `hero-banner.png` — park scene with multiplication blocks
+- [ ] **Play feature graphic** — export **1024×500** for Google Play (crop from hero or separate art)
+- [ ] **Phone screenshots** — min 2 for Play; optional crops for website Features
+- [ ] Feature screenshots — in-app UI shots for `app.md` feature cards
 
 ---
 
@@ -112,8 +120,8 @@ Drafted from the privacy policy and app positioning (2026-05-23). Owner may rewo
 
 | Field | Value |
 |-------|--------|
-| **Accent color** | TODO |
-| **Notes for designer/agent** | Calm, kid-friendly, offline learning; TODO: colors from assets |
+| **Accent color** | `#D97706` (orange), `#5FAE5A` (green) — from `logo-icon.png` / hero |
+| **Notes for designer/agent** | Calm, hand-drawn, kid-friendly; offline learning; cream/light hero art framed on dark site |
 
 ---
 

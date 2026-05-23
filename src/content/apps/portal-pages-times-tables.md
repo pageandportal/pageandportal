@@ -6,6 +6,13 @@ description: >-
   A calm, offline-friendly app for children to learn and practise multiplication
   tables 2–12. Progress and settings stay on the device — no account, no ads, and
   no analytics.
+accentColor: '#D97706'
+accentColorSecondary: '#5FAE5A'
+icon: apps/portal-pages-times-tables/icon.png
+heroImage: apps/portal-pages-times-tables/hero.png
+heroImageAlt: >-
+  Children practising multiplication with wooden blocks in a sunny park — calm,
+  kid-friendly learning
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: true
 links:

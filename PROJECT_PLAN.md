@@ -201,11 +201,11 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 
 **Portal Pages Times Tables** (`supply/apps/portal-pages-times-tables/`)
 
-- [ ] **Features** — 3–8 items
+- [x] **Features** — 7 items in `app.md` (screenshots still TODO)
 - [ ] **Roadmap**
 - [ ] **Links**
-- [ ] **Graphics**
-- [ ] **Brand hints**
+- [x] **Graphics** — `logo-icon.png`, `hero-banner.png` in `graphics/`; Play feature graphic + screenshots still TODO
+- [x] **Brand hints** — orange/green accents (see `app.md`, `graphics/README.md`)
 
 ### Site-wide optional (recommended)
 

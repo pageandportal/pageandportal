@@ -1,6 +1,13 @@
 {
   "apps": [
     {
+      "slug": "portal-pages-times-tables",
+      "name": "Portal Pages Times Tables",
+      "tagline": "Learn and practise times tables 2–12 — calm, offline, and free.",
+      "status": "coming-soon",
+      "supplyPath": "supply/apps/portal-pages-times-tables"
+    },
+    {
       "slug": "commander-vault",
       "name": "Commander Vault",
       "subtitle": "32 Deck Challenge Companion",
@@ -10,13 +17,6 @@
       "supportEmail": "pageandportal@gmail.com",
       "supplyPath": "supply/apps/commander-vault",
       "legacySite": "https://sites.google.com/view/commander-vault/home"
-    },
-    {
-      "slug": "portal-pages-times-tables",
-      "name": "Portal Pages Times Tables",
-      "tagline": "Learn and practise times tables 2–12 — calm, offline, and free.",
-      "status": "coming-soon",
-      "supplyPath": "supply/apps/portal-pages-times-tables"
     }
   ]
 }
