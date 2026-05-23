@@ -214,7 +214,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **Social links** — none (owner decision 2026-05-23; recorded in `supply/site/about.md`)
 - [x] **SEO** — default site title/description in `src/config/site.ts`; per-app meta from taglines
 - [x] **Custom domain** — not planned (stay on `pageandportal.github.io/pageandportal/`)
-- [x] **Analytics** — none (no tracking scripts; privacy-aligned with apps)
+- [x] **Analytics** — Plausible (`pageandportal.github.io`); see `docs/analytics.md` — owner completes Plausible signup
 - [x] **404 copy** — custom page at `/404.html`; `<base>` fix for nested bad URLs on GitHub Pages
 
 ### Delivery format (helps agents)
@@ -253,7 +253,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
-| 2026-05-23 | Post-launch owner decisions + 404 fix | Social/domain/analytics none; 404 `<base>` + `.nojekyll` → v0.5.1 |
+| 2026-05-23 | Website analytics (Plausible) | Script on all pages via BaseLayout; CI env → v0.5.2 |
+| 2026-05-23 | Post-launch owner decisions + 404 fix | Social/domain none; 404 `<base>` + `.nojekyll` → v0.5.1 |
 | 2026-05-23 | Phase 6 — Launch | Public repo; Pages + Actions; owner live smoke test passed → v0.5.0 |
 | 2026-05-23 | Phase 3 — Content ingest | Both apps + legal + about in collections; supply sync scripts |
 | 2026-05-23 | Commander Vault roadmap on site | v1.0–v1.2+ and iOS → `commander-vault` collection → v0.4.4 |
@@ -321,7 +322,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 | 2026-05-23 | App inventory (2 apps, coming soon) | `apps.inventory.json` + starter `supply/apps/*` |
 | 2026-05-23 | Commander Vault pilot content | Migrated from Google Sites; legal + features in `supply/` |
 | 2026-05-23 | Repo public + GitHub Pages live | Free plan requires public repo; Actions deploy |
-| 2026-05-23 | Analytics: none | No Plausible/GA; aligns with no-tracking app positioning |
+| 2026-05-23 | Website analytics: Plausible | Cookie-free pageviews; `PUBLIC_PLAUSIBLE_DOMAIN` in CI → v0.5.2 |
+| 2026-05-23 | Analytics: none (superseded) | Replaced by Plausible for website only |
 | 2026-05-23 | Social links: none | No profiles linked from site |
 | 2026-05-23 | Custom domain: deferred | GitHub Pages URL is canonical for now |
 

@@ -31,6 +31,8 @@ jobs:
         run: npm ci
 
       - name: Build site
+        env:
+          PUBLIC_PLAUSIBLE_DOMAIN: pageandportal.github.io
         run: npm run build
 
       - name: Upload Pages artifact

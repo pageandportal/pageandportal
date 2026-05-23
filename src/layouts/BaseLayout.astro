@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { SITE } from '../config/site';
@@ -32,6 +33,7 @@ const base = import.meta.env.BASE_URL;
       rel="stylesheet"
     />
     <title>{pageTitle}</title>
+    <Analytics />
   </head>
   <body>
     <SiteHeader />
