@@ -27,4 +27,4 @@ npm-debug.log*
 assets/
 
 # Local Lighthouse reports
-lighthouse-*.json
+lighthouse*.json

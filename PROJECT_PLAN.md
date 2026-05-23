@@ -312,7 +312,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] `version.properties` v0.5.0 matches shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
-- [x] Lighthouse / a11y polish — skip link, SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks (2026-05-23)
+- [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
 
 ---
 
