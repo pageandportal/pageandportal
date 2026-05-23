@@ -195,27 +195,27 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 
 - [x] **Features** — 4 items from legacy site (in `app.md`)
 - [x] **Roadmap** — v1.0–v1.2+ and iOS plan in `app.md` (2026-05-23)
-- [x] **Links** — support email; store URLs TODO
-- [x] **Graphics** — `logo-icon.png`, `hero-banner.png`, `logo-lockup.png`; in-app feature screenshots still TODO
+- [x] **Links** — support email; store URLs when listings go live (with feature screenshots)
+- [x] **Graphics** — `logo-icon.png`, `hero-banner.png`; feature screenshots + Play assets when store listing ships
 - [x] **Brand hints** — Cinzel/Inter, gold/purple accents, fan content disclaimer (see `app.md`, `legal/credits.md`)
 
 **Portal Pages Times Tables** (`supply/apps/portal-pages-times-tables/`)
 
-- [x] **Features** — 7 items in `app.md` (screenshots still TODO)
+- [x] **Features** — 7 items in `app.md`
 - [x] **Roadmap** — Release 2–4+ plan in `app.md` (2026-05-23)
-- [ ] **Links**
-- [x] **Graphics** — `logo-icon.png`, `hero-banner.png` in `graphics/`; Play feature graphic + screenshots still TODO
+- [x] **Links** — support email; store URLs when listings go live (with feature screenshots)
+- [x] **Graphics** — `logo-icon.png`, `hero-banner.png`; feature screenshots + Play assets when store listing ships
 - [x] **Brand hints** — orange/green accents (see `app.md`, `graphics/README.md`)
 
 ### Site-wide optional (recommended)
 
 - [x] **Global logo** — Tier A set in `supply/site/branding/` (`tier-a-1` nav icon, `tier-a-2` header, `tier-a-3` optional hero); see `TIER-A.md`
 - [x] **Avatar** — `supply/site/branding/avatar.png` (2026-05-23)
-- [ ] **Social links** — GitHub, X, Mastodon, Discord, etc. (URLs or “none”)
-- [ ] **SEO** — Default site description; per-app descriptions if different
-- [ ] **Custom domain** — e.g. `pageandportal.dev` + whether you want agents to document DNS
-- [ ] **Analytics** — Plausible / GA / none
-- [ ] **404 copy** — Friendly message or use default
+- [x] **Social links** — none (owner decision 2026-05-23; recorded in `supply/site/about.md`)
+- [x] **SEO** — default site title/description in `src/config/site.ts`; per-app meta from taglines
+- [x] **Custom domain** — not planned (stay on `pageandportal.github.io/pageandportal/`)
+- [x] **Analytics** — none (no tracking scripts; privacy-aligned with apps)
+- [x] **404 copy** — custom page at `/404.html`; `<base>` fix for nested bad URLs on GitHub Pages
 
 ### Delivery format (helps agents)
 
@@ -240,13 +240,12 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### In progress (agents)
 
-- **Phase 3 — Content ingest** — Sync `supply/` → content collections; Times Tables app copy; `npm run sync:content`
+*(none)*
 
 ### Backlog (agents)
 
-1. **Phase 1 — Home** — Refine copy when owner supplies blurb / donate; optional tier-a-3 hero
-5. **Phase 4 — Remaining apps** — Roll out after each **Your tasks** per-app block is done
-6. **Phase 6 — Launch** — Pages config, smoke test, update **To Test Checklist**
+1. **Phase 1 — Home** — Optional tier-a-3 hero; donate when owner supplies URL
+5. **Phase 4 — Asset polish** — Feature screenshots + Play graphics when store listings ship
 
 ### Done (agents)
 
@@ -254,6 +253,9 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-23 | Post-launch owner decisions + 404 fix | Social/domain/analytics none; 404 `<base>` + `.nojekyll` → v0.5.1 |
+| 2026-05-23 | Phase 6 — Launch | Public repo; Pages + Actions; owner live smoke test passed → v0.5.0 |
+| 2026-05-23 | Phase 3 — Content ingest | Both apps + legal + about in collections; supply sync scripts |
 | 2026-05-23 | Commander Vault roadmap on site | v1.0–v1.2+ and iOS → `commander-vault` collection → v0.4.4 |
 | 2026-05-23 | About on home only | Moved `AboutBlurb` to home `#about`; studio credit on app pages → v0.5.0 |
 | 2026-05-23 | Times Tables roadmap on site | Release 2–4+ from owner → `portal-pages-times-tables` collection → v0.4.3 |
@@ -283,28 +285,28 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Global
 
-- [ ] Home loads at https://pageandportal.github.io/pageandportal/ (`base: /pageandportal/`) — verify after Actions deploy
-- [ ] Dark theme readable; focus visible on links and donate button
-- [ ] Mobile layout: nav, app cards, footer
-- [ ] Donate button opens correct external URL in new tab (`rel="noopener"`) — skip while donate UI hidden
+- [x] Home loads at https://pageandportal.github.io/pageandportal/ (`base: /pageandportal/`) — owner verified 2026-05-23
+- [x] Dark theme readable; focus visible on links — owner verified 2026-05-23
+- [x] Mobile layout: nav, app cards, footer — owner verified 2026-05-23
+- [x] Donate button — N/A (UI hidden via `DONATE.enabled`)
 
 ### Per app
 
-- [ ] App page hero shows correct art or placeholder
-- [ ] All feature items render with alt text on images
-- [ ] Roadmap order and status labels match your intent
-- [ ] About blurb displays; links work
-- [ ] Privacy (and other legal) pages linked and readable
-- [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy` (local build)
-- [x] Commander Vault — privacy, terms, credits at `/apps/commander-vault/{privacy,terms,credits}` (local build)
-- [ ] Store/repo links work
+- [x] App page hero shows correct art — owner verified 2026-05-23
+- [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
+- [x] Roadmap order and status labels — owner verified 2026-05-23
+- [x] About on home `#about`; studio credit on app pages — owner verified 2026-05-23
+- [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23
+- [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy`
+- [x] Commander Vault — privacy, terms, credits at `/apps/commander-vault/{privacy,terms,credits}`
+- [ ] Store/repo links work — pending Play/App Store URLs (support email only today)
 
 ### Deploy & meta
 
-- [ ] `version.properties` matches shipped user-visible version
-- [ ] Favicon and page `<title>` / description present — favicon via `public/brand/studio-icon.png` (verify on deploy)
-- [x] 404 page works (local build: `/404.html`)
-- [ ] Lighthouse: no critical a11y failures on home + one app page
+- [x] `version.properties` v0.5.0 matches shipped site
+- [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
+- [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
+- [ ] Lighthouse: no critical a11y failures on home + one app page (optional)
 
 ---
 
@@ -318,7 +320,10 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 | 2026-05-23 | Renamed repo → `pageandportal/pageandportal` | Pages URL `/pageandportal/`; `site.properties` updated |
 | 2026-05-23 | App inventory (2 apps, coming soon) | `apps.inventory.json` + starter `supply/apps/*` |
 | 2026-05-23 | Commander Vault pilot content | Migrated from Google Sites; legal + features in `supply/` |
-| 2026-05-23 | Git repo init + initial push | Agent-controlled Git; supply graphics + Tier A branding |
+| 2026-05-23 | Repo public + GitHub Pages live | Free plan requires public repo; Actions deploy |
+| 2026-05-23 | Analytics: none | No Plausible/GA; aligns with no-tracking app positioning |
+| 2026-05-23 | Social links: none | No profiles linked from site |
+| 2026-05-23 | Custom domain: deferred | GitHub Pages URL is canonical for now |
 
 ---
 

@@ -7,10 +7,13 @@ import { SITE } from '../config/site';
 interface Props {
   title?: string;
   description?: string;
+  /** Use on 404.html so assets resolve when GitHub serves it for nested bad URLs. */
+  useAssetBase?: boolean;
 }
 
-const { title, description = SITE.description } = Astro.props;
+const { title, description = SITE.description, useAssetBase = false } = Astro.props;
 const pageTitle = title ? `${title} · ${SITE.title}` : SITE.title;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -18,6 +21,7 @@ const pageTitle = title ? `${title} · ${SITE.title}` : SITE.title;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {useAssetBase && <base href={base} />}
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}brand/studio-icon.png`} />

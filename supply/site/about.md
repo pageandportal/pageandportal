@@ -35,7 +35,9 @@ Then run `npm run sync` (copies to `public/brand/` and updates the site).
 
 ## Social links (optional)
 
+**Owner decision (2026-05-23):** none — no social URLs on the site.
+
 | Platform | URL |
 |----------|-----|
-| GitHub | TODO or blank |
-| Other | TODO or blank |
+| GitHub | *(none)* |
+| Other | *(none)* |
