@@ -257,6 +257,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-23 | Lighthouse / a11y polish | Skip link, OG meta, contrast, LCP hints → v0.5.3 |
 | 2026-05-23 | Website analytics (Plausible) | Script on all pages via BaseLayout; CI env → v0.5.2 |
 | 2026-05-23 | Post-launch owner decisions + 404 fix | Social/domain none; 404 `<base>` + `.nojekyll` → v0.5.1 |
 | 2026-05-23 | Phase 6 — Launch | Public repo; Pages + Actions; owner live smoke test passed → v0.5.0 |
@@ -311,7 +312,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] `version.properties` v0.5.0 matches shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
-- [ ] Lighthouse: no critical a11y failures on home + one app page (optional)
+- [x] Lighthouse / a11y polish — skip link, SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks (2026-05-23)
 
 ---
 

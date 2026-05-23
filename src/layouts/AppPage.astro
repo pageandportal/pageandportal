@@ -24,7 +24,11 @@ const accentStyle =
     : undefined;
 ---
 
-<BaseLayout title={data.name} description={data.tagline}>
+<BaseLayout
+  title={data.name}
+  description={data.tagline}
+  ogImage={data.heroImage ?? 'brand/studio-icon.png'}
+>
   <article class="app-page" style={accentStyle}>
     <AppHero entry={entry} />
     <div class="app-body container">

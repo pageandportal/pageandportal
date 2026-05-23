@@ -20,7 +20,15 @@ const heroUrl = appAssetUrl(data.heroImage);
     <div class="hero-ident">
       {
         iconUrl ? (
-          <img src={iconUrl} alt="" width="96" height="96" class="app-icon" />
+          <img
+            src={iconUrl}
+            alt=""
+            width="96"
+            height="96"
+            class="app-icon"
+            decoding="async"
+            aria-hidden="true"
+          />
         ) : (
           <div class="app-icon-fallback" aria-hidden="true">
             {data.name.charAt(0)}
@@ -45,6 +53,7 @@ const heroUrl = appAssetUrl(data.heroImage);
           width="1100"
           height="400"
           loading="eager"
+          fetchpriority="high"
           decoding="async"
         />
       </figure>
@@ -73,6 +82,10 @@ const heroUrl = appAssetUrl(data.heroImage);
   }
 
   .back:hover {
+    color: var(--app-accent, var(--gold));
+  }
+
+  .back:focus-visible {
     color: var(--app-accent, var(--gold));
   }
 

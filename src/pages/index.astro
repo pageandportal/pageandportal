@@ -8,14 +8,14 @@ import inventory from '../../apps.inventory.json';
 ---
 
 <BaseLayout>
-  <section class="hero container">
+  <header class="hero container">
     <p class="eyebrow">Developer hub</p>
     <h1>{SITE.title}</h1>
     <p class="lead">{SITE.tagline}</p>
-  </section>
+  </header>
 
-  <section id="apps" class="apps container">
-    <h2 class="section-title">Apps</h2>
+  <section id="apps" class="apps container" aria-labelledby="apps-heading">
+    <h2 id="apps-heading" class="section-title">Apps</h2>
     <div class="app-grid">
       {
         inventory.apps.map((app) => (

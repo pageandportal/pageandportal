@@ -25,3 +25,6 @@ npm-debug.log*
 
 # Cursor temp assets (not project source)
 assets/
+
+# Local Lighthouse reports
+lighthouse-*.json

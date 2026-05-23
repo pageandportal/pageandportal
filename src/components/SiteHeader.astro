@@ -13,6 +13,7 @@ const base = import.meta.env.BASE_URL;
         width="40"
         height="40"
         class="brand-icon"
+        decoding="async"
       />
       <span class="brand-text">{SITE.title}</span>
     </a>
@@ -51,6 +52,12 @@ const base = import.meta.env.BASE_URL;
     color: var(--gold);
   }
 
+  .brand:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+    border-radius: 8px;
+  }
+
   .brand-icon {
     border-radius: 8px;
     object-fit: cover;
@@ -70,11 +77,17 @@ const base = import.meta.env.BASE_URL;
   }
 
   .nav a {
+    display: inline-block;
+    padding: 0.35rem 0.15rem;
     text-decoration: none;
     color: var(--text-muted);
   }
 
   .nav a:hover {
+    color: var(--gold);
+  }
+
+  .nav a:focus-visible {
     color: var(--gold);
   }
 </style>

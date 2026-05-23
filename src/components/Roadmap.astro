@@ -16,9 +16,9 @@ const showLanes = hasRoadmapItems(entry);
 
   {
     showLanes ? (
-      <div class="roadmap-lanes" role="list">
+      <ul class="roadmap-lanes">
         {lanes.map((lane) => (
-          <div class="roadmap-lane" role="listitem">
+          <li class="roadmap-lane">
             <h3 class="lane-label">{lane.label}</h3>
             {lane.items.length > 0 ? (
               <ul class="lane-items">
@@ -26,7 +26,14 @@ const showLanes = hasRoadmapItems(entry);
                   <li class="roadmap-card">
                     <div class="card-head">
                       <span class="card-title">{item.title}</span>
-                      {item.status && <span class={`status status-${item.status}`}>{item.status.replace('-', ' ')}</span>}
+                      {
+                        item.status && (
+                          <span class={`status status-${item.status}`}>
+                            <span class="sr-only">Status: </span>
+                            {item.status.replace('-', ' ')}
+                          </span>
+                        )
+                      }
                     </div>
                     {item.description && <p>{item.description}</p>}
                   </li>
@@ -35,9 +42,9 @@ const showLanes = hasRoadmapItems(entry);
             ) : (
               <p class="lane-empty">Nothing listed yet.</p>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     ) : (
       <p class="roadmap-placeholder">
         Roadmap items will appear here once they are added to the app supply sheet.
@@ -63,8 +70,15 @@ const showLanes = hasRoadmapItems(entry);
   }
 
   .roadmap-lanes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
     gap: 1.25rem;
+  }
+
+  .roadmap-lane {
+    list-style: none;
   }
 
   @media (min-width: 768px) {

@@ -2,7 +2,7 @@
   --bg: #0d0f12;
   --bg-elevated: #161a21;
   --text: #e8e6e3;
-  --text-muted: #9aa3b2;
+  --text-muted: #a8b0bd;
   --gold: #c5a059;
   --gold-dim: #8a7340;
   --border: #2a3140;
@@ -54,6 +54,34 @@ a:hover {
 a:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 200;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--bg);
+  background: var(--gold);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
 }
 
 h1,
