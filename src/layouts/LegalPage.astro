@@ -1,0 +1,104 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import AppLegalFooter from '../components/AppLegalFooter.astro';
+import type { AppEntry } from '../lib/apps';
+import type { LegalEntry } from '../lib/legal';
+
+interface Props {
+  appEntry: AppEntry;
+  legalEntry: LegalEntry;
+}
+
+const { appEntry, legalEntry } = Astro.props;
+const { Content } = await render(legalEntry);
+const { data: appData } = appEntry;
+const { data: legalData } = legalEntry;
+
+const base = import.meta.env.BASE_URL;
+const appUrl = `${base}apps/${appEntry.id}/`;
+
+const accentStyle =
+  appData.accentColor || appData.accentColorSecondary
+    ? {
+        '--app-accent': appData.accentColor ?? 'var(--gold)',
+        '--app-accent-secondary': appData.accentColorSecondary ?? appData.accentColor ?? 'var(--gold-dim)',
+      }
+    : undefined;
+---
+
+<BaseLayout title={`${legalData.title} · ${appData.name}`} description={`${legalData.title} for ${appData.name}.`}>
+  <article class="legal-page container" style={accentStyle}>
+    <nav class="legal-nav" aria-label="Breadcrumb">
+      <a href={appUrl}>← {appData.name}</a>
+    </nav>
+    <div class="legal-prose">
+      <Content />
+    </div>
+    <AppLegalFooter entry={appEntry} />
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .legal-nav a {
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--text-muted);
+  }
+
+  .legal-nav a:hover {
+    color: var(--app-accent, var(--gold));
+  }
+
+  .legal-prose :global(h1) {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .legal-prose :global(h2) {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .legal-prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+  }
+
+  .legal-prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+
+  .legal-prose :global(th),
+  .legal-prose :global(td) {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .legal-prose :global(th) {
+    background: var(--bg-elevated);
+    color: var(--text);
+  }
+
+  .legal-prose :global(p),
+  .legal-prose :global(li) {
+    color: var(--text);
+  }
+
+  .legal-prose :global(strong) {
+    color: var(--text);
+  }
+</style>

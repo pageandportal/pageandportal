@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import LegalPage from '../../../layouts/LegalPage.astro';
+import { legalSlugFromEntry } from '../../../lib/legal';
+
+export async function getStaticPaths() {
+  const apps = await getCollection('apps');
+  const legal = await getCollection('legal');
+  const appBySlug = new Map(apps.map((entry) => [entry.id, entry]));
+
+  return legal
+    .filter((entry) => appBySlug.has(entry.data.app))
+    .filter((entry) => {
+      const app = appBySlug.get(entry.data.app)!;
+      const slug = legalSlugFromEntry(entry);
+      return app.data.legalPages.some((page) => page.slug === slug);
+    })
+    .map((entry) => ({
+      params: { slug: entry.data.app, legal: legalSlugFromEntry(entry) },
+      props: {
+        legalEntry: entry,
+        appEntry: appBySlug.get(entry.data.app)!,
+      },
+    }));
+}
+
+const { appEntry, legalEntry } = Astro.props;
+---
+
+<LegalPage appEntry={appEntry} legalEntry={legalEntry} />

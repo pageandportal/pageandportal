@@ -31,6 +31,14 @@ const legalPageSchema = z.object({
   slug: z.string(),
 });
 
+export const legalCollection = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/legal' }),
+  schema: z.object({
+    app: z.string(),
+    title: z.string(),
+  }),
+});
+
 export const appsCollection = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/apps' }),
   schema: z.object({
@@ -58,4 +66,5 @@ export const appsCollection = defineCollection({
 
 export const collections = {
   apps: appsCollection,
+  legal: legalCollection,
 };

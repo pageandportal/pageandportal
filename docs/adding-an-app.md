@@ -10,6 +10,14 @@
 
 Place public assets under `public/apps/<slug>/` (e.g. `icon.png`, `hero.png`). Reference paths in frontmatter without a leading slash.
 
+## Legal pages
+
+1. Add Markdown under `supply/apps/<slug>/legal/` (e.g. `privacy.md`).
+2. Copy into `src/content/legal/<slug>/` with frontmatter: `app: <slug>`, `title: Privacy Policy` (or matching title).
+3. List the page in the app’s `legalPages` frontmatter (`slug` must match the filename, e.g. `privacy`).
+
+Routes: `/apps/<slug>/<legal-slug>/` (e.g. `/apps/portal-pages-times-tables/privacy`).
+
 ## Build
 
-App pages are generated from the `apps` content collection (`src/content.config.ts`). Run `npm run build` to verify.
+App and legal pages use the `apps` and `legal` content collections (`src/content.config.ts`). Run `npm run build` to verify.
