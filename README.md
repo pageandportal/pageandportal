@@ -17,7 +17,7 @@ npm run dev    # local preview at http://localhost:4321/pageandportal/
 npm run build
 ```
 
-See [`PROJECT_PLAN.md`](PROJECT_PLAN.md) for phases and tasks. Website analytics: [`docs/analytics.md`](docs/analytics.md).
+See [`PROJECT_PLAN.md`](PROJECT_PLAN.md) for phases and tasks.
 
 ## Owner content
 
