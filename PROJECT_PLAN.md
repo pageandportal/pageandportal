@@ -258,6 +258,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-25 | App hero intro width polish | Top descriptive text now spans the same content width as features and roadmap sections → v0.5.6 |
 | 2026-05-25 | Commander Vault V1.0-ready refresh | Freemium copy, `V1.0 ready` roadmap state, Google Play placeholder, and purchase legal wording aligned → v0.5.5 |
 | 2026-05-23 | Remove website analytics | Plausible removed; no tracking scripts → v0.5.4 |
 | 2026-05-23 | Lighthouse / a11y polish | Skip link, OG meta, contrast, LCP hints → v0.5.3 |
@@ -315,7 +316,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Deploy & meta
 
-- [ ] `version.properties` v0.5.5 matches the next shipped site
+- [ ] `version.properties` v0.5.6 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
