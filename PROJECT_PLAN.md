@@ -258,6 +258,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-25 | Commander Vault icon update | Replaced the small app icon with newly supplied artwork and synced it to public assets → v0.5.10 |
 | 2026-05-25 | Commander Vault roadmap lane rename | Renamed the current roadmap lane to `V1.0 coming soon` → v0.5.9 |
 | 2026-05-25 | Commander Vault roadmap trim | Removed the free-tier watermark item from the `V1.0 ready` roadmap → v0.5.8 |
 | 2026-05-25 | Commander Vault hero copy alignment | Updated the intro wording and center-aligned the top descriptive text → v0.5.7 |
@@ -319,7 +320,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Deploy & meta
 
-- [ ] `version.properties` v0.5.9 matches the next shipped site
+- [ ] `version.properties` v0.5.10 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
