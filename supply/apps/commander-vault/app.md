@@ -14,7 +14,7 @@
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander color identities — one deck at a time. |
 | **Status** | coming-soon |
-| **Short description** | Commander Vault helps you track the Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. Shared progress pages include a watermark until full access is unlocked. Deck progress is stored on your device. |
+| **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
 
 ---
 
@@ -71,9 +71,9 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-*Site lanes: **V1.0 ready** = complete in internal testing; **Next** = v1.1; **Later** = v1.2+ and iOS.*
+*Site lanes: **V1.0 coming soon** = current internal-testing release lane; **Next** = v1.1; **Later** = v1.2+ and iOS.*
 
-### V1.0 ready
+### V1.0 coming soon
 
 | Feature | Notes |
 |---------|--------|
@@ -81,7 +81,6 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 | 5 free mono slots | Free tier entry point |
 | Unlock all slots | One-time purchase unlocks full grid |
 | Support screen | In-app support |
-| Share watermark on free tier | Shared exports show watermark until unlock |
 
 ### Next — v1.1
 

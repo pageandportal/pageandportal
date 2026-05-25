@@ -35,7 +35,7 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 | Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | coming soon | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
 | Portal Pages Times Tables | `portal-pages-times-tables` | Learn and practise times tables 2–12 — calm, offline, and free. | coming soon | [`supply/apps/portal-pages-times-tables/`](supply/apps/portal-pages-times-tables/) |
 
-**Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0-ready roadmap and the free-to-start unlock model are documented; public Google Play listing and donate link still pending.
+**Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). The `V1.0 coming soon` roadmap lane and the free-to-start unlock model are documented; public Google Play listing and donate link still pending.
 
 **Site routes (when built):**
 
@@ -184,7 +184,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 
 - [x] **GitHub setup** — [pageandportal/pageandportal](https://github.com/pageandportal/pageandportal); project site → https://pageandportal.github.io/pageandportal/
 - [x] **App inventory** — Commander Vault, Portal Pages Times Tables (both coming soon); see **App inventory** above
-- [x] **Pilot app pack** — Commander Vault features, graphics, legal, and V1.0-ready roadmap synced from `supply/`; public Google Play listing URL and donate still pending
+- [x] **Pilot app pack** — Commander Vault features, graphics, legal, and `V1.0 coming soon` roadmap synced from `supply/`; public Google Play listing URL and donate still pending
 - [x] **Developer blurb** — James; Nelson region; Page & Portal copy in `supply/site/about.md` (2026-05-23)
 - [ ] **Donation** — URL for donate button(s): one global link or per-app links *(UI hidden via `DONATE.enabled` until ready)*
 - [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`)
@@ -198,7 +198,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 **Commander Vault** (`supply/apps/commander-vault/`)
 
 - [x] **Features** — 4 items from legacy site (in `app.md`)
-- [x] **Roadmap** — `V1.0 ready` lane plus v1.1, v1.2+, and iOS plan in `app.md` (updated 2026-05-25)
+- [x] **Roadmap** — `V1.0 coming soon` lane plus v1.1, v1.2+, and iOS plan in `app.md` (updated 2026-05-25)
 - [x] **Monetization architecture** — Start free with 5 editable mono-colour slots; non-mono slots remain visible but locked; a one-time purchase unlocks the full 32-slot challenge; shared progress pages keep a watermark until unlock (2026-05-25)
 - [x] **Links** — support email live; site shows `Coming soon to Google Play` until the public listing goes live
 - [x] **Graphics** — `logo-icon.png`, `hero-banner.png`; feature screenshots + Play assets when store listing ships
@@ -258,6 +258,9 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-25 | Commander Vault roadmap lane rename | Renamed the current roadmap lane to `V1.0 coming soon` → v0.5.9 |
+| 2026-05-25 | Commander Vault roadmap trim | Removed the free-tier watermark item from the `V1.0 ready` roadmap → v0.5.8 |
+| 2026-05-25 | Commander Vault hero copy alignment | Updated the intro wording and center-aligned the top descriptive text → v0.5.7 |
 | 2026-05-25 | App hero intro width polish | Top descriptive text now spans the same content width as features and roadmap sections → v0.5.6 |
 | 2026-05-25 | Commander Vault V1.0-ready refresh | Freemium copy, `V1.0 ready` roadmap state, Google Play placeholder, and purchase legal wording aligned → v0.5.5 |
 | 2026-05-23 | Remove website analytics | Plausible removed; no tracking scripts → v0.5.4 |
@@ -303,7 +306,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
-- [ ] Commander Vault — status badge remains `coming soon` while roadmap lane is labeled `V1.0 ready`
+- [ ] Commander Vault — status badge remains `coming soon` while roadmap lane is labeled `V1.0 coming soon`
 - [ ] Commander Vault — roadmap order and `ready` / planned status labels reflect internal-testing state
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and `Coming soon to Google Play` renders as non-clickable placeholder text
@@ -316,7 +319,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Deploy & meta
 
-- [ ] `version.properties` v0.5.6 matches the next shipped site
+- [ ] `version.properties` v0.5.9 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)

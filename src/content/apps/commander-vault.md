@@ -4,11 +4,10 @@ subtitle: 32 Deck Challenge Companion
 tagline: Track all 32 Commander color identities — one deck at a time.
 status: coming-soon
 description: >-
-  Commander Vault helps you track the Magic: The Gathering 32 Deck Commander
+  Commander Vault helps you track your Magic: The Gathering 32 Deck Commander
   Challenge — one deck slot for every unique colour identity. Start free with 5
   mono-colour slots, then unlock the full 32-slot challenge with a one-time
-  purchase. Shared progress pages include a watermark until full access is
-  unlocked. Deck progress is stored on your device.
+  purchase.
 accentColor: '#C9A227'
 accentColorSecondary: '#6B5B95'
 icon: apps/commander-vault/icon.png
@@ -52,7 +51,7 @@ features:
       account registration — a focused utility for personal deck tracking.
 roadmap:
   - id: now
-    label: V1.0 ready
+    label: V1.0 coming soon
     items:
       - title: 32-slot Commander challenge tracker
         description: Core 32 Deck Challenge grid — one slot per colour identity.
@@ -65,9 +64,6 @@ roadmap:
         status: ready
       - title: Support screen
         description: In-app support for questions and feedback.
-        status: ready
-      - title: Share watermark on free tier
-        description: Shared exports include a watermark until slots are unlocked.
         status: ready
   - id: next
     label: v1.1
