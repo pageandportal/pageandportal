@@ -17,6 +17,12 @@ Commander Vault is built to keep your deck tracking data on your device. We do n
 - Card artwork may load from Scryfall-hosted image URLs after you select a commander
 - No deck list content is uploaded to Commander Vault servers (this app has no backend)
 
+## Purchases
+
+- Commander Vault offers a one-time purchase to unlock the full 32-slot challenge
+- Purchases are processed by Google Play under Google's own terms and privacy policies
+- We do not receive or store your payment card details
+
 ## What we do not collect
 
 - No analytics SDKs are included in this app

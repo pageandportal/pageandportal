@@ -23,6 +23,10 @@ You are responsible for the commander names and notes you enter. Data is stored 
 
 Card data and images are provided via Scryfall under their terms. Magic: The Gathering cards and art are © Wizards of the Coast. See Attributions in this app.
 
+## Purchases
+
+Commander Vault offers a one-time purchase to unlock the full 32-slot challenge. Purchases, billing, and refund handling are managed by Google Play and remain subject to Google's own terms and policies.
+
 ## Disclaimer
 
 The app is provided "as is" without warranties. We are not liable for lost data; back up important information.

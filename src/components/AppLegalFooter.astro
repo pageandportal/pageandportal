@@ -26,7 +26,11 @@ const studioCreditName = ABOUT.displayName ?? SITE.title;
         <ul>
           {data.links.map((link) => (
             <li>
-              <a href={link.url}>{link.label}</a>
+              {link.url ? (
+                <a href={link.url}>{link.label}</a>
+              ) : (
+                <span class="app-link-placeholder">{link.label}</span>
+              )}
             </li>
           ))}
         </ul>
@@ -85,7 +89,8 @@ const studioCreditName = ABOUT.displayName ?? SITE.title;
   }
 
   .app-links a,
-  .legal-links a {
+  .legal-links a,
+  .app-link-placeholder {
     text-decoration: none;
     color: var(--text-muted);
   }

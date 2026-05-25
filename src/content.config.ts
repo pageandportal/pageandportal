@@ -12,7 +12,7 @@ const featureSchema = z.object({
 const roadmapItemSchema = z.object({
   title: z.string(),
   description: z.string().optional(),
-  status: z.enum(['planned', 'in-progress', 'shipped']).optional(),
+  status: z.enum(['planned', 'in-progress', 'ready', 'shipped']).optional(),
 });
 
 const roadmapLaneSchema = z.object({
@@ -23,7 +23,7 @@ const roadmapLaneSchema = z.object({
 
 const linkSchema = z.object({
   label: z.string(),
-  url: z.string(),
+  url: z.string().optional(),
 });
 
 const legalPageSchema = z.object({

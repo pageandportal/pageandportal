@@ -14,7 +14,7 @@
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander color identities — one deck at a time. |
 | **Status** | coming-soon |
-| **Short description** | Commander Vault helps you track the Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. Deck progress is stored on your device. |
+| **Short description** | Commander Vault helps you track the Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. Shared progress pages include a watermark until full access is unlocked. Deck progress is stored on your device. |
 
 ---
 
@@ -22,8 +22,8 @@
 
 | Label | URL |
 |-------|-----|
-| Google Play | TODO: or leave blank |
-| App Store | TODO: or leave blank |
+| Google Play | Coming soon to Google Play (placeholder text on site) |
+| App Store | Not announced |
 | GitHub / source | TODO: or leave blank |
 | Website / other | TODO: or leave blank |
 | **Support email** | pageandportal@gmail.com |
@@ -46,7 +46,7 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 ### Feature 1 — 32 deck challenge grid
 
 - **Title:** Every colour identity, one slot
-- **Description:** Track the full 32 Deck Commander Challenge with a dedicated slot for each unique colour identity — commander name, bracket, build status, and notes per deck.
+- **Description:** Track the full 32 Deck Commander Challenge with a dedicated slot for each unique colour identity — commander name, bracket, build status, and notes per deck. Start free with five editable mono-colour slots; the remaining non-mono slots stay visible but locked until you unlock full access with a one-time purchase.
 - **Image (optional):** TODO
 
 ### Feature 2 — Local-first privacy
@@ -71,15 +71,15 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-*Site lanes: **Now** = v1.0; **Next** = v1.1; **Later** = v1.2+ and iOS.*
+*Site lanes: **V1.0 ready** = complete in internal testing; **Next** = v1.1; **Later** = v1.2+ and iOS.*
 
-### Now — v1.0
+### V1.0 ready
 
 | Feature | Notes |
 |---------|--------|
 | 32-slot Commander challenge tracker | Core 32 Deck Challenge grid |
 | 5 free mono slots | Free tier entry point |
-| Unlock all slots | IAP to unlock full grid |
+| Unlock all slots | One-time purchase unlocks full grid |
 | Support screen | In-app support |
 | Share watermark on free tier | Shared exports show watermark until unlock |
 

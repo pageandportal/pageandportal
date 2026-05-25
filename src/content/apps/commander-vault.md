@@ -5,8 +5,10 @@ tagline: Track all 32 Commander color identities — one deck at a time.
 status: coming-soon
 description: >-
   Commander Vault helps you track the Magic: The Gathering 32 Deck Commander
-  Challenge — one deck slot for every unique colour identity. Deck progress is
-  stored on your device.
+  Challenge — one deck slot for every unique colour identity. Start free with 5
+  mono-colour slots, then unlock the full 32-slot challenge with a one-time
+  purchase. Shared progress pages include a watermark until full access is
+  unlocked. Deck progress is stored on your device.
 accentColor: '#C9A227'
 accentColorSecondary: '#6B5B95'
 icon: apps/commander-vault/icon.png
@@ -17,6 +19,7 @@ donateUseGlobal: true
 links:
   - label: Support
     url: mailto:pageandportal@gmail.com
+  - label: Coming soon to Google Play
 legalPages:
   - title: Privacy
     slug: privacy
@@ -30,7 +33,9 @@ features:
     description: >-
       Track the full 32 Deck Commander Challenge with a dedicated slot for each
       unique colour identity — commander name, bracket, build status, and notes per
-      deck.
+      deck. Start free with five editable mono-colour slots; the remaining
+      non-mono slots stay visible but locked until you unlock full access with
+      a one-time purchase.
   - title: Your decks stay on your device
     description: >-
       Commander names, bracket, build status, notes, and saved card art URLs are
@@ -47,23 +52,23 @@ features:
       account registration — a focused utility for personal deck tracking.
 roadmap:
   - id: now
-    label: v1.0
+    label: V1.0 ready
     items:
       - title: 32-slot Commander challenge tracker
         description: Core 32 Deck Challenge grid — one slot per colour identity.
-        status: planned
+        status: ready
       - title: 5 free mono slots
         description: Free tier with five mono-colour slots to start the challenge.
-        status: planned
+        status: ready
       - title: Unlock all slots
-        description: In-app purchase to unlock the full grid.
-        status: planned
+        description: One-time purchase to unlock the full grid.
+        status: ready
       - title: Support screen
         description: In-app support for questions and feedback.
-        status: planned
+        status: ready
       - title: Share watermark on free tier
         description: Shared exports include a watermark until slots are unlocked.
-        status: planned
+        status: ready
   - id: next
     label: v1.1
     items:
