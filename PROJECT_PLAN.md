@@ -258,6 +258,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-27 | Website analytics privacy note | Added a short footer note that the website uses Google Analytics → v0.5.12 |
 | 2026-05-27 | Google Analytics 4 setup | Added GA4 site-wide in `BaseLayout`; production only, disabled in local dev → v0.5.11 |
 | 2026-05-25 | Commander Vault icon update | Replaced the small app icon with newly supplied artwork and synced it to public assets → v0.5.10 |
 | 2026-05-25 | Commander Vault roadmap lane rename | Renamed the current roadmap lane to `V1.0 coming soon` → v0.5.9 |
@@ -303,6 +304,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] Dark theme readable; focus visible on links — owner verified 2026-05-23
 - [x] Mobile layout: nav, app cards, footer — owner verified 2026-05-23
 - [x] Donate button — N/A (UI hidden via `DONATE.enabled`)
+- [ ] Footer includes a short note that the website uses Google Analytics
 - [ ] Google Analytics 4 loads on deployed pages with measurement ID `G-48L1CF97DY`
 - [ ] Google Analytics 4 does not load during local `npm run dev`
 
@@ -323,7 +325,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Deploy & meta
 
-- [ ] `version.properties` v0.5.11 matches the next shipped site
+- [ ] `version.properties` v0.5.12 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
