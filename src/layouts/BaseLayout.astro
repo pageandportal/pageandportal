@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SkipLink from '../components/SkipLink.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { ANALYTICS, hasGoogleAnalytics } from '../config/analytics';
 import { SITE } from '../config/site';
 import { siteUrl } from '../lib/seo';
 
@@ -28,6 +29,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = siteUrl(ogImage, Astro.site);
 const fontHref =
   'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap';
+const gaId = ANALYTICS.googleAnalyticsMeasurementId;
+const enableAnalytics = import.meta.env.PROD && hasGoogleAnalytics();
+const gaInitScript = enableAnalytics
+  ? `window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}');`
+  : null;
 ---
 
 <!doctype html>
@@ -55,6 +64,12 @@ const fontHref =
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href={fontHref} as="style" />
     <link rel="stylesheet" href={fontHref} />
+    {
+      enableAnalytics && (
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+      )
+    }
+    {enableAnalytics && <script is:inline set:html={gaInitScript} />}
     <title>{pageTitle}</title>
   </head>
   <body>

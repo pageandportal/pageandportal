@@ -219,7 +219,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **Social links** — none (owner decision 2026-05-23; recorded in `supply/site/about.md`)
 - [x] **SEO** — default site title/description in `src/config/site.ts`; per-app meta from taglines
 - [x] **Custom domain** — not planned (stay on `pageandportal.github.io/pageandportal/`)
-- [x] **Analytics** — none (no website tracking scripts)
+- [x] **Analytics** — Google Analytics 4 on the website (`G-48L1CF97DY`), loaded in production only and disabled in local dev
 - [x] **404 copy** — custom page at `/404.html`; `<base>` fix for nested bad URLs on GitHub Pages
 
 ### Delivery format (helps agents)
@@ -258,6 +258,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-27 | Google Analytics 4 setup | Added GA4 site-wide in `BaseLayout`; production only, disabled in local dev → v0.5.11 |
 | 2026-05-25 | Commander Vault icon update | Replaced the small app icon with newly supplied artwork and synced it to public assets → v0.5.10 |
 | 2026-05-25 | Commander Vault roadmap lane rename | Renamed the current roadmap lane to `V1.0 coming soon` → v0.5.9 |
 | 2026-05-25 | Commander Vault roadmap trim | Removed the free-tier watermark item from the `V1.0 ready` roadmap → v0.5.8 |
@@ -302,6 +303,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] Dark theme readable; focus visible on links — owner verified 2026-05-23
 - [x] Mobile layout: nav, app cards, footer — owner verified 2026-05-23
 - [x] Donate button — N/A (UI hidden via `DONATE.enabled`)
+- [ ] Google Analytics 4 loads on deployed pages with measurement ID `G-48L1CF97DY`
+- [ ] Google Analytics 4 does not load during local `npm run dev`
 
 ### Per app
 
@@ -320,7 +323,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Deploy & meta
 
-- [ ] `version.properties` v0.5.10 matches the next shipped site
+- [ ] `version.properties` v0.5.11 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
@@ -339,6 +342,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 | 2026-05-23 | Commander Vault pilot content | Migrated from Google Sites; legal + features in `supply/` |
 | 2026-05-25 | Commander Vault uses free-to-start unlock model | Internal-testing app stays `coming soon`; 5 editable mono-colour slots are free, non-mono slots stay visible but locked, full 32-slot access is a one-time Google Play unlock, and free-tier shares keep a watermark |
 | 2026-05-23 | Repo public + GitHub Pages live | Free plan requires public repo; Actions deploy |
+| 2026-05-27 | Google Analytics 4 enabled on the website | Use measurement ID `G-48L1CF97DY`; tracking loads on deployed pages only and stays off in local development |
 | 2026-05-23 | Analytics: none | No website tracking; app privacy unchanged |
 | 2026-05-23 | Social links: none | No profiles linked from site |
 | 2026-05-23 | Custom domain: deferred | GitHub Pages URL is canonical for now |
