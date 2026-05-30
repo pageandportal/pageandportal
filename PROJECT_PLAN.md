@@ -185,6 +185,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **GitHub setup** — [pageandportal/pageandportal](https://github.com/pageandportal/pageandportal); project site → https://pageandportal.github.io/pageandportal/
 - [x] **App inventory** — Commander Vault (closed beta V1.0), Portal Pages Times Tables (coming soon); see **App inventory** above
 - [x] **Pilot app pack** — Commander Vault features, graphics, legal, and `V1.0 closed beta` roadmap synced from `supply/`; public Google Play listing URL and donate still pending
+- [x] **Roadmap ownership** — Commander Vault `docs/public-roadmap.yaml` is source of truth (2026-05-30); website publishes via `docs/roadmap-handoff.md`
 - [x] **Developer blurb** — James; Nelson region; Page & Portal copy in `supply/site/about.md` (2026-05-23)
 - [ ] **Donation** — URL for donate button(s): one global link or per-app links *(UI hidden via `DONATE.enabled` until ready)*
 - [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`)
@@ -258,6 +259,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-30 | Commander Vault roadmap publish | Published refined user-centric roadmap from CV `public-roadmap.yaml`; V1.0 ready items + v1.1 deck links/nicknames → v0.6.1 |
+| 2026-05-30 | Roadmap ownership → Commander Vault | `docs/public-roadmap.yaml` in Commander Vault repo is canonical; website publishes from handoff doc → v0.6.0 build 1 |
 | 2026-05-30 | Roadmap agent handoff doc | Added `docs/roadmap-handoff.md` for app content and roadmap update workflow → v0.6.0 build 1 |
 | 2026-05-30 | Commander Vault signed build prep | Website release `v0.6.0` build `1` for V1.0 closed beta signed build → v0.6.0 build 1 |
 | 2026-05-30 | Commander Vault V1.0 closed beta | App status `beta`; roadmap lane `V1.0 closed beta` with in-progress V1.0 items → v0.5.13 |
@@ -315,8 +318,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
-- [ ] Commander Vault — status badge shows `beta` while roadmap lane is labeled `V1.0 closed beta`
-- [ ] Commander Vault — roadmap order and `in-progress` / planned status labels reflect closed beta state
+- [ ] Commander Vault — status badge shows `beta` while roadmap lane is **V1.0 Play launch**
+- [ ] Commander Vault — roadmap shows **ready** V1.0 items and **in-progress** Google Play launch
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and `Coming soon to Google Play` renders as non-clickable placeholder text
 - [ ] Commander Vault — privacy and terms mention Google Play purchase handling and the one-time unlock

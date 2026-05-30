@@ -13,7 +13,7 @@
 | **Subtitle** | 32 Deck Challenge Companion |
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander color identities — one deck at a time. |
-| **Status** | beta (V1.0 closed beta testing) |
+| **Status** | beta (V1.0 Play launch — closed testing) |
 | **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
 
 ---
@@ -71,43 +71,40 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-*Site lanes: **V1.0 closed beta** = current closed beta release lane; **Next** = v1.1; **Later** = v1.2+ and iOS.*
+_Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlines only — see that repo’s `docs/roadmap-handoff.md`._
 
-### V1.0 closed beta
+*Site lanes: **V1.0 Play launch** = current release; **Next** = v1.1; **Later** = v1.2+ and iOS.*
 
-| Feature | Notes |
-|---------|--------|
-| 32-slot Commander challenge tracker | Core 32 Deck Challenge grid |
-| 5 free mono slots | Free tier entry point |
-| Unlock all slots | One-time purchase unlocks full grid |
-| Support screen | In-app support |
+### V1.0 Play launch
+
+| Feature | Status | Notes |
+|---------|--------|--------|
+| 32-deck challenge tracker | Ready | Grid, editor, progress, share, backup — on device |
+| Free tier and one-time unlock | Ready | 5 mono free; one-time unlock for full 32 |
+| Support and roadmap | Ready | In-app Support + this public roadmap |
+| Google Play launch | In progress | Public release after closed beta |
 
 ### Next — v1.1
 
 | Feature | Notes |
 |---------|--------|
-| Smarter commander search | Improved Scryfall lookup / UX |
-| Filter/sort grid | Manage large deck lists |
-| Quick status | Faster deck status updates |
-| More deck hosts | Additional hosting / export options |
+| Better deck links | Paste-friendly Moxfield + more deck-builder hosts |
+| Deck slot nicknames | Custom name on grid and share image |
+| Smarter commander search | Colour-aware search and better art picking |
+| Filter and sort your decks | Status filters, sorting, faster status updates |
 
-### Later — v1.2+
-
-| Feature | Notes |
-|---------|--------|
-| Settings menu | App settings hub |
-| Themes | Visual variants |
-| Partners | Partner integrations |
-| Richer shares | Enhanced share cards / exports |
-| EDHREC, budget, play tracking | Deeper deck tooling |
-
-### Later — iOS
+### Later — v1.2+ and iOS
 
 | Feature | Notes |
 |---------|--------|
-| TestFlight → App Store | iOS release path |
-| Widget | Home-screen widget |
-| Optional same IAP model | Parity with Android unlock model |
+| Settings menu | App preferences and backup |
+| Light and dark themes | Light, dark, or system |
+| Partner commanders | Partner / background commanders |
+| Richer progress shares | More detail on share images |
+| EDHREC, budget, and play tracking | Links and optional tracking fields |
+| iPhone and iPad release | App Store + home-screen widget |
+| iCloud backup | Optional synced backup |
+| Alternative 32-deck challenges | House-rule / community presets |
 
 ---
 

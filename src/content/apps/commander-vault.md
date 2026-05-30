@@ -51,58 +51,68 @@ features:
       account registration — a focused utility for personal deck tracking.
 roadmap:
   - id: now
-    label: V1.0 closed beta
+    label: V1.0 Play launch
     items:
-      - title: 32-slot Commander challenge tracker
-        description: Core 32 Deck Challenge grid — one slot per colour identity.
-        status: in-progress
-      - title: 5 free mono slots
-        description: Free tier with five mono-colour slots to start the challenge.
-        status: in-progress
-      - title: Unlock all slots
-        description: One-time purchase to unlock the full grid.
-        status: in-progress
-      - title: Support screen
-        description: In-app support for questions and feedback.
+      - title: 32-deck challenge tracker
+        description: >-
+          Track every colour identity — commander, bracket, build status, notes, progress
+          ring, shareable progress images, and backup. Everything stays on your device.
+        status: ready
+      - title: Free tier and one-time unlock
+        description: >-
+          Start with five mono-colour decks free. See all 32 slots on the grid; unlock the
+          full challenge with a one-time Google Play purchase.
+        status: ready
+      - title: Support and roadmap
+        description: >-
+          In-app Support screen with purchase and restore, plus a link to this public
+          roadmap and feedback path.
+        status: ready
+      - title: Google Play launch
+        description: Public release on Google Play after closed beta testing.
         status: in-progress
   - id: next
     label: v1.1
     items:
+      - title: Better deck links
+        description: >-
+          Easier way to save Moxfield and other deck-builder links — paste-friendly entry
+          and support for more hosts.
+        status: planned
+      - title: Deck slot nicknames
+        description: Give each colour-identity slot a custom name on the grid and share image.
+        status: planned
       - title: Smarter commander search
-        description: Improved Scryfall lookup and search UX.
+        description: Search that respects your slot’s colours and helps you pick the right card art.
         status: planned
-      - title: Filter and sort grid
-        description: Filter and sort the deck grid as your collection grows.
-        status: planned
-      - title: Quick status
-        description: Faster updates to deck build status.
-        status: planned
-      - title: More deck hosts
-        description: Additional hosting and export options.
+      - title: Filter and sort your decks
+        description: Find decks by status, sort your grid, and update build status faster.
         status: planned
   - id: later
     label: v1.2+ and iOS
     items:
       - title: Settings menu
+        description: A dedicated place for app preferences and backup.
         status: planned
-      - title: Themes
-        description: Visual variants for the app.
+      - title: Light and dark themes
+        description: Choose light, dark, or match your phone’s system setting.
         status: planned
-      - title: Partners
-        description: Partner integrations.
+      - title: Partner commanders
+        description: Track partner and background commanders where the challenge allows.
         status: planned
-      - title: Richer shares
-        description: Enhanced share cards and export options.
+      - title: Richer progress shares
+        description: Share images with more deck detail — names, art, or completion highlights.
         status: planned
       - title: EDHREC, budget, and play tracking
-        description: Deeper deck tooling and play insights.
+        description: Quick links and optional fields to track cost and table time per deck.
         status: planned
-      - title: iOS — TestFlight to App Store
-        description: iOS release via TestFlight, then App Store.
+      - title: iPhone and iPad release
+        description: Commander Vault on the App Store, including the home-screen widget.
         status: planned
-      - title: iOS widget
+      - title: iCloud backup
+        description: Optional synced backup beyond exporting a file from the app.
         status: planned
-      - title: iOS IAP parity (optional)
-        description: Same unlock model as Android, if applicable.
+      - title: Alternative 32-deck challenges
+        description: Optional preset lists for house-rule or community challenge variants.
         status: planned
 ---
