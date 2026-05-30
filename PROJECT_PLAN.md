@@ -259,6 +259,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-31 | Commander Vault v1.1 deck links copy | Published auto-fill commander from linked deck list on Better deck links → v0.6.2 |
 | 2026-05-30 | Commander Vault roadmap publish | Published refined user-centric roadmap from CV `public-roadmap.yaml`; V1.0 ready items + v1.1 deck links/nicknames → v0.6.1 |
 | 2026-05-30 | Roadmap ownership → Commander Vault | `docs/public-roadmap.yaml` in Commander Vault repo is canonical; website publishes from handoff doc → v0.6.0 build 1 |
 | 2026-05-30 | Roadmap agent handoff doc | Added `docs/roadmap-handoff.md` for app content and roadmap update workflow → v0.6.0 build 1 |

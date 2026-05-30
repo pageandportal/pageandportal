@@ -76,8 +76,8 @@ roadmap:
     items:
       - title: Better deck links
         description: >-
-          Easier way to save Moxfield and other deck-builder links — paste-friendly entry
-          and support for more hosts.
+          Easier way to save Moxfield and other deck-builder links — paste-friendly entry,
+          more hosts, and your commander filled in automatically from the linked list.
         status: planned
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.

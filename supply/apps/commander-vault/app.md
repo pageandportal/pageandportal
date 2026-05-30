@@ -88,7 +88,7 @@ _Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlin
 
 | Feature | Notes |
 |---------|--------|
-| Better deck links | Paste-friendly Moxfield + more deck-builder hosts |
+| Better deck links | Paste-friendly Moxfield + more hosts; commander filled in from the linked list |
 | Deck slot nicknames | Custom name on grid and share image |
 | Smarter commander search | Colour-aware search and better art picking |
 | Filter and sort your decks | Status filters, sorting, faster status updates |
