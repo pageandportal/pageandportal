@@ -6,7 +6,10 @@ The public site version is stored in `version.properties` at the repo root.
 
 ```
 version=MAJOR.MINOR.PATCH
+build=N
 ```
+
+`build` is an optional monotonic counter for release prep (for example, a signed Play build). Bump it when preparing a build even if `version` stays the same.
 
 Semantic intent:
 

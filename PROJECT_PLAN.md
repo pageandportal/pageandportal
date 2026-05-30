@@ -258,6 +258,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-05-30 | Roadmap agent handoff doc | Added `docs/roadmap-handoff.md` for app content and roadmap update workflow → v0.6.0 build 1 |
+| 2026-05-30 | Commander Vault signed build prep | Website release `v0.6.0` build `1` for V1.0 closed beta signed build → v0.6.0 build 1 |
 | 2026-05-30 | Commander Vault V1.0 closed beta | App status `beta`; roadmap lane `V1.0 closed beta` with in-progress V1.0 items → v0.5.13 |
 | 2026-05-27 | Website analytics privacy note | Added a short footer note that the website uses Google Analytics → v0.5.12 |
 | 2026-05-27 | Google Analytics 4 setup | Added GA4 site-wide in `BaseLayout`; production only, disabled in local dev → v0.5.11 |
@@ -326,7 +328,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 ### Deploy & meta
 
-- [ ] `version.properties` v0.5.13 matches the next shipped site
+- [ ] `version.properties` v0.6.0 build 1 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
