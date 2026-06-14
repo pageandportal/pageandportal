@@ -4,6 +4,7 @@ import AppHero from '../components/AppHero.astro';
 import FeatureGrid from '../components/FeatureGrid.astro';
 import Roadmap from '../components/Roadmap.astro';
 import DonateSection from '../components/DonateSection.astro';
+import AppFeedbackSection from '../components/AppFeedbackSection.astro';
 import { isDonateEnabled } from '../config/donate';
 import AppLegalFooter from '../components/AppLegalFooter.astro';
 import type { AppEntry } from '../lib/apps';
@@ -34,6 +35,7 @@ const accentStyle =
     <div class="app-body container">
       <FeatureGrid features={data.features} />
       <Roadmap entry={entry} />
+      <AppFeedbackSection entry={entry} />
       {isDonateEnabled() && <DonateSection entry={entry} />}
       <AppLegalFooter entry={entry} />
     </div>

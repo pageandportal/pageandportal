@@ -75,7 +75,7 @@ roadmap:
         description: >-
           A clear way to send feedback from the Commander Vault project homepage — so the
           link in the app’s Support screen goes somewhere useful.
-        status: in-progress
+        status: shipped
   - id: next
     label: v1.2+
     items:

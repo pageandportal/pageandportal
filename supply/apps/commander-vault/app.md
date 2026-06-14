@@ -84,7 +84,7 @@ _Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlin
 | Smarter commander search | In progress | Colour-aware search and better art picking |
 | Partner commanders | In progress | Partner / background commanders |
 | Filter and sort your decks | In progress | Status filters, sorting, faster status updates |
-| Share feedback from the project homepage | In progress | Feedback path from Support screen link |
+| Share feedback from the project homepage | Shipped | `#feedback` section + mailto; app Support deep link |
 
 ### v1.2+
 
@@ -169,6 +169,6 @@ Unofficial fan content. Not affiliated with Wizards of the Coast.
 
 ## Notes for agents
 
-- Support block: “Questions, Feedback and Support” → `pageandportal@gmail.com`
+- Support block: “Questions, Feedback and Support” → `pageandportal@gmail.com` (live on app page as **Questions and feedback** section with `#feedback` anchor)
 - Scryfall API for commander autocomplete and artwork; no deck uploads to app servers
 - When building Astro routes, include privacy, terms, and credits pages for this app
