@@ -79,10 +79,12 @@ _Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlin
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Better deck links | Planned | Paste-friendly Moxfield + more hosts; commander from linked list |
-| Deck slot nicknames | Planned | Custom name on grid and share image |
-| Smarter commander search | Planned | Colour-aware search and better art picking |
-| Filter and sort your decks | Planned | Status filters, sorting, faster status updates |
+| Better deck links | In progress | Paste-friendly Moxfield + more hosts; commander from linked list |
+| Deck slot nicknames | In progress | Custom name on grid and share image |
+| Smarter commander search | In progress | Colour-aware search and better art picking |
+| Partner commanders | In progress | Partner / background commanders |
+| Filter and sort your decks | In progress | Status filters, sorting, faster status updates |
+| Share feedback from the project homepage | In progress | Feedback path from Support screen link |
 
 ### v1.2+
 
@@ -90,7 +92,6 @@ _Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlin
 |---------|--------|
 | Settings menu | App preferences and backup |
 | Light and dark themes | Light, dark, or system |
-| Partner commanders | Partner / background commanders |
 | Richer progress shares | More detail on share images |
 | EDHREC, budget, and play tracking | Links and optional tracking fields |
 

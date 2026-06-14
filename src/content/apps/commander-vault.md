@@ -58,16 +58,24 @@ roadmap:
         description: >-
           Easier way to save Moxfield and other deck-builder links — paste-friendly entry,
           more hosts, and your commander filled in automatically from the linked list.
-        status: planned
+        status: in-progress
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.
-        status: planned
+        status: in-progress
       - title: Smarter commander search
         description: Search that respects your slot’s colours and helps you pick the right card art.
-        status: planned
+        status: in-progress
+      - title: Partner commanders
+        description: Track partner and background commanders where the challenge allows.
+        status: in-progress
       - title: Filter and sort your decks
         description: Find decks by status, sort your grid, and update build status faster.
-        status: planned
+        status: in-progress
+      - title: Share feedback from the project homepage
+        description: >-
+          A clear way to send feedback from the Commander Vault project homepage — so the
+          link in the app’s Support screen goes somewhere useful.
+        status: in-progress
   - id: next
     label: v1.2+
     items:
@@ -76,9 +84,6 @@ roadmap:
         status: planned
       - title: Light and dark themes
         description: Choose light, dark, or match your phone’s system setting.
-        status: planned
-      - title: Partner commanders
-        description: Track partner and background commanders where the challenge allows.
         status: planned
       - title: Richer progress shares
         description: Share images with more deck detail — names, art, or completion highlights.
