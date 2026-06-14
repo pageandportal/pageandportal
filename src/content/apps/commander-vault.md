@@ -2,12 +2,12 @@
 name: Commander Vault
 subtitle: 32 Deck Challenge Companion
 tagline: Track all 32 Commander color identities — one deck at a time.
-status: beta
+status: live
 description: >-
   Commander Vault helps you track your Magic: The Gathering 32 Deck Commander
-  Challenge — one deck slot for every unique colour identity. Start free with 5
-  mono-colour slots, then unlock the full 32-slot challenge with a one-time
-  purchase.
+  Challenge — one deck slot for every unique colour identity. Available on Google
+  Play. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge
+  with a one-time purchase.
 accentColor: '#C9A227'
 accentColorSecondary: '#6B5B95'
 icon: apps/commander-vault/icon.png
@@ -16,9 +16,10 @@ heroImageAlt: Commander Vault — vault and compass motif on a twilight landscap
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: true
 links:
+  - label: Get it on Google Play
+    url: https://play.google.com/store/apps/details?id=com.commandervault.app
   - label: Support
     url: mailto:pageandportal@gmail.com
-  - label: Coming soon to Google Play
 legalPages:
   - title: Privacy
     slug: privacy
@@ -51,27 +52,6 @@ features:
       account registration — a focused utility for personal deck tracking.
 roadmap:
   - id: now
-    label: V1.0 Play launch
-    items:
-      - title: 32-deck challenge tracker
-        description: >-
-          Track every colour identity — commander, bracket, build status, notes, progress
-          ring, shareable progress images, and backup. Everything stays on your device.
-        status: ready
-      - title: Free tier and one-time unlock
-        description: >-
-          Start with five mono-colour decks free. See all 32 slots on the grid; unlock the
-          full challenge with a one-time Google Play purchase.
-        status: ready
-      - title: Support and roadmap
-        description: >-
-          In-app Support screen with purchase and restore, plus a link to this public
-          roadmap and feedback path.
-        status: ready
-      - title: Google Play launch
-        description: Public release on Google Play after closed beta testing.
-        status: in-progress
-  - id: next
     label: v1.1
     items:
       - title: Better deck links
@@ -88,8 +68,8 @@ roadmap:
       - title: Filter and sort your decks
         description: Find decks by status, sort your grid, and update build status faster.
         status: planned
-  - id: later
-    label: v1.2+ and iOS
+  - id: next
+    label: v1.2+
     items:
       - title: Settings menu
         description: A dedicated place for app preferences and backup.
@@ -106,6 +86,9 @@ roadmap:
       - title: EDHREC, budget, and play tracking
         description: Quick links and optional fields to track cost and table time per deck.
         status: planned
+  - id: later
+    label: iOS and beyond
+    items:
       - title: iPhone and iPad release
         description: Commander Vault on the App Store, including the home-screen widget.
         status: planned

@@ -13,8 +13,8 @@
 | **Subtitle** | 32 Deck Challenge Companion |
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander color identities — one deck at a time. |
-| **Status** | beta (V1.0 Play launch — closed testing) |
-| **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
+| **Status** | live (v1.0 on Google Play — public release) |
+| **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. **Available on Google Play.** Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
 
 ---
 
@@ -22,7 +22,7 @@
 
 | Label | URL |
 |-------|-----|
-| Google Play | Coming soon to Google Play (placeholder text on site) |
+| Google Play | https://play.google.com/store/apps/details?id=com.commandervault.app |
 | App Store | Not announced |
 | GitHub / source | TODO: or leave blank |
 | Website / other | TODO: or leave blank |
@@ -73,27 +73,18 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 _Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlines only — see that repo’s `docs/roadmap-handoff.md`._
 
-*Site lanes: **V1.0 Play launch** = current release; **Next** = v1.1; **Later** = v1.2+ and iOS.*
+*Site lanes: **v1.1** = next release; **v1.2+** = later polish; **iOS and beyond** = App Store and long-term.*
 
-### V1.0 Play launch
+### v1.1
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| 32-deck challenge tracker | Ready | Grid, editor, progress, share, backup — on device |
-| Free tier and one-time unlock | Ready | 5 mono free; one-time unlock for full 32 |
-| Support and roadmap | Ready | In-app Support + this public roadmap |
-| Google Play launch | In progress | Public release after closed beta |
+| Better deck links | Planned | Paste-friendly Moxfield + more hosts; commander from linked list |
+| Deck slot nicknames | Planned | Custom name on grid and share image |
+| Smarter commander search | Planned | Colour-aware search and better art picking |
+| Filter and sort your decks | Planned | Status filters, sorting, faster status updates |
 
-### Next — v1.1
-
-| Feature | Notes |
-|---------|--------|
-| Better deck links | Paste-friendly Moxfield + more hosts; commander filled in from the linked list |
-| Deck slot nicknames | Custom name on grid and share image |
-| Smarter commander search | Colour-aware search and better art picking |
-| Filter and sort your decks | Status filters, sorting, faster status updates |
-
-### Later — v1.2+ and iOS
+### v1.2+
 
 | Feature | Notes |
 |---------|--------|
@@ -102,9 +93,16 @@ _Published from Commander Vault `docs/public-roadmap.yaml`. User-centric headlin
 | Partner commanders | Partner / background commanders |
 | Richer progress shares | More detail on share images |
 | EDHREC, budget, and play tracking | Links and optional tracking fields |
+
+### iOS and beyond
+
+| Feature | Notes |
+|---------|--------|
 | iPhone and iPad release | App Store + home-screen widget |
 | iCloud backup | Optional synced backup |
 | Alternative 32-deck challenges | House-rule / community presets |
+
+**Shipped in v1.0 (live on Google Play):** 32-deck tracker, free mono tier + one-time unlock, Support screen with purchase/restore, backup export/import, progress share, Scryfall commander lookup.
 
 ---
 

@@ -12,9 +12,10 @@
       "name": "Commander Vault",
       "subtitle": "32 Deck Challenge Companion",
       "tagline": "Track all 32 Commander color identities — one deck at a time.",
-      "status": "beta",
+      "status": "live",
       "pilot": true,
       "supportEmail": "pageandportal@gmail.com",
+      "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.commandervault.app",
       "supplyPath": "supply/apps/commander-vault",
       "legacySite": "https://sites.google.com/view/commander-vault/home"
     }

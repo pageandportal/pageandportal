@@ -11,6 +11,9 @@ const { data } = entry;
 const base = import.meta.env.BASE_URL;
 const iconUrl = appIconUrl(entry.id, data.icon);
 const heroUrl = appAssetUrl(data.heroImage);
+const playStoreLink = data.links.find(
+  (link) => link.url?.includes('play.google.com/store/apps/details'),
+);
 ---
 
 <header class="app-hero">
@@ -62,6 +65,15 @@ const heroUrl = appAssetUrl(data.heroImage);
 
   <div class="container hero-bottom">
     <p class="intro">{data.description}</p>
+    {
+      playStoreLink?.url && (
+        <p class="hero-cta">
+          <a class="store-button" href={playStoreLink.url} target="_blank" rel="noopener noreferrer">
+            {playStoreLink.label}
+          </a>
+        </p>
+      )
+    }
   </div>
 </header>
 
@@ -166,5 +178,29 @@ const heroUrl = appAssetUrl(data.heroImage);
     margin: 0 auto;
     font-size: 1.05rem;
     color: var(--text-muted);
+  }
+
+  .hero-cta {
+    margin: 1.25rem 0 0;
+  }
+
+  .store-button {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--bg);
+    background: var(--app-accent, var(--gold));
+    border-radius: var(--radius);
+  }
+
+  .store-button:hover {
+    filter: brightness(1.08);
+  }
+
+  .store-button:focus-visible {
+    outline: 2px solid var(--app-accent, var(--gold));
+    outline-offset: 3px;
   }
 </style>
