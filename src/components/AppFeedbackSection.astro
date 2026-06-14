@@ -20,9 +20,7 @@ const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(feedbackSubject)
 <section class="feedback" id="feedback" aria-labelledby="feedback-heading">
   <h2 id="feedback-heading" class="section-title">Questions and feedback</h2>
   <div class="feedback-inner">
-    <p class="feedback-lead">
-      Ideas for layout, features, or bugs? James reads every message — no account or form required.
-    </p>
+    <p class="feedback-lead">Ideas for layout, features, or bugs?</p>
     <a class="feedback-button" href={mailtoUrl}>
       Email {email}
     </a>
@@ -74,6 +72,7 @@ const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(feedbackSubject)
   .feedback-note {
     margin: 0;
     font-size: 0.9rem;
+    font-style: italic;
     color: var(--text-muted);
   }
 
