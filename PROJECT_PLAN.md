@@ -259,6 +259,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-06-15 | Commander Vault v1.1 roadmap sync | Full v1.1 copy from CV `public-roadmap.yaml`; all v1.1 **in progress** on site except **U22** shipped; added suggest-slot headline → v0.6.4 |
 | 2026-06-15 | Commander Vault homepage feedback (U22) | `AppFeedbackSection` with `#feedback` + mailto; roadmap item shipped |
 | 2026-06-15 | Commander Vault v1.1 roadmap publish | Published live status + v1.1 in-progress lanes from CV `public-roadmap.yaml` → v0.6.3 |
 | 2026-05-31 | Commander Vault v1.1 deck links copy | Published auto-fill commander from linked deck list on Better deck links → v0.6.2 |

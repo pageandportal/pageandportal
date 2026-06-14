@@ -56,8 +56,8 @@ roadmap:
     items:
       - title: Better deck links
         description: >-
-          Easier way to save Moxfield and other deck-builder links — paste-friendly entry,
-          more hosts, and your commander filled in automatically from the linked list.
+          Easier way to save Moxfield, ManaBox, Archidekt, and other deck-builder links —
+          paste-friendly entry, more hosts, and your commander filled in automatically from the linked list.
         status: in-progress
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.
@@ -69,13 +69,18 @@ roadmap:
         description: Track partner and background commanders where the challenge allows.
         status: in-progress
       - title: Filter and sort your decks
-        description: Find decks by status, sort your grid, and update build status faster.
+        description: Find decks by status, sort your grid, jump to categories, and update build status from the grid.
         status: in-progress
       - title: Share feedback from the project homepage
         description: >-
           A clear way to send feedback from the Commander Vault project homepage — so the
           link in the app’s Support screen goes somewhere useful.
         status: shipped
+      - title: Help picking your next deck
+        description: >-
+          Tap for a smart deck suggestion, or press and hold for random empty or resume
+          in-progress slots when you are not sure what to brew next.
+        status: in-progress
   - id: next
     label: v1.2+
     items:
