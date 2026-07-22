@@ -71,7 +71,7 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-_Published from Commander Vault `docs/public-roadmap.yaml` (2026-07-22). **v1.1** is rolling out on Google Play — items below are **Ready** (in the release) or already **Shipped**. See that repo’s `docs/roadmap-handoff.md`._
+_Published from Commander Vault `docs/public-roadmap.yaml` (2026-07-22). **v1.1 is live** on Google Play — all items below **Shipped**. See that repo’s `docs/roadmap-handoff.md`._
 
 *Site lanes: **v1.1** = current release; **v1.2+** = later polish; **iOS and beyond** = App Store and long-term.*
 
@@ -79,15 +79,15 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-07-22). **v1.1*
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Better deck links | Ready | Moxfield, ManaBox, Archidekt + paste; commander from linked list |
-| Deck slot nicknames | Ready | Custom name on grid and share image |
-| Smarter commander search | Ready | Colour-aware search and better art picking |
+| Better deck links | Shipped | Moxfield, ManaBox, Archidekt + paste; commander from linked list |
+| Deck slot nicknames | Shipped | Custom name on grid and share image |
+| Smarter commander search | Shipped | Colour-aware search and better art picking |
 | Partner commanders | Shipped | Partner / background commanders |
 | Filter and sort your decks | Shipped | Filters, sort, category jump, quick status on grid |
 | Share feedback from the project homepage | Shipped | `#feedback` section + mailto; app Support deep link (**U22**) |
-| Help picking your next deck | Ready | Smart suggest; long-press for resume or random empty |
-| Reminders for stale in-progress decks | Ready | Local nudge after long idle; no push |
-| Stay up to date in the app | Ready | Flexible Play in-app update (**A79**) |
+| Help picking your next deck | Shipped | Smart suggest; long-press for resume or random empty |
+| Reminders for stale in-progress decks | Shipped | Local nudge after long idle; no push |
+| Stay up to date in the app | Shipped | Flexible Play in-app update (**A79**) |
 
 ### v1.2+
 
