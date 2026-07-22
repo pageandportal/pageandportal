@@ -58,19 +58,19 @@ roadmap:
         description: >-
           Easier way to save Moxfield, ManaBox, Archidekt, and other deck-builder links —
           paste-friendly entry, more hosts, and your commander filled in automatically from the linked list.
-        status: in-progress
+        status: ready
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.
-        status: in-progress
+        status: ready
       - title: Smarter commander search
         description: Search that respects your slot’s colours and helps you pick the right card art.
-        status: in-progress
+        status: ready
       - title: Partner commanders
         description: Track partner and background commanders where the challenge allows.
-        status: in-progress
+        status: shipped
       - title: Filter and sort your decks
         description: Find decks by status, sort your grid, jump to categories, and update build status from the grid.
-        status: in-progress
+        status: shipped
       - title: Share feedback from the project homepage
         description: >-
           A clear way to send feedback from the Commander Vault project homepage — so the
@@ -80,7 +80,17 @@ roadmap:
         description: >-
           Tap for a smart deck suggestion, or press and hold for random empty or resume
           in-progress slots when you are not sure what to brew next.
-        status: in-progress
+        status: ready
+      - title: Reminders for stale in-progress decks
+        description: >-
+          A gentle in-app nudge when a deck has sat in progress for a long time with no
+          updates — local only, no push notifications.
+        status: ready
+      - title: Stay up to date in the app
+        description: >-
+          When a newer Play Store version is available, update in the background and restart
+          when you are ready — no hunt through the store listing.
+        status: ready
   - id: next
     label: v1.2+
     items:

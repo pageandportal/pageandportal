@@ -71,21 +71,23 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-_Published from Commander Vault `docs/public-roadmap.yaml`. **v1.1 lane:** all items **In progress** on the public site until the v1.1 app release ships — except homepage feedback (**U22**, shipped). See that repo’s `docs/roadmap-handoff.md`._
+_Published from Commander Vault `docs/public-roadmap.yaml` (2026-07-22). **v1.1** is rolling out on Google Play — items below are **Ready** (in the release) or already **Shipped**. See that repo’s `docs/roadmap-handoff.md`._
 
-*Site lanes: **v1.1** = next release; **v1.2+** = later polish; **iOS and beyond** = App Store and long-term.*
+*Site lanes: **v1.1** = current release; **v1.2+** = later polish; **iOS and beyond** = App Store and long-term.*
 
 ### v1.1
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Better deck links | In progress | Moxfield, ManaBox, Archidekt + paste; commander from linked list |
-| Deck slot nicknames | In progress | Custom name on grid and share image |
-| Smarter commander search | In progress | Colour-aware search and better art picking |
-| Partner commanders | In progress | Partner / background commanders |
-| Filter and sort your decks | In progress | Filters, sort, category jump, quick status on grid |
+| Better deck links | Ready | Moxfield, ManaBox, Archidekt + paste; commander from linked list |
+| Deck slot nicknames | Ready | Custom name on grid and share image |
+| Smarter commander search | Ready | Colour-aware search and better art picking |
+| Partner commanders | Shipped | Partner / background commanders |
+| Filter and sort your decks | Shipped | Filters, sort, category jump, quick status on grid |
 | Share feedback from the project homepage | Shipped | `#feedback` section + mailto; app Support deep link (**U22**) |
-| Help picking your next deck | In progress | Smart suggest; long-press for resume or random empty |
+| Help picking your next deck | Ready | Smart suggest; long-press for resume or random empty |
+| Reminders for stale in-progress decks | Ready | Local nudge after long idle; no push |
+| Stay up to date in the app | Ready | Flexible Play in-app update (**A79**) |
 
 ### v1.2+
 
