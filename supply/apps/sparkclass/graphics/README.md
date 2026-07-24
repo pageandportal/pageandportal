@@ -2,7 +2,8 @@
 
 | File | Role |
 |------|------|
-| `logo-wordmark.png` / `logo-icon.png` | Official wordmark (transparent) — SparkClass + bolt |
+| `logo-wordmark.png` / `logo-icon.png` | Official wordmark on **white** tile (matches other app logos) |
+| `logo-wordmark-transparent.png` | Transparent cutout (optional) |
 | `logo-wordmark-source.png` | Original white-background export |
 | `hero-banner.png` | App page hero / OG preview |
 | `bolt-reference.png` | Earlier bolt shape reference (superseded by wordmark) |
