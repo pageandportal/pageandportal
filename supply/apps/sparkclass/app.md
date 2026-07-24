@@ -15,7 +15,7 @@
 | **URL slug** | sparkclass |
 | **Tagline** | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. |
 | **Status** | coming soon (web app not open to public navigation yet) |
-| **Short description** | SparkClass is a class-centred learning web app for New Zealand electrical training — built for pre-trade and apprenticeship programmes. Learners practise unit-standard topics, join Kahoot-style live sessions, and ask questions — named or anonymous — inside their class. Practice and engagement around public NZQA unit standards, not formal assessment or credentials. |
+| **Short description** | SparkClass is a class-centred learning web app for New Zealand electrical training — built for pre-trade and apprenticeship programmes. Learners practise unit-standard topics, join live quiz sessions, and ask questions — named or anonymous — inside their class. Practice and engagement around public NZQA unit standards, not formal assessment or credentials. |
 
 ---
 
@@ -57,7 +57,7 @@
 ### Feature 3 — Live sessions
 
 - **Title:** Live class sessions
-- **Description:** Trainers host Kahoot-style sessions with a PIN join code, timed questions, and a class leaderboard — built for tablets and phones in the room.
+- **Description:** Trainers host live quiz sessions with a PIN join code, timed questions, and a class leaderboard — built for tablets and phones in the room.
 - **Image (optional):** —
 
 ### Feature 4 — Class Q&A

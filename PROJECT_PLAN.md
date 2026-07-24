@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-07-24 | SparkClass drop Kahoot wording | Live quiz sessions only — avoid third-party brand risk → v0.7.3 |
 | 2026-07-24 | SparkClass wordmark on white | Logo tile matches other app marks; rounded white plate → v0.7.2 |
 | 2026-07-24 | SparkClass status and scope copy | Home/app: coming soon; pre-trade → apprenticeship wording → v0.7.1 |
 | 2026-07-24 | SparkClass app section | Home card, `/apps/sparkclass/`, privacy/terms drafts, web Open CTA, interim brand art from product teal → v0.7.0 |
