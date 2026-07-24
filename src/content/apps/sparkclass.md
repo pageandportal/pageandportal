@@ -1,14 +1,14 @@
 ---
 name: SparkClass
-subtitle: NZ electrical pre-trade learning
-tagline: Class-centred practice for NZ electrical pre-trade — quizzes, live sessions, and Q&A.
-status: beta
+subtitle: NZ electrical training
+tagline: Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship.
+status: coming-soon
 description: >-
   SparkClass is a class-centred learning web app for New Zealand electrical
-  training. Learners practise unit-standard topics, join Kahoot-style live
-  sessions, and ask questions — named or anonymous — inside their class. Built
-  for trainers and students; practice and engagement around public NZQA unit
-  standards, not formal assessment or credentials.
+  training — built for pre-trade and apprenticeship programmes. Learners practise
+  unit-standard topics, join Kahoot-style live sessions, and ask questions —
+  named or anonymous — inside their class. Practice and engagement around public
+  NZQA unit standards, not formal assessment or credentials.
 accentColor: '#3465C1'
 accentColorSecondary: '#F7D024'
 icon: apps/sparkclass/icon.png
@@ -20,7 +20,7 @@ heroImageAlt: >-
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: true
 links:
-  - label: Private beta — invite only
+  - label: Coming soon
   - label: Support
     url: mailto:pageandportal@gmail.com
 legalPages:
@@ -39,7 +39,7 @@ features:
       progress; peers see only what they should.
   - title: Practice by unit-standard topic
     description: >-
-      Drill quizzes mapped to NZ electrical pre-trade topics — multiple choice,
+      Drill quizzes mapped to NZ electrical training topics — multiple choice,
       true/false, numeric and guided recall, plus parametric maths that generates
       fresh values for each attempt.
   - title: Live class sessions

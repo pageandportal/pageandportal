@@ -11,11 +11,11 @@
 | Field | Value |
 |-------|--------|
 | **Display name** | SparkClass |
-| **Subtitle** | NZ electrical pre-trade learning |
+| **Subtitle** | NZ electrical training |
 | **URL slug** | sparkclass |
-| **Tagline** | Class-centred practice for NZ electrical pre-trade — quizzes, live sessions, and Q&A. |
-| **Status** | beta (web app live; classroom confidence in progress) |
-| **Short description** | SparkClass is a class-centred learning web app for New Zealand electrical training. Learners practise unit-standard topics, join Kahoot-style live sessions, and ask questions — named or anonymous — inside their class. Built for trainers and students; practice and engagement around public NZQA unit standards, not formal assessment or credentials. |
+| **Tagline** | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. |
+| **Status** | coming soon (web app not open to public navigation yet) |
+| **Short description** | SparkClass is a class-centred learning web app for New Zealand electrical training — built for pre-trade and apprenticeship programmes. Learners practise unit-standard topics, join Kahoot-style live sessions, and ask questions — named or anonymous — inside their class. Practice and engagement around public NZQA unit standards, not formal assessment or credentials. |
 
 ---
 
@@ -51,7 +51,7 @@
 ### Feature 2 — Topic practice
 
 - **Title:** Practice by unit-standard topic
-- **Description:** Drill quizzes mapped to NZ electrical pre-trade topics — multiple choice, true/false, numeric and guided recall, plus parametric maths that generates fresh values for each attempt.
+- **Description:** Drill quizzes mapped to NZ electrical training topics — multiple choice, true/false, numeric and guided recall, plus parametric maths that generates fresh values for each attempt.
 - **Image (optional):** —
 
 ### Feature 3 — Live sessions
@@ -162,7 +162,7 @@ Practice tool aligned to public NZQA unit-standard topics. Not a formal assessme
 
 ## Notes for agents
 
-- Web app CTA: **hidden** until owner approves public navigation — show “Private beta — invite only” placeholder only (no URL)
+- Web app CTA: **hidden** until owner approves public navigation — show “Coming soon” placeholder only (no URL)
 - Support: `pageandportal@gmail.com`
 - Do not imply official NZQA/EWRB endorsement
 - Do not promise licensing or paid plans yet (free for now)

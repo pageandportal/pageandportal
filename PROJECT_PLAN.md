@@ -33,12 +33,12 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 | Display name | URL slug | Tagline | Status | Supply folder |
 |--------------|----------|---------|--------|---------------|
 | Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | live (Google Play) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
-| SparkClass | `sparkclass` | Class-centred practice for NZ electrical pre-trade — quizzes, live sessions, and Q&A. | beta (web) | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
+| SparkClass | `sparkclass` | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. | coming soon | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
 | Portal Pages Times Tables | `portal-pages-times-tables` | Learn and practise times tables 2–12 — calm, offline, and free. | coming soon | [`supply/apps/portal-pages-times-tables/`](supply/apps/portal-pages-times-tables/) |
 
 **Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0 is **live on Google Play**; donate link still pending.
 
-**SparkClass:** NZ electrical pre-trade learning web app (Next.js + Supabase). Site section added 2026-07-24. **Do not publish the live app URL** until the owner says it is ready for visitors. Product name still interim (`U20` in SparkClass plan); privacy/consent copy needs owner review.
+**SparkClass:** NZ electrical learning web app (Next.js + Supabase) for pre-trade and apprenticeship programmes. Site section added 2026-07-24. **Do not publish the live app URL** until the owner says it is ready for visitors. Product name still interim (`U20` in SparkClass plan); privacy/consent copy needs owner review.
 
 **Site routes:**
 
@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-07-24 | SparkClass status and scope copy | Home/app: coming soon; pre-trade → apprenticeship wording → v0.7.1 |
 | 2026-07-24 | SparkClass app section | Home card, `/apps/sparkclass/`, privacy/terms drafts, web Open CTA, interim brand art from product teal → v0.7.0 |
 | 2026-07-22 | Commander Vault v1.1 shipped on site | All v1.1 roadmap items **shipped** after Play publish → v0.6.6 |
 | 2026-07-22 | Commander Vault v1.1 rollout roadmap | Synced from CV `public-roadmap.yaml`: v1.1 items **ready**/shipped for Play rollout; stale reminders + in-app updates added → v0.6.5 |
@@ -351,8 +352,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] Commander Vault — privacy, terms, credits at `/apps/commander-vault/{privacy,terms,credits}`
 - [ ] SparkClass — app page hero, features, roadmap, and Open app CTA
 - [ ] SparkClass — privacy and terms at `/apps/sparkclass/{privacy,terms}`
-- [ ] SparkClass — status badge shows `beta`; no public app URL / Open CTA until owner ready
-- [ ] SparkClass — footer shows “Private beta — invite only” as non-link placeholder
+- [ ] SparkClass — status badge shows `coming soon`; no public app URL / Open CTA until owner ready
+- [ ] SparkClass — footer shows “Coming soon” as non-link placeholder
 - [ ] Store/repo links work — pending Play/App Store URLs (support email only today); SparkClass web URL live
 
 ### Deploy & meta
