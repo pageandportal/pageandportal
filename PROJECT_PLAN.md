@@ -4,7 +4,7 @@
 **Purpose:** Clean, modern developer hub with a dedicated page per app  
 **Hosting:** GitHub Pages (static site)  
 **Repository:** [github.com/pageandportal/pageandportal](https://github.com/pageandportal/pageandportal)  
-**Last updated:** 2026-05-30
+**Last updated:** 2026-07-24
 
 ---
 
@@ -32,14 +32,18 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 
 | Display name | URL slug | Tagline | Status | Supply folder |
 |--------------|----------|---------|--------|---------------|
-| Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | closed beta (V1.0) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
+| Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | live (Google Play) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
+| SparkClass | `sparkclass` | Class-centred practice for NZ electrical pre-trade — quizzes, live sessions, and Q&A. | beta (web) | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
 | Portal Pages Times Tables | `portal-pages-times-tables` | Learn and practise times tables 2–12 — calm, offline, and free. | coming soon | [`supply/apps/portal-pages-times-tables/`](supply/apps/portal-pages-times-tables/) |
 
-**Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0 is in **closed beta**; the free-to-start unlock model is documented; public Google Play listing and donate link still pending.
+**Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0 is **live on Google Play**; donate link still pending.
 
-**Site routes (when built):**
+**SparkClass:** NZ electrical pre-trade learning web app (Next.js + Supabase). Site section added 2026-07-24. **Do not publish the live app URL** until the owner says it is ready for visitors. Product name still interim (`U20` in SparkClass plan); privacy/consent copy needs owner review.
+
+**Site routes:**
 
 - `/apps/commander-vault/`
+- `/apps/sparkclass/`
 - `/apps/portal-pages-times-tables/`
 
 ---
@@ -213,6 +217,17 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **Graphics** — `logo-icon.png`, `hero-banner.png`; feature screenshots + Play assets when store listing ships
 - [x] **Brand hints** — orange/green accents (see `app.md`, `graphics/README.md`)
 
+**SparkClass** (`supply/apps/sparkclass/`)
+
+- [ ] **Final product name** — still interim `SparkClass` (shortlist in SparkClass `notes/product-plan.md` / `U20`)
+- [ ] **Privacy / terms owner review** — drafts in `legal/`; confirm under-18 consent, retention, and third-party wording
+- [ ] **Graphics** — official wordmark (transparent) live; optional: replace workshop hero, product screenshots; page accents `#3465C1` / `#F7D024`
+- [ ] **Custom domain** — when a public hostname is ready, update site Open CTA + Auth URLs
+- [ ] **Public roadmap source** — optional `public-roadmap.yaml` in SparkClass (like Commander Vault) for ongoing sync
+- [x] **Features / roadmap / links** — drafted from SparkClass product plan (2026-07-24); **app URL withheld** from public site until ready
+- [ ] **Public app URL** — add Open CTA only when owner confirms visitors may use the hosted app
+- [x] **Support email** — `pageandportal@gmail.com` (same studio address unless owner specifies otherwise)
+
 ### Site-wide optional (recommended)
 
 - [x] **Global logo** — Tier A set in `supply/site/branding/` (`tier-a-1` nav icon, `tier-a-2` header, `tier-a-3` optional hero); see `TIER-A.md`
@@ -259,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-07-24 | SparkClass app section | Home card, `/apps/sparkclass/`, privacy/terms drafts, web Open CTA, interim brand art from product teal → v0.7.0 |
 | 2026-07-22 | Commander Vault v1.1 shipped on site | All v1.1 roadmap items **shipped** after Play publish → v0.6.6 |
 | 2026-07-22 | Commander Vault v1.1 rollout roadmap | Synced from CV `public-roadmap.yaml`: v1.1 items **ready**/shipped for Play rollout; stale reminders + in-app updates added → v0.6.5 |
 | 2026-06-15 | Commander Vault v1.1 roadmap sync | Full v1.1 copy from CV `public-roadmap.yaml`; all v1.1 **in progress** on site except **U22** shipped; added suggest-slot headline → v0.6.4 |
@@ -333,7 +349,11 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23
 - [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy`
 - [x] Commander Vault — privacy, terms, credits at `/apps/commander-vault/{privacy,terms,credits}`
-- [ ] Store/repo links work — pending Play/App Store URLs (support email only today)
+- [ ] SparkClass — app page hero, features, roadmap, and Open app CTA
+- [ ] SparkClass — privacy and terms at `/apps/sparkclass/{privacy,terms}`
+- [ ] SparkClass — status badge shows `beta`; no public app URL / Open CTA until owner ready
+- [ ] SparkClass — footer shows “Private beta — invite only” as non-link placeholder
+- [ ] Store/repo links work — pending Play/App Store URLs (support email only today); SparkClass web URL live
 
 ### Deploy & meta
 
@@ -348,6 +368,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-07-24 | SparkClass added to website inventory | Beta web app section; interim name; legal drafts pending owner review |
 | 2026-05-23 | Astro + static deploy | Markdown legal copy, multi-app template, GitHub Actions |
 | 2026-05-23 | Single `PROJECT_PLAN.md` for tasks + test checklist | Owner-requested agent workflow |
 | 2026-05-23 | GitHub repo `pageandportal/pageandportalweb` | Initial repo; superseded by rename |

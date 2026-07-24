@@ -50,6 +50,7 @@ export const appsCollection = defineCollection({
     accentColor: z.string().optional(),
     accentColorSecondary: z.string().optional(),
     icon: z.string().optional(),
+    wordmark: z.boolean().default(false),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
     links: z.array(linkSchema).default([]),

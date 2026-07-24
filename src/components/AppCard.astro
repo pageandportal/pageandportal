@@ -5,6 +5,8 @@ interface AppEntry {
   tagline: string;
   status: string;
   subtitle?: string;
+  wordmark?: boolean;
+  accentColor?: string;
 }
 
 interface Props {
@@ -16,9 +18,12 @@ const { app, iconUrl } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const href = `${base}apps/${app.slug}/`;
 const statusLabel = app.status.replace(/-/g, ' ');
+const accentStyle = app.accentColor
+  ? { '--card-accent': app.accentColor }
+  : undefined;
 ---
 
-<article class="app-card">
+<article class:list={['app-card', app.wordmark && 'app-card-wordmark']} style={accentStyle}>
   <a class="app-card-link" href={href}>
     <div class="app-card-media">
       {
@@ -26,9 +31,9 @@ const statusLabel = app.status.replace(/-/g, ' ');
           <img
             src={iconUrl}
             alt=""
-            width="72"
-            height="72"
-            class="app-icon"
+            width={app.wordmark ? 220 : 72}
+            height={app.wordmark ? 86 : 72}
+            class={app.wordmark ? 'app-wordmark' : 'app-icon'}
             decoding="async"
             aria-hidden="true"
           />
@@ -41,7 +46,8 @@ const statusLabel = app.status.replace(/-/g, ' ');
     </div>
     <div class="app-card-body">
       <span class="badge">{statusLabel}</span>
-      <h2 class="app-name">{app.name}</h2>
+      {!app.wordmark && <h2 class="app-name">{app.name}</h2>}
+      {app.wordmark && <h2 class="sr-only">{app.name}</h2>}
       {app.subtitle && <p class="app-subtitle">{app.subtitle}</p>}
       <p class="app-tagline">{app.tagline}</p>
     </div>
@@ -67,7 +73,7 @@ const statusLabel = app.status.replace(/-/g, ' ');
   }
 
   .app-card:hover {
-    border-color: var(--gold-dim);
+    border-color: var(--card-accent, var(--gold-dim));
   }
 
   .app-card-link {
@@ -79,8 +85,13 @@ const statusLabel = app.status.replace(/-/g, ' ');
     border-radius: var(--radius);
   }
 
+  .app-card-wordmark .app-card-link {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
   .app-card-link:focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--card-accent, var(--gold));
     outline-offset: 3px;
   }
 
@@ -91,6 +102,12 @@ const statusLabel = app.status.replace(/-/g, ' ');
   .app-icon {
     border-radius: 14px;
     object-fit: cover;
+  }
+
+  .app-wordmark {
+    display: block;
+    width: min(100%, 14rem);
+    height: auto;
   }
 
   .app-icon-fallback {
@@ -118,9 +135,9 @@ const statusLabel = app.status.replace(/-/g, ' ');
   }
 
   .app-subtitle {
-    margin: 0 0 0.35rem;
+    margin: 0.35rem 0;
     font-size: 0.85rem;
-    color: var(--gold);
+    color: var(--card-accent, var(--gold));
     font-weight: 500;
   }
 

@@ -11,8 +11,12 @@ const { data } = entry;
 const base = import.meta.env.BASE_URL;
 const iconUrl = appIconUrl(entry.id, data.icon);
 const heroUrl = appAssetUrl(data.heroImage);
-const playStoreLink = data.links.find(
-  (link) => link.url?.includes('play.google.com/store/apps/details'),
+/** Primary CTA: first non-mailto link (Play Store, Open app, etc.). */
+const primaryCta = data.links.find(
+  (link) => Boolean(link.url) && !link.url!.startsWith('mailto:'),
+);
+const primaryIsExternal = Boolean(
+  primaryCta?.url && /^https?:\/\//i.test(primaryCta.url),
 );
 ---
 
@@ -20,30 +24,51 @@ const playStoreLink = data.links.find(
   <div class="container hero-top">
     <a class="back" href={base}>← Back to home</a>
 
-    <div class="hero-ident">
+    <div class:list={['hero-ident', data.wordmark && 'hero-ident-wordmark']}>
       {
-        iconUrl ? (
-          <img
-            src={iconUrl}
-            alt=""
-            width="96"
-            height="96"
-            class="app-icon"
-            decoding="async"
-            aria-hidden="true"
-          />
-        ) : (
-          <div class="app-icon-fallback" aria-hidden="true">
-            {data.name.charAt(0)}
+        data.wordmark && iconUrl ? (
+          <div class="hero-wordmark-block">
+            <span class="badge">{statusLabel(data.status)}</span>
+            <img
+              src={iconUrl}
+              alt={data.name}
+              width="420"
+              height="164"
+              class="app-wordmark"
+              decoding="async"
+            />
+            <h1 class="sr-only">{data.name}</h1>
+            {data.subtitle && <p class="subtitle">{data.subtitle}</p>}
+            <p class="tagline">{data.tagline}</p>
           </div>
+        ) : (
+          <>
+            {
+              iconUrl ? (
+                <img
+                  src={iconUrl}
+                  alt=""
+                  width="96"
+                  height="96"
+                  class="app-icon"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+              ) : (
+                <div class="app-icon-fallback" aria-hidden="true">
+                  {data.name.charAt(0)}
+                </div>
+              )
+            }
+            <div class="hero-copy">
+              <span class="badge">{statusLabel(data.status)}</span>
+              <h1>{data.name}</h1>
+              {data.subtitle && <p class="subtitle">{data.subtitle}</p>}
+              <p class="tagline">{data.tagline}</p>
+            </div>
+          </>
         )
       }
-      <div class="hero-copy">
-        <span class="badge">{statusLabel(data.status)}</span>
-        <h1>{data.name}</h1>
-        {data.subtitle && <p class="subtitle">{data.subtitle}</p>}
-        <p class="tagline">{data.tagline}</p>
-      </div>
     </div>
   </div>
 
@@ -66,10 +91,15 @@ const playStoreLink = data.links.find(
   <div class="container hero-bottom">
     <p class="intro">{data.description}</p>
     {
-      playStoreLink?.url && (
+      primaryCta?.url && (
         <p class="hero-cta">
-          <a class="store-button" href={playStoreLink.url} target="_blank" rel="noopener noreferrer">
-            {playStoreLink.label}
+          <a
+            class="store-button"
+            href={primaryCta.url}
+            target={primaryIsExternal ? '_blank' : undefined}
+            rel={primaryIsExternal ? 'noopener noreferrer' : undefined}
+          >
+            {primaryCta.label}
           </a>
         </p>
       )
@@ -105,6 +135,24 @@ const playStoreLink = data.links.find(
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
+  }
+
+  .hero-ident-wordmark {
+    display: block;
+  }
+
+  .hero-wordmark-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    max-width: 36rem;
+  }
+
+  .app-wordmark {
+    display: block;
+    width: min(100%, 28rem);
+    height: auto;
   }
 
   .app-icon {
