@@ -4,7 +4,7 @@
 **Purpose:** Clean, modern developer hub with a dedicated page per app  
 **Hosting:** GitHub Pages (static site)  
 **Repository:** [github.com/pageandportal/pageandportal](https://github.com/pageandportal/pageandportal)  
-**Last updated:** 2026-07-24
+**Last updated:** 2026-07-25
 
 ---
 
@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-07-25 | GA4 page title (not set) fix | Move `<title>` before gtag; send explicit `page_title` in config so page_view cannot race empty document.title → v0.7.4 |
 | 2026-07-24 | SparkClass drop Kahoot wording | Live quiz sessions only — avoid third-party brand risk → v0.7.3 |
 | 2026-07-24 | SparkClass wordmark on white | Logo tile matches other app marks; rounded white plate → v0.7.2 |
 | 2026-07-24 | SparkClass status and scope copy | Home/app: coming soon; pre-trade → apprenticeship wording → v0.7.1 |
@@ -338,6 +339,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] Footer includes a short note that the website uses Google Analytics
 - [ ] Google Analytics 4 loads on deployed pages with measurement ID `G-48L1CF97DY`
 - [ ] Google Analytics 4 does not load during local `npm run dev`
+- [ ] Pages and screens report shows real page titles (e.g. Portal Pages Times Tables), not a large `(not set)` bucket after deploy
 
 ### Per app
 

@@ -31,11 +31,12 @@ const fontHref =
   'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap';
 const gaId = ANALYTICS.googleAnalyticsMeasurementId;
 const enableAnalytics = import.meta.env.PROD && hasGoogleAnalytics();
+// page_title is set explicitly so page_view never races an empty document.title
 const gaInitScript = enableAnalytics
   ? `window.dataLayer = window.dataLayer || [];
 function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${gaId}');`
+gtag('config', '${gaId}', { page_title: ${JSON.stringify(pageTitle)} });`
   : null;
 ---
 
@@ -45,6 +46,7 @@ gtag('config', '${gaId}');`
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {useAssetBase && <base href={base} />}
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0d0f12" />
     <meta name="generator" content={Astro.generator} />
@@ -70,7 +72,6 @@ gtag('config', '${gaId}');`
       )
     }
     {enableAnalytics && <script is:inline set:html={gaInitScript} />}
-    <title>{pageTitle}</title>
   </head>
   <body>
     <SkipLink />
