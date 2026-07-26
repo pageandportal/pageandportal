@@ -109,7 +109,7 @@ Enable Pages in the repo: **Settings → Pages → Source:** GitHub Actions (aft
 - **Default:** Dark background (`#0d0f12` range), high-contrast text, restrained accent from each app’s artwork
 - **Typography:** One readable sans (e.g. system stack or [Inter](https://rsms.me/inter/)) + optional display face for headings if assets suggest it
 - **Layout:** Generous whitespace, max-width ~1100px, mobile-first
-- **Roadmap:** Horizontal scroll on mobile; cards or nodes with status chips (`Planned`, `In progress`, `Ready`, `Shipped`)
+- **Roadmap:** Horizontal scroll on mobile; cards or nodes with status chips (`Planned`, `In progress`, `Ready`, `Shipped`). **Features only** — no user/internal tasks or "not planned" lanes; see `.cursor/rules/app-roadmaps.mdc`
 - **Accessibility:** Semantic landmarks, focus states, `prefers-reduced-motion`, alt text on all supplied images
 - **Apps without graphics:** Neutral gradient placeholder + monogram until assets arrive
 

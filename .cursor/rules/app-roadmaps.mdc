@@ -1,0 +1,45 @@
+---
+description: App project page roadmaps show real product features only, never user/internal tasks
+globs: src/content/apps/*.md,supply/apps/*/app.md
+alwaysApply: false
+---
+
+# App page roadmaps — features only
+
+Roadmap lanes on every App Project Page (`src/content/apps/<slug>.md` frontmatter, mirrored in `supply/apps/<slug>/app.md`) must describe **actual product features** the user experiences — nothing else.
+
+## Keep
+
+- User-facing features and capabilities (built, in progress, or genuinely planned).
+- Short benefit-focused titles/descriptions in the visitor's language.
+
+## Remove / never publish
+
+- **User or owner tasks** (e.g. "Finish Play listing graphics", "First internal test upload", "review privacy copy").
+- **Internal/engineering/release chores** (Console setup, CI, version bumps, refactors, QA).
+- **"Not planned" / out-of-scope lanes** — do not list things you will not build; it implies they were considered.
+- Task IDs, version numbers, or the word "shipped" on the public page.
+
+## Example
+
+```yaml
+# ❌ BAD — internal task + not-planned lane
+- id: now
+  label: Before public release
+  items:
+    - title: Finish Google Play listing graphics and Console setup
+- id: later
+  label: Not planned
+  items:
+    - title: Dark mode
+
+# ✅ GOOD — real upcoming feature
+- id: next
+  label: After release · Polish
+  items:
+    - title: Tap a heatmap cell for fact detail
+      description: Attempts and last practised.
+      status: planned
+```
+
+If a lane would only contain tasks/chores, omit the lane. Empty lanes are hidden at render (`src/lib/apps.ts`).
