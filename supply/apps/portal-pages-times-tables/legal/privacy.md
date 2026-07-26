@@ -1,7 +1,7 @@
 # Privacy Policy — Portal Pages: Times Tables
 
 **Effective date:** 23 May 2026  
-**Last updated:** 25 July 2026
+**Last updated:** 26 July 2026
 
 This policy describes how **Portal Pages: Times Tables** (the “App”) handles information when you install and use it on an Android device. The App is published on Google Play by **Page and Portal** (“we”, “us”, “our”).
 
@@ -13,10 +13,11 @@ This policy describes how **Portal Pages: Times Tables** (the “App”) handles
 ## Summary
 
 - **No account** is required — no email signup and no cloud login.
-- **No ads** and **no in-app purchases** in the current version.
+- **Always free** — **no ads** and **no in-app purchases**. This is permanent product policy, not a temporary promotion.
 - **No analytics or advertising SDKs** — we do not receive usage or behaviour data from the App.
 - **No internet connection** is required for normal use after installation (opening the hosted privacy policy link is optional).
 - **Practice progress, profiles, and settings stay on your device** unless you use Android’s backup features or move data by changing devices yourself.
+- Play **Data safety** is intended to match this local-only story: we do not collect or sell children’s data through the App.
 
 ---
 
@@ -40,10 +41,11 @@ To provide practice, progress, profiles, and settings, the App stores data **loc
 |--------------|---------|----------|
 | **Local profiles** | Separate Parent/Guardian and child use on one device | Optional parent display name; child display names; optional colour chip |
 | **Parent PIN** | Protect the grown-up area | A **hashed** 4-digit PIN (not stored in plain text) |
-| **Practice history** | Show progress, mastery, and parent summaries **per child** | Multiplication facts attempted, whether answers were correct, timestamps |
+| **Practice history** | Show progress, mastery, and parent summaries **per child** | Multiplication facts attempted, whether answers were correct, timestamps; optional silent response time used only to adapt practice difficulty on the device |
+| **Fact ratings / review schedule** | Keep practice at a helpful level and revisit earlier facts | Local difficulty ratings and review-due times — never shown as a timer or score race |
 | **Help notes** | Let a child flag a tricky fact for a grown-up | Optional short note, related fact (e.g. 7×8), parent reply — all local |
 | **Active tables** | Limit which tables a child can learn/practise | Which tables (2–12) a grown-up has turned on for each child |
-| **App settings** | Remember your choices | Sound and music toggles, session length, accessibility options, optional practice modes |
+| **App settings** | Remember your choices | Sound toggle, session length, easier-to-read (OpenDyslexic) font, practice reminders |
 | **Onboarding / setup state** | Remember that Parent setup was completed | Flags so the setup wizard is not shown again |
 | **Last practised tables** | Convenience shortcuts | Table numbers recently used |
 
@@ -73,7 +75,7 @@ If you add the optional **practice widget**, it opens the App so someone can cho
 
 The App is designed for children practising times tables (about ages 6–12), with a Parent/Guardian area protected by a PIN. Child display names and Help notes are stored only so the family can use the App on one shared device.
 
-We do not knowingly collect children’s personal information through our servers. Because the App does not send profile or practice data to us, we do not sell or share children’s personal information for advertising, and the App does not show ads in the current version.
+We do not knowingly collect children’s personal information through our servers. Because the App does not send profile or practice data to us, we do not sell or share children’s personal information for advertising, and the App does **not** show ads.
 
 Parents and guardians can review each child’s progress and Help notes in the App, change which tables are open, use PIN protection for the grown-up area, and **uninstall the App** or **clear app data** in Android settings to remove locally stored information.
 
@@ -96,7 +98,7 @@ Limited sharing may occur only in these situations:
 
 ## 7. Android backup and new devices
 
-The App may allow **Android backup** (for example to a Google account), depending on your device and system settings. Backup content is controlled by Google and your device manufacturer, not by us. If you restore the App on another device, profiles, practice data, Help notes, and settings may be restored with it.
+The App may allow **Android backup** (for example to a Google account), depending on your device and system settings. Backup content is controlled by Google and your device manufacturer, not by us. If you restore the App on another device, profiles, practice history, Help notes, and settings may be restored with it.
 
 To remove App data from a device: **Settings → Apps → Portal Pages: Times Tables → Storage → Clear data** (wording may vary by device).
 

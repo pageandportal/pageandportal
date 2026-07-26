@@ -3,9 +3,10 @@ name: Portal Pages Times Tables
 tagline: Learn and practise times tables 2–12 — calm, offline, and free.
 status: coming-soon
 description: >-
-  A calm, offline-friendly app for children to learn and practise multiplication
-  tables 2–12. Progress and settings stay on the device — no account, no ads, and
-  no analytics.
+  Portal Pages: Times Tables is in active development. The experience described
+  below is ready in our current builds, but the app is not yet available to
+  download from Google Play. We’ll update this page when the public release goes
+  live.
 accentColor: '#D97706'
 accentColorSecondary: '#5FAE5A'
 icon: apps/portal-pages-times-tables/icon.png
@@ -21,72 +22,83 @@ links:
 features:
   - title: Times tables 2–12
     description: >-
-      Focused practice for every table from 2 through 12 — learn facts at your own
-      pace without distractions.
+      Focused Learn and Practice for every table from 2 through 12 — calm sessions
+      without arcade noise or distractions.
   - title: Works fully offline
     description: >-
       No internet connection is required after install. Practice anywhere without
       worrying about connectivity or data use.
-  - title: Progress on your device
+  - title: Progress stays on your device
     description: >-
-      Practice history, mastery, and settings are stored locally so families keep
-      control of their data.
-  - title: Grown-up controls
+      Practice history, mastery, profiles, and settings are stored locally so
+      families keep control of their data.
+  - title: Profiles for the whole household
     description: >-
-      Optional parent PIN protects settings. Review progress summaries without
-      needing an online account.
-  - title: Learn mode with speech
+      Create a grown-up profile and named child profiles on one device. Each child
+      has their own progress; a profile picker opens on launch. No online account.
+  - title: Grown-up area with PIN
     description: >-
-      Learn mode can read facts aloud using your device’s built-in text-to-speech —
-      processed on-device, not sent to Page and Portal.
+      A required grown-up PIN protects settings, progress digests, Help notes, and
+      which tables each child can open. No cloud login.
+  - title: Visual Learn
+    description: >-
+      Children explore facts with equal groups, arrays, number lines, and related
+      pictures — including a gentle “your turn” build step before Practice opens on
+      a table.
+  - title: Adaptive Practice
+    description: >-
+      Short rounds that adjust difficulty as the child works, with varied question
+      shapes (including pictures, true/false, and “another way to show…”). Timing
+      may be used silently to help adaptation; there is no visible countdown clock.
+  - title: Help when they’re stuck
+    description: >-
+      A child can flag a tricky fact for a grown-up. Replies and notes stay on the
+      device in a simple Help inbox.
+  - title: Optional easier-to-read font
+    description: >-
+      Grown-ups can turn on the OpenDyslexic typeface in Settings. Attribution
+      appears in About.
   - title: Optional practice reminders
     description: >-
-      Reminders are off by default. Turn them on in settings if you want a gentle
-      nudge to practise.
-  - title: No ads or tracking
+      Reminders are off by default. If a grown-up turns them on, Android may ask for
+      notification permission (Android 13+).
+  - title: Always free, ad-free, and Data-safe
     description: >-
-      No advertising, no in-app purchases, and no analytics SDKs in the current
-      version — a calm space for learning.
+      No advertising, no in-app purchases, and no analytics or tracking SDKs — by
+      design, not as a limited-time offer. Practice data stays on the device.
 roadmap:
   - id: now
-    label: Release 2 · Next build
+    label: Before public release
     items:
-      - title: Notification permission for reminders
-        description: >-
-          Request POST_NOTIFICATIONS when a grown-up enables reminders (API 33+).
+      - title: Finish Google Play listing graphics and Console setup
+        description: Screenshots and remaining Play Console setup before launch.
         status: planned
-      - title: OpenDyslexic license in About
-        description: Attribution for the bundled OpenDyslexic font.
+      - title: First internal test upload and device checks
         status: planned
   - id: next
-    label: Release 3 · Post-launch (v1.x)
+    label: After release · Polish
     items:
-      - title: Perfect-score dog artwork
-        description: >-
-          Replace the confetti placeholder in PerfectScoreCelebration (confetti
-          shipped in v0.2.7; dog artwork deferred).
+      - title: Tap a heatmap cell for fact detail
+        description: Attempts and last practised.
         status: planned
-      - title: Heatmap cell detail (optional)
-        description: >-
-          Tap a heatmap cell for fact detail — attempt count, last practised.
+      - title: Extra reverse-division Practice prompts
+        description: Once division is unlocked.
         status: planned
-      - title: Dark/light theme control (optional)
-        description: >-
-          Theme choice beyond “follow system”, if not already exposed in settings.
+      - title: OpenDyslexic spacing refinements on dense screens
         status: planned
-      - title: Broader accessibility pass (optional)
-        description: Beyond current TalkBack labels.
+      - title: Fuller accessibility pass
+        description: TalkBack, focus order, and touch targets.
+        status: planned
+      - title: Illustration style refresh for Learn/Practice visuals
+        description: With art direction.
         status: planned
   - id: later
-    label: Release 4+ · Backlog
+    label: Not planned
     items:
-      - title: Themes / visual variants
-        status: planned
-      - title: Classroom mode
-        status: planned
-      - title: Mixed-mode / weighting refinements
-        description: Further improvements to mixed practice and weighting.
-        status: planned
+      - title: Ads, in-app purchases, or behavioural tracking
+      - title: Dark mode
+        description: The app stays on the warm light brand theme.
+      - title: Online accounts, cloud sync, or social features
 legalPages:
   - title: Privacy
     slug: privacy

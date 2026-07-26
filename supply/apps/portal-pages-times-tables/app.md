@@ -10,14 +10,14 @@
 | **URL slug** | portal-pages-times-tables |
 | **Tagline** | Learn and practise times tables 2–12 — calm, offline, and free. |
 | **Status** | coming-soon |
-| **Short description** | A calm, offline-friendly app for children to learn and practise multiplication tables 2–12. Progress and settings stay on the device — no account, no ads, and no analytics. |
+| **Short description** | Portal Pages: Times Tables is in active development. The experience described below is ready in our current builds, but the app is not yet available to download from Google Play. We’ll update this page when the public release goes live. |
 
 ---
 
 ## Links
 
 | Label | URL |
-|-------|-----|
+|-------|--------|
 | Google Play | TODO: or leave blank |
 | App Store | TODO: or leave blank |
 | GitHub / source | TODO: or leave blank |
@@ -37,12 +37,12 @@
 
 ## Features
 
-Drafted from the privacy policy and app positioning (2026-05-23). Owner may reword or add screenshots.
+Synced from Times Tables `docs/WEBSITE_PROJECT_PAGE_HANDOFF.md` (2026-07-26).
 
 ### Feature 1 — Times tables 2–12
 
 - **Title:** Times tables 2–12
-- **Description:** Focused practice for every table from 2 through 12 — learn facts at your own pace without distractions.
+- **Description:** Focused Learn and Practice for every table from 2 through 12 — calm sessions without arcade noise or distractions.
 - **Image (optional):** TODO
 
 ### Feature 2 — Works fully offline
@@ -51,70 +51,90 @@ Drafted from the privacy policy and app positioning (2026-05-23). Owner may rewo
 - **Description:** No internet connection is required after install. Practice anywhere without worrying about connectivity or data use.
 - **Image (optional):** TODO
 
-### Feature 3 — Progress on your device
+### Feature 3 — Progress stays on your device
 
-- **Title:** Progress on your device
-- **Description:** Practice history, mastery, and settings are stored locally so families keep control of their data.
+- **Title:** Progress stays on your device
+- **Description:** Practice history, mastery, profiles, and settings are stored locally so families keep control of their data.
 - **Image (optional):** TODO
 
-### Feature 4 — Grown-up controls
+### Feature 4 — Profiles for the whole household
 
-- **Title:** Grown-up controls
-- **Description:** Optional parent PIN protects settings. Review progress summaries without needing an online account.
+- **Title:** Profiles for the whole household
+- **Description:** Create a grown-up profile and named child profiles on one device. Each child has their own progress; a profile picker opens on launch. No online account.
 - **Image (optional):** TODO
 
-### Feature 5 — Learn mode with speech
+### Feature 5 — Grown-up area with PIN
 
-- **Title:** Learn mode with speech
-- **Description:** Learn mode can read facts aloud using the device’s built-in text-to-speech — processed on-device, not sent to Page and Portal.
+- **Title:** Grown-up area with PIN
+- **Description:** A required grown-up PIN protects settings, progress digests, Help notes, and which tables each child can open. No cloud login.
 - **Image (optional):** TODO
 
-### Feature 6 — Optional practice reminders
+### Feature 6 — Visual Learn
+
+- **Title:** Visual Learn
+- **Description:** Children explore facts with equal groups, arrays, number lines, and related pictures — including a gentle “your turn” build step before Practice opens on a table.
+- **Image (optional):** TODO
+
+### Feature 7 — Adaptive Practice
+
+- **Title:** Adaptive Practice
+- **Description:** Short rounds that adjust difficulty as the child works, with varied question shapes (including pictures, true/false, and “another way to show…”). Timing may be used silently to help adaptation; there is no visible countdown clock.
+- **Image (optional):** TODO
+
+### Feature 8 — Help when they’re stuck
+
+- **Title:** Help when they’re stuck
+- **Description:** A child can flag a tricky fact for a grown-up. Replies and notes stay on the device in a simple Help inbox.
+- **Image (optional):** TODO
+
+### Feature 9 — Optional easier-to-read font
+
+- **Title:** Optional easier-to-read font
+- **Description:** Grown-ups can turn on the OpenDyslexic typeface in Settings. Attribution appears in About.
+- **Image (optional):** TODO
+
+### Feature 10 — Optional practice reminders
 
 - **Title:** Optional practice reminders
-- **Description:** Reminders are off by default. Turn them on in settings if you want a gentle nudge to practise.
+- **Description:** Reminders are off by default. If a grown-up turns them on, Android may ask for notification permission (Android 13+).
 - **Image (optional):** TODO
 
-### Feature 7 — No ads or tracking
+### Feature 11 — Always free, ad-free, and Data-safe
 
-- **Title:** No ads or tracking
-- **Description:** No advertising, no in-app purchases, and no analytics SDKs in the current version — a calm space for learning.
+- **Title:** Always free, ad-free, and Data-safe
+- **Description:** No advertising, no in-app purchases, and no analytics or tracking SDKs — by design, not as a limited-time offer. Practice data stays on the device.
 - **Image (optional):** TODO
 
 ---
 
 ## Roadmap
 
-*Site lanes: **Now** = Release 2 (next Play build); **Next** = Release 3 (v1.x polish); **Later** = Release 4+ backlog.*
+*Site lanes from Times Tables handoff (2026-07-26). Public page must not use “shipped” or version numbers.*
 
-### Now — Release 2 (next app build, likely v0.2.9 or v0.3.0)
-
-Small agent-ready items before or alongside Play upload.
+### Now — Before public release
 
 | Item | Notes |
 |------|-------|
-| Notification permission for reminders | Request `POST_NOTIFICATIONS` when grown-up enables reminders (API 33+) |
-| OpenDyslexic license in About | Attribution for bundled font |
+| Finish Google Play listing graphics and Console setup | Screenshots and remaining Console setup |
+| First internal test upload and device checks | |
 
-### Next — Release 3 (post-launch polish, v1.x)
+### Next — After release · Polish
 
 | Item | Notes |
 |------|-------|
-| Perfect-score dog artwork | Replace confetti placeholder in `PerfectScoreCelebration` (confetti shipped v0.2.7; dog deferred) |
+| Tap a heatmap cell for fact detail | Attempts, last practised |
+| Extra reverse-division Practice prompts | Once division is unlocked |
+| OpenDyslexic spacing refinements on dense screens | |
+| Fuller accessibility pass | TalkBack, focus order, touch targets |
+| Illustration style refresh for Learn/Practice visuals | With art direction |
 
-**Optional UX** (promote to task board when ready — not on board yet):
+### Later — Not planned
 
-- Tap a heatmap cell for fact detail (attempt count, last practised)
-- Dark/light theme control (beyond “follow system” if not already exposed)
-- Broader accessibility pass beyond current TalkBack labels
-
-### Later — Release 4+ (post-launch backlog)
-
-Explicitly not v1; no tasks promoted yet:
-
-- Themes / visual variants
-- Classroom mode
-- Further mixed-mode / weighting refinements
+| Item | Notes |
+|------|-------|
+| Ads, in-app purchases, or behavioural tracking | Explicitly out of scope |
+| Dark mode | Warm light brand theme only |
+| Online accounts, cloud sync, or social features | Explicitly out of scope |
 
 ---
 
@@ -155,4 +175,4 @@ Assets in `graphics/` (owner-supplied 2026-05-23):
 
 ## Notes for agents
 
-TODO: optional notes (e.g. ages, offline-only, times tables 2–12)
+Canonical public copy: Times Tables repo `docs/WEBSITE_PROJECT_PAGE_HANDOFF.md` and `docs/PRIVACY_POLICY.md`.

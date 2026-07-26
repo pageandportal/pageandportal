@@ -4,7 +4,7 @@
 **Purpose:** Clean, modern developer hub with a dedicated page per app  
 **Hosting:** GitHub Pages (static site)  
 **Repository:** [github.com/pageandportal/pageandportal](https://github.com/pageandportal/pageandportal)  
-**Last updated:** 2026-07-25
+**Last updated:** 2026-07-26
 
 ---
 
@@ -192,7 +192,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [x] **Roadmap ownership** — Commander Vault `docs/public-roadmap.yaml` is source of truth (2026-05-30); website publishes via `docs/roadmap-handoff.md`
 - [x] **Developer blurb** — James; Nelson region; Page & Portal copy in `supply/site/about.md` (2026-05-23)
 - [ ] **Donation** — URL for donate button(s): one global link or per-app links *(UI hidden via `DONATE.enabled` until ready)*
-- [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`)
+- [x] **Privacy (and other legal)** — Commander Vault: privacy, terms, credits in `supply/apps/commander-vault/legal/`; Times Tables privacy in `supply/apps/portal-pages-times-tables/legal/privacy.md` (+ `docs/Portal-Pages-Times-Tables-PRIVACY_POLICY.md`; republished from app-repo canonical 2026-07-26)
 
 ### Post-launch (owner)
 
@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-07-26 | Y-014 Times Tables page + privacy | Rewrote features/roadmap from app-repo handoff; republished canonical privacy (26 July 2026) → v0.7.5 |
 | 2026-07-25 | GA4 page title (not set) fix | Move `<title>` before gtag; send explicit `page_title` in config so page_view cannot race empty document.title → v0.7.4 |
 | 2026-07-24 | SparkClass drop Kahoot wording | Live quiz sessions only — avoid third-party brand risk → v0.7.3 |
 | 2026-07-24 | SparkClass wordmark on white | Logo tile matches other app marks; rounded white plate → v0.7.2 |
