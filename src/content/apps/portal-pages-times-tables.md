@@ -67,14 +67,6 @@ features:
       No advertising, no in-app purchases, and no analytics or tracking SDKs — by
       design, not as a limited-time offer. Practice data stays on the device.
 roadmap:
-  - id: now
-    label: Before public release
-    items:
-      - title: Finish Google Play listing graphics and Console setup
-        description: Screenshots and remaining Play Console setup before launch.
-        status: planned
-      - title: First internal test upload and device checks
-        status: planned
   - id: next
     label: After release · Polish
     items:
@@ -92,13 +84,6 @@ roadmap:
       - title: Illustration style refresh for Learn/Practice visuals
         description: With art direction.
         status: planned
-  - id: later
-    label: Not planned
-    items:
-      - title: Ads, in-app purchases, or behavioural tracking
-      - title: Dark mode
-        description: The app stays on the warm light brand theme.
-      - title: Online accounts, cloud sync, or social features
 legalPages:
   - title: Privacy
     slug: privacy

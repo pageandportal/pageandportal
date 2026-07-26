@@ -109,14 +109,7 @@ Synced from Times Tables `docs/WEBSITE_PROJECT_PAGE_HANDOFF.md` (2026-07-26).
 
 ## Roadmap
 
-*Site lanes from Times Tables handoff (2026-07-26). Public page must not use “shipped” or version numbers.*
-
-### Now — Before public release
-
-| Item | Notes |
-|------|-------|
-| Finish Google Play listing graphics and Console setup | Screenshots and remaining Console setup |
-| First internal test upload and device checks | |
+*Public page: major product features only — no Play Console / internal release tasks, no “not planned” lane, no “shipped” or version numbers.*
 
 ### Next — After release · Polish
 
@@ -127,14 +120,6 @@ Synced from Times Tables `docs/WEBSITE_PROJECT_PAGE_HANDOFF.md` (2026-07-26).
 | OpenDyslexic spacing refinements on dense screens | |
 | Fuller accessibility pass | TalkBack, focus order, touch targets |
 | Illustration style refresh for Learn/Practice visuals | With art direction |
-
-### Later — Not planned
-
-| Item | Notes |
-|------|-------|
-| Ads, in-app purchases, or behavioural tracking | Explicitly out of scope |
-| Dark mode | Warm light brand theme only |
-| Online accounts, cloud sync, or social features | Explicitly out of scope |
 
 ---
 

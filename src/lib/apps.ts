@@ -25,11 +25,13 @@ export function statusLabel(status: string): string {
 }
 
 export function roadmapLanes(entry: AppEntry) {
-  return entry.data.roadmap.map((lane) => ({
-    ...lane,
-    label: lane.label ?? LANE_LABELS[lane.id],
-    items: lane.items.filter((item) => !/^TODO$/i.test(item.title.trim())),
-  }));
+  return entry.data.roadmap
+    .map((lane) => ({
+      ...lane,
+      label: lane.label ?? LANE_LABELS[lane.id],
+      items: lane.items.filter((item) => !/^TODO$/i.test(item.title.trim())),
+    }))
+    .filter((lane) => lane.items.length > 0);
 }
 
 export function hasRoadmapItems(entry: AppEntry): boolean {

@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-07-26 | Times Tables roadmap trim | Dropped Play/internal “before release” items and Not planned lane; hide empty roadmap lanes → v0.7.6 |
 | 2026-07-26 | Y-014 Times Tables page + privacy | Rewrote features/roadmap from app-repo handoff; republished canonical privacy (26 July 2026) → v0.7.5 |
 | 2026-07-25 | GA4 page title (not set) fix | Move `<title>` before gtag; send explicit `page_title` in config so page_view cannot race empty document.title → v0.7.4 |
 | 2026-07-24 | SparkClass drop Kahoot wording | Live quiz sessions only — avoid third-party brand risk → v0.7.3 |
