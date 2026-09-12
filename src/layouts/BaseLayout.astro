@@ -14,6 +14,10 @@ interface Props {
   ogImage?: string;
   /** Use on 404.html so assets resolve when GitHub serves it for nested bad URLs. */
   useAssetBase?: boolean;
+  /** Robots meta content. Use `noindex, nofollow` for unlisted private briefings. */
+  robots?: string;
+  /** When false, omit public site header/footer (unlisted briefing pages). */
+  showSiteChrome?: boolean;
 }
 
 const {
@@ -21,6 +25,8 @@ const {
   description = SITE.description,
   ogImage = 'brand/studio-icon.png',
   useAssetBase = false,
+  robots = 'index, follow',
+  showSiteChrome = true,
 } = Astro.props;
 
 const pageTitle = title ? `${title} · ${SITE.title}` : SITE.title;
@@ -48,9 +54,11 @@ gtag('config', '${gaId}', { page_title: ${JSON.stringify(pageTitle)} });`
     {useAssetBase && <base href={base} />}
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="googlebot" content={robots} />
     <meta name="theme-color" content="#0d0f12" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="canonical" href={canonical.href} />
+    {!robots.includes('noindex') && <link rel="canonical" href={canonical.href} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.title} />
     <meta property="og:title" content={pageTitle} />
@@ -75,11 +83,11 @@ gtag('config', '${gaId}', { page_title: ${JSON.stringify(pageTitle)} });`
   </head>
   <body>
     <SkipLink />
-    <SiteHeader />
+    {showSiteChrome && <SiteHeader />}
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <SiteFooter />
+    {showSiteChrome && <SiteFooter />}
   </body>
 </html>
 

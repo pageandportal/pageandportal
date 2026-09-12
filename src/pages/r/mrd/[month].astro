@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const digests = await getCollection('midwifery-digests');
+  return digests.map((entry) => ({
+    params: { month: entry.data.month },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, month, prepared, audience, description } = entry.data;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  robots="noindex, nofollow"
+  showSiteChrome={false}
+>
+  <article class="digest container">
+    <header class="digest-header">
+      <p class="eyebrow">Private briefing · unlisted page</p>
+      <h1>{title}</h1>
+      <p class="meta">
+        <span>{month}</span>
+        {prepared && <span>Prepared {prepared}</span>}
+        {audience && <span>{audience}</span>}
+      </p>
+      <p class="notice">
+        This page is intentionally unlisted (not linked from the public site). Please do not share the URL widely.
+      </p>
+    </header>
+    <div class="digest-prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .digest {
+    max-width: 46rem;
+    padding-block: 1.5rem 3rem;
+  }
+
+  .digest-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    margin: 0 0 0.65rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .digest-header h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.6rem, 4vw, 2.15rem);
+    line-height: 1.2;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin: 0 0 1rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .notice {
+    margin: 0;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    background: rgb(212 175 55 / 10%);
+    border: 1px solid rgb(212 175 55 / 28%);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .digest-prose :global(h1) {
+    display: none;
+  }
+
+  .digest-prose :global(h2) {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .digest-prose :global(h3) {
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  .digest-prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 1.75rem 0;
+  }
+
+  .digest-prose :global(blockquote) {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--gold);
+    background: rgb(255 255 255 / 3%);
+    color: var(--text-muted);
+  }
+
+  .digest-prose :global(a) {
+    color: var(--gold);
+  }
+
+  .digest-prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.92rem;
+  }
+
+  .digest-prose :global(th),
+  .digest-prose :global(td) {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+</style>

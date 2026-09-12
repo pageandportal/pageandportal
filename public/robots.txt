@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+
+# Unlisted private briefings (email recipients only — do not index)
+Disallow: /pageandportal/r/
+Disallow: /r/

@@ -65,7 +65,23 @@ export const appsCollection = defineCollection({
   }),
 });
 
+/** Unlisted midwifery research digests — not linked from public nav. */
+export const midwiferyDigestsCollection = defineCollection({
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/midwifery-digests',
+  }),
+  schema: z.object({
+    title: z.string(),
+    month: z.string().regex(/^\d{4}-\d{2}$/),
+    prepared: z.string().optional(),
+    audience: z.string().optional(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   apps: appsCollection,
   legal: legalCollection,
+  'midwifery-digests': midwiferyDigestsCollection,
 };
