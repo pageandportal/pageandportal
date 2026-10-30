@@ -73,7 +73,7 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 _Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-30). **v1.2 is live** on Google Play; **v1.3.0** is built and in testing. See that repo’s `docs/roadmap-handoff.md`._
 
-*Site lanes: **Released** (`now`) = live for users, newest first; **v1.3.0** (`next`) = next release; **Planned** (`later`) = accepted future work.*
+*Site lanes: **Released** (`now`) = live for users, newest first; **v1.3.0 — Coming soon** (`next`) = next release; **Planned** (`later`) = accepted future work.*
 
 ### Released
 
@@ -90,7 +90,7 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-30). **v1.2 
 | Reminders for stale in-progress decks | Shipped | Local nudge after long idle; no push |
 | Stay up to date in the app | Shipped | Flexible Play in-app update (**A79**) |
 
-### v1.3.0
+### v1.3.0 — Coming soon
 
 | Feature | Status | Notes |
 |---------|--------|--------|

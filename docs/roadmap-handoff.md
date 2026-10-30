@@ -73,7 +73,7 @@ Custom lane labels supported (e.g. `V1.0 closed beta`, `v1.2+ and iOS`).
 | Lane `id` | Label | Contents |
 |-----------|-------|----------|
 | `now` | `Released` | Everything live for users (`shipped`), newest release first |
-| `next` | Next release number, e.g. `v1.3.0` | Items for that release (`ready` / `in-progress`); empty when nothing is scheduled, so the lane hides |
+| `next` | Next release number + “Coming soon”, e.g. `v1.3.0 — Coming soon` (owner preference 2026-10-30) | Items for that release (`ready` / `in-progress`); empty when nothing is scheduled, so the lane hides |
 | `later` | `Planned` | Accepted future work (`planned`), biggest headline first |
 
 Each item: `title` (required), `description` (optional), `status` (`planned` | `in-progress` | `ready` | `shipped`). The site chip shows `shipped` as **Published**; keep `shipped` in the YAML.

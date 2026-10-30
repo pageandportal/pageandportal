@@ -97,7 +97,7 @@ roadmap:
           when you are ready — no hunt through the store listing.
         status: shipped
   - id: next
-    label: v1.3.0
+    label: v1.3.0 — Coming soon
     items:
       - title: Options menu
         description: A dedicated place for app preferences and backup.
