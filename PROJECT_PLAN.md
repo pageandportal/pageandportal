@@ -203,7 +203,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 **Commander Vault** (`supply/apps/commander-vault/`)
 
 - [x] **Features** — 4 items from legacy site (in `app.md`)
-- [x] **Roadmap** — `V1.0 closed beta` lane plus v1.1, v1.2+, and iOS plan in `app.md` (updated 2026-05-30)
+- [x] **Roadmap** — Released / v1.3.0 / Planned lanes in `app.md`, published from CV `public-roadmap.yaml` (updated 2026-10-30)
 - [x] **Monetization architecture** — Start free with 5 editable mono-colour slots; non-mono slots remain visible but locked; a one-time purchase unlocks the full 32-slot challenge; shared progress pages keep a watermark until unlock (2026-05-25)
 - [x] **Links** — support email live; site shows `Coming soon to Google Play` until the public listing goes live
 - [x] **Graphics** — `logo-icon.png`, `hero-banner.png`; feature screenshots + Play assets when store listing ships
@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-30 | Commander Vault roadmap — Released / v1.3.0 / Planned | Published three-column layout from CV `public-roadmap.yaml`: 10 released (EDHREC from v1.2 first), 4 v1.3.0 **ready**, 6 planned; fixed CV paths in `docs/roadmap-handoff.md` → v0.7.7 |
 | 2026-07-26 | Times Tables roadmap trim | Dropped Play/internal “before release” items and Not planned lane; hide empty roadmap lanes → v0.7.6 |
 | 2026-07-26 | Y-014 Times Tables page + privacy | Rewrote features/roadmap from app-repo handoff; republished canonical privacy (26 July 2026) → v0.7.5 |
 | 2026-07-25 | GA4 page title (not set) fix | Move `<title>` before gtag; send explicit `page_title` in config so page_view cannot race empty document.title → v0.7.4 |
@@ -347,10 +348,10 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
-- [ ] Commander Vault — status badge shows `beta` while roadmap lane is **V1.0 Play launch**
-- [ ] Commander Vault — roadmap shows **ready** V1.0 items and **in-progress** Google Play launch
+- [ ] Commander Vault — status badge shows `live`
+- [ ] Commander Vault — roadmap shows three lanes: **Released** (10 shipped, EDHREC first), **v1.3.0** (4 ready), **Planned** (6 planned, iPhone and iPad first); mobile swipes between lanes
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
-- [ ] Commander Vault — support link works and `Coming soon to Google Play` renders as non-clickable placeholder text
+- [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing
 - [ ] Commander Vault — privacy and terms mention Google Play purchase handling and the one-time unlock
 - [x] About on home `#about`; studio credit on app pages — owner verified 2026-05-23
 - [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23

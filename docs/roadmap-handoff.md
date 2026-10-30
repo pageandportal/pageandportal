@@ -8,9 +8,9 @@
 
 | File | Role |
 |------|------|
-| **`E:/App Projects/Commander_Vault/docs/public-roadmap.yaml`** | **Canonical** public roadmap — app badge, lanes, items, statuses, backlog cross-refs |
-| `E:/App Projects/Commander_Vault/docs/PROJECT_TODO.md` | Internal execution backlog (`A*` / `U*` tasks) |
-| `E:/App Projects/Commander_Vault/docs/roadmap-handoff.md` | Full ownership rules and maintenance workflow |
+| **`E:/Projects - Apps/Commander_Vault/docs/public-roadmap.yaml`** | **Canonical** public roadmap — app badge, lanes, items, statuses, backlog cross-refs |
+| `E:/Projects - Apps/Commander_Vault/docs/PROJECT_TODO.md` | Internal execution backlog (`A*` / `U*` tasks) |
+| `E:/Projects - Apps/Commander_Vault/docs/roadmap-handoff.md` | Full ownership rules and maintenance workflow |
 
 **Website agents:** Read Commander Vault `docs/public-roadmap.yaml` before editing Commander Vault roadmap content. Copy **user-centric headlines** verbatim — no task IDs or engineering detail on the site. See Commander Vault `docs/roadmap-handoff.md` § Editorial rules.
 
@@ -27,7 +27,7 @@ src/content/apps/commander-vault.md   ← YAML frontmatter (Astro renders this)
 Publish from Commander Vault source:
 
 ```
-E:/App Projects/Commander_Vault/docs/public-roadmap.yaml
+E:/Projects - Apps/Commander_Vault/docs/public-roadmap.yaml
         ↓  (website agent copies roadmap + status)
 src/content/apps/commander-vault.md
 supply/apps/commander-vault/app.md    ← human-friendly tables (keep aligned)
@@ -44,7 +44,7 @@ Only **legal pages** and some **site config** auto-sync from `supply/` via `npm 
 
 When publishing Commander Vault roadmap updates:
 
-1. Read **`E:/App Projects/Commander_Vault/docs/public-roadmap.yaml`** and **`docs/roadmap-handoff.md`** (Commander Vault).
+1. Read **`E:/Projects - Apps/Commander_Vault/docs/public-roadmap.yaml`** and **`docs/roadmap-handoff.md`** (Commander Vault).
 2. Update **`src/content/apps/commander-vault.md`** (`status`, `roadmap` frontmatter).
 3. Update **`supply/apps/commander-vault/app.md`** roadmap tables to match.
 4. If app badge changed, update **`apps.inventory.json`**.
@@ -67,6 +67,14 @@ Defined in `src/content.config.ts`. Each app has **exactly three lanes**:
 | `later` | Future / backlog |
 
 Custom lane labels supported (e.g. `V1.0 closed beta`, `v1.2+ and iOS`).
+
+**Commander Vault lane layout** (since 2026-10-30; see Commander Vault `docs/roadmap-handoff.md` § Lane layout):
+
+| Lane `id` | Label | Contents |
+|-----------|-------|----------|
+| `now` | `Released` | Everything live for users (`shipped`), newest release first |
+| `next` | Next release number, e.g. `v1.3.0` | Items for that release (`ready` / `in-progress`); empty when nothing is scheduled, so the lane hides |
+| `later` | `Planned` | Accepted future work (`planned`), biggest headline first |
 
 Each item: `title` (required), `description` (optional), `status` (`planned` | `in-progress` | `ready` | `shipped`).
 

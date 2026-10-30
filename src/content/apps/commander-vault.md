@@ -52,8 +52,13 @@ features:
       account registration — a focused utility for personal deck tracking.
 roadmap:
   - id: now
-    label: v1.1
+    label: Released
     items:
+      - title: EDHREC from your commander
+        description: >-
+          Open the EDHREC page for a deck’s primary commander from the deck editor —
+          quick inspiration without leaving your challenge progress.
+        status: shipped
       - title: Better deck links
         description: >-
           Easier way to save Moxfield, ManaBox, Archidekt, and other deck-builder links —
@@ -92,28 +97,43 @@ roadmap:
           when you are ready — no hunt through the store listing.
         status: shipped
   - id: next
-    label: v1.2+
+    label: v1.3.0
     items:
-      - title: Settings menu
+      - title: Options menu
         description: A dedicated place for app preferences and backup.
-        status: planned
+        status: ready
       - title: Light and dark themes
         description: Choose light, dark, or match your phone’s system setting.
-        status: planned
+        status: ready
       - title: Richer progress shares
         description: Share images with more deck detail — names, art, or completion highlights.
-        status: planned
-      - title: EDHREC, budget, and play tracking
-        description: Quick links and optional fields to track cost and table time per deck.
-        status: planned
+        status: ready
+      - title: Budget and play tracking
+        description: >-
+          Optional approximate deck cost and table time per slot, plus last-updated
+          and completed dates on the vault grid.
+        status: ready
   - id: later
-    label: iOS and beyond
+    label: Planned
     items:
       - title: iPhone and iPad release
         description: Commander Vault on the App Store, including the home-screen widget.
         status: planned
       - title: iCloud backup
         description: Optional synced backup beyond exporting a file from the app.
+        status: planned
+      - title: More languages
+        description: >-
+          Use Commander Vault in more languages, with an optional language choice in Options
+          when translations are available.
+        status: planned
+      - title: Choose your commander art
+        description: Pick the alternate printing you actually sleeve — not only Scryfall’s default art.
+        status: planned
+      - title: Extra decks per colour
+        description: >-
+          Retire a list into an archive for that colour identity, brew a new one in the same
+          slot, and restore an old list later — the 32-box still follows your active deck.
         status: planned
       - title: Alternative 32-deck challenges
         description: Optional preset lists for house-rule or community challenge variants.

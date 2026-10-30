@@ -13,7 +13,7 @@
 | **Subtitle** | 32 Deck Challenge Companion |
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander color identities — one deck at a time. |
-| **Status** | live (v1.0 on Google Play — public release) |
+| **Status** | live (v1.2 on Google Play; v1.3.0 built and in testing) |
 | **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. **Available on Google Play.** Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
 
 ---
@@ -71,14 +71,15 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-_Published from Commander Vault `docs/public-roadmap.yaml` (2026-07-22). **v1.1 is live** on Google Play — all items below **Shipped**. See that repo’s `docs/roadmap-handoff.md`._
+_Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-30). **v1.2 is live** on Google Play; **v1.3.0** is built and in testing. See that repo’s `docs/roadmap-handoff.md`._
 
-*Site lanes: **v1.1** = current release; **v1.2+** = later polish; **iOS and beyond** = App Store and long-term.*
+*Site lanes: **Released** (`now`) = live for users, newest first; **v1.3.0** (`next`) = next release; **Planned** (`later`) = accepted future work.*
 
-### v1.1
+### Released
 
 | Feature | Status | Notes |
 |---------|--------|--------|
+| EDHREC from your commander | Shipped | Open EDHREC for the primary commander from the deck editor (v1.2) |
 | Better deck links | Shipped | Moxfield, ManaBox, Archidekt + paste; commander from linked list |
 | Deck slot nicknames | Shipped | Custom name on grid and share image |
 | Smarter commander search | Shipped | Colour-aware search and better art picking |
@@ -89,22 +90,25 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-07-22). **v1.1 
 | Reminders for stale in-progress decks | Shipped | Local nudge after long idle; no push |
 | Stay up to date in the app | Shipped | Flexible Play in-app update (**A79**) |
 
-### v1.2+
+### v1.3.0
 
-| Feature | Notes |
-|---------|--------|
-| Settings menu | App preferences and backup |
-| Light and dark themes | Light, dark, or system |
-| Richer progress shares | More detail on share images |
-| EDHREC, budget, and play tracking | Links and optional tracking fields |
+| Feature | Status | Notes |
+|---------|--------|--------|
+| Options menu | Ready | App preferences and backup |
+| Light and dark themes | Ready | Light, dark, or system |
+| Richer progress shares | Ready | Names, art, or completion highlights on share images |
+| Budget and play tracking | Ready | Optional cost and table time per slot; last-updated and completed dates on grid |
 
-### iOS and beyond
+### Planned
 
-| Feature | Notes |
-|---------|--------|
-| iPhone and iPad release | App Store + home-screen widget |
-| iCloud backup | Optional synced backup |
-| Alternative 32-deck challenges | House-rule / community presets |
+| Feature | Status | Notes |
+|---------|--------|--------|
+| iPhone and iPad release | Planned | App Store + home-screen widget |
+| iCloud backup | Planned | Optional synced backup |
+| More languages | Planned | Optional language choice in Options when translations exist |
+| Choose your commander art | Planned | Pick the alternate printing you sleeve |
+| Extra decks per colour | Planned | Archive and restore lists per colour identity |
+| Alternative 32-deck challenges | Planned | House-rule / community presets |
 
 **Shipped in v1.0 (live on Google Play):** 32-deck tracker, free mono tier + one-time unlock, Support screen with purchase/restore, backup export/import, progress share, Scryfall commander lookup.
 
