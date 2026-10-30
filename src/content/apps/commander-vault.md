@@ -20,6 +20,7 @@ links:
     url: https://play.google.com/store/apps/details?id=com.commandervault.app
   - label: Support
     url: mailto:pageandportal@gmail.com
+announcement: iOS version coming soon
 legalPages:
   - title: Privacy
     slug: privacy

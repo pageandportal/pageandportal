@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-30 | Commander Vault iOS coming-soon banner | Optional `announcement` frontmatter field; shimmering pill under the store button (“iOS version coming soon”); animation off for reduced motion → v0.7.10 |
 | 2026-10-30 | Commander Vault “Coming soon” lane | Middle lane label `v1.3.0 — Coming soon` (owner request; CV source YAML still says `v1.3.0` — flagged) → v0.7.9 |
 | 2026-10-30 | Roadmap chip “Published” | `shipped` status chip now reads **Published** on all app pages (Commander Vault, SparkClass); data value unchanged; roadmap rule allows release-version lane labels → v0.7.8 |
 | 2026-10-30 | Commander Vault roadmap — Released / v1.3.0 / Planned | Published three-column layout from CV `public-roadmap.yaml`: 10 released (EDHREC from v1.2 first), 4 v1.3.0 **ready**, 6 planned; fixed CV paths in `docs/roadmap-handoff.md` → v0.7.7 |
@@ -354,6 +355,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] Commander Vault — roadmap shows three lanes: **Released** (10 **published**, EDHREC first), **v1.3.0 — Coming soon** (4 ready), **Planned** (6 planned, iPhone and iPad first); mobile swipes between lanes
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing
+- [ ] Commander Vault — “iOS version coming soon” banner sits under the Play button (remove `announcement` when the App Store link goes live)
 - [ ] Commander Vault — privacy and terms mention Google Play purchase handling and the one-time unlock
 - [x] About on home `#about`; studio credit on app pages — owner verified 2026-05-23
 - [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23

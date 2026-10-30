@@ -54,6 +54,7 @@ export const appsCollection = defineCollection({
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
     links: z.array(linkSchema).default([]),
+    announcement: z.string().optional(),
     donateUseGlobal: z.boolean().default(true),
     donateUrl: z.string().optional(),
     donateLabel: z.string().optional(),
