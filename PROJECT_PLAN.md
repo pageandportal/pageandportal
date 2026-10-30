@@ -109,7 +109,7 @@ Enable Pages in the repo: **Settings → Pages → Source:** GitHub Actions (aft
 - **Default:** Dark background (`#0d0f12` range), high-contrast text, restrained accent from each app’s artwork
 - **Typography:** One readable sans (e.g. system stack or [Inter](https://rsms.me/inter/)) + optional display face for headings if assets suggest it
 - **Layout:** Generous whitespace, max-width ~1100px, mobile-first
-- **Roadmap:** Horizontal scroll on mobile; cards or nodes with status chips (`Planned`, `In progress`, `Ready`, `Shipped`). **Features only** — no user/internal tasks or "not planned" lanes; see `.cursor/rules/app-roadmaps.mdc`
+- **Roadmap:** Horizontal scroll on mobile; cards or nodes with status chips (`Planned`, `In progress`, `Ready`, `Published` — data value `shipped`). **Features only** — no user/internal tasks or "not planned" lanes; see `.cursor/rules/app-roadmaps.mdc`
 - **Accessibility:** Semantic landmarks, focus states, `prefers-reduced-motion`, alt text on all supplied images
 - **Apps without graphics:** Neutral gradient placeholder + monogram until assets arrive
 
@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-30 | Roadmap chip “Published” | `shipped` status chip now reads **Published** on all app pages (Commander Vault, SparkClass); data value unchanged; roadmap rule allows release-version lane labels → v0.7.8 |
 | 2026-10-30 | Commander Vault roadmap — Released / v1.3.0 / Planned | Published three-column layout from CV `public-roadmap.yaml`: 10 released (EDHREC from v1.2 first), 4 v1.3.0 **ready**, 6 planned; fixed CV paths in `docs/roadmap-handoff.md` → v0.7.7 |
 | 2026-07-26 | Times Tables roadmap trim | Dropped Play/internal “before release” items and Not planned lane; hide empty roadmap lanes → v0.7.6 |
 | 2026-07-26 | Y-014 Times Tables page + privacy | Rewrote features/roadmap from app-repo handoff; republished canonical privacy (26 July 2026) → v0.7.5 |
@@ -349,7 +350,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
 - [ ] Commander Vault — status badge shows `live`
-- [ ] Commander Vault — roadmap shows three lanes: **Released** (10 shipped, EDHREC first), **v1.3.0** (4 ready), **Planned** (6 planned, iPhone and iPad first); mobile swipes between lanes
+- [ ] Commander Vault — roadmap shows three lanes: **Released** (10 **published**, EDHREC first), **v1.3.0** (4 ready), **Planned** (6 planned, iPhone and iPad first); mobile swipes between lanes
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing
 - [ ] Commander Vault — privacy and terms mention Google Play purchase handling and the one-time unlock

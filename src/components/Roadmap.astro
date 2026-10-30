@@ -9,6 +9,13 @@ interface Props {
 const { entry } = Astro.props;
 const lanes = roadmapLanes(entry);
 const showLanes = hasRoadmapItems(entry);
+
+const statusLabels: Record<string, string> = {
+  planned: 'planned',
+  'in-progress': 'in progress',
+  ready: 'ready',
+  shipped: 'published',
+};
 ---
 
 <section class="roadmap" aria-labelledby="roadmap-heading">
@@ -30,7 +37,7 @@ const showLanes = hasRoadmapItems(entry);
                         item.status && (
                           <span class={`status status-${item.status}`}>
                             <span class="sr-only">Status: </span>
-                            {item.status.replace('-', ' ')}
+                            {statusLabels[item.status]}
                           </span>
                         )
                       }

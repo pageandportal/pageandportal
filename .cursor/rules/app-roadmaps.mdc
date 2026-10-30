@@ -18,7 +18,12 @@ Roadmap lanes on every App Project Page (`src/content/apps/<slug>.md` frontmatte
 - **User or owner tasks** (e.g. "Finish Play listing graphics", "First internal test upload", "review privacy copy").
 - **Internal/engineering/release chores** (Console setup, CI, version bumps, refactors, QA).
 - **"Not planned" / out-of-scope lanes** — do not list things you will not build; it implies they were considered.
-- Task IDs, version numbers, or the word "shipped" on the public page.
+- Task IDs or internal build numbers on the public page.
+
+## Allowed
+
+- A release version as a lane label (e.g. `v1.3.0`) — the store version users will see.
+- Item `status: shipped` in frontmatter; the site chip renders it as **Published** (`src/components/Roadmap.astro`). Do not write "shipped" in titles or descriptions.
 
 ## Example
 
