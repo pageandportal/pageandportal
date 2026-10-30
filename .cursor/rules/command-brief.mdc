@@ -1,0 +1,40 @@
+---
+description: Command Brief — cross-project priorities, holds, and update rules
+alwaysApply: true
+---
+
+# Command Brief — mandatory for this project
+
+**This project:** Page and Portal Website
+
+### Where
+Living commander file (all projects share one):
+
+`E:\Shared\Command Brief\COMMAND_BRIEF.md`
+
+Also read: `E:\Shared\Command Brief\README.md`
+
+### Why
+James runs many projects. The Command Brief is the single place for **cross-project priorities, holds, and Grok army doctrine**. Grok Bot (The General / Intelligence) will eventually consume the same file. Do not invent Page & Portal or personal priorities that are not in the brief or clearly true for *this* repo.
+
+### When to read
+- Start of a session that involves priorities, planning, shipping order, or “what should we do next”
+- Before suggesting new bots, major scope, or cross-project work
+
+### When to update
+After meaningful work in **this** project, update the brief **in place** (same path):
+
+1. **§4 Portfolio map** — update **only this project’s row**: one-line purpose, status, priority this week, set tag to `known` or `inferred`.
+2. **§5 This week’s priorities** — only if James explicitly changed weekly priorities, or this session clearly finished/blocked a listed item (add a short changelog note).
+3. **§7 Changelog** — one line: date, project name, what changed.
+4. **§2 Holds** — only if James stated a new hold; never clear holds on your own.
+
+### Rules
+- **One file.** Do not create `COMMAND_BRIEF-project.md` copies inside this repo.
+- **Do not rewrite other projects’ rows** unless you verified them this session.
+- **No secrets** in the brief (keys, passwords, full account numbers).
+- **Google Drive:** If the brief is later synced via Google Drive for Desktop, still edit the **local path above** (or the synced equivalent James documents). Do not assume cloud-only Drive API access.
+- If the path is missing or unwritable, tell James; do not silently skip.
+
+### Optional one-liner for James to The General
+“Priorities and holds are in `E:\Shared\Command Brief\COMMAND_BRIEF.md` — read that before inventing P&P priorities.”

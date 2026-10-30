@@ -7,6 +7,7 @@ alwaysApply: true
 
 Before substantial work on this repo:
 
+0. For priorities, shipping order, holds, or cross-project work: read `E:\Shared\Command Brief\COMMAND_BRIEF.md` (see `.cursor/rules/command-brief.mdc`).
 1. Read `PROJECT_PLAN.md` at the repo root.
 2. Pick the next item from **Cursor agent tasks → In progress (agents)**, or promote from backlog / create a new row.
 3. Move that item to **In progress (agents)** when starting.
@@ -16,4 +17,4 @@ Before substantial work on this repo:
 7. Keep **To Test Checklist** in `PROJECT_PLAN.md` aligned with the live site.
 8. Put polish ideas in **Polish backlog** until the owner promotes them.
 9. Never delete **Done** history; newest entries first.
-10. **Commander Vault roadmap** — Read and publish from `E:/App Projects/Commander_Vault/docs/public-roadmap.yaml`. User-centric headlines only; see `docs/roadmap-handoff.md` and Commander Vault editorial rules.
+10. **Commander Vault roadmap** — Read and publish from `E:/Projects - Apps/Commander_Vault/docs/public-roadmap.yaml`. User-centric headlines only; see `docs/roadmap-handoff.md` and Commander Vault editorial rules.

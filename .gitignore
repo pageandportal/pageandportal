@@ -28,3 +28,6 @@ assets/
 
 # Local Lighthouse reports
 lighthouse*.json
+
+# Portable agent review template (owner copy, not project source)
+docs/PROJECT_HEALTH_REVIEW.md
