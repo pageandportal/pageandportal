@@ -73,10 +73,12 @@ Custom lane labels supported (e.g. `V1.0 closed beta`, `v1.2+ and iOS`).
 | Lane `id` | Label | Contents |
 |-----------|-------|----------|
 | `now` | `Released` | Everything live for users (`shipped`), newest release first |
-| `next` | Next release number + “Coming soon”, e.g. `v1.3.0 — Coming soon` (owner preference 2026-10-30) | Items for that release (`ready` / `in-progress`); empty when nothing is scheduled, so the lane hides |
+| `next` | Next release + status, e.g. `v1.3.0 — Coming soon` or `v2.0.0 — iOS Release` | Items for that release (`ready` / `in-progress`); empty when nothing is scheduled, so the lane hides |
 | `later` | `Planned` | Accepted future work (`planned`), biggest headline first |
 
 Each item: `title` (required), `description` (optional), `status` (`planned` | `in-progress` | `ready` | `shipped`). The site chip shows `shipped` as **Published**; keep `shipped` in the YAML.
+
+Lanes longer than 8 cards show the first 8 and collapse the rest behind a “Show N more” toggle (`src/components/Roadmap.astro`, all app pages). Keep source order — newest first in Released — so the most recent items stay visible.
 
 App badge (`coming-soon` | `beta` | `live`) is separate from item statuses.
 

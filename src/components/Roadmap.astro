@@ -1,6 +1,7 @@
 ---
 import { hasRoadmapItems, roadmapLanes } from '../lib/apps';
 import type { AppEntry } from '../lib/apps';
+import RoadmapCard from './RoadmapCard.astro';
 
 interface Props {
   entry: AppEntry;
@@ -10,12 +11,7 @@ const { entry } = Astro.props;
 const lanes = roadmapLanes(entry);
 const showLanes = hasRoadmapItems(entry);
 
-const statusLabels: Record<string, string> = {
-  planned: 'planned',
-  'in-progress': 'in progress',
-  ready: 'ready',
-  shipped: 'published',
-};
+const VISIBLE_CARDS = 8;
 ---
 
 <section class="roadmap" aria-labelledby="roadmap-heading">
@@ -24,33 +20,46 @@ const statusLabels: Record<string, string> = {
   {
     showLanes ? (
       <ul class="roadmap-lanes">
-        {lanes.map((lane) => (
-          <li class="roadmap-lane">
-            <h3 class="lane-label">{lane.label}</h3>
-            {lane.items.length > 0 ? (
-              <ul class="lane-items">
-                {lane.items.map((item) => (
-                  <li class="roadmap-card">
-                    <div class="card-head">
-                      <span class="card-title">{item.title}</span>
-                      {
-                        item.status && (
-                          <span class={`status status-${item.status}`}>
-                            <span class="sr-only">Status: </span>
-                            {statusLabels[item.status]}
-                          </span>
-                        )
-                      }
-                    </div>
-                    {item.description && <p>{item.description}</p>}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p class="lane-empty">Nothing listed yet.</p>
-            )}
-          </li>
-        ))}
+        {lanes.map((lane) => {
+          const visible = lane.items.slice(0, VISIBLE_CARDS);
+          const hidden = lane.items.slice(VISIBLE_CARDS);
+          return (
+            <li class="roadmap-lane">
+              <h3 class="lane-label">{lane.label}</h3>
+              {lane.items.length > 0 ? (
+                <>
+                  <ul class="lane-items">
+                    {visible.map((item) => (
+                      <RoadmapCard {...item} />
+                    ))}
+                  </ul>
+                  {hidden.length > 0 && (
+                    <details class="lane-more">
+                      <summary class="lane-more-toggle">
+                        <span class="lane-more-closed">
+                          Show {hidden.length} more
+                          <span class="sr-only"> in {lane.label}</span>
+                        </span>
+                        <span class="lane-more-open">
+                          Show fewer
+                          <span class="sr-only"> in {lane.label}</span>
+                        </span>
+                        <span class="lane-more-chevron" aria-hidden="true" />
+                      </summary>
+                      <ul class="lane-items lane-items-more">
+                        {hidden.map((item) => (
+                          <RoadmapCard {...item} />
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                </>
+              ) : (
+                <p class="lane-empty">Nothing listed yet.</p>
+              )}
+            </li>
+          );
+        })}
       </ul>
     ) : (
       <p class="roadmap-placeholder">
@@ -111,6 +120,87 @@ const statusLabels: Record<string, string> = {
     gap: 0.65rem;
   }
 
+  .lane-more {
+    margin-top: 0.65rem;
+  }
+
+  .lane-more-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--app-accent, var(--gold));
+    background: transparent;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .lane-more-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .lane-more-toggle:hover {
+    background: var(--bg-elevated);
+    border-color: var(--app-accent, var(--gold-dim));
+  }
+
+  .lane-more-toggle:focus-visible {
+    outline: 2px solid var(--app-accent, var(--gold));
+    outline-offset: 3px;
+  }
+
+  .lane-more-open,
+  .lane-more[open] .lane-more-closed {
+    display: none;
+  }
+
+  .lane-more[open] .lane-more-open {
+    display: inline;
+  }
+
+  .lane-more-chevron {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+  }
+
+  .lane-more[open] .lane-more-chevron {
+    transform: translateY(2px) rotate(-135deg);
+  }
+
+  .lane-items-more {
+    margin-top: 0.65rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lane-more-chevron {
+      transition: transform 0.2s ease;
+    }
+
+    .lane-more[open] .lane-items-more {
+      animation: lane-more-reveal 0.25s ease-out;
+    }
+  }
+
+  @keyframes lane-more-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   @media (max-width: 767px) {
     .roadmap-lanes {
       display: flex;
@@ -124,57 +214,5 @@ const statusLabels: Record<string, string> = {
       flex: 0 0 min(85%, 280px);
       scroll-snap-align: start;
     }
-  }
-
-  .roadmap-card {
-    padding: 0.85rem 1rem;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
-
-  .card-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.35rem;
-  }
-
-  .card-title {
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  .roadmap-card p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  .status {
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 0.15rem 0.45rem;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-  }
-
-  .status-in-progress {
-    color: var(--app-accent, var(--gold));
-    border-color: var(--app-accent, var(--gold-dim));
-  }
-
-  .status-ready {
-    color: #9dc0ff;
-    border-color: #41608f;
-  }
-
-  .status-shipped {
-    color: #8bc49a;
-    border-color: #3d5c45;
   }
 </style>

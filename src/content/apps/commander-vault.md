@@ -55,6 +55,20 @@ roadmap:
   - id: now
     label: Released
     items:
+      - title: Light and dark themes
+        description: Choose light, dark, or match your phone’s system setting.
+        status: shipped
+      - title: Richer progress shares
+        description: Share images with more deck detail — names, art, or completion highlights.
+        status: shipped
+      - title: Budget and play tracking
+        description: >-
+          Optional approximate deck cost and table time per slot, plus last-updated
+          and completed dates on the vault grid.
+        status: shipped
+      - title: Options menu
+        description: A dedicated place for app preferences and backup.
+        status: shipped
       - title: EDHREC from your commander
         description: >-
           Open the EDHREC page for a deck’s primary commander from the deck editor —
@@ -63,7 +77,7 @@ roadmap:
       - title: Better deck links
         description: >-
           Easier way to save Moxfield, ManaBox, Archidekt, and other deck-builder links —
-          paste-friendly entry, more hosts, and your commander filled in automatically from the linked list.
+          paste-friendly entry, more hosts, and your commander filled in automatically from Archidekt and ManaBox lists.
         status: shipped
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.
@@ -98,31 +112,17 @@ roadmap:
           when you are ready — no hunt through the store listing.
         status: shipped
   - id: next
-    label: v1.3.0 — Coming soon
-    items:
-      - title: Options menu
-        description: A dedicated place for app preferences and backup.
-        status: ready
-      - title: Light and dark themes
-        description: Choose light, dark, or match your phone’s system setting.
-        status: ready
-      - title: Richer progress shares
-        description: Share images with more deck detail — names, art, or completion highlights.
-        status: ready
-      - title: Budget and play tracking
-        description: >-
-          Optional approximate deck cost and table time per slot, plus last-updated
-          and completed dates on the vault grid.
-        status: ready
-  - id: later
-    label: Planned
+    label: v2.0.0 — iOS Release
     items:
       - title: iPhone and iPad release
         description: Commander Vault on the App Store, including the home-screen widget.
-        status: planned
+        status: in-progress
       - title: iCloud backup
         description: Optional synced backup beyond exporting a file from the app.
         status: planned
+  - id: later
+    label: Planned
+    items:
       - title: More languages
         description: >-
           Use Commander Vault in more languages, with an optional language choice in Options

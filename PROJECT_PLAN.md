@@ -203,7 +203,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 **Commander Vault** (`supply/apps/commander-vault/`)
 
 - [x] **Features** — 4 items from legacy site (in `app.md`)
-- [x] **Roadmap** — Released / v1.3.0 / Planned lanes in `app.md`, published from CV `public-roadmap.yaml` (updated 2026-10-30)
+- [x] **Roadmap** — Released / v2.0.0 — iOS Release / Planned lanes in `app.md`, published from CV `public-roadmap.yaml` (updated 2026-10-31)
 - [x] **Monetization architecture** — Start free with 5 editable mono-colour slots; non-mono slots remain visible but locked; a one-time purchase unlocks the full 32-slot challenge; shared progress pages keep a watermark until unlock (2026-05-25)
 - [x] **Links** — support email live; site shows `Coming soon to Google Play` until the public listing goes live
 - [x] **Graphics** — `logo-icon.png`, `hero-banner.png`; feature screenshots + Play assets when store listing ships
@@ -274,6 +274,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-31 | Commander Vault roadmap + collapsible lanes | Published CV `public-roadmap.yaml` (2026-10-31): v1.3 items top of Released (14), `v2.0.0 — iOS Release` lane (iPhone and iPad in progress, iCloud planned), Planned 4. Roadmap lanes over 8 cards collapse behind native `<details>` “Show N more” / “Show fewer” on all app pages; card markup moved to `RoadmapCard.astro` → v0.8.0 |
 | 2026-10-30 | Commander Vault iOS coming-soon banner | Optional `announcement` frontmatter field; shimmering pill under the store button (“iOS version coming soon”); animation off for reduced motion → v0.7.10 |
 | 2026-10-30 | Commander Vault “Coming soon” lane | Middle lane label `v1.3.0 — Coming soon` (owner request; CV source YAML still says `v1.3.0` — flagged) → v0.7.9 |
 | 2026-10-30 | Roadmap chip “Published” | `shipped` status chip now reads **Published** on all app pages (Commander Vault, SparkClass); data value unchanged; roadmap rule allows release-version lane labels → v0.7.8 |
@@ -352,7 +353,8 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
 - [ ] Commander Vault — status badge shows `live`
-- [ ] Commander Vault — roadmap shows three lanes: **Released** (10 **published**, EDHREC first), **v1.3.0 — Coming soon** (4 ready), **Planned** (6 planned, iPhone and iPad first); mobile swipes between lanes
+- [ ] Commander Vault — roadmap shows three lanes: **Released** (14 **published**, Light and dark themes first; 8 visible + “Show 6 more”), **v2.0.0 — iOS Release** (iPhone and iPad in progress, iCloud backup planned), **Planned** (4); mobile swipes between lanes
+- [ ] Roadmap “Show N more” toggle opens/closes with mouse, touch, and keyboard (Tab to it, Enter/Space); focus outline visible
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing
 - [ ] Commander Vault — “iOS version coming soon” banner sits under the Play button (remove `announcement` when the App Store link goes live)

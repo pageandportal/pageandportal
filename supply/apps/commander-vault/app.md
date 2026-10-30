@@ -13,7 +13,7 @@
 | **Subtitle** | 32 Deck Challenge Companion |
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander color identities — one deck at a time. |
-| **Status** | live (v1.2 on Google Play; v1.3.0 built and in testing) |
+| **Status** | live (v1.3 on Google Play; v2.0.0 iOS release in progress) |
 | **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. **Available on Google Play.** Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
 
 ---
@@ -71,16 +71,20 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-_Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-30). **v1.2 is live** on Google Play; **v1.3.0** is built and in testing. See that repo’s `docs/roadmap-handoff.md`._
+_Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-31). **v1.3 is live** on Google Play; **v2.0.0** (iPhone and iPad) is in progress. See that repo’s `docs/roadmap-handoff.md`._
 
-*Site lanes: **Released** (`now`) = live for users, newest first; **v1.3.0 — Coming soon** (`next`) = next release; **Planned** (`later`) = accepted future work.*
+*Site lanes: **Released** (`now`) = live for users, newest first; **v2.0.0 — iOS Release** (`next`) = next release; **Planned** (`later`) = accepted future work. Lanes longer than 8 cards collapse behind “Show N more” on the site.*
 
 ### Released
 
 | Feature | Status | Notes |
 |---------|--------|--------|
+| Light and dark themes | Shipped | Light, dark, or system (v1.3) |
+| Richer progress shares | Shipped | Names, art, or completion highlights on share images (v1.3) |
+| Budget and play tracking | Shipped | Optional cost and table time per slot; last-updated and completed dates on grid (v1.3) |
+| Options menu | Shipped | App preferences and backup (v1.3) |
 | EDHREC from your commander | Shipped | Open EDHREC for the primary commander from the deck editor (v1.2) |
-| Better deck links | Shipped | Moxfield, ManaBox, Archidekt + paste; commander from linked list |
+| Better deck links | Shipped | Moxfield, ManaBox, Archidekt + paste; commander auto-filled from Archidekt and ManaBox lists |
 | Deck slot nicknames | Shipped | Custom name on grid and share image |
 | Smarter commander search | Shipped | Colour-aware search and better art picking |
 | Partner commanders | Shipped | Partner / background commanders |
@@ -90,21 +94,17 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-30). **v1.2 
 | Reminders for stale in-progress decks | Shipped | Local nudge after long idle; no push |
 | Stay up to date in the app | Shipped | Flexible Play in-app update (**A79**) |
 
-### v1.3.0 — Coming soon
+### v2.0.0 — iOS Release
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Options menu | Ready | App preferences and backup |
-| Light and dark themes | Ready | Light, dark, or system |
-| Richer progress shares | Ready | Names, art, or completion highlights on share images |
-| Budget and play tracking | Ready | Optional cost and table time per slot; last-updated and completed dates on grid |
+| iPhone and iPad release | In progress | App Store + home-screen widget |
+| iCloud backup | Planned | Optional synced backup |
 
 ### Planned
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| iPhone and iPad release | Planned | App Store + home-screen widget |
-| iCloud backup | Planned | Optional synced backup |
 | More languages | Planned | Optional language choice in Options when translations exist |
 | Choose your commander art | Planned | Pick the alternate printing you sleeve |
 | Extra decks per colour | Planned | Archive and restore lists per colour identity |
