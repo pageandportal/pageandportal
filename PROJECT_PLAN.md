@@ -35,6 +35,7 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 | Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | live (Google Play) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
 | SparkClass | `sparkclass` | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. | coming soon | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
 | Portal Pages Times Tables | `portal-pages-times-tables` | Learn and practise times tables 2–12 — calm, offline, and free. | coming soon | [`supply/apps/portal-pages-times-tables/`](supply/apps/portal-pages-times-tables/) |
+| Insert Continue | `insert-continue` | Retro gaming in your pocket, no coins required. Original arcade mini games. | coming soon | [`supply/apps/insert-continue/`](supply/apps/insert-continue/) |
 
 **Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0 is **live on Google Play**; donate link still pending.
 
@@ -45,6 +46,9 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 - `/apps/commander-vault/`
 - `/apps/sparkclass/`
 - `/apps/portal-pages-times-tables/`
+- `/apps/insert-continue/`
+
+**Insert Continue:** pocket arcade of original mini games (Godot, Android first). Page added 2026-10-31 from the app repo’s `docs/website-page-brief.md` — copy is locked there. No store links, privacy page, or screenshots until the brief’s later pass.
 
 ---
 
@@ -228,6 +232,13 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 - [ ] **Public app URL** — add Open CTA only when owner confirms visitors may use the hosted app
 - [x] **Support email** — `pageandportal@gmail.com` (same studio address unless owner specifies otherwise)
 
+**Insert Continue** (`supply/apps/insert-continue/`)
+
+- [x] **Features / roadmap / intro** — locked copy from Insert Continue `docs/website-page-brief.md` (2026-10-31)
+- [x] **Graphics** — code-drawn green CRT icon + hero (`render-graphics.py`); real screenshots when a release build exists
+- [ ] **Privacy policy** — required before any Play submission; host at `src/content/legal/insert-continue/privacy.md` once shipping SDKs are confirmed
+- [ ] **Google Play link** — add the store button only when a real listing URL exists
+
 ### Site-wide optional (recommended)
 
 - [x] **Global logo** — Tier A set in `supply/site/branding/` (`tier-a-1` nav icon, `tier-a-2` header, `tier-a-3` optional hero); see `TIER-A.md`
@@ -274,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-31 | Insert Continue app page | New coming-soon page + home card from Insert Continue `docs/website-page-brief.md`: locked intro, six features, three-lane roadmap; green CRT icon and hero drawn with Pillow (Press Start 2P baked in); no store link, banner, legal, or donate → v0.9.0 |
 | 2026-10-31 | Commander Vault roadmap + collapsible lanes | Published CV `public-roadmap.yaml` (2026-10-31): v1.3 items top of Released (14), `v2.0.0 — iOS Release` lane (iPhone and iPad in progress, iCloud planned), Planned 4. Roadmap lanes over 8 cards collapse behind native `<details>` “Show N more” / “Show fewer” on all app pages; card markup moved to `RoadmapCard.astro` → v0.8.0 |
 | 2026-10-30 | Commander Vault iOS coming-soon banner | Optional `announcement` frontmatter field; shimmering pill under the store button (“iOS version coming soon”); animation off for reduced motion → v0.7.10 |
 | 2026-10-30 | Commander Vault “Coming soon” lane | Middle lane label `v1.3.0 — Coming soon` (owner request; CV source YAML still says `v1.3.0` — flagged) → v0.7.9 |
@@ -354,6 +366,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
 - [ ] Commander Vault — status badge shows `live`
 - [ ] Commander Vault — roadmap shows three lanes: **Released** (14 **published**, Light and dark themes first; 8 visible + “Show 6 more”), **v2.0.0 — iOS Release** (iPhone and iPad in progress, iCloud backup planned), **Planned** (4); mobile swipes between lanes
+- [ ] Insert Continue — home card (coming soon, green subtitle, square CRT icon readable); app page has no Play button, no banner, no privacy link; hero wordmark not cropped on a phone
 - [ ] Roadmap “Show N more” toggle opens/closes with mouse, touch, and keyboard (Tab to it, Enter/Space); focus outline visible
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing

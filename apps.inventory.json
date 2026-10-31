@@ -29,6 +29,16 @@
       "tagline": "Learn and practise times tables 2–12 — calm, offline, and free.",
       "status": "coming-soon",
       "supplyPath": "supply/apps/portal-pages-times-tables"
+    },
+    {
+      "slug": "insert-continue",
+      "name": "Insert Continue",
+      "subtitle": "Arcade Mini Games",
+      "tagline": "Retro gaming in your pocket, no coins required. Original arcade mini games.",
+      "status": "coming-soon",
+      "accentColor": "#33FF66",
+      "supportEmail": "pageandportal@gmail.com",
+      "supplyPath": "supply/apps/insert-continue"
     }
   ]
 }

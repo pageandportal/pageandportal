@@ -1,0 +1,133 @@
+# App supply sheet — Insert Continue
+
+**Source brief:** `E:\Projects - Apps\insert-continue\docs\website-page-brief.md` (James, 2026-10-31). Copy is locked there; this sheet mirrors what is published.
+
+---
+
+## Identity
+
+| Field | Value |
+|-------|--------|
+| **Display name** | Insert Continue |
+| **Subtitle** | Arcade Mini Games |
+| **URL slug** | insert-continue |
+| **Tagline** | Retro gaming in your pocket, no coins required. Original arcade mini games. |
+| **Status** | coming-soon (in active development; not on Google Play yet) |
+| **Short description** | Insert Continue is a pocket arcade cabinet: original mini games, a green-screen glow, and a bank of honest blips and bleeps. It is in active development and is not on Google Play yet. When it launches you pick a game, play a round, and chase a high score on your own phone — offline, with no account. |
+
+---
+
+## Links
+
+| Label | URL |
+|-------|-----|
+| Google Play | None yet — add only when a real store URL exists |
+| App Store | None yet |
+| Support email | pageandportal@gmail.com |
+
+---
+
+## Donate
+
+| Field | Value |
+|-------|--------|
+| **Use global donate link?** | no (`donateUseGlobal: false` — a game, not a tip jar) |
+| **App-specific donate URL** | None |
+
+---
+
+## Features
+
+### Feature 1 — In the cabinet
+
+- **Description:** Original games, built from scratch. Paddle & Pixel — a side-on paddle duel against the computer; first to seven wins. Neon Snake — eat, grow, and don’t bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick layouts, three lives, one ball, no power-up circus. Formation Fire — hold the line against eight waves of descending drones. Lane Hopper — get the rabbit across busy roads and rivers before the clock runs out. Shattered Earth — a turn-based artillery duel: set the angle and power, blast the hills, outlast the other tank.
+
+### Feature 2 — Short rounds
+
+- **Description:** Built for a bus stop or a coffee break. Simple touch controls, each game on the screen orientation that suits it.
+
+### Feature 3 — Plays offline
+
+- **Description:** No account and no sign-in. A round does not need a connection.
+
+### Feature 4 — A green screen you can switch off
+
+- **Description:** Classic phosphor green, with a plain white screen if you prefer. Subtle scanlines and a light vignette, and a mute button that means it.
+
+### Feature 5 — High scores stay on the phone
+
+- **Description:** Cabinet-style local tables. Three-letter initials. Nothing is uploaded.
+
+### Feature 6 — Fair play
+
+- **Description:** Free to play, with ads only between games — never in the middle of a round. In some games you can choose to watch a short ad to continue a run, once per run. A one-off way to turn ads off comes after launch. This is not an emulator and not a set of licensed remakes.
+
+---
+
+## Roadmap
+
+*Site lanes: **On the bench** (`now`), **Google Play** (`next`), **After Android** (`later`).*
+
+### On the bench
+
+| Feature | Status | Notes |
+|---------|--------|--------|
+| Cabinet shell | In progress | Green screen, scanlines you can turn off, hub into each game |
+| Paddle & Pixel | In progress | First game, already running on a phone |
+
+### Google Play
+
+| Feature | Status | Notes |
+|---------|--------|--------|
+| Android release on Google Play | Planned | |
+| The rest of the cabinet | Planned | Neon Snake, Brick Buster, Formation Fire, Lane Hopper, Shattered Earth |
+| Local high-score tables on the phone | Planned | |
+
+### After Android
+
+| Feature | Status | Notes |
+|---------|--------|--------|
+| iPhone and iPad | Planned | Same launch window as Android, after it; no date |
+| A one-off purchase to turn ads off | Planned | No price until billing is live |
+| Extra screen colours | Planned | Amber, red, cyan, purple packs; green and white stay free |
+| More original games over time | Planned | Do not name or count |
+
+---
+
+## Graphics checklist
+
+| File | Role | Notes |
+|------|------|-------|
+| `logo-icon.png` | 512×512 square icon (home card, app hero) | Stacked INSERT / CONTINUE in Press Start 2P, `#33FF66` on `#040A06`, inset border, bright cursor block. Checked at 72×72. |
+| `hero-banner.png` | 2200×880 app hero | Single-line wordmark + static cursor block, `ARCADE MINI GAMES` line, subtle scanlines, light vignette. Wordmark kept narrow enough for the mobile crop. |
+| `render-graphics.py` | Regenerates both PNGs | `python render-graphics.py` — reads fonts from the Insert Continue game repo; type is baked in, so no font files ship with the site. |
+
+- [x] Icon and hero (stylised, code-drawn)
+- [ ] Real screenshots — when a release build has real screens (same palette rules)
+
+---
+
+## Brand
+
+| Field | Value |
+|-------|--------|
+| **Accent color** | `#33FF66` (main), `#9CFF9C` (bright, secondary) |
+| **Palette (locked)** | Bright `#9CFF9C`, Main `#33FF66`, Dim `#1F8F3A` (never text), Background `#040A06` |
+| **Fonts in art** | Press Start 2P (wordmark), SIL OFL 1.1 — baked into PNGs |
+| **Notes** | Studio chrome stays (Cinzel / Inter / `#0d0f12`). No synthwave, no curvature, no flicker, no animated cursor. |
+
+---
+
+## Legal pages on site
+
+| Page | Include? | File |
+|------|----------|------|
+| Privacy | Later pass — before any Play submission | `src/content/legal/insert-continue/privacy.md` (outline in Insert Continue `FOUNDATION-PLAN.md` § D2) |
+
+---
+
+## Notes for agents
+
+- No famous game, character, or studio names; no emulator / ROM / remake wording; no game counts; no prices; no ads SDK or analytics talk. See the source brief § “Copy you must not write”.
+- Do not claim the other five games are playable today.
+- Add the Play button only when a real store URL exists.
