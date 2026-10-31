@@ -115,8 +115,8 @@ roadmap:
   - id: next
     label: v2.0.0 — iOS Release
     items:
-      - title: iPhone and iPad release
-        description: Commander Vault on the App Store, including the home-screen widget.
+      - title: iPhone release
+        description: Commander Vault on the App Store for iPhone, including the home-screen widget.
         status: in-progress
       - title: iCloud backup
         description: Optional synced backup beyond exporting a file from the app.
@@ -139,5 +139,8 @@ roadmap:
         status: planned
       - title: Alternative 32-deck challenges
         description: Optional preset lists for house-rule or community challenge variants.
+        status: planned
+      - title: iPad layout
+        description: A full-screen iPad version after the iPhone launch (until then, iPads run the iPhone app).
         status: planned
 ---

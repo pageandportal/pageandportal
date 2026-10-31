@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-01 | Commander Vault roadmap + privacy (Nov 2026) | Re-published CV `public-roadmap.yaml` (main, 2026-11-01; verified field-for-field): centre card now **iPhone release**, new Planned card **iPad layout** (Planned 5). Privacy policy (src + supply copy): Last updated November 2026; optional iCloud backup on iPhone/iPad; Scryfall wording; deck-link reads from Archidekt/ManaBox/Moxfield; purchases via Google Play and Apple's App Store, purchase status only for unlock/restore, unlock never in backups. Terms still name Google Play only — flagged to owner → v0.10.1 |
 | 2026-10-31 | Grok review fixes | 1200×630 share cards for every app (`shareImage`; `scripts/make-share-card.py`; IC card drawn in its render script) and large link previews on app pages (home keeps the small square card); `/apps/` redirects to `#apps`; generated `/sitemap.xml` (listed apps + legal; no `/r/`, no hidden apps); IC title “Insert Continue — Retro Arcade Mini Games” (`pageTitle`); SparkClass hero 1.8 MB PNG → 159 KB JPEG web copy (original kept in supply); SparkClass hidden from home grid (`"hidden": true`), page still live by direct link → v0.10.0 |
 | 2026-10-31 | Insert Continue roadmap wording | Tiles reworded for a more professional tone (owner request); lane labels kept; IC repo brief still has original wording → v0.9.1 |
 | 2026-10-31 | Insert Continue app page | New coming-soon page + home card from Insert Continue `docs/website-page-brief.md`: locked intro, six features, three-lane roadmap; green CRT icon and hero drawn with Pillow (Press Start 2P baked in); no store link, banner, legal, or donate → v0.9.0 |
@@ -367,13 +368,13 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
 - [ ] Commander Vault — status badge shows `live`
-- [ ] Commander Vault — roadmap shows three lanes: **Released** (14 **published**, Light and dark themes first; 8 visible + “Show 6 more”), **v2.0.0 — iOS Release** (iPhone and iPad in progress, iCloud backup planned), **Planned** (4); mobile swipes between lanes
+- [ ] Commander Vault — roadmap shows three lanes: **Released** (14 **published**, Light and dark themes first; 8 visible + “Show 6 more”), **v2.0.0 — iOS Release** (iPhone release in progress, iCloud backup planned), **Planned** (5, iPad layout last); mobile swipes between lanes
 - [ ] Insert Continue — home card (coming soon, green subtitle, square CRT icon readable); app page has no Play button, no banner, no privacy link; hero wordmark not cropped on a phone
 - [ ] Roadmap “Show N more” toggle opens/closes with mouse, touch, and keyboard (Tab to it, Enter/Space); focus outline visible
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
 - [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing
 - [ ] Commander Vault — “iOS version coming soon” banner sits under the Play button (remove `announcement` when the App Store link goes live)
-- [ ] Commander Vault — privacy and terms mention Google Play purchase handling and the one-time unlock
+- [ ] Commander Vault — privacy (Last updated November 2026) covers optional iCloud backup, deck-link lookups, and Google Play + App Store purchases; terms still name Google Play only (owner to decide)
 - [x] About on home `#about`; studio credit on app pages — owner verified 2026-05-23
 - [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23
 - [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy`

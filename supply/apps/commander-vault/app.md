@@ -71,7 +71,7 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-_Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-31). **v1.3 is live** on Google Play; **v2.0.0** (iPhone and iPad) is in progress. See that repo’s `docs/roadmap-handoff.md`._
+_Published from Commander Vault `docs/public-roadmap.yaml` (2026-11-01). **v1.3 is live** on Google Play; **v2.0.0** (iPhone, with optional iCloud backup) is in progress; a full iPad layout is planned after that. See that repo’s `docs/roadmap-handoff.md`._
 
 *Site lanes: **Released** (`now`) = live for users, newest first; **v2.0.0 — iOS Release** (`next`) = next release; **Planned** (`later`) = accepted future work. Lanes longer than 8 cards collapse behind “Show N more” on the site.*
 
@@ -98,7 +98,7 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-31). **v1.3 
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| iPhone and iPad release | In progress | App Store + home-screen widget |
+| iPhone release | In progress | App Store for iPhone + home-screen widget |
 | iCloud backup | Planned | Optional synced backup |
 
 ### Planned
@@ -109,6 +109,7 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-10-31). **v1.3 
 | Choose your commander art | Planned | Pick the alternate printing you sleeve |
 | Extra decks per colour | Planned | Archive and restore lists per colour identity |
 | Alternative 32-deck challenges | Planned | House-rule / community presets |
+| iPad layout | Planned | Full-screen iPad version after the iPhone launch; iPads run the iPhone app until then |
 
 **Shipped in v1.0 (live on Google Play):** 32-deck tracker, free mono tier + one-time unlock, Support screen with purchase/restore, backup export/import, progress share, Scryfall commander lookup.
 
