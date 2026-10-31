@@ -13,10 +13,11 @@ accentColor: '#3465C1'
 accentColorSecondary: '#F7D024'
 icon: apps/sparkclass/icon.png
 wordmark: true
-heroImage: apps/sparkclass/hero.png
+heroImage: apps/sparkclass/hero.jpg
 heroImageAlt: >-
   Calm workshop atmosphere with electrical tools and soft daylight — SparkClass
   learning environment
+shareImage: apps/sparkclass/share.jpg
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: true
 links:

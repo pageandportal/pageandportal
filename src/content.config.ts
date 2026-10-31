@@ -43,6 +43,8 @@ export const appsCollection = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/apps' }),
   schema: z.object({
     name: z.string(),
+    /** Overrides the browser/search title (still suffixed with the site name). */
+    pageTitle: z.string().optional(),
     subtitle: z.string().optional(),
     tagline: z.string(),
     status: z.enum(['coming-soon', 'beta', 'live']),
@@ -53,6 +55,8 @@ export const appsCollection = defineCollection({
     wordmark: z.boolean().default(false),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
+    /** 1200×630 link-preview image (public path); falls back to heroImage. */
+    shareImage: z.string().optional(),
     links: z.array(linkSchema).default([]),
     announcement: z.string().optional(),
     donateUseGlobal: z.boolean().default(true),

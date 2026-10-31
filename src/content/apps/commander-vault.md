@@ -13,6 +13,7 @@ accentColorSecondary: '#6B5B95'
 icon: apps/commander-vault/icon.png
 heroImage: apps/commander-vault/hero.png
 heroImageAlt: Commander Vault — vault and compass motif on a twilight landscape
+shareImage: apps/commander-vault/share.jpg
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: true
 links:

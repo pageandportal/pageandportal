@@ -1,5 +1,6 @@
 ---
 name: Insert Continue
+pageTitle: Insert Continue — Retro Arcade Mini Games
 subtitle: Arcade Mini Games
 tagline: Retro gaming in your pocket, no coins required. Original arcade mini games.
 status: coming-soon
@@ -14,6 +15,7 @@ icon: apps/insert-continue/icon.png
 wordmark: false
 heroImage: apps/insert-continue/hero.png
 heroImageAlt: Insert Continue wordmark in green phosphor type on a near-black screen.
+shareImage: apps/insert-continue/share.png
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: false
 links:

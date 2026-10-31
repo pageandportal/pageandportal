@@ -26,9 +26,12 @@ const accentStyle =
 ---
 
 <BaseLayout
-  title={data.name}
+  title={data.pageTitle ?? data.name}
   description={data.tagline}
-  ogImage={data.heroImage ?? 'brand/studio-icon.png'}
+  ogImage={data.shareImage ?? data.heroImage ?? 'brand/studio-icon.png'}
+  ogImageAlt={data.heroImageAlt}
+  ogImageSize={data.shareImage ? { width: 1200, height: 630 } : undefined}
+  largeSocialImage={Boolean(data.shareImage ?? data.heroImage)}
 >
   <article class="app-page" style={accentStyle}>
     <AppHero entry={entry} />

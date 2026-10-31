@@ -12,6 +12,11 @@ interface Props {
   description?: string;
   /** Path under public/ or full URL for Open Graph / Twitter image */
   ogImage?: string;
+  ogImageAlt?: string;
+  /** Pixel size of ogImage, when known. */
+  ogImageSize?: { width: number; height: number };
+  /** Wide images get the large link-preview card; square ones stay `summary`. */
+  largeSocialImage?: boolean;
   /** Use on 404.html so assets resolve when GitHub serves it for nested bad URLs. */
   useAssetBase?: boolean;
   /** Robots meta content. Use `noindex, nofollow` for unlisted private briefings. */
@@ -24,6 +29,9 @@ const {
   title,
   description = SITE.description,
   ogImage = 'brand/studio-icon.png',
+  ogImageAlt,
+  ogImageSize,
+  largeSocialImage = false,
   useAssetBase = false,
   robots = 'index, follow',
   showSiteChrome = true,
@@ -65,7 +73,11 @@ gtag('config', '${gaId}', { page_title: ${JSON.stringify(pageTitle)} });`
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={socialImage} />
-    <meta name="twitter:card" content="summary" />
+    {ogImageSize && <meta property="og:image:width" content={String(ogImageSize.width)} />}
+    {ogImageSize && <meta property="og:image:height" content={String(ogImageSize.height)} />}
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+    <meta name="twitter:card" content={largeSocialImage ? 'summary_large_image' : 'summary'} />
+    {ogImageAlt && <meta name="twitter:image:alt" content={ogImageAlt} />}
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />

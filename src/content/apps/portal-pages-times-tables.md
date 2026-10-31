@@ -14,6 +14,7 @@ heroImage: apps/portal-pages-times-tables/hero.png
 heroImageAlt: >-
   Children practising multiplication with wooden blocks in a sunny park — calm,
   kid-friendly learning
+shareImage: apps/portal-pages-times-tables/share.jpg
 supportEmail: pageandportal@gmail.com
 donateUseGlobal: true
 links:

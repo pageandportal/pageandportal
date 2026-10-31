@@ -4,7 +4,7 @@ import AppCard from '../components/AppCard.astro';
 import AboutBlurb from '../components/AboutBlurb.astro';
 import { appIconUrl } from '../lib/apps';
 import { SITE } from '../config/site';
-import inventory from '../../apps.inventory.json';
+import { listedApps } from '../lib/inventory';
 ---
 
 <BaseLayout>
@@ -18,7 +18,7 @@ import inventory from '../../apps.inventory.json';
     <h2 id="apps-heading" class="section-title">Apps</h2>
     <div class="app-grid">
       {
-        inventory.apps.map((app) => (
+        listedApps.map((app) => (
           <AppCard app={app} iconUrl={appIconUrl(app.slug)} />
         ))
       }

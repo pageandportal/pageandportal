@@ -6,6 +6,7 @@
       "subtitle": "NZ electrical training",
       "tagline": "Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship.",
       "status": "coming-soon",
+      "hidden": true,
       "wordmark": true,
       "accentColor": "#3465C1",
       "supportEmail": "pageandportal@gmail.com",

@@ -1,0 +1,19 @@
+---
+// GitHub Pages has no server redirects; send /apps/ to the home page app grid.
+const target = `${import.meta.env.BASE_URL}#apps`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apps · Page & Portal</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={new URL(import.meta.env.BASE_URL, Astro.site).href} />
+  </head>
+  <body>
+    <p><a href={target}>See all Page &amp; Portal apps</a></p>
+  </body>
+</html>

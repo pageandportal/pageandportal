@@ -33,13 +33,13 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 | Display name | URL slug | Tagline | Status | Supply folder |
 |--------------|----------|---------|--------|---------------|
 | Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | live (Google Play) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
-| SparkClass | `sparkclass` | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. | coming soon | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
+| SparkClass | `sparkclass` | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. | coming soon (hidden from home) | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
 | Portal Pages Times Tables | `portal-pages-times-tables` | Learn and practise times tables 2–12 — calm, offline, and free. | coming soon | [`supply/apps/portal-pages-times-tables/`](supply/apps/portal-pages-times-tables/) |
 | Insert Continue | `insert-continue` | Retro gaming in your pocket, no coins required. Original arcade mini games. | coming soon | [`supply/apps/insert-continue/`](supply/apps/insert-continue/) |
 
 **Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0 is **live on Google Play**; donate link still pending.
 
-**SparkClass:** NZ electrical learning web app (Next.js + Supabase) for pre-trade and apprenticeship programmes. Site section added 2026-07-24. **Do not publish the live app URL** until the owner says it is ready for visitors. Product name still interim (`U20` in SparkClass plan); privacy/consent copy needs owner review.
+**SparkClass:** NZ electrical learning web app (Next.js + Supabase) for pre-trade and apprenticeship programmes. Site section added 2026-07-24. **Hidden from the home grid since 2026-10-31** (page still at `/apps/sparkclass/`). **Do not publish the live app URL** until the owner says it is ready for visitors. Product name still interim (`U20` in SparkClass plan); privacy/consent copy needs owner review.
 
 **Site routes:**
 
@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-31 | Grok review fixes | 1200×630 share cards for every app (`shareImage`; `scripts/make-share-card.py`; IC card drawn in its render script) and large link previews on app pages (home keeps the small square card); `/apps/` redirects to `#apps`; generated `/sitemap.xml` (listed apps + legal; no `/r/`, no hidden apps); IC title “Insert Continue — Retro Arcade Mini Games” (`pageTitle`); SparkClass hero 1.8 MB PNG → 159 KB JPEG web copy (original kept in supply); SparkClass hidden from home grid (`"hidden": true`), page still live by direct link → v0.10.0 |
 | 2026-10-31 | Insert Continue roadmap wording | Tiles reworded for a more professional tone (owner request); lane labels kept; IC repo brief still has original wording → v0.9.1 |
 | 2026-10-31 | Insert Continue app page | New coming-soon page + home card from Insert Continue `docs/website-page-brief.md`: locked intro, six features, three-lane roadmap; green CRT icon and hero drawn with Pillow (Press Start 2P baked in); no store link, banner, legal, or donate → v0.9.0 |
 | 2026-10-31 | Commander Vault roadmap + collapsible lanes | Published CV `public-roadmap.yaml` (2026-10-31): v1.3 items top of Released (14), `v2.0.0 — iOS Release` lane (iPhone and iPad in progress, iCloud planned), Planned 4. Roadmap lanes over 8 cards collapse behind native `<details>` “Show N more” / “Show fewer” on all app pages; card markup moved to `RoadmapCard.astro` → v0.8.0 |
@@ -377,6 +378,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23
 - [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy`
 - [x] Commander Vault — privacy, terms, credits at `/apps/commander-vault/{privacy,terms,credits}`
+- [ ] SparkClass — **not** on the home grid; `/apps/sparkclass/` still opens by direct link with the workshop hero (now `hero.jpg`)
 - [ ] SparkClass — app page hero, features, roadmap, and Open app CTA
 - [ ] SparkClass — privacy and terms at `/apps/sparkclass/{privacy,terms}`
 - [ ] SparkClass — status badge shows `coming soon`; no public app URL / Open CTA until owner ready
@@ -387,6 +389,10 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 - [ ] `version.properties` v0.6.0 build 1 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
+- [ ] Link previews — pasting an app page link (e.g. Insert Continue) into Messages, Discord, Facebook, or X shows the large 1200×630 card; home link shows the small studio icon card. Platforms cache previews, so a re-shared old link may show the old card for a while
+- [ ] Insert Continue — browser tab / search title reads “Insert Continue — Retro Arcade Mini Games · Page & Portal”
+- [ ] `/apps/` opens the home page at the Apps section
+- [ ] `/sitemap.xml` lists home, Commander Vault, Times Tables, Insert Continue and their legal pages (no SparkClass, no `/r/`); submit it in Google Search Console when the owner sets that up
 - [x] 404 page works (`/404.html` and nested bad URLs — owner verified; `<base>` fix v0.5.1)
 - [x] Lighthouse / a11y polish — skip link (owner verified Tab 2026-05-23), SEO meta, focus/touch targets, semantic roadmap lists, perf tweaks; re-run 2026-05-23: home 95/100/100/100, Commander Vault 94/100/100/100, Times Tables 88/100/100/100 (perf/a11y/bp/seo)
 
@@ -396,6 +402,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-10-31 | SparkClass hidden from home grid | Owner decision after Grok review; `/apps/sparkclass/` stays built and reachable by direct link, left out of sitemap. Remove `"hidden"` in `apps.inventory.json` to relist |
 | 2026-07-24 | SparkClass added to website inventory | Beta web app section; interim name; legal drafts pending owner review |
 | 2026-05-23 | Astro + static deploy | Markdown legal copy, multi-app template, GitHub Actions |
 | 2026-05-23 | Single `PROJECT_PLAN.md` for tasks + test checklist | Owner-requested agent workflow |

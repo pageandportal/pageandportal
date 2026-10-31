@@ -5,7 +5,10 @@
  * - supply/site/branding/tier-a-1-nav-icon.png → public/brand/studio-icon.png
  * - supply/site/branding/avatar.{webp,png,jpg,jpeg} → public/brand/avatar.<ext>
  * - supply/apps/<slug>/graphics/logo-icon.png → public/apps/<slug>/icon.png
- * - supply/apps/<slug>/graphics/hero-banner.png → public/apps/<slug>/hero.png
+ * - supply/apps/<slug>/graphics/hero-banner.{jpg,png} → public/apps/<slug>/hero.<ext>
+ *   (a .jpg web copy wins over the .png original when both exist)
+ * - supply/apps/<slug>/graphics/share-card.{jpg,png} → public/apps/<slug>/share.<ext>
+ *   (1200×630 link-preview image)
  *
  * Run after adding or updating images in supply/. See docs/adding-an-app.md.
  */
@@ -58,6 +61,21 @@ function syncBranding() {
   return count;
 }
 
+const IMAGE_EXTS = ['.jpg', '.png'];
+
+/**
+ * Copy the first `<srcBase>.<ext>` found (IMAGE_EXTS order) to `<destBase>.<ext>`.
+ * @param {string} srcDir @param {string} srcBase @param {string} destDir @param {string} destBase
+ */
+function copyFirstOf(srcDir, srcBase, destDir, destBase) {
+  for (const ext of IMAGE_EXTS) {
+    const src = path.join(srcDir, srcBase + ext);
+    if (!fs.existsSync(src)) continue;
+    return copyIfChanged(src, path.join(destDir, destBase + ext));
+  }
+  return false;
+}
+
 function syncAppAssets() {
   const supplyApps = path.join(root, 'supply', 'apps');
   const skip = new Set(['_template']);
@@ -70,10 +88,10 @@ function syncAppAssets() {
 
     const publicDir = path.join(root, 'public', 'apps', slug);
     const iconSrc = path.join(graphicsDir, 'logo-icon.png');
-    const heroSrc = path.join(graphicsDir, 'hero-banner.png');
 
     if (copyIfChanged(iconSrc, path.join(publicDir, 'icon.png'))) count += 1;
-    if (copyIfChanged(heroSrc, path.join(publicDir, 'hero.png'))) count += 1;
+    if (copyFirstOf(graphicsDir, 'hero-banner', publicDir, 'hero')) count += 1;
+    if (copyFirstOf(graphicsDir, 'share-card', publicDir, 'share')) count += 1;
   }
 
   return count;

@@ -1,4 +1,4 @@
-"""Render the Insert Continue icon and hero for the website.
+"""Render the Insert Continue icon, hero and link-preview card for the website.
 
 Run from this folder:  python render-graphics.py
 Needs Pillow and the fonts in the Insert Continue game repo (see FONT_DIR).
@@ -98,37 +98,48 @@ def render_icon() -> None:
     img.convert("RGB").save(OUT_DIR / "logo-icon.png", optimize=True)
 
 
-def render_hero() -> None:
-    w, h = 2200, 880
+def render_banner(
+    w: int, h: int, cell: int, tag_size: int, tag_gap: int, y: int, glow: int, filename: str
+) -> None:
     img = Image.new("RGBA", (w, h), SCREEN + (255,))
 
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ldraw = ImageDraw.Draw(layer)
     ldraw.fontmode = "1"
 
-    word_font = display_font(72)
+    word_font = display_font(cell)
     wordmark = "INSERT CONTINUE"
-    cell = 72
     word_w = text_width(ldraw, wordmark, word_font)
     gap = cell // 3
     total_w = word_w + gap + cell
     x = (w - total_w) // 2
-    y = 300
     ldraw.text((x, y), wordmark, font=word_font, fill=MAIN)
     ldraw.rectangle([x + word_w + gap, y, x + word_w + gap + cell - 1, y + cell - 1], fill=BRIGHT)
 
-    tag_font = display_font(32)
+    tag_font = display_font(tag_size)
     tag = "ARCADE MINI GAMES"
     tag_w = text_width(ldraw, tag, tag_font)
-    ldraw.text(((w - tag_w) // 2, y + cell + 64), tag, font=tag_font, fill=MAIN)
+    ldraw.text(((w - tag_w) // 2, y + cell + tag_gap), tag, font=tag_font, fill=MAIN)
 
-    img = add_glow(img, layer, radius=10, strength=0.22)
+    img = add_glow(img, layer, radius=glow, strength=0.22)
     img = add_scanlines(img, period=6, opacity=0.35)
     img = add_vignette(img, strength=0.55)
-    img.convert("RGB").save(OUT_DIR / "hero-banner.png", optimize=True)
+    img.convert("RGB").save(OUT_DIR / filename, optimize=True)
+
+
+def render_hero() -> None:
+    render_banner(2200, 880, cell=72, tag_size=32, tag_gap=64, y=300, glow=10, filename="hero-banner.png")
+
+
+def render_share_card() -> None:
+    # 1200x630 link preview; wordmark block centred vertically.
+    cell, tag_size, tag_gap = 56, 24, 48
+    y = (630 - (cell + tag_gap + tag_size)) // 2
+    render_banner(1200, 630, cell, tag_size, tag_gap, y=y, glow=8, filename="share-card.png")
 
 
 if __name__ == "__main__":
     render_icon()
     render_hero()
-    print("Wrote logo-icon.png and hero-banner.png to", OUT_DIR)
+    render_share_card()
+    print("Wrote logo-icon.png, hero-banner.png and share-card.png to", OUT_DIR)
