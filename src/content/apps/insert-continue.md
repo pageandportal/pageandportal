@@ -52,33 +52,37 @@ roadmap:
   - id: now
     label: On the bench
     items:
-      - title: Cabinet shell
-        description: Green screen, scanlines you can turn off, a hub that leads into each game.
+      - title: Arcade cabinet interface
+        description: A phosphor-green display with optional scanlines, and a central hub for launching each game.
         status: in-progress
       - title: Paddle & Pixel
-        description: The first game, already running on a phone.
+        description: The first game, now playable on a phone in testing.
         status: in-progress
   - id: next
     label: Google Play
     items:
-      - title: Android release on Google Play
+      - title: Google Play release
+        description: Public release for Android on Google Play.
         status: planned
-      - title: The rest of the cabinet
-        description: Neon Snake, Brick Buster, Formation Fire, Lane Hopper, and Shattered Earth.
+      - title: Full launch line-up
+        description: Neon Snake, Brick Buster, Formation Fire, Lane Hopper, and Shattered Earth join Paddle & Pixel.
         status: planned
-      - title: Local high-score tables on the phone
+      - title: Local high-score tables
+        description: Cabinet-style score tables with three-letter initials, stored only on your phone.
         status: planned
   - id: later
     label: After Android
     items:
-      - title: iPhone and iPad
-        description: Android launches first; the iPhone version follows in the same launch window.
+      - title: iPhone and iPad release
+        description: Following the Android launch, within the same release window.
         status: planned
-      - title: A one-off purchase to turn ads off
+      - title: Remove ads
+        description: An optional one-time purchase to remove ads.
         status: planned
-      - title: Extra screen colours
-        description: Amber, red, cyan, and purple as optional packs. Green and white stay free.
+      - title: Additional screen colours
+        description: Optional amber, red, cyan, and purple display packs. Green and white remain free.
         status: planned
-      - title: More original games over time
+      - title: New original games
+        description: More games added to the cabinet over time.
         status: planned
 ---

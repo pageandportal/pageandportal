@@ -72,25 +72,27 @@
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Cabinet shell | In progress | Green screen, scanlines you can turn off, hub into each game |
-| Paddle & Pixel | In progress | First game, already running on a phone |
+| Arcade cabinet interface | In progress | Phosphor-green display, optional scanlines, central hub for launching each game |
+| Paddle & Pixel | In progress | First game, now playable on a phone in testing |
 
 ### Google Play
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Android release on Google Play | Planned | |
-| The rest of the cabinet | Planned | Neon Snake, Brick Buster, Formation Fire, Lane Hopper, Shattered Earth |
-| Local high-score tables on the phone | Planned | |
+| Google Play release | Planned | Public release for Android on Google Play |
+| Full launch line-up | Planned | Neon Snake, Brick Buster, Formation Fire, Lane Hopper, Shattered Earth join Paddle & Pixel |
+| Local high-score tables | Planned | Three-letter initials, stored only on the phone |
 
 ### After Android
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| iPhone and iPad | Planned | Same launch window as Android, after it; no date |
-| A one-off purchase to turn ads off | Planned | No price until billing is live |
-| Extra screen colours | Planned | Amber, red, cyan, purple packs; green and white stay free |
-| More original games over time | Planned | Do not name or count |
+| iPhone and iPad release | Planned | Same release window as Android, after it; no date |
+| Remove ads | Planned | Optional one-time purchase; no price until billing is live |
+| Additional screen colours | Planned | Amber, red, cyan, purple packs; green and white remain free |
+| New original games | Planned | Do not name or count |
+
+_Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request); lane labels unchanged. The Insert Continue repo brief still has the original wording._
 
 ---
 

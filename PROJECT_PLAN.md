@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-10-31 | Insert Continue roadmap wording | Tiles reworded for a more professional tone (owner request); lane labels kept; IC repo brief still has original wording → v0.9.1 |
 | 2026-10-31 | Insert Continue app page | New coming-soon page + home card from Insert Continue `docs/website-page-brief.md`: locked intro, six features, three-lane roadmap; green CRT icon and hero drawn with Pillow (Press Start 2P baked in); no store link, banner, legal, or donate → v0.9.0 |
 | 2026-10-31 | Commander Vault roadmap + collapsible lanes | Published CV `public-roadmap.yaml` (2026-10-31): v1.3 items top of Released (14), `v2.0.0 — iOS Release` lane (iPhone and iPad in progress, iCloud planned), Planned 4. Roadmap lanes over 8 cards collapse behind native `<details>` “Show N more” / “Show fewer” on all app pages; card markup moved to `RoadmapCard.astro` → v0.8.0 |
 | 2026-10-30 | Commander Vault iOS coming-soon banner | Optional `announcement` frontmatter field; shimmering pill under the store button (“iOS version coming soon”); animation off for reduced motion → v0.7.10 |
