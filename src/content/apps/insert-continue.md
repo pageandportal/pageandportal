@@ -59,7 +59,7 @@ screenshots:
       Insert Continue hub: green outlined game tiles on a black screen. Paddle &
       Pixel shows its high scores; Neon Snake, Brick Buster, Formation Fire, Lane
       Hopper and Shattered Earth are marked Soon.
-    caption: The cabinet hub. Paddle & Pixel is playable in testing; the other games are still on the bench.
+    caption: The cabinet hub, captured when Paddle & Pixel was the first game playable in testing.
   - src: apps/insert-continue/screenshots/02-prematch.png
     width: 540
     height: 1200

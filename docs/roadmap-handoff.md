@@ -117,6 +117,17 @@ See Commander Vault `docs/public-roadmap.yaml` for current Commander Vault conte
 
 ---
 
+## Insert Continue (different process, James 2026-11-02)
+
+Insert Continue has no roadmap file in its own repo. Its agents may edit **only** the `roadmap:` block in `src/content/apps/insert-continue.md` (Insert Continue `AGENTS.md` § Page & Portal website), and **must not commit or push** — a push to `main` deploys the live site straight away.
+
+1. Insert Continue agent edits the `roadmap:` block, leaves it uncommitted, and tells James what changed and why (plus any other page copy it thinks is now out of date).
+2. Website agent reviews the diff, mirrors it into `supply/apps/insert-continue/app.md`, fixes knock-on copy (features, screenshot captions), builds, checks in the browser, bumps `version.properties`, records in `PROJECT_PLAN.md` and the Command Brief, commits, pushes, and watches the deploy.
+
+Copy rules for Insert Continue roadmap items come from Insert Continue `docs/website-page-brief.md`: no famous game, character or studio names; no game counts or prices; no ads SDK or analytics wording; say "in testing" for anything not yet released.
+
+---
+
 ## Verification after publish
 
 - [ ] Commander Vault `docs/public-roadmap.yaml` matches published frontmatter
