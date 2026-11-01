@@ -26,6 +26,15 @@ const linkSchema = z.object({
   url: z.string().optional(),
 });
 
+const screenshotSchema = z.object({
+  src: z.string(),
+  alt: z.string(),
+  caption: z.string().optional(),
+  /** Pixel size of the file; sets the aspect ratio and portrait/landscape layout. */
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+});
+
 const legalPageSchema = z.object({
   title: z.string(),
   slug: z.string(),
@@ -63,6 +72,9 @@ export const appsCollection = defineCollection({
     donateUrl: z.string().optional(),
     donateLabel: z.string().optional(),
     features: z.array(featureSchema).default([]),
+    screenshots: z.array(screenshotSchema).default([]),
+    /** Short line under the Screenshots heading, e.g. that shots are from a test build. */
+    screenshotsNote: z.string().optional(),
     roadmap: z.array(roadmapLaneSchema).default([]),
     legalPages: z.array(legalPageSchema).default([]),
     disclaimer: z.string().optional(),

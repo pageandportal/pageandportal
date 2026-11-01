@@ -1,0 +1,132 @@
+---
+import { appAssetUrl } from '../lib/apps';
+import type { CollectionEntry } from 'astro:content';
+
+type AppData = CollectionEntry<'apps'>['data'];
+
+interface Props {
+  screenshots: AppData['screenshots'];
+  note?: string;
+}
+
+const { screenshots, note } = Astro.props;
+
+const shots = screenshots.map((shot) => ({
+  ...shot,
+  url: appAssetUrl(shot.src),
+  portrait: shot.height > shot.width,
+}));
+const portraits = shots.filter((shot) => shot.portrait);
+const landscapes = shots.filter((shot) => !shot.portrait);
+
+// Tall phone shots side by side, wide shots stacked beside them. The wide column's
+// share is sized so both sides end at about the same height (captions add a little).
+const bento = portraits.length >= 1 && portraits.length <= 2 && landscapes.length >= 2;
+const landscapeFr = bento
+  ? ((portraits[0].height / portraits[0].width) /
+      (landscapes.length * (landscapes[0].height / landscapes[0].width))) *
+    0.84
+  : 0;
+const listStyle = bento
+  ? `--portrait-cols: ${portraits.length}; --landscape-fr: ${landscapeFr.toFixed(2)}fr; --landscape-rows: ${landscapes.length}`
+  : undefined;
+---
+
+{
+  shots.length > 0 && (
+    <section class="screenshots" aria-labelledby="screenshots-heading">
+      <h2 id="screenshots-heading" class="section-title">Screenshots</h2>
+      {note && <p class="screenshots-note">{note}</p>}
+      <ul class:list={['shot-list', { bento }]} style={listStyle}>
+        {shots.map((shot) => (
+          <li class:list={['shot', shot.portrait ? 'shot-portrait' : 'shot-landscape']}>
+            <figure>
+              <img
+                src={shot.url}
+                alt={shot.alt}
+                width={shot.width}
+                height={shot.height}
+                loading="lazy"
+                decoding="async"
+              />
+              {shot.caption && <figcaption>{shot.caption}</figcaption>}
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+<style>
+  .section-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.35rem;
+  }
+
+  .screenshots-note {
+    margin: -0.5rem 0 1.25rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .shot-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .shot-landscape {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 720px) {
+    .shot-list {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .shot-landscape {
+      grid-column: span 2;
+    }
+
+    .shot-list.bento {
+      grid-template-columns:
+        repeat(var(--portrait-cols), minmax(0, 1fr))
+        minmax(0, var(--landscape-fr));
+    }
+
+    .bento .shot-portrait {
+      grid-row: span var(--landscape-rows);
+    }
+
+    .bento .shot-landscape {
+      grid-column: -2 / -1;
+    }
+  }
+
+  figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--app-accent, var(--gold)) 30%, var(--border));
+    background: #000;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+  }
+</style>

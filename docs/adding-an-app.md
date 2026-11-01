@@ -21,10 +21,15 @@ Source files live in `supply/`; **`npm run sync:assets`** writes deploy copies:
 | `supply/apps/<slug>/graphics/logo-icon.png` | `public/apps/<slug>/icon.png` |
 | `supply/apps/<slug>/graphics/hero-banner.{jpg,png}` | `public/apps/<slug>/hero.<ext>` |
 | `supply/apps/<slug>/graphics/share-card.{jpg,png}` | `public/apps/<slug>/share.<ext>` |
+| `supply/apps/<slug>/graphics/screenshots/*.{jpg,png}` | `public/apps/<slug>/screenshots/*` |
 
 Reference paths in app frontmatter without a leading slash (e.g. `apps/commander-vault/icon.png`).
 
 **Large heroes:** if `hero-banner.png` is a photo over ~500 KB, save a `hero-banner.jpg` web copy beside it (quality ~85). The `.jpg` wins on sync; point `heroImage` at `hero.jpg`.
+
+## Screenshots
+
+Optional `screenshots` frontmatter adds a **Screenshots** section between Features and Roadmap. Each entry needs `src`, `alt`, `width` and `height` (the file's pixel size), plus an optional `caption`; `screenshotsNote` adds a line under the heading (e.g. that shots come from a test build). Phone captures can be large — save half-size web copies into `graphics/screenshots/`. With one or two portrait shots and two or more landscape shots, desktop shows the portraits side by side with the landscapes stacked beside them; otherwise it is a simple grid.
 
 ## Link previews and search title
 

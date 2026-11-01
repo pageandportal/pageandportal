@@ -50,6 +50,42 @@ features:
       In some games you can choose to watch a short ad to continue a run, once per
       run. A one-off way to turn ads off comes after launch. This is not an emulator
       and not a set of licensed remakes.
+screenshotsNote: Captured from an in-development build. Screens may change before launch.
+screenshots:
+  - src: apps/insert-continue/screenshots/01-hub.png
+    width: 540
+    height: 1200
+    alt: >-
+      Insert Continue hub: green outlined game tiles on a black screen. Paddle &
+      Pixel shows its high scores; Neon Snake, Brick Buster, Formation Fire, Lane
+      Hopper and Shattered Earth are marked Soon.
+    caption: The cabinet hub. Paddle & Pixel is playable in testing; the other games are still on the bench.
+  - src: apps/insert-continue/screenshots/02-prematch.png
+    width: 540
+    height: 1200
+    alt: >-
+      Paddle & Pixel pre-match screen with Easy, Normal and Hard buttons, a
+      ten-place high-score table, and a Play button.
+    caption: Before a match, pick a difficulty and check the high-score table.
+  - src: apps/insert-continue/screenshots/03-game.png
+    width: 1200
+    height: 540
+    alt: Paddle & Pixel in play — two paddles, a ball and a dashed centre line, with the score at 4–3.
+    caption: Paddle & Pixel, played side-on against the computer. First to seven wins.
+  - src: apps/insert-continue/screenshots/04-results-entry.png
+    width: 1200
+    height: 540
+    alt: >-
+      Results screen reading You win, 7–4, win streak 6, with arrows for entering
+      three initials for second place.
+    caption: Make the table and enter your three initials, cabinet style.
+  - src: apps/insert-continue/screenshots/05-results-table.png
+    width: 1200
+    height: 540
+    alt: >-
+      Results screen with the high-score table, the new entry highlighted in second
+      place, and Rematch and Hub buttons.
+    caption: Scores stay in a local table on your phone. Rematch, or head back to the hub.
 roadmap:
   - id: now
     label: On the bench

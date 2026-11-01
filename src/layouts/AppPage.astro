@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import AppHero from '../components/AppHero.astro';
 import FeatureGrid from '../components/FeatureGrid.astro';
 import Roadmap from '../components/Roadmap.astro';
+import Screenshots from '../components/Screenshots.astro';
 import DonateSection from '../components/DonateSection.astro';
 import AppFeedbackSection from '../components/AppFeedbackSection.astro';
 import { isDonateEnabled } from '../config/donate';
@@ -37,6 +38,7 @@ const accentStyle =
     <AppHero entry={entry} />
     <div class="app-body container">
       <FeatureGrid features={data.features} />
+      <Screenshots screenshots={data.screenshots} note={data.screenshotsNote} />
       <Roadmap entry={entry} />
       <AppFeedbackSection entry={entry} />
       {isDonateEnabled() && <DonateSection entry={entry} />}

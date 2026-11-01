@@ -102,10 +102,11 @@ _Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request);
 |------|------|-------|
 | `logo-icon.png` | 512×512 square icon (home card, app hero) | Stacked INSERT / CONTINUE in Press Start 2P, `#33FF66` on `#040A06`, inset border, bright cursor block. Checked at 72×72. |
 | `hero-banner.png` | 2200×880 app hero | Single-line wordmark + static cursor block, `ARCADE MINI GAMES` line, subtle scanlines, light vignette. Wordmark kept narrow enough for the mobile crop. |
-| `render-graphics.py` | Regenerates both PNGs | `python render-graphics.py` — reads fonts from the Insert Continue game repo; type is baked in, so no font files ship with the site. |
+| `render-graphics.py` | Regenerates icon, hero and `share-card.png` | `python render-graphics.py` — reads fonts from the Insert Continue game repo; type is baked in, so no font files ship with the site. |
+| `screenshots/01–05-*.png` | In-development screenshots (page Screenshots section) | Half-size web copies (540×1200 portrait, 1200×540 landscape) of `E:\Tools\Godot\builds\web-shots\` (owner-supplied 2026-11-01): hub, pre-match, Paddle & Pixel in play, initials entry, results table. Captioned as an in-development build. |
 
 - [x] Icon and hero (stylised, code-drawn)
-- [ ] Real screenshots — when a release build has real screens (same palette rules)
+- [x] In-development screenshots — added at owner request 2026-11-01 (brief said wait for a release build); swap for release-build screens when they exist
 
 ---
 

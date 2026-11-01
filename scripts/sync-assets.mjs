@@ -9,6 +9,7 @@
  *   (a .jpg web copy wins over the .png original when both exist)
  * - supply/apps/<slug>/graphics/share-card.{jpg,png} → public/apps/<slug>/share.<ext>
  *   (1200×630 link-preview image)
+ * - supply/apps/<slug>/graphics/screenshots/* → public/apps/<slug>/screenshots/*
  *
  * Run after adding or updating images in supply/. See docs/adding-an-app.md.
  */
@@ -92,6 +93,15 @@ function syncAppAssets() {
     if (copyIfChanged(iconSrc, path.join(publicDir, 'icon.png'))) count += 1;
     if (copyFirstOf(graphicsDir, 'hero-banner', publicDir, 'hero')) count += 1;
     if (copyFirstOf(graphicsDir, 'share-card', publicDir, 'share')) count += 1;
+
+    const shotsDir = path.join(graphicsDir, 'screenshots');
+    if (fs.existsSync(shotsDir)) {
+      for (const name of fs.readdirSync(shotsDir)) {
+        if (!IMAGE_EXTS.includes(path.extname(name).toLowerCase())) continue;
+        const dest = path.join(publicDir, 'screenshots', name);
+        if (copyIfChanged(path.join(shotsDir, name), dest)) count += 1;
+      }
+    }
   }
 
   return count;
