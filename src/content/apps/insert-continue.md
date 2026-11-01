@@ -94,20 +94,23 @@ roadmap:
         description: A phosphor-green display with optional scanlines, and a central hub for launching each game. Built and working in testing.
         status: ready
       - title: Local high-score tables
-        description: Cabinet-style score tables with three-letter initials, stored only on your phone. Working in Paddle & Pixel and Neon Snake in testing.
+        description: Cabinet-style score tables with three-letter initials, stored only on your phone. Working in Paddle & Pixel, Neon Snake and Brick Buster in testing.
         status: ready
       - title: Paddle & Pixel
         description: The first game, finished and playable on a phone in testing.
         status: ready
+      - title: Neon Snake
+        description: The second game, finished and playable on a phone in testing — three speeds, with walls or wrap-around edges.
+        status: ready
   - id: next
     label: On the bench
     items:
-      - title: Neon Snake
-        description: The second game, now playable on a phone in testing — three speeds, with walls or wrap-around edges.
-        status: in-progress
       - title: Brick Buster
-        description: Ten hand-built brick layouts, three lives, one ball, no power-up circus.
-        status: planned
+        description: >-
+          Now playable on a phone in testing — ten hand-built brick layouts, three lives,
+          one ball, no power-up circus. Plus an endless mode that loops the layouts,
+          faster each time round.
+        status: in-progress
       - title: Formation Fire
         description: Hold the line against eight waves of descending drones.
         status: planned
