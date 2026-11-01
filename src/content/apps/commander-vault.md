@@ -53,6 +53,57 @@ features:
     description: >-
       No analytics SDKs, no advertising identifiers, and no in-app email or
       account registration — a focused utility for personal deck tracking.
+screenshotsNote: Shown with sample decks. Card art © Wizards of the Coast, via Scryfall.
+screenshots:
+  - src: apps/commander-vault/screenshots/01-progress.jpg
+    width: 600
+    height: 1300
+    alt: >-
+      Commander Vault home screen in the dark theme: a gold progress ring at 38%,
+      12 of 32 decks built and 7 in progress, category counts, and deck filters.
+    caption: Your challenge at a glance — overall progress and a count for each colour category.
+  - src: apps/commander-vault/screenshots/02-deck-grid-mono.jpg
+    width: 600
+    height: 1300
+    alt: >-
+      The mono-colour section of the deck grid: five cards showing commander art,
+      names such as Krenko, Mob Boss and Talrand, Sky Summoner, brackets, Complete
+      status and build milestones. The red slot is nicknamed Goblin Party.
+    caption: Every slot shows its commander's art, bracket, status and milestones — and can have a nickname.
+  - src: apps/commander-vault/screenshots/03-deck-grid-shards.jpg
+    width: 600
+    height: 1300
+    alt: >-
+      The three-colour section of the deck grid, with completed, in-progress and
+      not-started slots side by side.
+    caption: Complete, in-progress and empty slots side by side.
+  - src: apps/commander-vault/screenshots/04-deck-editor.jpg
+    width: 600
+    height: 1300
+    alt: >-
+      The deck editor for the red slot: a nickname field, commander Krenko, Mob Boss
+      with its card art and artist credit, partner and background fields, and the
+      power bracket.
+    caption: The deck editor — commander search with card art, partners and backgrounds, and power bracket.
+  - src: apps/commander-vault/screenshots/05-share-preview.jpg
+    width: 600
+    height: 1300
+    alt: >-
+      The Share progress preview showing a portrait image of all 32 slots, with
+      Share and Cancel buttons.
+    caption: Share your progress as an image, in portrait or landscape.
+  - src: apps/commander-vault/screenshots/06-options.jpg
+    width: 600
+    height: 1300
+    alt: The Options sheet with appearance choices System, Light and Dark.
+    caption: Options include a light, dark or system theme, the default share layout, and backup.
+  - src: apps/commander-vault/screenshots/05c-share-image-landscape.jpg
+    width: 1200
+    height: 984
+    alt: >-
+      A landscape progress image titled Commander Vault, 32 Deck Challenge, showing
+      12 of 32 complete, with each colour identity's commander, milestones and art.
+    caption: The landscape share image — all 32 slots on one card.
 roadmap:
   - id: now
     label: Released

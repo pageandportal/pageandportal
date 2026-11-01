@@ -127,7 +127,7 @@ Assets in `graphics/` (owner-supplied 2026-05-23):
 
 - [x] Logo / icon — `logo-icon.png`
 - [x] Hero — `hero-banner.png`
-- [ ] Feature screenshots — still need **in-app UI** shots (grid, deck slot, Scryfall picker)
+- [x] In-app screenshots — six dark-theme portrait shots + landscape share image in `graphics/screenshots/` (from Commander Vault `resources/website-screenshots/web/`, 2026-11-01); shown in the page **Screenshots** section
 - [ ] Favicon exports — generate 32×32 / 180×180 from `logo-icon.png` at build time
 
 ### Graphics notes (suitability)
@@ -135,7 +135,7 @@ Assets in `graphics/` (owner-supplied 2026-05-23):
 - **logo-icon.png:** Best all-purpose asset. Circular vault + five color motifs reads at small sizes; matches Commander Vault brand; works on dark backgrounds.
 - **hero-banner.png:** Strong app-page hero and social preview. Caveat: “COMMANDER VAULT” is in the image — page should still use a real `<h1>` for accessibility; avoid duplicating the same text immediately below. On narrow mobile, baked-in type may shrink — acceptable for v1.
 - **logo-lockup.png:** Good for store listings or a light “about” panel. Off-white background clashes with dark-mode site unless placed in a card or re-exported on transparent/dark bg.
-- **Not covered:** Feature section screenshots; roadmap visuals (optional). AI/fan-art style is fine with existing Wizards disclaimer.
+- **Not covered:** Roadmap visuals (optional). AI/fan-art style is fine with existing Wizards disclaimer.
 - **Accent colors (from art):** gold `#C9A227` (approx), bronze frame, purple twilight `#4A3F6B`, Scryfall-blue accents from compass gem.
 
 ---
