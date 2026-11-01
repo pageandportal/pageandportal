@@ -56,7 +56,7 @@
 
 ### Feature 5 — High scores stay on the phone
 
-- **Description:** Cabinet-style local tables. Three-letter initials. Nothing is uploaded.
+- **Description:** Cabinet-style local tables. Three-letter initials. Your scores are never uploaded.
 
 ### Feature 6 — Fair play
 
@@ -74,6 +74,7 @@
 |---------|--------|--------|
 | Arcade cabinet interface | In progress | Phosphor-green display, optional scanlines, central hub for launching each game |
 | Paddle & Pixel | In progress | First game, now playable on a phone in testing |
+| Local high-score tables | In progress | Three-letter initials, stored only on the phone; working in Paddle & Pixel in testing |
 
 ### Google Play
 
@@ -81,8 +82,6 @@
 |---------|--------|--------|
 | Google Play release | Planned | Public release for Android on Google Play |
 | Full launch line-up | Planned | Neon Snake, Brick Buster, Formation Fire, Lane Hopper, Shattered Earth join Paddle & Pixel |
-| Local high-score tables | Planned | Three-letter initials, stored only on the phone |
-
 ### After Android
 
 | Feature | Status | Notes |

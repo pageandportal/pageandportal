@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-01 | Insert Continue review fixes + lighter site logo | From Grok's IC page review (owner-approved items): site header logo now an 80px WebP centre crop (`studio-icon.webp`, 1.5 KB, was the 108 KB original) and the browser-tab icon a 64px `favicon.png`; the full image stays as the link-preview fallback. IC: "Local high-score tables" moved to **On the bench** as in progress (working in Paddle & Pixel in testing); "Nothing is uploaded" → "Your scores are never uploaded". Supply `app.md` kept in step. Privacy page still waits on confirmed SDKs per the IC brief → v0.12.6 |
 | 2026-11-01 | Commander Vault roadmap grouped by release | Re-published CV `public-roadmap.yaml` (main 3b8ecb5): only change is `release` on all 14 Released items; site frontmatter verified field-for-field (0 mismatches). Released lane now shows **v1.3** (4), **v1.2** (1), then **v1.1** (9) behind "Show 9 more" → v0.12.5 |
 | 2026-11-01 | Commander Vault legal wording + roadmap release groups (Grok review, owner decisions) | Credits: dropped "permitted under the Fan Content Policy" (kept unofficial / not endorsed / © Wizards; footer policy link kept). Privacy: Scryfall may log search requests; View on EDHREC opens edhrec.com with the commander's name; Android asks Google Play about updates. iCloud backup labelled "coming with the iOS app" in Features, Privacy, Terms (src + supply). Roadmap items accept optional `release` — Released lane groups by store version, newest first; needs `release` values in CV `public-roadmap.yaml` (not there yet, so the live lane is unchanged). Owner declined the v1.3 line; support page not created (homepage is the Support URL) → v0.12.4 |
 | 2026-11-01 | Lighter app icons + "colour" tagline (Grok review) | `sync:assets` now writes `icon.webp` (square 192px, wordmark 840px wide) instead of copying the 1024px PNG: Commander Vault icon 217 KB → 9 KB, Times Tables 121 KB → 3 KB. `sharp` added as a dev dependency. Commander Vault tagline "color" → "colour" (page, home grid inventory, supply app.md) → v0.12.3 |
@@ -378,6 +379,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] Commander Vault — status badge shows `live`
 - [ ] Commander Vault — roadmap shows three lanes: **Released** (14 **published**, grouped under **v1.3** (4) and **v1.2** (1), with **v1.1** (9) behind “Show 9 more”), **v2.0.0 — iOS Release** (iPhone release in progress, iCloud backup planned), **Planned** (5, iPad layout last); mobile swipes between lanes
 - [ ] Insert Continue — home card (coming soon, green subtitle, square CRT icon readable); app page has no Play button, no banner, no privacy link; hero wordmark not cropped on a phone
+- [ ] Insert Continue — roadmap **On the bench** lists cabinet interface, Paddle & Pixel and local high-score tables (all in progress); Google Play lane has the release and the full line-up only; the high-scores feature card says "Your scores are never uploaded"
 - [ ] Insert Continue — Screenshots section between Features and Roadmap: five shots in play order with captions and the in-development note; desktop phone shots and landscape stack end level; on a phone the two upright shots sit side by side
 - [ ] Roadmap “Show N more” toggle opens/closes with mouse, touch, and keyboard (Tab to it, Enter/Space); focus outline visible
 - [ ] Commander Vault — Screenshots section between Features and Roadmap: six dark-theme portraits (no share image); one row of six on a wide desktop, two rows of three on a tablet/small laptop, pairs on a phone; note credits card art to Wizards of the Coast via Scryfall
@@ -402,6 +404,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 - [ ] `version.properties` v0.6.0 build 1 matches the next shipped site
 - [x] Favicon and page `<title>` / description — owner verified on deploy 2026-05-23
+- [ ] Header logo and browser-tab icon look the same as before (centre crop of the Page & Portal artwork) after the v0.12.6 switch to small `studio-icon.webp` / `favicon.png`
 - [ ] Link previews — pasting an app page link (e.g. Insert Continue) into Messages, Discord, Facebook, or X shows the large 1200×630 card; home link shows the small studio icon card. Platforms cache previews, so a re-shared old link may show the old card for a while
 - [ ] Insert Continue — browser tab / search title reads “Insert Continue — Retro Arcade Mini Games · Page & Portal”
 - [ ] `/apps/` opens the home page at the Apps section

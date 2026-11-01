@@ -16,7 +16,7 @@ Source files live in `supply/`; **`npm run sync:assets`** writes deploy copies:
 
 | Supply | Public |
 |--------|--------|
-| `supply/site/branding/tier-a-1-nav-icon.png` | `public/brand/studio-icon.png` |
+| `supply/site/branding/tier-a-1-nav-icon.png` | `public/brand/studio-icon.png` (link previews), plus `studio-icon.webp` (80px header) and `favicon.png` (64px) |
 | `supply/site/branding/avatar.{webp,png,jpg}` | `public/brand/avatar.<ext>` |
 | `supply/apps/<slug>/graphics/logo-icon.png` | `public/apps/<slug>/icon.webp` (resized: square 192px, wordmark 840px wide) |
 | `supply/apps/<slug>/graphics/hero-banner.{jpg,png}` | `public/apps/<slug>/hero.<ext>` |

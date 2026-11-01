@@ -2,7 +2,8 @@
 /**
  * Sync owner supply graphics → public/ (deployed static assets).
  *
- * - supply/site/branding/tier-a-1-nav-icon.png → public/brand/studio-icon.png
+ * - supply/site/branding/tier-a-1-nav-icon.png → public/brand/studio-icon.png (link previews),
+ *   plus centre-square crops studio-icon.webp (80px header) and favicon.png (64px)
  * - supply/site/branding/avatar.{webp,png,jpg,jpeg} → public/brand/avatar.<ext>
  * - supply/apps/<slug>/graphics/logo-icon.png → public/apps/<slug>/icon.webp
  *   (square icons 192px, wordmarks 840px wide — twice their largest display size)
@@ -44,6 +45,19 @@ function copyIfChanged(src, dest) {
   return true;
 }
 
+/** @param {Buffer} buf @param {string} dest */
+function writeIfChanged(buf, dest) {
+  if (fs.existsSync(dest) && buf.equals(fs.readFileSync(dest))) {
+    console.log(`same  ${path.relative(root, dest)}`);
+    return false;
+  }
+
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.writeFileSync(dest, buf);
+  console.log(`wrote ${path.relative(root, dest)}`);
+  return true;
+}
+
 /**
  * Write a web-sized WebP copy of an app icon (square → 192px, wordmark → 840px wide).
  * @param {string} src @param {string} dest
@@ -62,26 +76,36 @@ async function writeIcon(src, dest) {
     .webp({ quality: 85 })
     .toBuffer();
 
-  if (fs.existsSync(dest) && buf.equals(fs.readFileSync(dest))) {
-    console.log(`same  ${path.relative(root, dest)}`);
-    return false;
-  }
+  return writeIfChanged(buf, dest);
+}
 
-  fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.writeFileSync(dest, buf);
-  console.log(`wrote ${path.relative(root, dest)}`);
-  return true;
+/**
+ * Write the centre-square crops of the studio icon: header (WebP) and favicon (PNG).
+ * @param {string} src @param {string} publicBrand
+ */
+async function writeStudioIcons(src, publicBrand) {
+  if (!fs.existsSync(src)) return 0;
+
+  const square = (size) => sharp(src).resize({ width: size, height: size, fit: 'cover' });
+  const header = await square(80).webp({ quality: 85 }).toBuffer();
+  const favicon = await square(64).png().toBuffer();
+
+  let count = 0;
+  if (writeIfChanged(header, path.join(publicBrand, 'studio-icon.webp'))) count += 1;
+  if (writeIfChanged(favicon, path.join(publicBrand, 'favicon.png'))) count += 1;
+  return count;
 }
 
 const AVATAR_FILENAMES = ['avatar.webp', 'avatar.png', 'avatar.jpg', 'avatar.jpeg'];
 
-function syncBranding() {
+async function syncBranding() {
   let count = 0;
   const brandingDir = path.join(root, 'supply', 'site', 'branding');
   const publicBrand = path.join(root, 'public', 'brand');
 
   const iconSrc = path.join(brandingDir, 'tier-a-1-nav-icon.png');
   if (copyIfChanged(iconSrc, path.join(publicBrand, 'studio-icon.png'))) count += 1;
+  count += await writeStudioIcons(iconSrc, publicBrand);
 
   for (const name of AVATAR_FILENAMES) {
     const src = path.join(brandingDir, name);
@@ -140,7 +164,7 @@ async function syncAppAssets() {
 
 console.log('Syncing supply graphics → public/…\n');
 console.log('brand');
-const brandCount = syncBranding();
+const brandCount = await syncBranding();
 console.log('\napps');
 const appCount = await syncAppAssets();
 console.log(`\nDone. ${brandCount + appCount} file(s) updated.`);

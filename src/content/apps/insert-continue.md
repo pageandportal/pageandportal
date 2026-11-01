@@ -43,7 +43,7 @@ features:
       Classic phosphor green, with a plain white screen if you prefer. Subtle
       scanlines and a light vignette, and a mute button that means it.
   - title: High scores stay on the phone
-    description: Cabinet-style local tables. Three-letter initials. Nothing is uploaded.
+    description: Cabinet-style local tables. Three-letter initials. Your scores are never uploaded.
   - title: Fair play
     description: >-
       Free to play, with ads only between games — never in the middle of a round.
@@ -96,6 +96,9 @@ roadmap:
       - title: Paddle & Pixel
         description: The first game, now playable on a phone in testing.
         status: in-progress
+      - title: Local high-score tables
+        description: Cabinet-style score tables with three-letter initials, stored only on your phone. Working in Paddle & Pixel in testing.
+        status: in-progress
   - id: next
     label: Google Play
     items:
@@ -104,9 +107,6 @@ roadmap:
         status: planned
       - title: Full launch line-up
         description: Neon Snake, Brick Buster, Formation Fire, Lane Hopper, and Shattered Earth join Paddle & Pixel.
-        status: planned
-      - title: Local high-score tables
-        description: Cabinet-style score tables with three-letter initials, stored only on your phone.
         status: planned
   - id: later
     label: After Android
