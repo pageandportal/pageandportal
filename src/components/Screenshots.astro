@@ -49,22 +49,105 @@ const listStyle = bento
         {shots.map((shot) => (
           <li class:list={['shot', shot.portrait ? 'shot-portrait' : 'shot-landscape']}>
             <figure>
-              <img
-                src={shot.url}
-                alt={shot.alt}
-                width={shot.width}
-                height={shot.height}
-                loading="lazy"
-                decoding="async"
-              />
+              <a class="shot-link" href={shot.url} aria-label={`View larger: ${shot.alt}`}>
+                <img
+                  src={shot.url}
+                  alt={shot.alt}
+                  width={shot.width}
+                  height={shot.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
               {shot.caption && <figcaption>{shot.caption}</figcaption>}
             </figure>
           </li>
         ))}
       </ul>
+      <dialog class="lightbox" aria-label="Screenshot viewer">
+        <figure class="lightbox-figure">
+          <img class="lightbox-img" src="" alt="" />
+          <figcaption class="lightbox-caption"></figcaption>
+        </figure>
+        <p class="lightbox-count" aria-live="polite"></p>
+        <button type="button" class="lightbox-btn lightbox-close" aria-label="Close">×</button>
+        {shots.length > 1 && (
+          <>
+            <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous screenshot">‹</button>
+            <button type="button" class="lightbox-btn lightbox-next" aria-label="Next screenshot">›</button>
+          </>
+        )}
+      </dialog>
     </section>
   )
 }
+
+<script>
+  for (const section of document.querySelectorAll<HTMLElement>('.screenshots')) {
+    const dialog = section.querySelector<HTMLDialogElement>('.lightbox');
+    if (!dialog || typeof dialog.showModal !== 'function') continue;
+
+    const links = [...section.querySelectorAll<HTMLAnchorElement>('.shot-link')];
+    const img = dialog.querySelector<HTMLImageElement>('.lightbox-img')!;
+    const caption = dialog.querySelector<HTMLElement>('.lightbox-caption')!;
+    const count = dialog.querySelector<HTMLElement>('.lightbox-count')!;
+    let current = 0;
+    let opener: HTMLElement | null = null;
+
+    const show = (index: number) => {
+      current = (index + links.length) % links.length;
+      const link = links[current];
+      img.src = link.href;
+      img.alt = link.querySelector('img')?.alt ?? '';
+      const text = link.closest('figure')?.querySelector('figcaption')?.textContent ?? '';
+      caption.textContent = text;
+      caption.hidden = !text;
+      count.textContent = links.length > 1 ? `${current + 1} of ${links.length}` : '';
+    };
+
+    links.forEach((link, index) => {
+      link.addEventListener('click', (event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        opener = link;
+        show(index);
+        document.documentElement.style.overflow = 'hidden';
+        dialog.showModal();
+      });
+    });
+
+    dialog.querySelector('.lightbox-close')?.addEventListener('click', () => dialog.close());
+    dialog.querySelector('.lightbox-prev')?.addEventListener('click', () => show(current - 1));
+    dialog.querySelector('.lightbox-next')?.addEventListener('click', () => show(current + 1));
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog || event.target === dialog.querySelector('.lightbox-figure')) dialog.close();
+    });
+
+    dialog.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') dialog.close();
+      else if (links.length < 2) return;
+      else if (event.key === 'ArrowLeft') show(current - 1);
+      else if (event.key === 'ArrowRight') show(current + 1);
+    });
+
+    let touchX: number | null = null;
+    dialog.addEventListener('touchstart', (event) => {
+      touchX = event.touches.length === 1 ? event.touches[0].clientX : null;
+    }, { passive: true });
+    dialog.addEventListener('touchend', (event) => {
+      if (touchX === null || links.length < 2) return;
+      const dx = event.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+    });
+
+    dialog.addEventListener('close', () => {
+      document.documentElement.style.overflow = '';
+      opener?.focus();
+    });
+  }
+</script>
 
 <style>
   .section-title {
@@ -133,18 +216,152 @@ const listStyle = bento
     gap: 0.5rem;
   }
 
-  img {
+  .shot-link {
+    display: block;
+    border-radius: 10px;
+    cursor: zoom-in;
+  }
+
+  .shot-link:focus-visible {
+    outline: 2px solid var(--app-accent, var(--gold));
+    outline-offset: 3px;
+  }
+
+  .shot img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 10px;
     border: 1px solid color-mix(in srgb, var(--app-accent, var(--gold)) 30%, var(--border));
     background: #000;
+    transition: border-color 0.15s ease;
   }
 
-  figcaption {
+  .shot-link:hover img {
+    border-color: var(--app-accent, var(--gold));
+  }
+
+  .shot figcaption {
     font-size: 0.85rem;
     line-height: 1.45;
     color: var(--text-muted);
+  }
+
+  .lightbox {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 3.5rem 4.5rem 1rem;
+    border: 0;
+    background: rgb(0 0 0 / 0.92);
+    color: var(--text);
+  }
+
+  .lightbox[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .lightbox::backdrop {
+    background: transparent;
+  }
+
+  .lightbox-figure {
+    margin: 0;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .lightbox-img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100dvh - 10rem);
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--app-accent, var(--gold)) 30%, var(--border));
+    background: #000;
+  }
+
+  .lightbox-caption {
+    max-width: 60ch;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .lightbox-count {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .lightbox-btn {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: rgb(22 26 33 / 0.85);
+    color: var(--text);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .lightbox-btn:hover,
+  .lightbox-btn:focus-visible {
+    border-color: var(--app-accent, var(--gold));
+    color: var(--app-accent, var(--gold));
+  }
+
+  .lightbox-close {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-prev {
+    left: 0.75rem;
+  }
+
+  .lightbox-next {
+    right: 0.75rem;
+  }
+
+  @media (max-width: 719px) {
+    .lightbox {
+      padding: 3.5rem 0.75rem 4.25rem;
+    }
+
+    .lightbox-img {
+      max-height: calc(100dvh - 14rem);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      top: auto;
+      bottom: 0.75rem;
+      transform: none;
+    }
   }
 </style>
