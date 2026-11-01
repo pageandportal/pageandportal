@@ -104,59 +104,73 @@ roadmap:
       - title: Light and dark themes
         description: Choose light, dark, or match your phone’s system setting.
         status: shipped
+        release: v1.3
       - title: Richer progress shares
         description: Share images with more deck detail — names, art, or completion highlights.
         status: shipped
+        release: v1.3
       - title: Budget and play tracking
         description: >-
           Optional approximate deck cost and table time per slot, plus last-updated
           and completed dates on the vault grid.
         status: shipped
+        release: v1.3
       - title: Options menu
         description: A dedicated place for app preferences and backup.
         status: shipped
+        release: v1.3
       - title: EDHREC from your commander
         description: >-
           Open the EDHREC page for a deck’s primary commander from the deck editor —
           quick inspiration without leaving your challenge progress.
         status: shipped
+        release: v1.2
       - title: Better deck links
         description: >-
           Easier way to save Moxfield, ManaBox, Archidekt, and other deck-builder links —
           paste-friendly entry, more hosts, and your commander filled in automatically from Archidekt and ManaBox lists.
         status: shipped
+        release: v1.1
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.
         status: shipped
+        release: v1.1
       - title: Smarter commander search
         description: Search that respects your slot’s colours and helps you pick the right card art.
         status: shipped
+        release: v1.1
       - title: Partner commanders
         description: Track partner and background commanders where the challenge allows.
         status: shipped
+        release: v1.1
       - title: Filter and sort your decks
         description: Find decks by status, sort your grid, jump to categories, and update build status from the grid.
         status: shipped
+        release: v1.1
       - title: Share feedback from the project homepage
         description: >-
           A clear way to send feedback from the Commander Vault project homepage — so the
           link in the app’s Support screen goes somewhere useful.
         status: shipped
+        release: v1.1
       - title: Help picking your next deck
         description: >-
           Tap for a smart deck suggestion, or press and hold for random empty or resume
           in-progress slots when you are not sure what to brew next.
         status: shipped
+        release: v1.1
       - title: Reminders for stale in-progress decks
         description: >-
           A gentle in-app nudge when a deck has sat in progress for a long time with no
           updates — local only, no push notifications.
         status: shipped
+        release: v1.1
       - title: Stay up to date in the app
         description: >-
           When a newer Play Store version is available, update in the background and restart
           when you are ready — no hunt through the store listing.
         status: shipped
+        release: v1.1
   - id: next
     label: v2.0.0 — iOS Release
     items:
