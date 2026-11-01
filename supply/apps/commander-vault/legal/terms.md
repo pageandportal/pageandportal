@@ -2,7 +2,7 @@
 
 **32 Deck Challenge Companion**
 
-**Last updated:** May 2026
+**Last updated:** November 2026
 
 By using Commander Vault you agree to these terms.
 
@@ -12,7 +12,7 @@ Commander Vault is a fan-made utility for personal deck tracking. It is not affi
 
 ## Your content
 
-You are responsible for the commander names and notes you enter. Data is stored locally on your device.
+You are responsible for the commander names and notes you enter. Data is stored locally on your device. On iPhone and iPad, if you turn on iCloud backup, a copy is also saved to your own iCloud account.
 
 ## Third-party services
 
@@ -20,7 +20,7 @@ Card data and images are provided via Scryfall under their terms. Magic: The Gat
 
 ## Purchases
 
-Commander Vault offers a one-time purchase to unlock the full 32-slot challenge. Purchases, billing, and refund handling are managed by Google Play and remain subject to Google's own terms and policies.
+Commander Vault offers an optional one-time purchase to unlock the full 32-slot challenge. Purchases, billing, and refund handling are managed by Google Play on Android and by Apple's App Store on iPhone and iPad, and remain subject to their own terms and policies.
 
 ## Disclaimer
 

@@ -42,11 +42,12 @@ features:
     description: >-
       Commander names, bracket, build status, notes, and saved card art URLs are
       stored locally (IndexedDB). No user accounts and no backend — your list is
-      not uploaded to Page and Portal servers.
+      not uploaded to Page and Portal servers. On iPhone and iPad, optional iCloud
+      backup (off by default) saves a copy to your own iCloud account.
   - title: Search commanders with Scryfall
     description: >-
-      Commander search and autocomplete use the Scryfall API when you look up a
-      card. Card artwork may load from Scryfall-hosted URLs after you select a
+      Commander search and autocomplete send what you type to the Scryfall API to
+      find cards. Card artwork may load from Scryfall-hosted URLs after you select a
       commander.
   - title: No tracking SDKs
     description: >-
