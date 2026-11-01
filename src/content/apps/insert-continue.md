@@ -91,14 +91,17 @@ roadmap:
     label: On the bench
     items:
       - title: Arcade cabinet interface
-        description: A phosphor-green display with optional scanlines, and a central hub for launching each game.
-        status: in-progress
+        description: A phosphor-green display with optional scanlines, and a central hub for launching each game. Built and working in testing.
+        status: ready
       - title: Paddle & Pixel
-        description: The first game, now playable on a phone in testing.
+        description: The first game, finished and playable on a phone in testing.
+        status: ready
+      - title: Neon Snake
+        description: The second game, now playable on a phone in testing — three speeds, with walls or wrap-around edges.
         status: in-progress
       - title: Local high-score tables
-        description: Cabinet-style score tables with three-letter initials, stored only on your phone. Working in Paddle & Pixel in testing.
-        status: in-progress
+        description: Cabinet-style score tables with three-letter initials, stored only on your phone. Working in Paddle & Pixel and Neon Snake in testing.
+        status: ready
   - id: next
     label: Google Play
     items:
@@ -106,7 +109,7 @@ roadmap:
         description: Public release for Android on Google Play.
         status: planned
       - title: Full launch line-up
-        description: Neon Snake, Brick Buster, Formation Fire, Lane Hopper, and Shattered Earth join Paddle & Pixel.
+        description: Brick Buster, Formation Fire, Lane Hopper, and Shattered Earth join Paddle & Pixel and Neon Snake.
         status: planned
   - id: later
     label: After Android

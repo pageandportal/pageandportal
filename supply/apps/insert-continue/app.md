@@ -72,16 +72,17 @@
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Arcade cabinet interface | In progress | Phosphor-green display, optional scanlines, central hub for launching each game |
-| Paddle & Pixel | In progress | First game, now playable on a phone in testing |
-| Local high-score tables | In progress | Three-letter initials, stored only on the phone; working in Paddle & Pixel in testing |
+| Arcade cabinet interface | Ready | Phosphor-green display, optional scanlines, central hub for launching each game; built and working in testing |
+| Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
+| Neon Snake | In progress | Second game, playable on a phone in testing; three speeds, walls or wrap-around |
+| Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in Paddle & Pixel and Neon Snake in testing |
 
 ### Google Play
 
 | Feature | Status | Notes |
 |---------|--------|--------|
 | Google Play release | Planned | Public release for Android on Google Play |
-| Full launch line-up | Planned | Neon Snake, Brick Buster, Formation Fire, Lane Hopper, Shattered Earth join Paddle & Pixel |
+| Full launch line-up | Planned | Brick Buster, Formation Fire, Lane Hopper, Shattered Earth join Paddle & Pixel and Neon Snake |
 ### After Android
 
 | Feature | Status | Notes |

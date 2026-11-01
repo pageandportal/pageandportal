@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-02 | Insert Continue roadmap update | Owner request (via the Insert Continue agent): cabinet interface, Paddle & Pixel and local high-score tables now **ready** (built, working in testing); **Neon Snake** added as in progress (playable on a phone in testing); Google Play line-up now names the remaining four games. Frontmatter and supply sheet match. Screenshots still show Neon Snake as Soon on the hub — refresh when new shots are wanted → v0.12.10 |
 | 2026-11-01 | Roadmap lanes line up under release headings | Owner request: when a lane starts with a release heading (Commander Vault **v1.3**), the other lanes get an invisible spacer of the same height so all first cards start level (measured equal on desktop). Pages without release headings unchanged → v0.12.9 |
 | 2026-11-01 | No chips in all-released lanes | Owner request: a lane where every item is `shipped` (Commander Vault **Released**) no longer repeats a **Released** chip on each card; mixed lanes (SparkClass **Classroom readiness**) keep their chips → v0.12.8 |
 | 2026-11-01 | Roadmap chip Published → Released | Owner request: `shipped` items now show a **Released** chip on all app pages (Commander Vault; SparkClass by direct link). YAML still uses `shipped`; rule and handoff doc updated → v0.12.7 |
