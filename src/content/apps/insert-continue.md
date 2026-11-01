@@ -11,7 +11,7 @@ description: >-
   a high score on your own phone — offline, with no account.
 accentColor: '#33FF66'
 accentColorSecondary: '#9CFF9C'
-icon: apps/insert-continue/icon.png
+icon: apps/insert-continue/icon.webp
 wordmark: false
 heroImage: apps/insert-continue/hero.png
 heroImageAlt: Insert Continue wordmark in green phosphor type on a near-black screen.

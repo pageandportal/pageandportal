@@ -11,7 +11,7 @@ description: >-
   NZQA unit standards, not formal assessment or credentials.
 accentColor: '#3465C1'
 accentColorSecondary: '#F7D024'
-icon: apps/sparkclass/icon.png
+icon: apps/sparkclass/icon.webp
 wordmark: true
 heroImage: apps/sparkclass/hero.jpg
 heroImageAlt: >-

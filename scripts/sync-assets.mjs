@@ -4,7 +4,8 @@
  *
  * - supply/site/branding/tier-a-1-nav-icon.png → public/brand/studio-icon.png
  * - supply/site/branding/avatar.{webp,png,jpg,jpeg} → public/brand/avatar.<ext>
- * - supply/apps/<slug>/graphics/logo-icon.png → public/apps/<slug>/icon.png
+ * - supply/apps/<slug>/graphics/logo-icon.png → public/apps/<slug>/icon.webp
+ *   (square icons 192px, wordmarks 840px wide — twice their largest display size)
  * - supply/apps/<slug>/graphics/hero-banner.{jpg,png} → public/apps/<slug>/hero.<ext>
  *   (a .jpg web copy wins over the .png original when both exist)
  * - supply/apps/<slug>/graphics/share-card.{jpg,png} → public/apps/<slug>/share.<ext>
@@ -16,6 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -38,6 +40,35 @@ function copyIfChanged(src, dest) {
 
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, srcBuf);
+  console.log(`wrote ${path.relative(root, dest)}`);
+  return true;
+}
+
+/**
+ * Write a web-sized WebP copy of an app icon (square → 192px, wordmark → 840px wide).
+ * @param {string} src @param {string} dest
+ */
+async function writeIcon(src, dest) {
+  if (!fs.existsSync(src)) {
+    console.warn(`skip  missing source: ${path.relative(root, src)}`);
+    return false;
+  }
+
+  const image = sharp(src);
+  const { width = 0, height = 0 } = await image.metadata();
+  const size = width === height ? { width: 192, height: 192 } : { width: 840 };
+  const buf = await image
+    .resize({ ...size, fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: 85 })
+    .toBuffer();
+
+  if (fs.existsSync(dest) && buf.equals(fs.readFileSync(dest))) {
+    console.log(`same  ${path.relative(root, dest)}`);
+    return false;
+  }
+
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.writeFileSync(dest, buf);
   console.log(`wrote ${path.relative(root, dest)}`);
   return true;
 }
@@ -77,7 +108,7 @@ function copyFirstOf(srcDir, srcBase, destDir, destBase) {
   return false;
 }
 
-function syncAppAssets() {
+async function syncAppAssets() {
   const supplyApps = path.join(root, 'supply', 'apps');
   const skip = new Set(['_template']);
   let count = 0;
@@ -90,7 +121,7 @@ function syncAppAssets() {
     const publicDir = path.join(root, 'public', 'apps', slug);
     const iconSrc = path.join(graphicsDir, 'logo-icon.png');
 
-    if (copyIfChanged(iconSrc, path.join(publicDir, 'icon.png'))) count += 1;
+    if (await writeIcon(iconSrc, path.join(publicDir, 'icon.webp'))) count += 1;
     if (copyFirstOf(graphicsDir, 'hero-banner', publicDir, 'hero')) count += 1;
     if (copyFirstOf(graphicsDir, 'share-card', publicDir, 'share')) count += 1;
 
@@ -111,5 +142,5 @@ console.log('Syncing supply graphics → public/…\n');
 console.log('brand');
 const brandCount = syncBranding();
 console.log('\napps');
-const appCount = syncAppAssets();
+const appCount = await syncAppAssets();
 console.log(`\nDone. ${brandCount + appCount} file(s) updated.`);

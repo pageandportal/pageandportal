@@ -18,12 +18,12 @@ Source files live in `supply/`; **`npm run sync:assets`** writes deploy copies:
 |--------|--------|
 | `supply/site/branding/tier-a-1-nav-icon.png` | `public/brand/studio-icon.png` |
 | `supply/site/branding/avatar.{webp,png,jpg}` | `public/brand/avatar.<ext>` |
-| `supply/apps/<slug>/graphics/logo-icon.png` | `public/apps/<slug>/icon.png` |
+| `supply/apps/<slug>/graphics/logo-icon.png` | `public/apps/<slug>/icon.webp` (resized: square 192px, wordmark 840px wide) |
 | `supply/apps/<slug>/graphics/hero-banner.{jpg,png}` | `public/apps/<slug>/hero.<ext>` |
 | `supply/apps/<slug>/graphics/share-card.{jpg,png}` | `public/apps/<slug>/share.<ext>` |
 | `supply/apps/<slug>/graphics/screenshots/*.{jpg,png}` | `public/apps/<slug>/screenshots/*` |
 
-Reference paths in app frontmatter without a leading slash (e.g. `apps/commander-vault/icon.png`).
+Reference paths in app frontmatter without a leading slash (e.g. `apps/commander-vault/icon.webp`).
 
 **Large heroes:** if `hero-banner.png` is a photo over ~500 KB, save a `hero-banner.jpg` web copy beside it (quality ~85). The `.jpg` wins on sync; point `heroImage` at `hero.jpg`.
 

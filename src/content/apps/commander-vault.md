@@ -1,7 +1,7 @@
 ---
 name: Commander Vault
 subtitle: 32 Deck Challenge Companion
-tagline: Track all 32 Commander color identities — one deck at a time.
+tagline: Track all 32 Commander colour identities — one deck at a time.
 status: live
 description: >-
   Commander Vault helps you track your Magic: The Gathering 32 Deck Commander
@@ -10,7 +10,7 @@ description: >-
   with a one-time purchase.
 accentColor: '#C9A227'
 accentColorSecondary: '#6B5B95'
-icon: apps/commander-vault/icon.png
+icon: apps/commander-vault/icon.webp
 heroImage: apps/commander-vault/hero.png
 heroImageAlt: Commander Vault — vault and compass motif on a twilight landscape
 shareImage: apps/commander-vault/share.jpg

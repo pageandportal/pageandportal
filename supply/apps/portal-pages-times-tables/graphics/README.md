@@ -21,7 +21,7 @@ Owner-supplied 2026-05-23.
 
 Agents copy to `public/apps/portal-pages-times-tables/`:
 
-- `icon.png` ← `logo-icon.png`
+- `icon.webp` ← `logo-icon.png` (resized to 192px)
 - `hero.png` ← `hero-banner.png`
 
 ## Brand notes

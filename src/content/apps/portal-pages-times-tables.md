@@ -9,7 +9,7 @@ description: >-
   live.
 accentColor: '#D97706'
 accentColorSecondary: '#5FAE5A'
-icon: apps/portal-pages-times-tables/icon.png
+icon: apps/portal-pages-times-tables/icon.webp
 heroImage: apps/portal-pages-times-tables/hero.png
 heroImageAlt: >-
   Children practising multiplication with wooden blocks in a sunny park — calm,

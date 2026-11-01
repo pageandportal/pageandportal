@@ -11,7 +11,7 @@ const LANE_LABELS: Record<'now' | 'next' | 'later', string> = {
 export function appIconUrl(slug: string, iconPath?: string): string | undefined {
   const base = import.meta.env.BASE_URL;
   if (iconPath) return `${base}${iconPath.replace(/^\//, '')}`;
-  return `${base}apps/${slug}/icon.png`;
+  return `${base}apps/${slug}/icon.webp`;
 }
 
 export function appAssetUrl(path?: string): string | undefined {
