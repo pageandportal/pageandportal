@@ -88,31 +88,37 @@ screenshots:
     caption: Scores stay in a local table on your phone. Rematch, or head back to the hub.
 roadmap:
   - id: now
-    label: On the bench
+    label: Ready for launch
     items:
       - title: Arcade cabinet interface
         description: A phosphor-green display with optional scanlines, and a central hub for launching each game. Built and working in testing.
         status: ready
-      - title: Paddle & Pixel
-        description: The first game, finished and playable on a phone in testing.
-        status: ready
-      - title: Neon Snake
-        description: The second game, now playable on a phone in testing — three speeds, with walls or wrap-around edges.
-        status: in-progress
       - title: Local high-score tables
         description: Cabinet-style score tables with three-letter initials, stored only on your phone. Working in Paddle & Pixel and Neon Snake in testing.
         status: ready
+      - title: Paddle & Pixel
+        description: The first game, finished and playable on a phone in testing.
+        status: ready
   - id: next
-    label: Google Play
+    label: On the bench
     items:
-      - title: Google Play release
-        description: Public release for Android on Google Play.
+      - title: Neon Snake
+        description: The second game, now playable on a phone in testing — three speeds, with walls or wrap-around edges.
+        status: in-progress
+      - title: Brick Buster
+        description: Ten hand-built brick layouts, three lives, one ball, no power-up circus.
         status: planned
-      - title: Full launch line-up
-        description: Brick Buster, Formation Fire, Lane Hopper, and Shattered Earth join Paddle & Pixel and Neon Snake.
+      - title: Formation Fire
+        description: Hold the line against eight waves of descending drones.
+        status: planned
+      - title: Lane Hopper
+        description: Get the rabbit across busy roads and rivers before the clock runs out.
+        status: planned
+      - title: Shattered Earth
+        description: A turn-based artillery duel — set the angle and power, blast the hills, outlast the other tank.
         status: planned
   - id: later
-    label: After Android
+    label: After launch
     items:
       - title: iPhone and iPad release
         description: Following the Android launch, within the same release window.

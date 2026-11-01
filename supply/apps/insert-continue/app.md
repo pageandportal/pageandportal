@@ -66,24 +66,27 @@
 
 ## Roadmap
 
-*Site lanes: **On the bench** (`now`), **Google Play** (`next`), **After Android** (`later`).*
+*Site lanes: **Ready for launch** (`now`), **On the bench** (`next`), **After launch** (`later`). Lanes read like Commander Vault's: done, being worked on, later. The Google Play launch is the line between the first two lanes and the third (James, 2026-11-02).*
+
+### Ready for launch
+
+| Feature | Status | Notes |
+|---------|--------|--------|
+| Arcade cabinet interface | Ready | Phosphor-green display, optional scanlines, central hub for launching each game; built and working in testing |
+| Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in Paddle & Pixel and Neon Snake in testing |
+| Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
 
 ### On the bench
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Arcade cabinet interface | Ready | Phosphor-green display, optional scanlines, central hub for launching each game; built and working in testing |
-| Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
 | Neon Snake | In progress | Second game, playable on a phone in testing; three speeds, walls or wrap-around |
-| Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in Paddle & Pixel and Neon Snake in testing |
+| Brick Buster | Planned | Ten hand-built brick layouts, three lives, one ball, no power-up circus |
+| Formation Fire | Planned | Eight waves of descending drones |
+| Lane Hopper | Planned | Get the rabbit across roads and rivers before the clock runs out |
+| Shattered Earth | Planned | Turn-based artillery duel |
 
-### Google Play
-
-| Feature | Status | Notes |
-|---------|--------|--------|
-| Google Play release | Planned | Public release for Android on Google Play |
-| Full launch line-up | Planned | Brick Buster, Formation Fire, Lane Hopper, Shattered Earth join Paddle & Pixel and Neon Snake |
-### After Android
+### After launch
 
 | Feature | Status | Notes |
 |---------|--------|--------|
