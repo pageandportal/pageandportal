@@ -76,7 +76,7 @@ Custom lane labels supported (e.g. `V1.0 closed beta`, `v1.2+ and iOS`).
 | `next` | Next release + status, e.g. `v1.3.0 — Coming soon` or `v2.0.0 — iOS Release` | Items for that release (`ready` / `in-progress`); empty when nothing is scheduled, so the lane hides |
 | `later` | `Planned` | Accepted future work (`planned`), biggest headline first |
 
-Each item: `title` (required), `description` (optional), `status` (`planned` | `in-progress` | `ready` | `shipped`). The site chip shows `shipped` as **Published**; keep `shipped` in the YAML.
+Each item: `title` (required), `description` (optional), `status` (`planned` | `in-progress` | `ready` | `shipped`). The site chip shows `shipped` as **Released**; keep `shipped` in the YAML.
 
 Optional `release` (e.g. `v1.3`) on items: consecutive items with the same value are grouped under that label in the lane — use it in **Released**, newest release first, so the lane reads by store version. Groups are never split by "Show more"; lanes without `release` look as before. Copy the value into the site frontmatter as-is.
 

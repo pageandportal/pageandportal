@@ -113,7 +113,7 @@ Enable Pages in the repo: **Settings → Pages → Source:** GitHub Actions (aft
 - **Default:** Dark background (`#0d0f12` range), high-contrast text, restrained accent from each app’s artwork
 - **Typography:** One readable sans (e.g. system stack or [Inter](https://rsms.me/inter/)) + optional display face for headings if assets suggest it
 - **Layout:** Generous whitespace, max-width ~1100px, mobile-first
-- **Roadmap:** Horizontal scroll on mobile; cards or nodes with status chips (`Planned`, `In progress`, `Ready`, `Published` — data value `shipped`). **Features only** — no user/internal tasks or "not planned" lanes; see `.cursor/rules/app-roadmaps.mdc`
+- **Roadmap:** Horizontal scroll on mobile; cards or nodes with status chips (`Planned`, `In progress`, `Ready`, `Released` — data value `shipped`). **Features only** — no user/internal tasks or "not planned" lanes; see `.cursor/rules/app-roadmaps.mdc`
 - **Accessibility:** Semantic landmarks, focus states, `prefers-reduced-motion`, alt text on all supplied images
 - **Apps without graphics:** Neutral gradient placeholder + monogram until assets arrive
 
@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-01 | Roadmap chip Published → Released | Owner request: `shipped` items now show a **Released** chip on all app pages (Commander Vault; SparkClass by direct link). YAML still uses `shipped`; rule and handoff doc updated → v0.12.7 |
 | 2026-11-01 | Insert Continue review fixes + lighter site logo | From Grok's IC page review (owner-approved items): site header logo now an 80px WebP centre crop (`studio-icon.webp`, 1.5 KB, was the 108 KB original) and the browser-tab icon a 64px `favicon.png`; the full image stays as the link-preview fallback. IC: "Local high-score tables" moved to **On the bench** as in progress (working in Paddle & Pixel in testing); "Nothing is uploaded" → "Your scores are never uploaded". Supply `app.md` kept in step. Privacy page still waits on confirmed SDKs per the IC brief → v0.12.6 |
 | 2026-11-01 | Commander Vault roadmap grouped by release | Re-published CV `public-roadmap.yaml` (main 3b8ecb5): only change is `release` on all 14 Released items; site frontmatter verified field-for-field (0 mismatches). Released lane now shows **v1.3** (4), **v1.2** (1), then **v1.1** (9) behind "Show 9 more" → v0.12.5 |
 | 2026-11-01 | Commander Vault legal wording + roadmap release groups (Grok review, owner decisions) | Credits: dropped "permitted under the Fan Content Policy" (kept unofficial / not endorsed / © Wizards; footer policy link kept). Privacy: Scryfall may log search requests; View on EDHREC opens edhrec.com with the commander's name; Android asks Google Play about updates. iCloud backup labelled "coming with the iOS app" in Features, Privacy, Terms (src + supply). Roadmap items accept optional `release` — Released lane groups by store version, newest first; needs `release` values in CV `public-roadmap.yaml` (not there yet, so the live lane is unchanged). Owner declined the v1.3 line; support page not created (homepage is the Support URL) → v0.12.4 |
@@ -377,7 +378,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [x] App page hero shows correct art — owner verified 2026-05-23
 - [x] Feature items render (text-only; no feature screenshots yet) — owner verified 2026-05-23
 - [ ] Commander Vault — status badge shows `live`
-- [ ] Commander Vault — roadmap shows three lanes: **Released** (14 **published**, grouped under **v1.3** (4) and **v1.2** (1), with **v1.1** (9) behind “Show 9 more”), **v2.0.0 — iOS Release** (iPhone release in progress, iCloud backup planned), **Planned** (5, iPad layout last); mobile swipes between lanes
+- [ ] Commander Vault — roadmap shows three lanes: **Released** (14 cards with **Released** chips, grouped under **v1.3** (4) and **v1.2** (1), with **v1.1** (9) behind “Show 9 more”), **v2.0.0 — iOS Release** (iPhone release in progress, iCloud backup planned), **Planned** (5, iPad layout last); mobile swipes between lanes
 - [ ] Insert Continue — home card (coming soon, green subtitle, square CRT icon readable); app page has no Play button, no banner, no privacy link; hero wordmark not cropped on a phone
 - [ ] Insert Continue — roadmap **On the bench** lists cabinet interface, Paddle & Pixel and local high-score tables (all in progress); Google Play lane has the release and the full line-up only; the high-scores feature card says "Your scores are never uploaded"
 - [ ] Insert Continue — Screenshots section between Features and Roadmap: five shots in play order with captions and the in-development note; desktop phone shots and landscape stack end level; on a phone the two upright shots sit side by side

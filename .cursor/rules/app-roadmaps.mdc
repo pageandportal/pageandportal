@@ -23,7 +23,7 @@ Roadmap lanes on every App Project Page (`src/content/apps/<slug>.md` frontmatte
 ## Allowed
 
 - A release version as a lane label (e.g. `v1.3.0`) — the store version users will see.
-- Item `status: shipped` in frontmatter; the site chip renders it as **Published** (`src/components/Roadmap.astro`). Do not write "shipped" in titles or descriptions.
+- Item `status: shipped` in frontmatter; the site chip renders it as **Released** (`src/components/RoadmapCard.astro`). Do not write "shipped" in titles or descriptions.
 
 ## Example
 
