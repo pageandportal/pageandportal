@@ -127,7 +127,7 @@ Assets in `graphics/` (owner-supplied 2026-05-23):
 
 - [x] Logo / icon — `logo-icon.png`
 - [x] Hero — `hero-banner.png`
-- [x] In-app screenshots — six dark-theme portrait shots + landscape share image in `graphics/screenshots/` (from Commander Vault `resources/website-screenshots/web/`, 2026-11-01); shown in the page **Screenshots** section
+- [x] In-app screenshots — six dark-theme portrait shots in `graphics/screenshots/` (landscape share image dropped by owner) (from Commander Vault `resources/website-screenshots/web/`, 2026-11-01); shown in the page **Screenshots** section
 - [ ] Favicon exports — generate 32×32 / 180×180 from `logo-icon.png` at build time
 
 ### Graphics notes (suitability)

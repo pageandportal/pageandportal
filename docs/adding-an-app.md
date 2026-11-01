@@ -29,7 +29,7 @@ Reference paths in app frontmatter without a leading slash (e.g. `apps/commander
 
 ## Screenshots
 
-Optional `screenshots` frontmatter adds a **Screenshots** section between Features and Roadmap. Each entry needs `src`, `alt`, `width` and `height` (the file's pixel size), plus an optional `caption`; `screenshotsNote` adds a line under the heading (e.g. that shots come from a test build). Phone captures can be large — save half-size web copies into `graphics/screenshots/`. With one or two portrait shots and two or more landscape shots, desktop shows the portraits side by side with the landscapes stacked beside them; otherwise it is a simple grid.
+Optional `screenshots` frontmatter adds a **Screenshots** section between Features and Roadmap. Each entry needs `src`, `alt`, `width` and `height` (the file's pixel size), plus an optional `caption`; `screenshotsNote` adds a line under the heading (e.g. that shots come from a test build). Phone captures can be large — save half-size web copies into `graphics/screenshots/`. With one or two portrait shots and two or more landscape shots, desktop shows the portraits side by side with the landscapes stacked beside them. Portrait-only sets fill every row: up to six in one row on wide screens, and two rows of three (or pairs) on mid widths; otherwise it is a four-column grid with landscapes spanning two.
 
 ## Link previews and search title
 

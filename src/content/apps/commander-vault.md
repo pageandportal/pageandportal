@@ -97,13 +97,6 @@ screenshots:
     height: 1300
     alt: The Options sheet with appearance choices System, Light and Dark.
     caption: Options include a light, dark or system theme, the default share layout, and backup.
-  - src: apps/commander-vault/screenshots/05c-share-image-landscape.jpg
-    width: 1200
-    height: 984
-    alt: >-
-      A landscape progress image titled Commander Vault, 32 Deck Challenge, showing
-      12 of 32 complete, with each colour identity's commander, milestones and art.
-    caption: The landscape share image — all 32 slots on one card.
 roadmap:
   - id: now
     label: Released
