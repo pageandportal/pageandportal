@@ -54,6 +54,10 @@ function splitLane(items: Item[]) {
 }
 
 const count = (groups: Group[]) => groups.reduce((sum, group) => sum + group.items.length, 0);
+
+/** Lanes that start with a release heading sit lower; the others get a matching spacer so first cards line up. */
+const startsWithRelease = (items: Item[]) => Boolean(items[0]?.release);
+const alignToRelease = lanes.some((lane) => startsWithRelease(lane.items));
 ---
 
 <section class="roadmap" aria-labelledby="roadmap-heading">
@@ -83,6 +87,9 @@ const count = (groups: Group[]) => groups.reduce((sum, group) => sum + group.ite
           return (
             <li class="roadmap-lane">
               <h3 class="lane-label">{lane.label}</h3>
+              {alignToRelease && !startsWithRelease(lane.items) && (
+                <div class="release-label release-spacer" aria-hidden="true">&nbsp;</div>
+              )}
               {lane.items.length > 0 ? (
                 <>
                   {renderGroups(visible)}
@@ -179,6 +186,10 @@ const count = (groups: Group[]) => groups.reduce((sum, group) => sum + group.ite
     font-weight: 600;
     letter-spacing: 0.04em;
     color: var(--text-muted);
+  }
+
+  .release-spacer {
+    visibility: hidden;
   }
 
   .lane-more {
