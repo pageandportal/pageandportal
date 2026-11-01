@@ -64,13 +64,18 @@ const count = (groups: Group[]) => groups.reduce((sum, group) => sum + group.ite
       <ul class="roadmap-lanes">
         {lanes.map((lane) => {
           const { visible, hidden } = splitLane(lane.items);
+          const allReleased = lane.items.every((item) => item.status === 'shipped');
           const renderGroups = (groups: Group[], more = false) =>
             groups.map((group) => (
               <div class:list={['release-group', { 'lane-items-more': more }]}>
                 {group.release && <h4 class="release-label">{group.release}</h4>}
                 <ul class="lane-items">
                   {group.items.map((item) => (
-                    <RoadmapCard title={item.title} description={item.description} status={item.status} />
+                    <RoadmapCard
+                      title={item.title}
+                      description={item.description}
+                      status={allReleased ? undefined : item.status}
+                    />
                   ))}
                 </ul>
               </div>
