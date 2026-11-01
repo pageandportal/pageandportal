@@ -42,8 +42,8 @@ features:
     description: >-
       Commander names, bracket, build status, notes, and saved card art URLs are
       stored locally (IndexedDB). No user accounts and no backend — your list is
-      not uploaded to Page and Portal servers. On iPhone and iPad, optional iCloud
-      backup (off by default) saves a copy to your own iCloud account.
+      not uploaded to Page and Portal servers. Coming with the iOS app: optional iCloud
+      backup on iPhone and iPad (off by default) that saves a copy to your own iCloud account.
   - title: Search commanders with Scryfall
     description: >-
       Commander search and autocomplete send what you type to the Scryfall API to

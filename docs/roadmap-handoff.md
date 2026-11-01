@@ -78,6 +78,8 @@ Custom lane labels supported (e.g. `V1.0 closed beta`, `v1.2+ and iOS`).
 
 Each item: `title` (required), `description` (optional), `status` (`planned` | `in-progress` | `ready` | `shipped`). The site chip shows `shipped` as **Published**; keep `shipped` in the YAML.
 
+Optional `release` (e.g. `v1.3`) on items: consecutive items with the same value are grouped under that label in the lane — use it in **Released**, newest release first, so the lane reads by store version. Groups are never split by "Show more"; lanes without `release` look as before. Copy the value into the site frontmatter as-is.
+
 Lanes longer than 8 cards show the first 8 and collapse the rest behind a “Show N more” toggle (`src/components/Roadmap.astro`, all app pages). Keep source order — newest first in Released — so the most recent items stay visible.
 
 App badge (`coming-soon` | `beta` | `live`) is separate from item statuses.

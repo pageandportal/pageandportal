@@ -13,6 +13,8 @@ const roadmapItemSchema = z.object({
   title: z.string(),
   description: z.string().optional(),
   status: z.enum(['planned', 'in-progress', 'ready', 'shipped']).optional(),
+  /** Store release the item shipped in, e.g. "v1.3"; consecutive items with the same value are grouped under it. */
+  release: z.string().optional(),
 });
 
 const roadmapLaneSchema = z.object({

@@ -17,7 +17,7 @@ Commander Vault is a fan-made utility for personal deck tracking. It is not affi
 
 ## Your content
 
-You are responsible for the commander names and notes you enter. Data is stored locally on your device. On iPhone and iPad, if you turn on iCloud backup, a copy is also saved to your own iCloud account.
+You are responsible for the commander names and notes you enter. Data is stored locally on your device. On iPhone and iPad (coming with the iOS app), if you turn on iCloud backup, a copy is also saved to your own iCloud account.
 
 ## Third-party services
 

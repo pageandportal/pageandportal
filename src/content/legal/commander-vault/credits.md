@@ -9,7 +9,7 @@ title: Credits
 
 ## Magic: The Gathering
 
-Magic: The Gathering, Commander, and related names and symbols are trademarks of Wizards of the Coast LLC. This app is unofficial fan content permitted under the [Wizards of the Coast Fan Content Policy](https://company.wizards.com/en/legal/fancontentpolicy). Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
+Magic: The Gathering, Commander, and related names and symbols are trademarks of Wizards of the Coast LLC. Commander Vault is unofficial fan content. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
 
 ## Scryfall
 

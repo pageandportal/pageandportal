@@ -52,7 +52,7 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 ### Feature 2 — Local-first privacy
 
 - **Title:** Your decks stay on your device
-- **Description:** Commander names, bracket, build status, notes, and saved card art URLs are stored locally (IndexedDB). No user accounts and no backend — your list is not uploaded to Page and Portal servers. On iPhone and iPad, optional iCloud backup (off by default) saves a copy to your own iCloud account.
+- **Description:** Commander names, bracket, build status, notes, and saved card art URLs are stored locally (IndexedDB). No user accounts and no backend — your list is not uploaded to Page and Portal servers. Coming with the iOS app: optional iCloud backup on iPhone and iPad (off by default) that saves a copy to your own iCloud account.
 - **Image (optional):** TODO
 
 ### Feature 3 — Scryfall commander lookup
