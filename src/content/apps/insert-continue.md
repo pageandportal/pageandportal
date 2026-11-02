@@ -89,6 +89,14 @@ screenshots:
       Formation Fire in play: rows of green drones above four shields, one partly shot
       away, the player's ship below, and Drag and Fire controls along the bottom. Score 140.
     caption: Formation Fire. Hold the line against eight waves of drones. Drag to move, tap Fire to shoot.
+  - src: apps/insert-continue/screenshots/09-lane-hopper.png
+    width: 720
+    height: 1600
+    alt: >-
+      Lane Hopper in play: a rabbit riding crates across a river, stepping stones below,
+      two trains crossing the railway, a snake on the platform and traffic on the road,
+      with two of five homes filled at the top. Score 13,820.
+    caption: Lane Hopper. Get the rabbit across roads, rails, marsh and river into all five homes before the clock runs out.
   - src: apps/insert-continue/screenshots/03-game.png
     width: 1200
     height: 540
