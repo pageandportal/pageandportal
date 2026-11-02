@@ -40,7 +40,7 @@
 
 ### Feature 1 — In the cabinet
 
-- **Description:** Original games, built from scratch. Paddle & Pixel — a side-on paddle duel against the computer; first to seven wins. Neon Snake — eat, grow, and don’t bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick layouts, three lives, one ball, no power-up circus. Formation Fire — hold the line against eight waves of descending drones. Lane Hopper — get the rabbit across busy roads and rivers before the clock runs out. Shattered Earth — a turn-based artillery duel: set the angle and power, blast the hills, outlast the other tank.
+- **Description:** Original games, built from scratch. Paddle & Pixel — a side-on paddle duel against the computer; first to seven wins. Neon Snake — eat, grow, and don’t bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick layouts, three lives, one ball, no power-up circus. Formation Fire — hold the line against eight waves of descending drones. Lane Hopper — get the rabbit across roads, railway tracks, a sinking marsh and a river before the clock runs out. Shattered Earth — a turn-based artillery duel: set the angle and power, blast the hills, outlast the other tank.
 
 ### Feature 2 — Short rounds
 
@@ -77,13 +77,13 @@
 | Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
 | Neon Snake | Ready | Second game, finished and playable on a phone in testing; three speeds, walls or wrap-around |
 | Brick Buster | Ready | Third game, finished and playable on a phone in testing; ten hand-built brick layouts, three lives, one ball, no power-ups; endless mode loops the layouts, faster each time round |
+| Formation Fire | Ready | Fourth game, finished and playable on a phone in testing; eight waves of descending drones, tougher drones from wave four; endless mode loops the waves, faster each time round |
+| Lane Hopper | Ready | Fifth game, finished and playable on a phone in testing; get the rabbit across roads, railway tracks, a sinking marsh and a river into all five homes before the clock runs out; endless mode keeps going, faster each level |
 
 ### On the bench
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Formation Fire | In progress | Now being built; eight waves of descending drones |
-| Lane Hopper | Planned | Get the rabbit across roads and rivers before the clock runs out |
 | Shattered Earth | Planned | Turn-based artillery duel |
 
 ### After launch
@@ -107,7 +107,7 @@ _Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request);
 | `hero-banner.png` | 2200×880 app hero | Single-line wordmark + static cursor block, `ARCADE MINI GAMES` line, subtle scanlines, light vignette. Wordmark kept narrow enough for the mobile crop. |
 | `render-graphics.py` | Regenerates icon, hero and `share-card.png` | `python render-graphics.py` — reads fonts from the Insert Continue game repo; type is baked in, so no font files ship with the site. |
 | `screenshots/01–05-*.png` | In-development screenshots (page Screenshots section) | Half-size web copies (540×1200 portrait, 1200×540 landscape) of `E:\Tools\Godot\builds\web-shots\` (owner-supplied 2026-11-01): hub, pre-match, Paddle & Pixel in play, initials entry, results table. Captioned as an in-development build. |
-| `screenshots/06–08-*.png` | Game shots in the upright row with the hub and pre-match (page Screenshots section) | 720×1600 copies of `E:\Tools\Godot\builds\website-shots\` (owner-supplied 2026-11-02): Neon Snake, Brick Buster, Formation Fire (captioned as an early look, still being built). Owner will supply a fresh hub shot once all six games are in. |
+| `screenshots/06–08-*.png` | Game shots in the upright row with the hub and pre-match (page Screenshots section) | 720×1600 copies of `E:\Tools\Godot\builds\website-shots\` (owner-supplied 2026-11-02): Neon Snake, Brick Buster, Formation Fire (captured while still being built; captioned as finished from 2026-11-03). Owner will supply a fresh hub shot once all six games are in. |
 
 - [x] Icon and hero (stylised, code-drawn)
 - [x] In-development screenshots — added at owner request 2026-11-01 (brief said wait for a release build); swap for release-build screens when they exist

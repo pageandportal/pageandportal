@@ -29,7 +29,8 @@ features:
       bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick
       layouts, three lives, one ball, no power-up circus. Formation Fire — hold the
       line against eight waves of descending drones. Lane Hopper — get the rabbit
-      across busy roads and rivers before the clock runs out. Shattered Earth — a
+      across roads, railway tracks, a sinking marsh and a river before the clock
+      runs out. Shattered Earth — a
       turn-based artillery duel: set the angle and power, blast the hills, outlast
       the other tank.
   - title: Short rounds
@@ -87,7 +88,7 @@ screenshots:
     alt: >-
       Formation Fire in play: rows of green drones above four shields, one partly shot
       away, the player's ship below, and Drag and Fire controls along the bottom. Score 140.
-    caption: An early look at Formation Fire, still being built. Drag to move, tap Fire to shoot.
+    caption: Formation Fire. Hold the line against eight waves of drones. Drag to move, tap Fire to shoot.
   - src: apps/insert-continue/screenshots/03-game.png
     width: 1200
     height: 540
@@ -129,15 +130,21 @@ roadmap:
           brick layouts, three lives, one ball, no power-up circus. Plus an endless mode
           that loops the layouts, faster each time round.
         status: ready
+      - title: Formation Fire
+        description: >-
+          The fourth game, finished and playable on a phone in testing — hold the line
+          against eight waves of descending drones, with tougher drones from wave four.
+          Plus an endless mode that loops the waves, faster each time round.
+        status: ready
+      - title: Lane Hopper
+        description: >-
+          The fifth game, finished and playable on a phone in testing — get the rabbit
+          across roads, railway tracks, a sinking marsh and a river, into all five homes
+          before the clock runs out. Plus an endless mode that keeps going, faster each level.
+        status: ready
   - id: next
     label: On the bench
     items:
-      - title: Formation Fire
-        description: Now being built — hold the line against eight waves of descending drones.
-        status: in-progress
-      - title: Lane Hopper
-        description: Get the rabbit across busy roads and rivers before the clock runs out.
-        status: planned
       - title: Shattered Earth
         description: A turn-based artillery duel — set the angle and power, blast the hills, outlast the other tank.
         status: planned
