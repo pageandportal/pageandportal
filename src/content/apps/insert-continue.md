@@ -28,7 +28,7 @@ features:
       against the computer; first to seven wins. Neon Snake — eat, grow, and don’t
       bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick
       layouts, three lives, one ball, no power-up circus. Formation Fire — hold the
-      line against eight waves of descending drones. Lane Hopper — get the rabbit
+      line against eight waves of descending drones. Lane Hopper — get the rabbits
       across roads, railway tracks, a sinking marsh and a river before the clock
       runs out. Shattered Earth — a
       turn-based artillery duel: set the angle and power, blast the hills, outlast
@@ -96,7 +96,7 @@ screenshots:
       Lane Hopper in play: a rabbit riding crates across a river, stepping stones below,
       two trains crossing the railway, a snake on the platform and traffic on the road,
       with two of five homes filled at the top. Score 13,820.
-    caption: Lane Hopper. Get the rabbit across roads, rails, marsh and river into all five homes before the clock runs out.
+    caption: Lane Hopper. Get the rabbits across roads, rails, marsh and river into all five homes before the clock runs out.
   - src: apps/insert-continue/screenshots/03-game.png
     width: 1200
     height: 540
@@ -146,7 +146,7 @@ roadmap:
         status: ready
       - title: Lane Hopper
         description: >-
-          The fifth game, finished and playable on a phone in testing — get the rabbit
+          The fifth game, finished and playable on a phone in testing — get the rabbits
           across roads, railway tracks, a sinking marsh and a river, into all five homes
           before the clock runs out. Plus an endless mode that keeps going, faster each level.
         status: ready
