@@ -26,42 +26,53 @@ for (const shot of shots) {
   else groups.push({ label: shot.group, shots: [shot] });
 }
 
-function layout(groupShots: Shot[]) {
+type Row = { shots: Shot[]; kind: 'bento' | 'even' | 'wide'; style: string };
+
+// Portrait rows: up to six in one row on wide screens, and a row-filling count
+// (6 → 3 + 3) on mid widths where six would be too narrow. Three stay in one row
+// on phones too rather than leaving one on its own.
+function portraitRow(row: Shot[]): Row {
+  const n = row.length;
+  const cols = n <= 6 ? n : ([4, 3, 2].find((c) => n % c === 0) ?? 4);
+  const colsMid = [3, 2].find((c) => n % c === 0) ?? 3;
+  const colsPhone = n === 3 ? 3 : 2;
+  return {
+    shots: row,
+    kind: 'even',
+    style: `--even-cols: ${cols}; --even-cols-mid: ${colsMid}; --even-cols-phone: ${colsPhone}`,
+  };
+}
+
+/** Landscape rows: up to three across on wider screens, one per line on phones. */
+function landscapeRow(row: Shot[]): Row {
+  return { shots: row, kind: 'wide', style: `--wide-cols: ${Math.min(row.length, 3)}` };
+}
+
+function layout(groupShots: Shot[]): Row[] {
   const portraits = groupShots.filter((shot) => shot.portrait);
   const landscapes = groupShots.filter((shot) => !shot.portrait);
 
-  // Tall phone shots side by side, wide shots stacked beside them. The wide column's
+  // One or two phone shots side by side, wide shots stacked beside them. The wide column's
   // share is sized so both sides end at about the same height (captions add a little).
-  const bento = portraits.length >= 1 && portraits.length <= 2 && landscapes.length >= 2;
-  if (bento) {
+  if (portraits.length >= 1 && portraits.length <= 2 && landscapes.length >= 2) {
     const landscapeFr =
       ((portraits[0].height / portraits[0].width) /
         (landscapes.length * (landscapes[0].height / landscapes[0].width))) *
       0.84;
-    return {
-      bento,
-      even: false,
-      style: `--portrait-cols: ${portraits.length}; --landscape-fr: ${landscapeFr.toFixed(2)}fr; --landscape-rows: ${landscapes.length}`,
-    };
+    return [
+      {
+        shots: [...portraits, ...landscapes],
+        kind: 'bento',
+        style: `--portrait-cols: ${portraits.length}; --landscape-fr: ${landscapeFr.toFixed(2)}fr; --landscape-rows: ${landscapes.length}`,
+      },
+    ];
   }
 
-  // Portrait-only sets fill every row: up to six in one row on wide screens, and a
-  // row-filling count (6 → 3 + 3) on mid widths where six would be too narrow.
-  // Three stay in one row on phones too rather than leaving one on its own.
-  const even = landscapes.length === 0 && portraits.length > 0;
-  if (even) {
-    const n = portraits.length;
-    const cols = n <= 6 ? n : ([4, 3, 2].find((c) => n % c === 0) ?? 4);
-    const colsMid = [3, 2].find((c) => n % c === 0) ?? 3;
-    const colsPhone = n === 3 ? 3 : 2;
-    return {
-      bento,
-      even,
-      style: `--even-cols: ${cols}; --even-cols-mid: ${colsMid}; --even-cols-phone: ${colsPhone}`,
-    };
-  }
-
-  return { bento, even, style: undefined };
+  // Otherwise every phone shot shares one row and the wide shots sit in a row beneath.
+  const rows: Row[] = [];
+  if (portraits.length > 0) rows.push(portraitRow(portraits));
+  if (landscapes.length > 0) rows.push(landscapeRow(landscapes));
+  return rows;
 }
 ---
 
@@ -70,13 +81,12 @@ function layout(groupShots: Shot[]) {
     <section class="screenshots" aria-labelledby="screenshots-heading">
       <h2 id="screenshots-heading" class="section-title">Screenshots</h2>
       {note && <p class="screenshots-note">{note}</p>}
-      {groups.map((group) => {
-        const { bento, even, style } = layout(group.shots);
-        return (
-          <div class="shot-group">
-            {group.label && <h3 class="shot-group-label">{group.label}</h3>}
-            <ul class:list={['shot-list', { bento, even }]} style={style}>
-              {group.shots.map((shot) => (
+      {groups.map((group) => (
+        <div class="shot-group">
+          {group.label && <h3 class="shot-group-label">{group.label}</h3>}
+          {layout(group.shots).map((row) => (
+            <ul class:list={['shot-list', row.kind]} style={row.style}>
+              {row.shots.map((shot) => (
                 <li class:list={['shot', shot.portrait ? 'shot-portrait' : 'shot-landscape']}>
                   <figure>
                     <a class="shot-link" href={shot.url} aria-label={`View larger: ${shot.alt}`}>
@@ -94,9 +104,9 @@ function layout(groupShots: Shot[]) {
                 </li>
               ))}
             </ul>
-          </div>
-        );
-      })}
+          ))}
+        </div>
+      ))}
       <dialog class="lightbox" aria-label="Screenshot viewer">
         <figure class="lightbox-figure">
           <img class="lightbox-img" src="" alt="" />
@@ -212,6 +222,10 @@ function layout(groupShots: Shot[]) {
     grid-column: 1 / -1;
   }
 
+  .shot-list + .shot-list {
+    margin-top: 1.25rem;
+  }
+
   .shot-group + .shot-group {
     margin-top: 2rem;
   }
@@ -250,6 +264,14 @@ function layout(groupShots: Shot[]) {
 
     .bento .shot-landscape {
       grid-column: -2 / -1;
+    }
+
+    .shot-list.wide {
+      grid-template-columns: repeat(var(--wide-cols), minmax(0, 1fr));
+    }
+
+    .wide .shot-landscape {
+      grid-column: auto;
     }
   }
 

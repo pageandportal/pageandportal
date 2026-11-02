@@ -66,7 +66,28 @@ screenshots:
     alt: >-
       Paddle & Pixel pre-match screen with Easy, Normal and Hard buttons, a
       ten-place high-score table, and a Play button.
-    caption: Before a match, pick a difficulty and check the high-score table.
+    caption: Paddle & Pixel. Before a match, pick a difficulty and check the high-score table.
+  - src: apps/insert-continue/screenshots/06-neon-snake.png
+    width: 720
+    height: 1600
+    alt: >-
+      Neon Snake in play: a long green snake winding through a walled field, with one
+      food square below it. Score 21.
+    caption: Neon Snake. Eat, grow, and don’t bite your own tail.
+  - src: apps/insert-continue/screenshots/07-brick-buster.png
+    width: 720
+    height: 1600
+    alt: >-
+      Brick Buster in play: rows of green bricks with a few knocked out, a ball and a
+      paddle, three lives shown at the top. Score 120.
+    caption: Brick Buster. Ten hand-built layouts, three lives, one ball.
+  - src: apps/insert-continue/screenshots/08-formation-fire.png
+    width: 720
+    height: 1600
+    alt: >-
+      Formation Fire in play: rows of green drones above four shields, one partly shot
+      away, the player's ship below, and Drag and Fire controls along the bottom. Score 140.
+    caption: An early look at Formation Fire, still being built. Drag to move, tap Fire to shoot.
   - src: apps/insert-continue/screenshots/03-game.png
     width: 1200
     height: 540
@@ -86,30 +107,6 @@ screenshots:
       Results screen with the high-score table, the new entry highlighted in second
       place, and Rematch and Hub buttons.
     caption: Scores stay in a local table on your phone. Rematch, or head back to the hub.
-  - src: apps/insert-continue/screenshots/06-neon-snake.png
-    group: More games in testing
-    width: 720
-    height: 1600
-    alt: >-
-      Neon Snake in play: a long green snake winding through a walled field, with one
-      food square below it. Score 21.
-    caption: Neon Snake. Eat, grow, and don’t bite your own tail.
-  - src: apps/insert-continue/screenshots/07-brick-buster.png
-    group: More games in testing
-    width: 720
-    height: 1600
-    alt: >-
-      Brick Buster in play: rows of green bricks with a few knocked out, a ball and a
-      paddle, three lives shown at the top. Score 120.
-    caption: Brick Buster. Ten hand-built layouts, three lives, one ball.
-  - src: apps/insert-continue/screenshots/08-formation-fire.png
-    group: More games in testing
-    width: 720
-    height: 1600
-    alt: >-
-      Formation Fire in play: rows of green drones above four shields, one partly shot
-      away, the player's ship below, and Drag and Fire controls along the bottom. Score 140.
-    caption: An early look at Formation Fire, still being built. Drag to move, tap Fire to shoot.
 roadmap:
   - id: now
     label: Ready for launch
