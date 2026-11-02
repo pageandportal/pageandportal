@@ -35,6 +35,8 @@ const screenshotSchema = z.object({
   /** Pixel size of the file; sets the aspect ratio and portrait/landscape layout. */
   width: z.number().int().positive(),
   height: z.number().int().positive(),
+  /** Consecutive shots with the same group form their own row under this label. */
+  group: z.string().optional(),
 });
 
 const legalPageSchema = z.object({

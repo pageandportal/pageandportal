@@ -16,28 +16,53 @@ const shots = screenshots.map((shot) => ({
   url: appAssetUrl(shot.src),
   portrait: shot.height > shot.width,
 }));
-const portraits = shots.filter((shot) => shot.portrait);
-const landscapes = shots.filter((shot) => !shot.portrait);
+type Shot = (typeof shots)[number];
 
-// Tall phone shots side by side, wide shots stacked beside them. The wide column's
-// share is sized so both sides end at about the same height (captions add a little).
-const bento = portraits.length >= 1 && portraits.length <= 2 && landscapes.length >= 2;
-const landscapeFr = bento
-  ? ((portraits[0].height / portraits[0].width) /
-      (landscapes.length * (landscapes[0].height / landscapes[0].width))) *
-    0.84
-  : 0;
-// Portrait-only sets fill every row: up to six in one row on wide screens, and a
-// row-filling count (6 → 3 + 3) on mid widths where six would be too narrow.
-const portraitOnly = landscapes.length === 0 && portraits.length > 0;
-const n = portraits.length;
-const evenCols = portraitOnly ? (n <= 6 ? n : ([4, 3, 2].find((c) => n % c === 0) ?? 4)) : 0;
-const evenColsMid = portraitOnly ? ([3, 2].find((c) => n % c === 0) ?? 3) : 0;
-const listStyle = bento
-  ? `--portrait-cols: ${portraits.length}; --landscape-fr: ${landscapeFr.toFixed(2)}fr; --landscape-rows: ${landscapes.length}`
-  : portraitOnly
-    ? `--even-cols: ${evenCols}; --even-cols-mid: ${evenColsMid}`
-    : undefined;
+/** Consecutive shots with the same `group` share a row; the viewer still steps through them all. */
+const groups: { label?: string; shots: Shot[] }[] = [];
+for (const shot of shots) {
+  const last = groups.at(-1);
+  if (last && last.label === shot.group) last.shots.push(shot);
+  else groups.push({ label: shot.group, shots: [shot] });
+}
+
+function layout(groupShots: Shot[]) {
+  const portraits = groupShots.filter((shot) => shot.portrait);
+  const landscapes = groupShots.filter((shot) => !shot.portrait);
+
+  // Tall phone shots side by side, wide shots stacked beside them. The wide column's
+  // share is sized so both sides end at about the same height (captions add a little).
+  const bento = portraits.length >= 1 && portraits.length <= 2 && landscapes.length >= 2;
+  if (bento) {
+    const landscapeFr =
+      ((portraits[0].height / portraits[0].width) /
+        (landscapes.length * (landscapes[0].height / landscapes[0].width))) *
+      0.84;
+    return {
+      bento,
+      even: false,
+      style: `--portrait-cols: ${portraits.length}; --landscape-fr: ${landscapeFr.toFixed(2)}fr; --landscape-rows: ${landscapes.length}`,
+    };
+  }
+
+  // Portrait-only sets fill every row: up to six in one row on wide screens, and a
+  // row-filling count (6 → 3 + 3) on mid widths where six would be too narrow.
+  // Three stay in one row on phones too rather than leaving one on its own.
+  const even = landscapes.length === 0 && portraits.length > 0;
+  if (even) {
+    const n = portraits.length;
+    const cols = n <= 6 ? n : ([4, 3, 2].find((c) => n % c === 0) ?? 4);
+    const colsMid = [3, 2].find((c) => n % c === 0) ?? 3;
+    const colsPhone = n === 3 ? 3 : 2;
+    return {
+      bento,
+      even,
+      style: `--even-cols: ${cols}; --even-cols-mid: ${colsMid}; --even-cols-phone: ${colsPhone}`,
+    };
+  }
+
+  return { bento, even, style: undefined };
+}
 ---
 
 {
@@ -45,25 +70,33 @@ const listStyle = bento
     <section class="screenshots" aria-labelledby="screenshots-heading">
       <h2 id="screenshots-heading" class="section-title">Screenshots</h2>
       {note && <p class="screenshots-note">{note}</p>}
-      <ul class:list={['shot-list', { bento, even: portraitOnly }]} style={listStyle}>
-        {shots.map((shot) => (
-          <li class:list={['shot', shot.portrait ? 'shot-portrait' : 'shot-landscape']}>
-            <figure>
-              <a class="shot-link" href={shot.url} aria-label={`View larger: ${shot.alt}`}>
-                <img
-                  src={shot.url}
-                  alt={shot.alt}
-                  width={shot.width}
-                  height={shot.height}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-              {shot.caption && <figcaption>{shot.caption}</figcaption>}
-            </figure>
-          </li>
-        ))}
-      </ul>
+      {groups.map((group) => {
+        const { bento, even, style } = layout(group.shots);
+        return (
+          <div class="shot-group">
+            {group.label && <h3 class="shot-group-label">{group.label}</h3>}
+            <ul class:list={['shot-list', { bento, even }]} style={style}>
+              {group.shots.map((shot) => (
+                <li class:list={['shot', shot.portrait ? 'shot-portrait' : 'shot-landscape']}>
+                  <figure>
+                    <a class="shot-link" href={shot.url} aria-label={`View larger: ${shot.alt}`}>
+                      <img
+                        src={shot.url}
+                        alt={shot.alt}
+                        width={shot.width}
+                        height={shot.height}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                    {shot.caption && <figcaption>{shot.caption}</figcaption>}
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
       <dialog class="lightbox" aria-label="Screenshot viewer">
         <figure class="lightbox-figure">
           <img class="lightbox-img" src="" alt="" />
@@ -171,8 +204,24 @@ const listStyle = bento
     align-items: start;
   }
 
+  .shot-list.even {
+    grid-template-columns: repeat(var(--even-cols-phone), minmax(0, 1fr));
+  }
+
   .shot-landscape {
     grid-column: 1 / -1;
+  }
+
+  .shot-group + .shot-group {
+    margin-top: 2rem;
+  }
+
+  .shot-group-label {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    color: var(--app-accent, var(--gold));
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
 
   @media (min-width: 720px) {
@@ -184,8 +233,9 @@ const listStyle = bento
       grid-column: span 2;
     }
 
+    /* Capped so a short row of phone shots is no taller than the ones beside landscapes. */
     .shot-list.even {
-      grid-template-columns: repeat(var(--even-cols-mid), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--even-cols-mid), minmax(0, 20rem));
     }
 
     .shot-list.bento {
@@ -205,7 +255,7 @@ const listStyle = bento
 
   @media (min-width: 1024px) {
     .shot-list.even {
-      grid-template-columns: repeat(var(--even-cols), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--even-cols), minmax(0, 20rem));
     }
   }
 
