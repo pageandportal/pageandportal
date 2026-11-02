@@ -73,16 +73,16 @@
 | Feature | Status | Notes |
 |---------|--------|--------|
 | Arcade cabinet interface | Ready | Phosphor-green display, optional scanlines, central hub for launching each game; built and working in testing |
-| Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in Paddle & Pixel, Neon Snake and Brick Buster in testing |
+| Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in every finished game in testing |
 | Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
 | Neon Snake | Ready | Second game, finished and playable on a phone in testing; three speeds, walls or wrap-around |
+| Brick Buster | Ready | Third game, finished and playable on a phone in testing; ten hand-built brick layouts, three lives, one ball, no power-ups; endless mode loops the layouts, faster each time round |
 
 ### On the bench
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Brick Buster | In progress | Playable on a phone in testing; ten hand-built brick layouts, three lives, one ball, no power-ups; endless mode loops the layouts, faster each time round |
-| Formation Fire | Planned | Eight waves of descending drones |
+| Formation Fire | In progress | Now being built; eight waves of descending drones |
 | Lane Hopper | Planned | Get the rabbit across roads and rivers before the clock runs out |
 | Shattered Earth | Planned | Turn-based artillery duel |
 
