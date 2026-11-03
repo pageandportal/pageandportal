@@ -84,7 +84,7 @@
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Shattered Earth | Planned | Turn-based artillery duel |
+| Shattered Earth | In progress | Turn-based artillery duel, in testing; angle, power and shifting wind; destructible hills, rocks and ruined buildings; new ground every round; damage depends on how close the shell lands; tanks fall when the ground goes; first to three rounds wins |
 
 ### After launch
 

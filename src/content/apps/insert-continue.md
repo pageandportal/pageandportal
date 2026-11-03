@@ -154,8 +154,12 @@ roadmap:
     label: On the bench
     items:
       - title: Shattered Earth
-        description: A turn-based artillery duel — set the angle and power, blast the hills, outlast the other tank.
-        status: planned
+        description: >-
+          A turn-based artillery duel, in testing — set the angle and power, read the
+          shifting wind, and blast through hills, rocks and ruined buildings. New ground
+          every round, damage that depends on how close the shell lands, and tanks that
+          fall when the ground goes. First to three rounds wins.
+        status: in-progress
   - id: later
     label: After launch
     items:
