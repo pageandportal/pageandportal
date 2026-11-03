@@ -31,8 +31,8 @@ features:
       line against eight waves of descending drones. Lane Hopper — get the rabbits
       across roads, railway tracks, a sinking marsh and a river before the clock
       runs out. Shattered Earth — a
-      turn-based artillery duel: set the angle and power, blast the hills, outlast
-      the other tank.
+      turn-based artillery duel: set the angle and power, read the shifting wind, and
+      blast through hills and ruined buildings; first to three rounds wins.
   - title: Short rounds
     description: >-
       Built for a bus stop or a coffee break. Simple touch controls, each game on
@@ -54,13 +54,13 @@ features:
 screenshotsNote: Captured from an in-development build. Screens may change before launch.
 screenshots:
   - src: apps/insert-continue/screenshots/01-hub.png
-    width: 540
-    height: 1200
+    width: 720
+    height: 1600
     alt: >-
-      Insert Continue hub: green outlined game tiles on a black screen. Paddle &
-      Pixel shows its high scores; Neon Snake, Brick Buster, Formation Fire, Lane
-      Hopper and Shattered Earth are marked Soon.
-    caption: The cabinet hub, captured when Paddle & Pixel was the first game playable in testing.
+      Insert Continue hub: green outlined tiles for Paddle & Pixel, Neon Snake, Brick
+      Buster, Formation Fire, Lane Hopper and Shattered Earth on a black screen, each
+      with a small picture of its game and an empty high-score table.
+    caption: The cabinet hub. Every game has its own tile and its own high-score table.
   - src: apps/insert-continue/screenshots/02-prematch.png
     width: 540
     height: 1200
@@ -116,6 +116,14 @@ screenshots:
       Results screen with the high-score table, the new entry highlighted in second
       place, and Rematch and Hub buttons.
     caption: Scores stay in a local table on your phone. Rematch, or head back to the hub.
+  - src: apps/insert-continue/screenshots/10-shattered-earth.png
+    width: 1600
+    height: 720
+    alt: >-
+      Shattered Earth in play: two tanks on rolling green hills with a tall ruined tower
+      and a lamp post between them. The computer's tank sits in a fresh crater at 75%,
+      the wind reads 10, and angle and power sliders and a Fire button run along the bottom.
+    caption: Shattered Earth. Set the angle and power, read the wind, and bring the ground down under the other tank.
 roadmap:
   - id: now
     label: Ready for launch

@@ -43,9 +43,13 @@ function portraitRow(row: Shot[]): Row {
   };
 }
 
-/** Landscape rows: up to three across on wider screens, one per line on phones. */
+// Landscape rows: up to four across on wide screens (four go 2 + 2 on mid widths rather
+// than 3 + 1), one per line on phones.
 function landscapeRow(row: Shot[]): Row {
-  return { shots: row, kind: 'wide', style: `--wide-cols: ${Math.min(row.length, 3)}` };
+  const n = row.length;
+  const cols = n <= 4 ? n : 3;
+  const colsMid = n === 4 ? 2 : Math.min(n, 3);
+  return { shots: row, kind: 'wide', style: `--wide-cols: ${cols}; --wide-cols-mid: ${colsMid}` };
 }
 
 function layout(groupShots: Shot[]): Row[] {
@@ -267,7 +271,7 @@ function layout(groupShots: Shot[]): Row[] {
     }
 
     .shot-list.wide {
-      grid-template-columns: repeat(var(--wide-cols), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--wide-cols-mid), minmax(0, 1fr));
     }
 
     .wide .shot-landscape {
@@ -278,6 +282,10 @@ function layout(groupShots: Shot[]): Row[] {
   @media (min-width: 1024px) {
     .shot-list.even {
       grid-template-columns: repeat(var(--even-cols), minmax(0, 20rem));
+    }
+
+    .shot-list.wide {
+      grid-template-columns: repeat(var(--wide-cols), minmax(0, 1fr));
     }
   }
 
