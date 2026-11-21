@@ -49,7 +49,7 @@ features:
     description: >-
       Free to play, with ads only between games — never in the middle of a round.
       In some games you can choose to watch a short ad to continue a run, once per
-      run. A one-off way to turn ads off comes after launch. This is not an emulator
+      run. There is a one-off Remove ads purchase. This is not an emulator
       and not a set of licensed remakes.
 screenshotsNote: Captured from an in-development build. Screens may change before launch.
 screenshots:
@@ -174,13 +174,16 @@ roadmap:
       - title: iPhone and iPad release
         description: Following the Android launch, within the same release window.
         status: planned
-      - title: Remove ads
-        description: An optional one-time purchase to remove ads.
-        status: planned
       - title: Additional screen colours
         description: Optional amber, red, cyan, and purple display packs. Green and white remain free.
         status: planned
       - title: New original games
         description: More games added to the cabinet over time.
+        status: planned
+  - id: purchase
+    label: One-off purchase
+    items:
+      - title: Remove ads
+        description: There is a one-off Remove ads purchase.
         status: planned
 ---

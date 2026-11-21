@@ -60,13 +60,13 @@
 
 ### Feature 6 — Fair play
 
-- **Description:** Free to play, with ads only between games — never in the middle of a round. In some games you can choose to watch a short ad to continue a run, once per run. A one-off way to turn ads off comes after launch. This is not an emulator and not a set of licensed remakes.
+- **Description:** Free to play, with ads only between games — never in the middle of a round. In some games you can choose to watch a short ad to continue a run, once per run. There is a one-off Remove ads purchase. This is not an emulator and not a set of licensed remakes.
 
 ---
 
 ## Roadmap
 
-*Site lanes: **Ready for launch** (`now`), **On the bench** (`next`), **After launch** (`later`). Lanes read like Commander Vault's: done, being worked on, later. The Google Play launch is the line between the first two lanes and the third (James, 2026-11-02).*
+*Site lanes: **Ready for launch** (`now`), **On the bench** (`next`), **After launch** (`later`), **One-off purchase** (`purchase`). The first three read like Commander Vault's: done, being worked on, later. The Google Play launch is the line between the first two and After launch (James, 2026-11-02). Remove ads is not in that timeline (James, 2026-11-22).*
 
 ### Ready for launch
 
@@ -91,11 +91,16 @@
 | Feature | Status | Notes |
 |---------|--------|--------|
 | iPhone and iPad release | Planned | Same release window as Android, after it; no date |
-| Remove ads | Planned | Optional one-time purchase; no price until billing is live |
 | Additional screen colours | Planned | Amber, red, cyan, purple packs; green and white remain free |
 | New original games | Planned | Do not name or count |
 
-_Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request); lane labels unchanged. The Insert Continue repo brief still has the original wording._
+### One-off purchase
+
+| Feature | Status | Notes |
+|---------|--------|--------|
+| Remove ads | Planned | There is a one-off Remove ads purchase. Do not say when, and do not quote a price. |
+
+_Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request). Remove ads wording in the Insert Continue page brief was aligned on 2026-11-22; older game-status lines in that brief are still behind the live page._
 
 ---
 

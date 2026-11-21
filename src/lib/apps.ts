@@ -2,7 +2,7 @@ import type { CollectionEntry } from 'astro:content';
 
 export type AppEntry = CollectionEntry<'apps'>;
 
-const LANE_LABELS: Record<'now' | 'next' | 'later', string> = {
+const LANE_LABELS: Record<string, string> = {
   now: 'Now',
   next: 'Next',
   later: 'Later',
@@ -28,7 +28,7 @@ export function roadmapLanes(entry: AppEntry) {
   return entry.data.roadmap
     .map((lane) => ({
       ...lane,
-      label: lane.label ?? LANE_LABELS[lane.id],
+      label: lane.label ?? LANE_LABELS[lane.id] ?? lane.id,
       items: lane.items.filter((item) => !/^TODO$/i.test(item.title.trim())),
     }))
     .filter((lane) => lane.items.length > 0);

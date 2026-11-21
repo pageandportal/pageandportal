@@ -18,7 +18,7 @@ const roadmapItemSchema = z.object({
 });
 
 const roadmapLaneSchema = z.object({
-  id: z.enum(['now', 'next', 'later']),
+  id: z.string().min(1),
   label: z.string().optional(),
   items: z.array(roadmapItemSchema),
 });
