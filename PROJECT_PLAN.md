@@ -48,7 +48,7 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 - `/apps/portal-pages-times-tables/`
 - `/apps/insert-continue/`
 
-**Insert Continue:** pocket arcade of original mini games (Godot, Android first). Page added 2026-10-31 from the app repo’s `docs/website-page-brief.md` — copy is locked there. Privacy draft live at `/apps/insert-continue/privacy/` (2026-11-24; owner to confirm wording). No store links yet.
+**Insert Continue:** pocket arcade of original mini games (Godot, Android first). Page added 2026-10-31 from the app repo’s `docs/website-page-brief.md` — copy is locked there. Privacy policy live at `/apps/insert-continue/privacy/` (revised 24 November 2026). No store links yet.
 
 ---
 
@@ -236,7 +236,7 @@ Agents own bumps in `version.properties` when user-visible work ships or a Play 
 
 - [x] **Features / roadmap / intro** — locked copy from Insert Continue `docs/website-page-brief.md` (2026-10-31)
 - [x] **Graphics** — code-drawn green CRT icon + hero (`render-graphics.py`); real screenshots when a release build exists
-- [x] **Privacy policy** — draft hosted at `/apps/insert-continue/privacy/` from IC `docs/website-supply/legal/privacy.md` (2026-11-24); owner to confirm wording before treating as final
+- [x] **Privacy policy** — hosted at `/apps/insert-continue/privacy/` from IC `docs/website-supply/legal/privacy.md` (revised 24 November 2026)
 - [ ] **Google Play link** — add the store button only when a real listing URL exists
 
 ### Site-wide optional (recommended)
@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-24 | Insert Continue privacy policy revised | Replaced live draft with IC revised wording: who/where (Nelson NZ), overseas processing, Your rights, no “anonymous” for Firebase/AdMob, personalised-ads geography fixed, exact date 24 November 2026; drafting note removed → v0.12.25 |
 | 2026-11-24 | Insert Continue privacy policy (draft) | Hosted from IC `docs/website-supply/legal/privacy.md` at `/apps/insert-continue/privacy/`; app footer Privacy link wired; supply legal + sheet mirrored. Owner to confirm wording before treating as final → v0.12.24 |
 | 2026-11-24 | Insert Continue roadmap: Shattered Earth ready | Published the IC agent's uncommitted roadmap edit: Shattered Earth moves to **Ready for launch** as the sixth finished game (shop between rounds); **On the bench** is empty and hidden. In the cabinet line aligned. Supply sheet mirrored → v0.12.23 |
 | 2026-11-22 | Insert Continue: Remove ads is a one-off purchase, not timed | Fair play and the Remove ads card now say only that there is a one-off Remove ads purchase. The card left the After launch lane — that title no longer fitted — and sits under **One-off purchase**. After launch keeps iPhone and iPad, extra colours, and new games. Supply sheet, handoff, and the Insert Continue page brief match → v0.12.22 |
@@ -397,7 +398,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] Commander Vault — status badge shows `live`
 - [ ] Commander Vault — roadmap shows three lanes: **Released** (14 cards, no status chips; first cards of all three lanes level), grouped under **v1.3** (4) and **v1.2** (1), with **v1.1** (9) behind “Show 9 more”), **v2.0.0 — iOS Release** (iPhone release in progress, iCloud backup planned), **Planned** (5, iPad layout last); mobile swipes between lanes
 - [ ] Insert Continue — home card (coming soon, green subtitle, square CRT icon readable); app page has no Play button, no banner; Privacy footer link opens `/apps/insert-continue/privacy/`; hero wordmark not cropped on a phone
-- [ ] Insert Continue — privacy (Last updated November 2026) covers local scores/settings, AdMob, Firebase Analytics/Crashlytics, Play Billing, UMP consent, usage-data switch, 13+ age band; treat as draft until owner confirms
+- [ ] Insert Continue — privacy (Last updated 24 November 2026) covers who/where (Page & Portal, Nelson NZ), local scores/settings, AdMob, Firebase Analytics/Crashlytics (random app identifier, not name/email), Play Billing, UMP/personalised-ads geography, Share usage data switch, Your rights, under-13 contact, overseas processing incl. United States
 - [ ] Insert Continue — roadmap lanes **Ready for launch** (8 ready: cabinet, high scores, all six games incl. Shattered Earth), **On the bench** hidden while empty, **After launch** (3 planned: iPhone and iPad, extra colours, new games), **One-off purchase** (Remove ads, planned); Fair play and the Remove ads card say there is a one-off Remove ads purchase and do not say when; first cards level; the In the cabinet card mentions railway tracks and a sinking marsh for Lane Hopper and Shattered Earth's shop between rounds; Formation Fire's caption doesn't say it's still being built; the high-scores feature card says "Your scores are never uploaded"; hub caption says it was captured when Paddle & Pixel was the first playable game
 - [ ] Insert Continue — Screenshots on a PC: one row of six upright shots (new hub showing all six games, pre-match, Neon Snake, Brick Buster, Formation Fire, Lane Hopper) above four landscape shots (three Paddle & Pixel, then Shattered Earth), edges level; mid-width screens show the landscapes two by two; on a phone, upright shots in pairs and landscapes full width; the viewer counts 1–10 left to right
 - [ ] Insert Continue — Screenshots section between Features and Roadmap: five shots in play order with captions and the in-development note; desktop phone shots and landscape stack end level; on a phone the two upright shots sit side by side
