@@ -22,6 +22,7 @@ const LEGAL_TITLES = {
   privacy: 'Privacy Policy',
   terms: 'Terms of Use',
   credits: 'Credits',
+  'data-deletion': 'Request data deletion',
 };
 
 function isTodo(value) {

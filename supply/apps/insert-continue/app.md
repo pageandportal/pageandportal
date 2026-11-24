@@ -134,6 +134,7 @@ _Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request).
 | Page | Include? | File |
 |------|----------|------|
 | Privacy | Yes — revised wording published 2026-11-24 from Insert Continue `docs/website-supply/legal/privacy.md` | `supply/apps/insert-continue/legal/privacy.md` → sync → `src/content/legal/insert-continue/privacy.md` (live: `/apps/insert-continue/privacy/`) |
+| Data deletion | Yes — published 2026-11-25 for Play Console from Insert Continue `docs/website-supply/legal/data-deletion.md` | `supply/apps/insert-continue/legal/data-deletion.md` → sync → `src/content/legal/insert-continue/data-deletion.md` (live: `/apps/insert-continue/data-deletion/`) |
 
 ---
 

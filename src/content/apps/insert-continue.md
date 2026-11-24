@@ -24,6 +24,8 @@ links:
 legalPages:
   - title: Privacy
     slug: privacy
+  - title: Data deletion
+    slug: data-deletion
 features:
   - title: In the cabinet
     description: >-
