@@ -133,7 +133,7 @@ _Roadmap tiles reworded 2026-10-31 for a more professional tone (owner request).
 
 | Page | Include? | File |
 |------|----------|------|
-| Privacy | Later pass — before any Play submission | `src/content/legal/insert-continue/privacy.md` (outline in Insert Continue `FOUNDATION-PLAN.md` § D2) |
+| Privacy | Yes — draft published 2026-11-24 from Insert Continue `docs/website-supply/legal/privacy.md`; owner to confirm wording | `supply/apps/insert-continue/legal/privacy.md` → sync → `src/content/legal/insert-continue/privacy.md` (live: `/apps/insert-continue/privacy/`) |
 
 ---
 

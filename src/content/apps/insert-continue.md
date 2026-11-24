@@ -21,6 +21,9 @@ donateUseGlobal: false
 links:
   - label: Support
     url: mailto:pageandportal@gmail.com
+legalPages:
+  - title: Privacy
+    slug: privacy
 features:
   - title: In the cabinet
     description: >-
