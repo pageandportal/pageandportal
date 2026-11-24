@@ -31,8 +31,8 @@ features:
       line against eight waves of descending drones. Lane Hopper — get the rabbits
       across roads, railway tracks, a sinking marsh and a river before the clock
       runs out. Shattered Earth — a
-      turn-based artillery duel: set the angle and power, read the shifting wind, and
-      blast through hills and ruined buildings; first to three rounds wins.
+      turn-based artillery duel: set the angle and power, read the shifting wind, blast
+      through hills and ruins, and shop between rounds; first to three wins.
   - title: Short rounds
     description: >-
       Built for a bus stop or a coffee break. Simple touch controls, each game on
@@ -158,16 +158,15 @@ roadmap:
           across roads, railway tracks, a sinking marsh and a river, into all five homes
           before the clock runs out. Plus an endless mode that keeps going, faster each level.
         status: ready
-  - id: next
-    label: On the bench
-    items:
       - title: Shattered Earth
         description: >-
-          A turn-based artillery duel, in testing — set the angle and power, read the
-          shifting wind, and blast through hills, rocks and ruined buildings. New ground
-          every round, damage that depends on how close the shell lands, and tanks that
-          fall when the ground goes. First to three rounds wins.
-        status: in-progress
+          The sixth game, finished and playable on a phone in testing — a turn-based
+          artillery duel: set the angle and power, read the shifting wind, blast through
+          hills and ruins, and shop between rounds. First to three wins.
+        status: ready
+  - id: next
+    label: On the bench
+    items: []
   - id: later
     label: After launch
     items:

@@ -40,7 +40,7 @@
 
 ### Feature 1 — In the cabinet
 
-- **Description:** Original games, built from scratch. Paddle & Pixel — a side-on paddle duel against the computer; first to seven wins. Neon Snake — eat, grow, and don’t bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick layouts, three lives, one ball, no power-up circus. Formation Fire — hold the line against eight waves of descending drones. Lane Hopper — get the rabbits across roads, railway tracks, a sinking marsh and a river before the clock runs out. Shattered Earth — a turn-based artillery duel: set the angle and power, read the shifting wind, and blast through hills and ruined buildings; first to three rounds wins.
+- **Description:** Original games, built from scratch. Paddle & Pixel — a side-on paddle duel against the computer; first to seven wins. Neon Snake — eat, grow, and don’t bite your own tail; walls or wrap-around. Brick Buster — ten hand-built brick layouts, three lives, one ball, no power-up circus. Formation Fire — hold the line against eight waves of descending drones. Lane Hopper — get the rabbits across roads, railway tracks, a sinking marsh and a river before the clock runs out. Shattered Earth — a turn-based artillery duel: set the angle and power, read the shifting wind, blast through hills and ruins, and shop between rounds; first to three wins.
 
 ### Feature 2 — Short rounds
 
@@ -79,12 +79,11 @@
 | Brick Buster | Ready | Third game, finished and playable on a phone in testing; ten hand-built brick layouts, three lives, one ball, no power-ups; endless mode loops the layouts, faster each time round |
 | Formation Fire | Ready | Fourth game, finished and playable on a phone in testing; eight waves of descending drones, tougher drones from wave four; endless mode loops the waves, faster each time round |
 | Lane Hopper | Ready | Fifth game, finished and playable on a phone in testing; get the rabbits across roads, railway tracks, a sinking marsh and a river into all five homes before the clock runs out; endless mode keeps going, faster each level |
+| Shattered Earth | Ready | Sixth game, finished and playable on a phone in testing; turn-based artillery duel; angle, power and shifting wind; blast through hills and ruins; shop between rounds; first to three wins |
 
 ### On the bench
 
-| Feature | Status | Notes |
-|---------|--------|--------|
-| Shattered Earth | In progress | Turn-based artillery duel, in testing; angle, power and shifting wind; destructible hills, rocks and ruined buildings; new ground every round; damage depends on how close the shell lands; tanks fall when the ground goes; first to three rounds wins |
+*(empty — all six games are in Ready for launch; the lane stays in frontmatter so the next item can land here)*
 
 ### After launch
 
