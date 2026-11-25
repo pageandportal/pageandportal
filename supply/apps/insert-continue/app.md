@@ -12,8 +12,8 @@
 | **Subtitle** | Arcade Mini Games |
 | **URL slug** | insert-continue |
 | **Tagline** | Retro gaming in your pocket, no coins required. Original arcade mini games. |
-| **Status** | coming-soon (in active development; not on Google Play yet) |
-| **Short description** | Insert Continue is a pocket arcade cabinet: original mini games, a green-screen glow, and a bank of honest blips and bleeps. It is in active development and is not on Google Play yet. When it launches you pick a game, play a round, and chase a high score on your own phone — offline, with no account. |
+| **Status** | beta (closed testing submitted to Google Play; not publicly available; no store link until production) |
+| **Short description** | Insert Continue is a pocket arcade cabinet: original mini games, a green-screen glow, and a bank of honest blips and bleeps. A first closed-test build has been submitted to Google Play — invited testers only, once that track is live. It is not publicly available yet. When you play, you pick a game, play a round, and chase a high score on your own phone — offline, with no account. |
 
 ---
 
@@ -66,12 +66,13 @@
 
 ## Roadmap
 
-*Site lanes: **Ready for launch** (`now`), **On the bench** (`next`), **After launch** (`later`), **One-off purchase** (`purchase`). The first three read like Commander Vault's: done, being worked on, later. The Google Play launch is the line between the first two and After launch (James, 2026-11-02). Remove ads is not in that timeline (James, 2026-11-22).*
+*Site lanes: **In testing** (`now`), **On the bench** (`next`), **After launch** (`later`), **One-off purchase** (`purchase`). `now` was renamed from Ready for launch when closed testing started (James, 2026-11-25). The public Google Play launch remains the line before After launch (James, 2026-11-02). Remove ads is not in that timeline (James, 2026-11-22).*
 
-### Ready for launch
+### In testing
 
 | Feature | Status | Notes |
 |---------|--------|--------|
+| Closed testing on Google Play | In progress | First closed-test build submitted for review; invited testers can install from Play once the track is live. Closed-test version 0.9.0; production go-live holds 1.0.0 (not stated on the public page) |
 | Arcade cabinet interface | Ready | Phosphor-green display, optional scanlines, central hub for launching each game; built and working in testing |
 | Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in every finished game in testing |
 | Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
@@ -83,7 +84,7 @@
 
 ### On the bench
 
-*(empty — all six games are in Ready for launch; the lane stays in frontmatter so the next item can land here)*
+*(empty — the lane stays in frontmatter so the next item can land here)*
 
 ### After launch
 

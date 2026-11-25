@@ -128,12 +128,12 @@ Insert Continue has no roadmap file in its own repo. Its agents may edit **only*
 
 | Lane `id` | Label | Contents |
 |-----------|-------|----------|
-| `now` | `Ready for launch` | Built and finished in testing (`ready`) |
-| `next` | `On the bench` | Launch work not finished yet: the game being built (`in-progress`), then the other launch games (`planned`), one card per game |
-| `later` | `After launch` | After the Google Play launch (`planned`). Not the Remove ads card. |
+| `now` | `In testing` | Closed-test / pre-public work. May mix `in-progress` (e.g. closed testing on Play) with finished games still labelled `ready`. Renamed from Ready for launch when closed testing began (James, 2026-11-25). |
+| `next` | `On the bench` | Work not finished yet (`in-progress` / `planned`). Hidden while empty. |
+| `later` | `After launch` | After the public Google Play launch (`planned`). Not the Remove ads card. |
 | `purchase` | `One-off purchase` | Remove ads only. Say there is a one-off purchase. Do not say when (`planned`) |
 
-Every card in a lane is at the same stage — move a card across when its status changes rather than mixing stages in one lane. The Google Play launch is the line between the first two lanes and **After launch**, not a card. Remove ads is its own lane so the page does not time that purchase (James, 2026-11-22). After the launch, `now` becomes `Released` with `shipped` items, as on Commander Vault.
+Move a card across when its status changes. The public Google Play launch is the line between the first lanes and **After launch**, not a card. Remove ads is its own lane so the page does not time that purchase (James, 2026-11-22). After public launch, `now` becomes `Released` with `shipped` items, as on Commander Vault. Do not add a Play store link or `live` badge until James says production is up.
 
 Copy rules for Insert Continue roadmap items come from Insert Continue `docs/website-page-brief.md`: no famous game, character or studio names; no game counts or prices; no ads SDK or analytics wording; say "in testing" for anything not yet released.
 

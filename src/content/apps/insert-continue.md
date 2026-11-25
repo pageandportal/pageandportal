@@ -3,12 +3,13 @@ name: Insert Continue
 pageTitle: Insert Continue — Retro Arcade Mini Games
 subtitle: Arcade Mini Games
 tagline: Retro gaming in your pocket, no coins required. Original arcade mini games.
-status: coming-soon
+status: beta
 description: >-
   Insert Continue is a pocket arcade cabinet: original mini games, a green-screen
-  glow, and a bank of honest blips and bleeps. It is in active development and is
-  not on Google Play yet. When it launches you pick a game, play a round, and chase
-  a high score on your own phone — offline, with no account.
+  glow, and a bank of honest blips and bleeps. A first closed-test build has been
+  submitted to Google Play — invited testers only, once that track is live. It is
+  not publicly available yet. When you play, you pick a game, play a round, and
+  chase a high score on your own phone — offline, with no account.
 accentColor: '#33FF66'
 accentColorSecondary: '#9CFF9C'
 icon: apps/insert-continue/icon.webp
@@ -56,7 +57,7 @@ features:
       In some games you can choose to watch a short ad to continue a run, once per
       run. There is a one-off Remove ads purchase. This is not an emulator
       and not a set of licensed remakes.
-screenshotsNote: Captured from an in-development build. Screens may change before launch.
+screenshotsNote: Captured from a test build. Screens may still change.
 screenshots:
   - src: apps/insert-continue/screenshots/01-hub.png
     width: 720
@@ -131,8 +132,11 @@ screenshots:
     caption: Shattered Earth. Set the angle and power, read the wind, and bring the ground down under the other tank.
 roadmap:
   - id: now
-    label: Ready for launch
+    label: In testing
     items:
+      - title: Closed testing on Google Play
+        description: First closed-test build submitted for review. Invited testers can install from Play once the track is live.
+        status: in-progress
       - title: Arcade cabinet interface
         description: A phosphor-green display with optional scanlines, and a central hub for launching each game. Built and working in testing.
         status: ready
