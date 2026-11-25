@@ -179,7 +179,7 @@ roadmap:
   - id: later
     label: After launch
     items:
-      - title: iPhone and iPad release
+      - title: iPhone release
         description: Following the Android launch, within the same release window.
         status: planned
       - title: Additional screen colours

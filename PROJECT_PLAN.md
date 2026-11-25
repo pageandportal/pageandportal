@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-25 | Insert Continue: iPhone only after Android | After launch card is now **iPhone release** (no iPad planned — owner has no iPad for testing). Supply mirrored → v0.12.28 |
 | 2026-11-25 | Insert Continue roadmap: In testing + closed Play track | Published IC agent's roadmap edit: **Ready for launch** → **In testing**; new first card **Closed testing on Google Play** (in progress). Knock-on: status `beta`, intro says closed test submitted / not public, screenshot note softened. No Play store link. Supply + handoff mirrored → v0.12.27 |
 | 2026-11-25 | Insert Continue data deletion page | Published from IC `docs/website-supply/legal/data-deletion.md` at `/apps/insert-continue/data-deletion/` for Play Console; footer link **Data deletion** wired beside Privacy → v0.12.26 |
 | 2026-11-24 | Insert Continue privacy policy revised | Replaced live draft with IC revised wording: who/where (Nelson NZ), overseas processing, Your rights, no “anonymous” for Firebase/AdMob, personalised-ads geography fixed, exact date 24 November 2026; drafting note removed → v0.12.25 |

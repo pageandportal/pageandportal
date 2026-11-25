@@ -90,7 +90,7 @@
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| iPhone and iPad release | Planned | Same release window as Android, after it; no date |
+| iPhone release | Planned | Same release window as Android, after it; no date. No iPad version planned (James, 2026-11-25 — no iPad for testing). |
 | Additional screen colours | Planned | Amber, red, cyan, purple packs; green and white remain free |
 | New original games | Planned | Do not name or count |
 
