@@ -6,10 +6,10 @@ tagline: Retro gaming in your pocket, no coins required. Original arcade mini ga
 status: beta
 description: >-
   Insert Continue is a pocket arcade cabinet: original mini games, a green-screen
-  glow, and a bank of honest blips and bleeps. A first closed-test build has been
-  submitted to Google Play — invited testers only, once that track is live. It is
-  not publicly available yet. When you play, you pick a game, play a round, and
-  chase a high score on your own phone — offline, with no account.
+  glow, and a bank of honest blips and bleeps. Closed testing is live on Google
+  Play for invited testers. It is not publicly available yet. When you play, you
+  pick a game, play a round, and chase a high score on your own phone — offline,
+  with no account.
 accentColor: '#33FF66'
 accentColorSecondary: '#9CFF9C'
 icon: apps/insert-continue/icon.webp
@@ -135,7 +135,7 @@ roadmap:
     label: In testing
     items:
       - title: Closed testing on Google Play
-        description: First closed-test build submitted for review. Invited testers can install from Play once the track is live.
+        description: Closed testing is live. Invited testers can install from Play and help shake out the build before launch.
         status: in-progress
       - title: Arcade cabinet interface
         description: A phosphor-green display with optional scanlines, and a central hub for launching each game. Built and working in testing.
@@ -183,7 +183,7 @@ roadmap:
         description: Following the Android launch, within the same release window.
         status: planned
       - title: Additional screen colours
-        description: Optional amber, red, cyan, and purple display packs. Green and white remain free.
+        description: Optional single-hue display colours (amber, red, cyan, purple, gold) and a pack, then later two-tone and multicolour themes. Green and white remain free.
         status: planned
       - title: New original games
         description: More games added to the cabinet over time.

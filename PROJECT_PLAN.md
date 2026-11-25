@@ -48,7 +48,7 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 - `/apps/portal-pages-times-tables/`
 - `/apps/insert-continue/`
 
-**Insert Continue:** pocket arcade of original mini games (Godot, Android first). Page added 2026-10-31 from the app repo’s `docs/website-page-brief.md`. Status **beta** — closed-test build submitted to Play (not public; no store link until production). Privacy at `/apps/insert-continue/privacy/`; data deletion at `/apps/insert-continue/data-deletion/`.
+**Insert Continue:** pocket arcade of original mini games (Godot, Android first). Page added 2026-10-31 from the app repo’s `docs/website-page-brief.md`. Status **beta** — closed testing live on Play for invited testers (not public; no store link until production). Privacy at `/apps/insert-continue/privacy/`; data deletion at `/apps/insert-continue/data-deletion/`.
 
 ---
 
@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-25 | Insert Continue roadmap: closed testing live | Published IC agent's uncommitted edit: Closed testing card now says the track is live for invited testers; Additional screen colours names gold plus later two-tone/multicolour. Intro knock-on matched. No Play store link → v0.12.29 |
 | 2026-11-25 | Insert Continue: iPhone only after Android | After launch card is now **iPhone release** (no iPad planned — owner has no iPad for testing). Supply mirrored → v0.12.28 |
 | 2026-11-25 | Insert Continue roadmap: In testing + closed Play track | Published IC agent's roadmap edit: **Ready for launch** → **In testing**; new first card **Closed testing on Google Play** (in progress). Knock-on: status `beta`, intro says closed test submitted / not public, screenshot note softened. No Play store link. Supply + handoff mirrored → v0.12.27 |
 | 2026-11-25 | Insert Continue data deletion page | Published from IC `docs/website-supply/legal/data-deletion.md` at `/apps/insert-continue/data-deletion/` for Play Console; footer link **Data deletion** wired beside Privacy → v0.12.26 |

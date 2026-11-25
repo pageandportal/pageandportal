@@ -12,8 +12,8 @@
 | **Subtitle** | Arcade Mini Games |
 | **URL slug** | insert-continue |
 | **Tagline** | Retro gaming in your pocket, no coins required. Original arcade mini games. |
-| **Status** | beta (closed testing submitted to Google Play; not publicly available; no store link until production) |
-| **Short description** | Insert Continue is a pocket arcade cabinet: original mini games, a green-screen glow, and a bank of honest blips and bleeps. A first closed-test build has been submitted to Google Play — invited testers only, once that track is live. It is not publicly available yet. When you play, you pick a game, play a round, and chase a high score on your own phone — offline, with no account. |
+| **Status** | beta (closed testing live on Google Play for invited testers; not publicly available; no store link until production) |
+| **Short description** | Insert Continue is a pocket arcade cabinet: original mini games, a green-screen glow, and a bank of honest blips and bleeps. Closed testing is live on Google Play for invited testers. It is not publicly available yet. When you play, you pick a game, play a round, and chase a high score on your own phone — offline, with no account. |
 
 ---
 
@@ -72,7 +72,7 @@
 
 | Feature | Status | Notes |
 |---------|--------|--------|
-| Closed testing on Google Play | In progress | First closed-test build submitted for review; invited testers can install from Play once the track is live. Closed-test version 0.9.0; production go-live holds 1.0.0 (not stated on the public page) |
+| Closed testing on Google Play | In progress | Closed testing is live; invited testers can install from Play and help shake out the build before launch. Closed-test version 0.9.0; production go-live holds 1.0.0 (not stated on the public page) |
 | Arcade cabinet interface | Ready | Phosphor-green display, optional scanlines, central hub for launching each game; built and working in testing |
 | Local high-score tables | Ready | Three-letter initials, stored only on the phone; working in every finished game in testing |
 | Paddle & Pixel | Ready | First game, finished and playable on a phone in testing |
@@ -91,7 +91,7 @@
 | Feature | Status | Notes |
 |---------|--------|--------|
 | iPhone release | Planned | Same release window as Android, after it; no date. No iPad version planned (James, 2026-11-25 — no iPad for testing). |
-| Additional screen colours | Planned | Amber, red, cyan, purple packs; green and white remain free |
+| Additional screen colours | Planned | Optional single-hue colours (amber, red, cyan, purple, gold) and a pack, then later two-tone and multicolour themes; green and white remain free. No prices on the public page. |
 | New original games | Planned | Do not name or count |
 
 ### One-off purchase
