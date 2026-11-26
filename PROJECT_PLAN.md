@@ -32,12 +32,12 @@ App list: [`apps.inventory.json`](apps.inventory.json) and `supply/apps/<slug>/`
 
 | Display name | URL slug | Tagline | Status | Supply folder |
 |--------------|----------|---------|--------|---------------|
-| Commander Vault | `commander-vault` | Track all 32 Commander color identities — one deck at a time. | live (Google Play) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
+| Commander Vault | `commander-vault` | Track all 32 Commander colour identities — one deck at a time. | live (Google Play + App Store) | [`supply/apps/commander-vault/`](supply/apps/commander-vault/) |
 | SparkClass | `sparkclass` | Class-centred practice for NZ electrical learners — from pre-trade through apprenticeship. | coming soon (hidden from home) | [`supply/apps/sparkclass/`](supply/apps/sparkclass/) |
 | Portal Pages Times Tables | `portal-pages-times-tables` | Learn and practise times tables 2–12 — calm, offline, and free. | coming soon | [`supply/apps/portal-pages-times-tables/`](supply/apps/portal-pages-times-tables/) |
 | Insert Continue | `insert-continue` | Retro gaming in your pocket, no coins required. Original arcade mini games. | beta (closed testing) | [`supply/apps/insert-continue/`](supply/apps/insert-continue/) |
 
-**Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). V1.0 is **live on Google Play**; donate link still pending.
+**Pilot app:** **Commander Vault** — content migrated from [Google Sites](https://sites.google.com/view/commander-vault/home) into `supply/apps/commander-vault/` (2026-05-23). **v2.0.0 live on Google Play and the App Store (iPhone)** (2026-11-26); donate link still pending.
 
 **SparkClass:** NZ electrical learning web app (Next.js + Supabase) for pre-trade and apprenticeship programmes. Site section added 2026-07-24. **Hidden from the home grid since 2026-10-31** (page still at `/apps/sparkclass/`). **Do not publish the live app URL** until the owner says it is ready for visitors. Product name still interim (`U20` in SparkClass plan); privacy/consent copy needs owner review.
 
@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-26 | Commander Vault post-iOS tidy | Inventory + plan now say Play + App Store; `appStoreUrl` on inventory; “Stay up to date” names Android Play update and iPhone App Store (CV `public-roadmap.yaml` matched) → v0.12.33 |
 | 2026-11-26 | Commander Vault store CTAs stacked | Play then App Store one above the other (was side by side) → v0.12.32 |
 | 2026-11-26 | Commander Vault App Store celebrate CTA | Hero shows Play + **Get it on the App Store**; App Store button reuses coming-soon shimmer + sparks for launch → v0.12.31 |
 | 2026-11-26 | Commander Vault dual-store 2.0.0 live | Roadmap: v2.0 items shipped (iPhone, Play 2.0.0, iCloud); centre lane emptied. App Store link + description; removed “iOS coming soon”; privacy/terms iCloud wording present tense. Source: Vault `docs/public-roadmap.yaml` → v0.12.30 |
@@ -427,7 +428,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] SparkClass — privacy and terms at `/apps/sparkclass/{privacy,terms}`
 - [ ] SparkClass — status badge shows `coming soon`; no public app URL / Open CTA until owner ready
 - [ ] SparkClass — footer shows “Coming soon” as non-link placeholder
-- [ ] Store/repo links work — pending Play/App Store URLs (support email only today); SparkClass web URL live
+- [ ] Store/repo links work — Commander Vault Play + App Store URLs live (2026-11-26); Insert Continue none until production; SparkClass web URL live
 
 ### Deploy & meta
 

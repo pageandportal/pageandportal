@@ -197,8 +197,8 @@ roadmap:
 
       - title: Stay up to date in the app
         description: >-
-          When a newer Play Store version is available, update in the background and restart
-          when you are ready — no hunt through the store listing.
+          On Android, when a newer Play version is available, update in the background and
+          restart when you are ready. On iPhone, get updates from the App Store as usual.
         status: shipped
         release: v1.1
 

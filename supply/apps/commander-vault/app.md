@@ -95,7 +95,7 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-11-26). **v2.0.
 | Share feedback from the project homepage | Shipped | `#feedback` section + mailto; app Support deep link (**U22**) |
 | Help picking your next deck | Shipped | Smart suggest; long-press for resume or random empty |
 | Reminders for stale in-progress decks | Shipped | Local nudge after long idle; no push |
-| Stay up to date in the app | Shipped | Flexible Play in-app update (**A79**) |
+| Stay up to date in the app | Shipped | Android: flexible Play in-app update (**A79**); iPhone: App Store updates as usual |
 
 ### Planned
 
