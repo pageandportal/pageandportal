@@ -11,12 +11,9 @@ const { data } = entry;
 const base = import.meta.env.BASE_URL;
 const iconUrl = appIconUrl(entry.id, data.icon);
 const heroUrl = appAssetUrl(data.heroImage);
-/** Primary CTA: first non-mailto link (Play Store, Open app, etc.). */
-const primaryCta = data.links.find(
+/** Store / open CTAs: all non-mailto links with a URL (Play, App Store, Open app, …). */
+const storeCtas = data.links.filter(
   (link) => Boolean(link.url) && !link.url!.startsWith('mailto:'),
-);
-const primaryIsExternal = Boolean(
-  primaryCta?.url && /^https?:\/\//i.test(primaryCta.url),
 );
 ---
 
@@ -91,16 +88,32 @@ const primaryIsExternal = Boolean(
   <div class="container hero-bottom">
     <p class="intro">{data.description}</p>
     {
-      primaryCta?.url && (
+      storeCtas.length > 0 && (
         <p class="hero-cta">
-          <a
-            class="store-button"
-            href={primaryCta.url}
-            target={primaryIsExternal ? '_blank' : undefined}
-            rel={primaryIsExternal ? 'noopener noreferrer' : undefined}
-          >
-            {primaryCta.label}
-          </a>
+          {storeCtas.map((cta) => {
+            const external = Boolean(cta.url && /^https?:\/\//i.test(cta.url));
+            const celebrate = Boolean(cta.celebrate);
+            return (
+              <a
+                class:list={['store-button', celebrate && 'store-button--celebrate']}
+                href={cta.url}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+              >
+                {celebrate && (
+                  <span class="store-spark" aria-hidden="true">
+                    ✦
+                  </span>
+                )}
+                <span class="store-button-label">{cta.label}</span>
+                {celebrate && (
+                  <span class="store-spark" aria-hidden="true">
+                    ✦
+                  </span>
+                )}
+              </a>
+            );
+          })}
         </p>
       )
     }
@@ -240,11 +253,18 @@ const primaryIsExternal = Boolean(
   }
 
   .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
     margin: 1.25rem 0 0;
   }
 
   .store-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
     padding: 0.65rem 1.25rem;
     font-weight: 600;
     font-size: 0.95rem;
@@ -261,6 +281,39 @@ const primaryIsExternal = Boolean(
   .store-button:focus-visible {
     outline: 2px solid var(--app-accent, var(--gold));
     outline-offset: 3px;
+  }
+
+  .store-button--celebrate {
+    letter-spacing: 0.02em;
+    border: 1px solid color-mix(in srgb, var(--app-accent, var(--gold)) 70%, #fff);
+    box-shadow:
+      0 0 22px color-mix(in srgb, var(--app-accent, var(--gold)) 40%, transparent),
+      0 0 48px color-mix(in srgb, var(--app-accent-secondary, var(--gold-dim)) 22%, transparent);
+    background:
+      linear-gradient(
+        110deg,
+        transparent 35%,
+        rgb(255 255 255 / 28%) 50%,
+        transparent 65%
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--app-accent-secondary, var(--gold-dim)) 55%, var(--app-accent, var(--gold))),
+        var(--app-accent, var(--gold)),
+        color-mix(in srgb, var(--app-accent-secondary, var(--gold-dim)) 55%, var(--app-accent, var(--gold)))
+      );
+    background-size:
+      250% 100%,
+      100% 100%;
+    background-position:
+      150% 0,
+      0 0;
+    background-repeat: no-repeat;
+  }
+
+  .store-spark {
+    font-size: 0.85em;
+    line-height: 1;
   }
 
   .hero-announcement {
@@ -303,6 +356,18 @@ const primaryIsExternal = Boolean(
   }
 
   @media (prefers-reduced-motion: no-preference) {
+    .store-button--celebrate {
+      animation: announcement-shimmer 3.2s ease-in-out infinite;
+    }
+
+    .store-button--celebrate .store-spark {
+      animation: announcement-twinkle 1.8s ease-in-out infinite;
+    }
+
+    .store-button--celebrate .store-spark:last-child {
+      animation-delay: 0.9s;
+    }
+
     .hero-announcement {
       animation: announcement-shimmer 4s ease-in-out infinite;
     }

@@ -23,7 +23,7 @@
 | Label | URL |
 |-------|-----|
 | Google Play | https://play.google.com/store/apps/details?id=com.commandervault.app |
-| App Store | https://apps.apple.com/app/32-deck-challenge-cmdr-vault/id6830339514 |
+| Get it on the App Store | https://apps.apple.com/app/32-deck-challenge-cmdr-vault/id6830339514 |
 | GitHub / source | TODO: or leave blank |
 | Website / other | TODO: or leave blank |
 | **Support email** | pageandportal@gmail.com |

@@ -19,8 +19,9 @@ donateUseGlobal: true
 links:
   - label: Get it on Google Play
     url: https://play.google.com/store/apps/details?id=com.commandervault.app
-  - label: Download on the App Store
+  - label: Get it on the App Store
     url: https://apps.apple.com/app/32-deck-challenge-cmdr-vault/id6830339514
+    celebrate: true
   - label: Support
     url: mailto:pageandportal@gmail.com
 legalPages:

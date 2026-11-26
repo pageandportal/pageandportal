@@ -26,6 +26,8 @@ const roadmapLaneSchema = z.object({
 const linkSchema = z.object({
   label: z.string(),
   url: z.string().optional(),
+  /** Temporary launch flourish (shimmer) on the hero store button. */
+  celebrate: z.boolean().optional(),
 });
 
 const screenshotSchema = z.object({

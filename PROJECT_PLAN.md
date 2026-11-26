@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-26 | Commander Vault App Store celebrate CTA | Hero shows Play + **Get it on the App Store**; App Store button reuses coming-soon shimmer + sparks for launch → v0.12.31 |
 | 2026-11-26 | Commander Vault dual-store 2.0.0 live | Roadmap: v2.0 items shipped (iPhone, Play 2.0.0, iCloud); centre lane emptied. App Store link + description; removed “iOS coming soon”; privacy/terms iCloud wording present tense. Source: Vault `docs/public-roadmap.yaml` → v0.12.30 |
 | 2026-11-25 | Insert Continue roadmap: closed testing live | Published IC agent's uncommitted edit: Closed testing card now says the track is live for invited testers; Additional screen colours names gold plus later two-tone/multicolour. Intro knock-on matched. No Play store link → v0.12.29 |
 | 2026-11-25 | Insert Continue: iPhone only after Android | After launch card is now **iPhone release** (no iPad planned — owner has no iPad for testing). Supply mirrored → v0.12.28 |
