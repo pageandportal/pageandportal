@@ -285,6 +285,7 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 
 | Date | Task | Note |
 |------|------|------|
+| 2026-11-26 | Commander Vault dual-store 2.0.0 live | Roadmap: v2.0 items shipped (iPhone, Play 2.0.0, iCloud); centre lane emptied. App Store link + description; removed “iOS coming soon”; privacy/terms iCloud wording present tense. Source: Vault `docs/public-roadmap.yaml` → v0.12.30 |
 | 2026-11-25 | Insert Continue roadmap: closed testing live | Published IC agent's uncommitted edit: Closed testing card now says the track is live for invited testers; Additional screen colours names gold plus later two-tone/multicolour. Intro knock-on matched. No Play store link → v0.12.29 |
 | 2026-11-25 | Insert Continue: iPhone only after Android | After launch card is now **iPhone release** (no iPad planned — owner has no iPad for testing). Supply mirrored → v0.12.28 |
 | 2026-11-25 | Insert Continue roadmap: In testing + closed Play track | Published IC agent's roadmap edit: **Ready for launch** → **In testing**; new first card **Closed testing on Google Play** (in progress). Knock-on: status `beta`, intro says closed test submitted / not public, screenshot note softened. No Play store link. Supply + handoff mirrored → v0.12.27 |
@@ -412,9 +413,9 @@ Plain text, YAML, or Markdown is ideal. Word docs are fine if you paste content 
 - [ ] Screenshot viewer (Commander Vault and Insert Continue) — tap a screenshot: it opens full-screen with caption and "n of N"; previous/next buttons (bottom corners on a phone), swipe and arrow keys move between shots; ×, Escape or tapping outside closes it
 - [ ] App pages on a phone — no sideways scrolling or zoomed-out page; only the roadmap lanes swipe sideways
 - [ ] Commander Vault — free-to-start copy matches the approved one-time unlock wording
-- [ ] Commander Vault — support link works and **Get it on Google Play** opens the store listing
-- [ ] Commander Vault — “iOS version coming soon” banner sits under the Play button (remove `announcement` when the App Store link goes live)
-- [ ] Commander Vault — privacy (Last updated November 2026) covers optional iCloud backup (coming with the iOS app), Scryfall logging, deck-link lookups, View on EDHREC, the Android update check, and Google Play + App Store purchases; terms (November 2026) name both stores and label iCloud backup as coming with the iOS app; feature card matches; Credits no longer claims "permitted under the Fan Content Policy"
+- [ ] Commander Vault — support link works; **Get it on Google Play** and **Download on the App Store** open the live listings
+- [x] Commander Vault — “iOS version coming soon” banner removed; App Store link live (2026-11-26, dual-store 2.0.0)
+- [ ] Commander Vault — privacy (Last updated November 2026) covers optional iCloud backup on iPhone, Scryfall logging, deck-link lookups, View on EDHREC, the Android update check, and Google Play + App Store purchases; terms name both stores and iCloud backup; feature card matches; Credits no longer claims "permitted under the Fan Content Policy"
 - [x] About on home `#about`; studio credit on app pages — owner verified 2026-05-23
 - [x] Privacy (and other legal) pages linked and readable — owner verified 2026-05-23
 - [x] Portal Pages Times Tables — privacy at `/apps/portal-pages-times-tables/privacy`

@@ -15,7 +15,7 @@ Commander Vault is built to keep your deck tracking data on your device. We do n
 
 - Commander names, bracket, build status, notes, and saved card art URLs for your 32 deck slots
 - This information is stored locally using your browser or app storage (IndexedDB)
-- On iPhone and iPad (coming with the iOS app), if you turn on iCloud backup (off by default), a copy of this deck data is also saved to your own iCloud account by Apple. Commander Vault cannot access it, and purchases are never included.
+- On iPhone (and on iPad when running the iPhone app), if you turn on iCloud backup (off by default), a copy of this deck data is also saved to your own iCloud account by Apple. Commander Vault cannot access it, and purchases are never included.
 
 ## What uses the internet
 

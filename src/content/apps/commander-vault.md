@@ -6,8 +6,8 @@ status: live
 description: >-
   Commander Vault helps you track your Magic: The Gathering 32 Deck Commander
   Challenge — one deck slot for every unique colour identity. Available on Google
-  Play. Start free with 5 mono-colour slots, then unlock the full 32-slot challenge
-  with a one-time purchase.
+  Play and the App Store (iPhone). Start free with 5 mono-colour slots, then unlock
+  the full 32-slot challenge with a one-time purchase.
 accentColor: '#C9A227'
 accentColorSecondary: '#6B5B95'
 icon: apps/commander-vault/icon.webp
@@ -19,9 +19,10 @@ donateUseGlobal: true
 links:
   - label: Get it on Google Play
     url: https://play.google.com/store/apps/details?id=com.commandervault.app
+  - label: Download on the App Store
+    url: https://apps.apple.com/app/32-deck-challenge-cmdr-vault/id6830339514
   - label: Support
     url: mailto:pageandportal@gmail.com
-announcement: iOS version coming soon
 legalPages:
   - title: Privacy
     slug: privacy
@@ -42,8 +43,8 @@ features:
     description: >-
       Commander names, bracket, build status, notes, and saved card art URLs are
       stored locally (IndexedDB). No user accounts and no backend — your list is
-      not uploaded to Page and Portal servers. Coming with the iOS app: optional iCloud
-      backup on iPhone and iPad (off by default) that saves a copy to your own iCloud account.
+      not uploaded to Page and Portal servers. On iPhone, optional iCloud backup
+      (off by default) saves a copy to your own iCloud account.
   - title: Search commanders with Scryfall
     description: >-
       Commander search and autocomplete send what you type to the Scryfall API to
@@ -101,85 +102,109 @@ roadmap:
   - id: now
     label: Released
     items:
+      - title: iPhone on the App Store
+        description: Commander Vault on the App Store for iPhone, including the home-screen widget.
+        status: shipped
+        release: v2.0
+
+      - title: Play Store 2.0.0
+        description: The same 2.0.0 release on Google Play, with the latest polish from the dual-store build.
+        status: shipped
+        release: v2.0
+
+      - title: iCloud backup
+        description: Optional synced backup beyond exporting a file from the app (iPhone).
+        status: shipped
+        release: v2.0
+
       - title: Light and dark themes
         description: Choose light, dark, or match your phone’s system setting.
         status: shipped
         release: v1.3
+
       - title: Richer progress shares
         description: Share images with more deck detail — names, art, or completion highlights.
         status: shipped
         release: v1.3
+
       - title: Budget and play tracking
         description: >-
           Optional approximate deck cost and table time per slot, plus last-updated
           and completed dates on the vault grid.
         status: shipped
         release: v1.3
+
       - title: Options menu
         description: A dedicated place for app preferences and backup.
         status: shipped
         release: v1.3
+
       - title: EDHREC from your commander
         description: >-
           Open the EDHREC page for a deck’s primary commander from the deck editor —
           quick inspiration without leaving your challenge progress.
         status: shipped
         release: v1.2
+
       - title: Better deck links
         description: >-
           Easier way to save Moxfield, ManaBox, Archidekt, and other deck-builder links —
           paste-friendly entry, more hosts, and your commander filled in automatically from Archidekt and ManaBox lists.
         status: shipped
         release: v1.1
+
       - title: Deck slot nicknames
         description: Give each colour-identity slot a custom name on the grid and share image.
         status: shipped
         release: v1.1
+
       - title: Smarter commander search
         description: Search that respects your slot’s colours and helps you pick the right card art.
         status: shipped
         release: v1.1
+
       - title: Partner commanders
         description: Track partner and background commanders where the challenge allows.
         status: shipped
         release: v1.1
+
       - title: Filter and sort your decks
         description: Find decks by status, sort your grid, jump to categories, and update build status from the grid.
         status: shipped
         release: v1.1
+
       - title: Share feedback from the project homepage
         description: >-
           A clear way to send feedback from the Commander Vault project homepage — so the
           link in the app’s Support screen goes somewhere useful.
         status: shipped
         release: v1.1
+
       - title: Help picking your next deck
         description: >-
           Tap for a smart deck suggestion, or press and hold for random empty or resume
           in-progress slots when you are not sure what to brew next.
         status: shipped
         release: v1.1
+
       - title: Reminders for stale in-progress decks
         description: >-
           A gentle in-app nudge when a deck has sat in progress for a long time with no
           updates — local only, no push notifications.
         status: shipped
         release: v1.1
+
       - title: Stay up to date in the app
         description: >-
           When a newer Play Store version is available, update in the background and restart
           when you are ready — no hunt through the store listing.
         status: shipped
         release: v1.1
+
   - id: next
-    label: v2.0.0 — iOS Release
-    items:
-      - title: iPhone release
-        description: Commander Vault on the App Store for iPhone, including the home-screen widget.
-        status: in-progress
-      - title: iCloud backup
-        description: Optional synced backup beyond exporting a file from the app.
-        status: planned
+    label: Next
+    items: []
+
   - id: later
     label: Planned
     items:
@@ -188,17 +213,21 @@ roadmap:
           Use Commander Vault in more languages, with an optional language choice in Options
           when translations are available.
         status: planned
+
       - title: Choose your commander art
         description: Pick the alternate printing you actually sleeve — not only Scryfall’s default art.
         status: planned
+
       - title: Extra decks per colour
         description: >-
           Retire a list into an archive for that colour identity, brew a new one in the same
           slot, and restore an old list later — the 32-box still follows your active deck.
         status: planned
+
       - title: Alternative 32-deck challenges
         description: Optional preset lists for house-rule or community challenge variants.
         status: planned
+
       - title: iPad layout
         description: A full-screen iPad version after the iPhone launch (until then, iPads run the iPhone app).
         status: planned

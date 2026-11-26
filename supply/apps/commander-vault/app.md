@@ -13,8 +13,8 @@
 | **Subtitle** | 32 Deck Challenge Companion |
 | **URL slug** | commander-vault |
 | **Tagline** | Track all 32 Commander colour identities — one deck at a time. |
-| **Status** | live (v1.3 on Google Play; v2.0.0 iOS release in progress) |
-| **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. **Available on Google Play.** Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
+| **Status** | live (v2.0.0 on Google Play and the App Store for iPhone) |
+| **Short description** | Commander Vault helps you track your Magic: The Gathering 32 Deck Commander Challenge — one deck slot for every unique colour identity. **Available on Google Play and the App Store (iPhone).** Start free with 5 mono-colour slots, then unlock the full 32-slot challenge with a one-time purchase. |
 
 ---
 
@@ -23,7 +23,7 @@
 | Label | URL |
 |-------|-----|
 | Google Play | https://play.google.com/store/apps/details?id=com.commandervault.app |
-| App Store | Not announced |
+| App Store | https://apps.apple.com/app/32-deck-challenge-cmdr-vault/id6830339514 |
 | GitHub / source | TODO: or leave blank |
 | Website / other | TODO: or leave blank |
 | **Support email** | pageandportal@gmail.com |
@@ -52,7 +52,7 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 ### Feature 2 — Local-first privacy
 
 - **Title:** Your decks stay on your device
-- **Description:** Commander names, bracket, build status, notes, and saved card art URLs are stored locally (IndexedDB). No user accounts and no backend — your list is not uploaded to Page and Portal servers. Coming with the iOS app: optional iCloud backup on iPhone and iPad (off by default) that saves a copy to your own iCloud account.
+- **Description:** Commander names, bracket, build status, notes, and saved card art URLs are stored locally (IndexedDB). No user accounts and no backend — your list is not uploaded to Page and Portal servers. On iPhone, optional iCloud backup (off by default) saves a copy to your own iCloud account.
 - **Image (optional):** TODO
 
 ### Feature 3 — Scryfall commander lookup
@@ -71,14 +71,17 @@ Derived from legacy site copy; expand or reword when you have screenshots.
 
 ## Roadmap
 
-_Published from Commander Vault `docs/public-roadmap.yaml` (2026-11-01). **v1.3 is live** on Google Play; **v2.0.0** (iPhone, with optional iCloud backup) is in progress; a full iPad layout is planned after that. See that repo’s `docs/roadmap-handoff.md`._
+_Published from Commander Vault `docs/public-roadmap.yaml` (2026-11-26). **v2.0.0 is live** on Google Play and the App Store (iPhone, with optional iCloud backup). A full iPad layout is planned later. See that repo’s `docs/roadmap-handoff.md`._
 
-*Site lanes: **Released** (`now`) = live for users, newest first; **v2.0.0 — iOS Release** (`next`) = next release; **Planned** (`later`) = accepted future work. Lanes longer than 8 cards collapse behind “Show N more” on the site.*
+*Site lanes: **Released** (`now`) = live for users, newest first (grouped by `release`); centre (`next`) empty until the next headline; **Planned** (`later`) = accepted future work. Lanes longer than 8 cards collapse behind “Show N more” on the site.*
 
 ### Released
 
 | Feature | Status | Notes |
 |---------|--------|--------|
+| iPhone on the App Store | Shipped | App Store for iPhone + home-screen widget (v2.0) |
+| Play Store 2.0.0 | Shipped | Matching dual-store build on Google Play (v2.0) |
+| iCloud backup | Shipped | Optional synced backup on iPhone (v2.0) |
 | Light and dark themes | Shipped | Light, dark, or system (v1.3) |
 | Richer progress shares | Shipped | Names, art, or completion highlights on share images (v1.3) |
 | Budget and play tracking | Shipped | Optional cost and table time per slot; last-updated and completed dates on grid (v1.3) |
@@ -93,13 +96,6 @@ _Published from Commander Vault `docs/public-roadmap.yaml` (2026-11-01). **v1.3 
 | Help picking your next deck | Shipped | Smart suggest; long-press for resume or random empty |
 | Reminders for stale in-progress decks | Shipped | Local nudge after long idle; no push |
 | Stay up to date in the app | Shipped | Flexible Play in-app update (**A79**) |
-
-### v2.0.0 — iOS Release
-
-| Feature | Status | Notes |
-|---------|--------|--------|
-| iPhone release | In progress | App Store for iPhone + home-screen widget |
-| iCloud backup | Planned | Optional synced backup |
 
 ### Planned
 
